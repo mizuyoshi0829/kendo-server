@@ -1,0 +1,523 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport"
+content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link media="only screen and (max-device-width:480px)" href="{$root_url}css/mobile.css" type="text/css" rel="stylesheet" />
+<link media="screen and (min-device-width:481px)" href="{$root_url}css/style.css" type="text/css" rel="stylesheet" />
+<!--[if IE]>
+<link href="{$root_url}design.css" type="text/css" rel="stylesheet" />
+<![endif]-->
+<link  href="../css/cropper.css" rel="stylesheet">
+
+<meta charset="UTF-8">
+<title>入力フォーム</title>
+{if $mform_msg != ''}
+<script type="text/javascript">
+{literal}
+window.onload = function(){
+{/literal}
+    alert( "{$mform_msg}" );
+{if $pdf_name != ''}
+    alert( "PDF申込書をダウンロードします。" );
+    pdf_download();
+{/if}
+{literal}
+};
+{/literal}
+</script>
+{/if}
+
+<script type="text/javascript" src="../js/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="../js/cropper.js"></script>
+<script type="text/javascript">
+<!--
+{if $pdf_name != ''}
+let pdf_base64 = "{$pdf_base64}";
+let pdf_name = "{$pdf_name}";
+
+function pdf_download()
+{
+    let element = document.createElement('a');
+    element.href = 'data:image/pdf;base64,' + encodeURI(pdf_base64);
+    element.download = pdf_name;
+    element.target = '_blank';
+    element.click();
+}
+{/if}
+{literal}
+let cropper = [ null, null ];
+let zoom = [ 0, 0 ];
+let brightness = [100,100];
+
+function showActiveIndicator()
+{
+	$('#actindicator').show();
+	$('#actindicator_fade').css("opacity", "0.3").show();
+}
+
+function hideActiveIndicator()
+{
+    $('#actindicator').hide();
+    $('#actindicator_fade').hide();
+}
+
+// ファイルのアップロード
+function previewImage(field,imageUrl,width,field_index)
+{
+    const img = $('#'+field+'_file_preview_image').eq(0);
+    const img_effect = $("input[name='"+field+"_effect']").val();
+    let data = null;
+    if( img_effect != '' ){
+        let jdata = JSON.parse(img_effect);
+        data = jdata.crop;
+        brightness[field_index] = jdata.brightness == 0 ? 100: jdata.brightness;
+    }
+    if( imageUrl != null ){
+        img.attr('src',imageUrl); // 画像のURLをimg要素にセット
+    }
+    if( cropper[field_index] != null ){
+        cropper[field_index].destroy();
+        cropper[field_index] = null;
+    }
+    cropper[field_index] = new Cropper(
+        img.get(0),
+        {
+            viewMode: 0,
+            checkOrientation: true,
+            zoomOnwheel: false,
+            zoomOntouch: false,            
+            data: data,
+            background: false,
+            autoCropArea: 1,
+            movable: true,
+            rotatable: true,
+            scalable: false,
+            zoomable: true,
+            crop(event) {
+                let d = JSON.stringify(event.detail);
+                const img_effect = '{ "crop":' + d + ',' + '"brightness": ' + brightness[field_index] + ' }';
+                $("input[name='"+field+"_effect']").val(img_effect);
+            }
+        }
+    );
+}
+
+function previewFile(file,field,width,field_index)
+{
+    const preview = $('#'+field+'_file_preview');
+    const reader = new FileReader();
+    reader.onload = function (e) {
+        const imageUrl = e.target.result; // 画像のURLはevent.target.resultで呼び出せる
+        $("input[name='"+field+"_effect']").val('');
+        previewImage(field,imageUrl,width,field_index);
+    }
+    reader.readAsDataURL(file);
+}
+
+function updateImage( field, width, field_index )
+{
+    const fileInput = document.getElementById(field+'_file_op');
+    const files = fileInput.files;
+    for (let i = 0; i < files.length; i++) {
+        previewFile(files[i],field,width,field_index);
+    }
+    return;
+
+	showActiveIndicator();
+    // FormData の作成
+	$("#form_entry [name='imageupload']").val(field);
+    var form = $('#form_entry').get()[0];
+    var formData = new FormData(form);
+    // FormData を送信
+    $.ajax({
+		url: "uploadimage.php",
+        method: 'POST',
+        contentType: false,
+        processData: false,
+        data: formData,
+        dataType: 'text',
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
+			hideActiveIndicator();
+            console.log('error');
+		//	alert(XMLHttpRequest.status+":"+textStatus+":"+errorThrown.message);
+        },
+        success: function(data, dataType) {
+			hideActiveIndicator();
+            console.log('success');
+			if( data != '' ){
+				$("#"+field+"_preview img:eq(0)").attr( 'src', 'upload/'+data+'_02.jpg' ).css("width","200px");
+				$("#"+field+"_file_del").css("display","inline");
+				$("#form_entry [name='"+field+"']").val(data);
+				$("#form_entry [name='"+field+"_file']").val('');
+			}
+		//	alert( data );
+        }
+    });
+}
+
+// ファイルのアップロード
+function deleteImage( field )
+{
+	if( !window.confirm('画像を削除してよろしいでしょうか？') ){ return false; }
+	$("#"+field+"_preview img:eq(0)").attr( 'src', 'img/white.jpg' ).css("width","16px");
+	$("#"+field+"_file_del1").css("display","none");
+	$("#form_entry [name='"+field+"']").val('');
+	$("#form_entry [name='"+field+"_file']").val('');
+}
+
+-->
+{/literal}
+</script>
+
+</head>
+<body>
+<div id="main">
+  <div id="actindicator"><img src="../img/466.gif" width="48" height="48" alt="Loading..." /></div>
+  <div id="actindicator_fade"></div>
+  <form id="form_entry" name="form1" method="post" action="" enctype="multipart/form-data">
+    <input name="mode" type="hidden" value="confirm" />
+    <input type="hidden" name="imageupload" value="0">
+{foreach from=$fields_info item=info}
+{if $info.kind == 'hidden'}
+    <input type="hidden" name="{$info.field}" value="{$info.placeholder}" >
+{/if}
+{/foreach}
+{assign var="photo_index" value=0}
+{foreach from=$fields_info item=info}
+{if $info.kind != '' && $info.kind != 'hidden'}
+{if $info.kind == 'title1'}
+    <div {if $info.field !=''}id="{$info.field}" {/if}class="titlename"><h1>{$info.name}{if $info.placeholder != ''}&nbsp;<a {$info.select_info} >{$info.placeholder}</a>{/if}</h1></div>
+{if $mform_msg != ''}
+    <div class="discription">{$mform_msg}</div>
+{/if}
+    <div class="f_box">
+{elseif $info.kind == 'title2'}
+      <div {if $info.field !=''}id="{$info.field}" {/if}class="titlename2"><h2>{$info.name}{$info.placeholder}{$info.select_info}</h2></div>
+{elseif $info.kind == 'data_title'}
+      <div class="data_title"><h2>{$info.name}</h2></div>
+{elseif $info.kind == 'dantai_title1'}
+      <div class="dantai_title1"><h2>{$info.name}</h2></div>
+{elseif $info.kind == 'dantai_title2'}
+      <div class="dantai_title2"><h2>{$info.name}</h2></div>
+{elseif $info.kind == 'discription'}
+      <div class="discription">{$info.placeholder}</div>
+{elseif $info.kind == 'f_box'}
+    <div class="f_box">
+{elseif $info.kind == 'f_box_end'}
+      <div class="clear_fix"></div>
+    </div>
+{else}
+  {if $info.kind == 'school_name_kana' || $info.kind == 'name_kana'}
+      <div class="midasi">{$info.name}(全角)</div>
+  {elseif $info.kind == 'email' || $info.kind == 'email2' || $info.kind == 'tel_fax' || $info.kind == 'mobile_tel' || $info.kind == 'address'}
+      <div class="midasi">{$info.name}(半角)</div>
+  {else}
+      <div class="midasi">{$info.name}</div>
+  {/if}
+{/if}
+{assign var="edit_field" value=$info.field}
+{if $info.kind == 'text'}
+      <div class="tw{$info.text_width}">
+        <input type="text" name="{$edit_field}" value="{$smarty.session.p.$edit_field}" class="text" placeholder="{$info.placeholder}" >
+        {$info.tail}
+        {if $smarty.session.e.$edit_field != ''}<br /><div class="f_error">{$smarty.session.e.$edit_field}</div>{/if}
+      </div>
+{elseif $info.kind == 'textarea'}
+      <div class="tw{$info.text_width}">
+        <textarea name="{$edit_field}" cols="40" rows="3" maxlength="100" placeholder="{$info.placeholder}" >{$smarty.session.p.$edit_field}</textarea>
+      </div>
+{elseif $info.kind == 'check'}
+      <div class="f_radio">
+        {html_checkboxes name=$edit_field options=$info.sel selected=$smarty.session.p.$edit_field separator='&nbsp;'}
+      </div>
+{elseif $info.kind == 'check_one'}
+      <div class="f_radio">
+        {html_checkboxes name=$edit_field options=$info.sel selected=$smarty.session.p.$edit_field separator='&nbsp;'}
+      </div>
+{elseif $info.kind == 'select' || $info.kind == 'pref_select'}
+      <div class="f_select">
+        {html_options name=$edit_field options=$info.sel selected=$smarty.session.p.$edit_field}
+      </div>
+{elseif $info.kind == 'radio'}
+      <div class="f_radio">
+        {html_radios name=$edit_field options=$info.sel selected=$smarty.session.p.$edit_field separator='&nbsp;'}
+      </div>
+{elseif $info.kind == 'photo'}
+{assign var="edit_field_effect" value="`$edit_field`_effect"}
+{assign var="edit_field_rotate" value="`$edit_field`_rotate"}
+      <div class="tw200">
+{if $info.text_width == 1}
+        <div id="{$edit_field}_file_preview" class="photo_preview">
+{else}
+        <div id="{$edit_field}_file_preview" class="photo_preview2">
+{/if}
+{if $smarty.session.p.$edit_field != ''}
+          <img id="{$edit_field}_file_preview_image" src="/kendo/admin/upload/org/{$smarty.session.p.$edit_field}.jpg" />
+        </div>
+{*
+        <input id="{$edit_field}_file_del" name="{$edit_field}_file_delete" type="button" value="削除" onClick="deleteImage('{$edit_field}');" />
+*}
+{else}
+          <img id="{$edit_field}_file_preview_image" src="" />
+        </div>
+{*
+        <input id="{$edit_field}_file_del" name="{$edit_field}_file_delete" type="button" value="削除" onClick="deleteImage('{$edit_field}');" style="display:none;" />
+*}
+{/if}
+        <div class="photo_preview_sample">
+          {$info.tail}<br />
+          画像回転：
+          <input type="number" id="{$edit_field}_file_rotate_text" max="180" min="-180" value="{$smarty.session.p.$edit_field_rotate}">
+          <input type="range" id="{$edit_field}_file_rotate" max="180" min="-180" step="1" value="{$smarty.session.p.$edit_field_rotate}"><br />
+          画像ズーム：
+          <input type="number" id="{$edit_field}_file_zoom_text" max="5" min="-5" step="0.05" value="0">
+          <input type="range" id="{$edit_field}_file_zoom" max="5" min="-5" step="0.05" value="0">
+        </div>
+        <div class="clear_fix"></div>
+        <input id="{$edit_field}_file_op" name="{$edit_field}_file" type="file" value="" onchange="updateImage('{$edit_field}',{$info.text_width},{$photo_index});" />
+        <input type="hidden" name="{$edit_field}" value="{$smarty.session.p.$edit_field}">
+        <input type="hidden" name="{$edit_field}_effect" value="{$smarty.session.p.$edit_field_effect|escape:'html'}">
+      </div>
+{assign var="photo_index" value=1}
+{elseif $info.kind == 'name'}
+{assign var="edit_field_sei" value="`$edit_field`_sei"}
+{assign var="edit_field_mei" value="`$edit_field`_mei"}
+      <div class="tw5 name_font">
+        <input id="{$edit_field_sei}" type="text" name="{$edit_field_sei}" value="{$smarty.session.p.$edit_field_sei}" maxlength="8" class="text" placeholder="名字" >
+        <input id="{$edit_field_mei}" type="text" name="{$edit_field_mei}" value="{$smarty.session.p.$edit_field_mei}" class="text" placeholder="名前" >
+        {if $smarty.session.e.$edit_field != ''}<br /><div class="f_error">{$smarty.session.e.$edit_field}</div>{/if}
+      </div>
+{elseif $info.kind == 'name_kana'}
+{assign var="edit_field_sei" value="`$edit_field`_sei"}
+{assign var="edit_field_mei" value="`$edit_field`_mei"}
+      <div class="tw5 name_font">
+        <input id="{$edit_field_sei}" type="text" name="{$edit_field_sei}" value="{$smarty.session.p.$edit_field_sei}" class="text" placeholder="名字(全角)" >
+        <input id="{$edit_field_mei}" type="text" name="{$edit_field_mei}" value="{$smarty.session.p.$edit_field_mei}" class="text" placeholder="名前(全角)" >
+        {if $smarty.session.e.$edit_field != ''}<br /><div class="f_error">{$smarty.session.e.$edit_field}</div>{/if}
+      </div>
+{elseif $info.kind == 'name3'}
+{assign var="edit_field_sei" value="`$edit_field`_sei"}
+{assign var="edit_field_mei" value="`$edit_field`_mei"}
+{assign var="edit_field_add" value="`$edit_field`_add"}
+      <div class="tw5 name_font">
+        <input id="{$edit_field_sei}" type="text" name="{$edit_field_sei}" value="{$smarty.session.p.$edit_field_sei}" maxlength="8" class="text" placeholder="名字" >
+        <input id="{$edit_field_mei}" type="text" name="{$edit_field_mei}" value="{$smarty.session.p.$edit_field_mei}" class="text" placeholder="名前" >
+        <input id="{$edit_field_add}" type="text" name="{$edit_field_add}" value="{$smarty.session.p.$edit_field_add}" class="text" placeholder="備考：異体字など" style="width: 8em;" >
+        {if $smarty.session.e.$edit_field != ''}<br /><div class="f_error">{$smarty.session.e.$edit_field}</div>{/if}
+      </div>
+{elseif $info.kind == 'name4'}
+{assign var="edit_field_sei" value="`$edit_field`_sei"}
+{assign var="edit_field_mei" value="`$edit_field`_mei"}
+{assign var="edit_field_add" value="`$edit_field`_add"}
+{assign var="edit_field_disp" value="`$edit_field`_disp"}
+      <div class="tw5 name_font">
+        <input id="{$edit_field_sei}" type="text" name="{$edit_field_sei}" value="{$smarty.session.p.$edit_field_sei}" maxlength="8" class="text" placeholder="名字" >
+        <input id="{$edit_field_mei}" type="text" name="{$edit_field_mei}" value="{$smarty.session.p.$edit_field_mei}" class="text" placeholder="名前" >
+        <input id="{$edit_field_add}" type="text" name="{$edit_field_add}" value="{$smarty.session.p.$edit_field_add}" class="text" placeholder="備考：異体字など" style="width: 8em;" >
+        <input id="{$edit_field_disp}" type="text" name="{$edit_field_disp}" value="{$smarty.session.p.$edit_field_disp}" class="text" placeholder="表示名" >
+        {if $smarty.session.e.$edit_field != ''}<br /><div class="f_error">{$smarty.session.e.$edit_field}</div>{/if}
+      </div>
+{elseif $info.kind == 'name5'}
+{assign var="edit_field_sei" value="`$edit_field`_sei"}
+{assign var="edit_field_mei" value="`$edit_field`_mei"}
+{assign var="edit_field_add" value="`$edit_field`_add"}
+{assign var="edit_field_disp" value="`$edit_field`_disp"}
+      <div class="tw5 name_font">
+        <input id="{$edit_field_sei}" type="text" name="{$edit_field_sei}" value="{$smarty.session.p.$edit_field_sei}" maxlength="8" class="text" placeholder="名字" >
+        <input id="{$edit_field_mei}" type="text" name="{$edit_field_mei}" value="{$smarty.session.p.$edit_field_mei}" class="text" placeholder="名前" >
+        <input id="{$edit_field_add}" type="checkbox" name="{$edit_field_add}" value="1" class="text" {if $smarty.session.p.$edit_field_add==1}checked="checked" {/if} style="width: 1em;">異体字あり
+        {if $smarty.session.e.$edit_field != ''}<br /><div class="f_error">{$smarty.session.e.$edit_field}</div>{/if}
+      </div>
+{elseif $info.kind == 'name6'}
+{assign var="edit_field_sei" value="`$edit_field`_sei"}
+{assign var="edit_field_mei" value="`$edit_field`_mei"}
+{assign var="edit_field_add" value="`$edit_field`_add"}
+{assign var="edit_field_disp" value="`$edit_field`_disp"}
+      <div class="tw5 name_font">
+        <input id="{$edit_field_sei}" type="text" name="{$edit_field_sei}" value="{$smarty.session.p.$edit_field_sei}" maxlength="8" class="text" placeholder="名字" >
+        <input id="{$edit_field_mei}" type="text" name="{$edit_field_mei}" value="{$smarty.session.p.$edit_field_mei}" class="text" placeholder="名前" >
+        <input id="{$edit_field_add}" type="checkbox" name="{$edit_field_add}" value="1" class="text" {if $smarty.session.p.$edit_field_add==1}checked="checked" {/if} style="width: 1em;">異体字あり
+        <input id="{$edit_field_disp}" type="hidden" name="{$edit_field_disp}" value="{$smarty.session.p.$edit_field_disp}"  >
+        {if $smarty.session.e.$edit_field != ''}<br /><div class="f_error">{$smarty.session.e.$edit_field}</div>{/if}
+      </div>
+{elseif $info.kind == 'tel_fax'}
+{assign var="edit_field_tel" value="`$edit_field`_tel"}
+{assign var="edit_field_fax" value="`$edit_field`_fax"}
+      <div class="tw{$info.text_width}">
+        <input id="{$edit_field_tel}" type="text" name="{$edit_field_tel}" value="{$smarty.session.p.$edit_field_tel}" class="text" placeholder="電話番号(半角)" >
+        <input id="{$edit_field_fax}" type="text" name="{$edit_field_fax}" value="{$smarty.session.p.$edit_field_fax}" class="text" placeholder="FAX番号(半角)" >
+        {if $smarty.session.e.$edit_field != ''}<br /><div class="f_error">{$smarty.session.e.$edit_field}</div>{/if}
+      </div>
+{elseif $info.kind == 'mobile_tel'}
+{assign var="edit_field_mobile" value="`$edit_field`_mobile"}
+{assign var="edit_field_tel" value="`$edit_field`_tel"}
+      <div class="tw{$info.text_width}">
+        <input id="{$edit_field_mobile}" type="text" name="{$edit_field_mobile}" value="{$smarty.session.p.$edit_field_mobile}" class="text" placeholder="携帯番号(半角)" >
+        <input id="{$edit_field_tel}" type="text" name="{$edit_field_tel}" value="{$smarty.session.p.$edit_field_tel}" class="text" placeholder="電話番号(半角)" >
+        {if $smarty.session.e.$edit_field != ''}<br /><div class="f_error">{$smarty.session.e.$edit_field}</div>{/if}
+      </div>
+{elseif $info.kind == 'school_org'}
+{assign var="edit_field_school_name" value="`$edit_field`_school_name"}
+      <div class="tw{$info.text_width}">
+        <input id="{$edit_field_school_name}" type="text" name="{$edit_field_school_name}" value="{$smarty.session.p.$edit_field_school_name}" class="text" placeholder="○○立" >
+{*
+        {html_options name=$edit_field options=$org_array selected=$smarty.session.p.$edit_field}
+*}
+      </div>
+{elseif $info.kind == 'school_name'}
+{assign var="edit_field_school_org" value="`$edit_field`_org"}
+      <div class="tw{$info.text_width}">
+        <input id="{$edit_field_school_org}" type="text" name="{$edit_field_school_org}" value="{$smarty.session.p.$edit_field_school_org}" class="text" placeholder="○○" >立
+        <input type="text" name="{$edit_field}" value="{$smarty.session.p.$edit_field}" class="text" placeholder="{$info.placeholder}" >
+        {if $smarty.session.e.$edit_field != ''}<br /><div class="f_error">{$smarty.session.e.$edit_field}</div>{/if}
+      </div>
+{elseif $info.kind == 'school_name_kana'}
+      <div class="tw{$info.text_width}">
+        <input type="text" name="{$edit_field}" value="{$smarty.session.p.$edit_field}" class="text" placeholder="{$info.placeholder}(全角)" >
+        {if $smarty.session.e.$edit_field != ''}<br /><div class="f_error">{$smarty.session.e.$edit_field}</div>{/if}
+      </div>
+{elseif $info.kind == 'address'}
+{assign var="edit_field_zip1" value="`$edit_field`_zip1"}
+{assign var="edit_field_zip2" value="`$edit_field`_zip2"}
+{assign var="edit_field_pref" value="`$edit_field`_pref"}
+      <div class="tw8">
+        <input id="{$edit_field_zip1}" type="text" name="{$edit_field_zip1}" value="{$smarty.session.p.$edit_field_zip1}" class="text" placeholder="郵便番号" >
+        -<input id="{$edit_field_zip2}" type="text" name="{$edit_field_zip2}" value="{$smarty.session.p.$edit_field_zip2}" class="text" placeholder="郵便番号"><br />
+{*      <input id="{$edit_field}_input" type="button" name="{$edit_field}_input" value="住所自動入力" class="" onClick="zip_search();"><br /> *}
+        {html_options name=$edit_field_pref options=$pref_array selected=$smarty.session.p.$edit_field_pref}
+        <input style="width: 400px;" id="{$edit_field}" type="text" name="{$edit_field}" value="{$smarty.session.p.$edit_field}" class="text" placeholder="住所" >
+        {if $smarty.session.e.$edit_field != ''}<br /><div class="f_error">{$smarty.session.e.$edit_field}</div>{/if}
+      </div>
+{elseif $info.kind == 'address_pref'}
+      <div class="tw8">
+        {html_options name=$edit_field options=$pref_array selected=$smarty.session.p.$edit_field}
+      </div>
+{elseif $info.kind == 'grade_j'}
+      <div class="tw{$info.text_width}">
+        {html_options name=$edit_field options=$grade_junior_array selected=$smarty.session.p.$edit_field}
+      </div>
+{elseif $info.kind == 'grade_e'}
+      <div class="tw{$info.text_width}">
+        {html_options name=$edit_field options=$grade_elementary_array selected=$smarty.session.p.$edit_field}
+      </div>
+{elseif $info.kind == 'email'}
+      <div class="tw{$info.text_width}">
+        <input type="text" name="{$edit_field}" value="{$smarty.session.p.$edit_field}" class="text" placeholder="{$info.placeholder}(半角)" >
+        {if $smarty.session.e.$edit_field != ''}<br /><div class="f_error">{$smarty.session.e.$edit_field}</div>{/if}
+      </div>
+{elseif $info.kind == 'email2'}
+      <div class="tw{$info.text_width}">
+        <input type="text" name="{$edit_field}" value="{$smarty.session.p.$edit_field}" class="text" placeholder="{$info.placeholder}(半角)" >
+      </div>
+{elseif $info.kind == 'gakunen_dan_j'}
+      <div class="f_radio_2">
+{assign var="edit_field_gakunen" value="`$edit_field`_gakunen"}
+          {html_options name=$edit_field_gakunen options=$grade_junior_array selected=$smarty.session.p.$edit_field_gakunen}
+{*
+          <input name="{$edit_field_gakunen}" type="radio" value="1" {if $smarty.session.p.$edit_field_gakunen==1}checked="checked"{/if}>
+          １年
+          <input name="{$edit_field_gakunen}" type="radio" value="2" {if $smarty.session.p.$edit_field_gakunen==2}checked="checked"{/if}>
+          ２年
+          <input name="{$edit_field_gakunen}" type="radio" value="3" {if $smarty.session.p.$edit_field_gakunen==3}checked="checked"{/if}>
+          ３年
+*}
+      </div>
+      <div class="tw6">
+{assign var="edit_field_dan" value="`$edit_field`_dan"}
+          {html_options name=$edit_field_dan options=$dan_array selected=$smarty.session.p.$edit_field_dan}
+{*          <input type="text" name="{$edit_field_dan}" id="{$edit_field_dan}" value="{$smarty.session.p.$edit_field_dan|escape}" placeholder="段位"> *}
+      </div>
+{elseif $info.kind == 'yosen_rank'}
+      <div class="tw{$info.text_width}">
+        {html_options name=$edit_field options=$yosen_rank_array selected=$smarty.session.p.$edit_field}
+      </div>
+{elseif $info.kind == 'form_pdf'}
+      <div class="tw{$info.text_width}">
+          <input name="pdf_download" type="submit" value="PDF申込書ダウンロード">
+          <input type="hidden" name="{$edit_field}" value="{$smarty.session.p.$edit_field}">
+      </div>
+{elseif $info.kind == 'hidden'}
+      <input type="hidden" name="{$edit_field}" value="{$info.placeholder}" >
+{elseif $info.kind == 'literal'}
+      <div class="tw{$info.text_width}">{$info.placeholder}</div>
+{elseif $info.kind == 'include'}
+{assign var="include_file" value="reg/mform_`$smarty.session.auth.series`_`$info.select_info`.html"}
+{include file="$include_file"}
+{/if}
+{/if}
+{/foreach}
+      <div class="clear_fix"></div>
+    </div>
+    <div class="clear_fix"></div>
+    <div class="button">
+      <input name="exec" type="submit" value="確認">
+      <input name="cancel" type="submit" value="戻る">
+    </div>
+  </form>
+</div>
+<footer>
+  <div class="jump"><a href="#main">このページのトップへ</a>
+    <div class="clear_fix"></div>
+  </div>
+</footer>
+<script type="text/javascript">
+{literal}
+<!--
+{/literal}
+
+{assign var="photo_index" value=0}
+{foreach from=$fields_info item=info name=fields}
+{assign var="edit_field" value=$info.field}
+{if $info.kind == 'photo'}
+{if $smarty.session.p.$edit_field != ''}
+    previewImage('{$edit_field}',null,{$info.text_width},{$photo_index});
+{/if}
+
+    $('#{$edit_field}_file_rotate').on('input', function () {
+        let val = $(this).val();
+        $('#{$edit_field}_file_rotate_text').val(val);
+        let d = JSON.parse($("input[name='{$edit_field}_effect']").val());
+        let prev_val = d.crop.rotate * -1;
+        cropper[{$photo_index}].rotate(prev_val);
+        cropper[{$photo_index}].rotate(val);
+    });
+
+    $('#{$edit_field}_file_rotate_text').on('input', function () {
+        let val = $(this).val();
+        $('#{$edit_field}_file_rotate').val(val);
+        let d = JSON.parse($("input[name='{$edit_field}_effect']").val());
+        let prev_val = d.crop.rotate * -1;
+        cropper[{$photo_index}].rotate(prev_val);
+        cropper[{$photo_index}].rotate(val);
+    });
+
+    $('#{$edit_field}_file_zoom').on('input', function () {
+        let val = $(this).val();
+        $('#{$edit_field}_file_zoom_text').val(val);
+        let prev_val = zoom[{$photo_index}] * -1;
+        cropper[{$photo_index}].zoom(prev_val);
+        cropper[{$photo_index}].zoom(val);
+        zoom[{$photo_index}] = val;
+    });
+
+    $('#{$edit_field}_file_zoom_text').on('input', function () {
+        let val = $(this).val();
+        $('#{$edit_field}_file_zoom').val(val);
+        let prev_val = zoom[{$photo_index}] * -1;
+        cropper[{$photo_index}].zoom(prev_val);
+        cropper[{$photo_index}].zoom(val);
+        zoom[{$photo_index}] = val;
+    });
+
+{assign var="photo_index" value=1}
+{/if}
+{/foreach}
+
+{literal}
+-->
+{/literal}
+</script>
+</body>
+</html>

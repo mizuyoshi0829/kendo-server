@@ -1,0 +1,5 @@
+  </div>
+</div>
+<div id="footer">{$configs.admin_title}管理画面</div>
+</body>
+</html>

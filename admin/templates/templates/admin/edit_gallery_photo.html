@@ -1,0 +1,30 @@
+{$htmlheader|smarty:nodefaults}
+    <h2>{$edit_title}</h2>
+    <br />
+    <form action="gallery_photo.php" method="post" enctype="multipart/form-data">
+      <input type="hidden" name="mode" value="confirm">
+      <table id="ex_t" border="0" cellspacing="1" cellpadding="0">
+        <tr>
+          <td class="td_left3">タイトル</td>
+          <td class="td_right"><input type="text" name="title" size="120" maxlength="128" value="{$smarty.session.p.title}"></td>
+        </tr>
+        <tr>
+          <td class="td_left3">写真</td>
+          <td class="td_right">
+            <div style="margin: 5px;">
+{if $smarty.session.p.image != ''}<a href="/galleryimage/{$smarty.session.p.image}.jpg" target="_blank"><img src="/galleryimage/{$smarty.session.p.image}.jpg" width="200" /></a>{/if}
+            </div>
+            <p>{$smarty.session.p.image}.jpg</p>
+            <input type="file" id="image_input" name="image" size="60" />
+            &nbsp;<input type="submit" name="upload_image" value="アップロード" />
+          </td>
+        </tr>
+      </table>
+      <br />
+      <input type="submit" name="cancel" value="中止">
+      <input type="submit" name="exec" value="実行">
+    </form>
+    <br />
+    <br />
+    <br />
+{$htmlfooter|smarty:nodefaults}

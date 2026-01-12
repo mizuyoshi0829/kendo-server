@@ -1,0 +1,647 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport"
+content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link media="only screen and (max-device-width:480px)" href="{$root_url}css/mobile.css" type="text/css" rel="stylesheet" />
+<link media="screen and (min-device-width:481px)" href="{$root_url}css/style.css" type="text/css" rel="stylesheet" />
+<!--[if IE]>
+<link href="{$root_url}design.css" type="text/css" rel="stylesheet" />
+<![endif]-->
+
+<meta charset="UTF-8">
+<title>入力フォーム</title>
+</head>
+
+<body>
+<div id="main">
+  <form id="form" name="form1" method="post" action="index.php">
+    <input name="mode" type="hidden" value="confirm" />
+    <div class="titlename">
+      <h1>入力フォーム</h1>
+    </div>
+
+
+
+    <div class="discription">1.人名漢字で異体字の場合は氏名備考欄にその旨を記入してください。<br>
+      2.フリガナは全角カタカナ、電話番号、メールアドレスは半角で記入してください。<br>
+      3.監督と引率者が同一の場合も引率者欄にも記入してください。</div>
+    <div class="f_box">
+
+
+{foreach from=$fields_info item=info}
+{if $info.kind != ''}
+      <div class="midasi">{$info.name}</div>
+
+
+
+    <tr>
+{assign var="ref_field" value="ref_`$info.field`"}
+{assign var="edit_field" value=$info.field}
+        <td class="normal"{if $info.language == 'mono'} colspan="2"{/if}>
+{if $info.kind == 'text'}
+            <input id="kanri_eng" type="text" name="{$ref_field}" value="{$smarty.session.p.$ref_field}" class="text">
+{if $info.language == 'multi'}
+        </td>
+        <td class="normal">
+            <input id="kanri_eng" type="text" name="{$edit_field}" value="{$smarty.session.p.$edit_field}" class="text">
+{/if}
+{elseif $info.kind == 'textarea'}
+            <textarea id="kanri_eng" name="{$ref_field}" rows="8">{$smarty.session.p.$ref_field}</textarea>
+{if $info.language == 'multi'}
+        </td>
+        <td class="normal">
+            <textarea id="kanri_eng" name="{$edit_field}" rows="8">{$smarty.session.p.$edit_field}</textarea>
+{/if}
+{elseif $info.kind == 'check'}
+			{html_checkboxes name=$ref_field options=$info.sel1 selected=$smarty.session.p.$ref_field separator='<br />'}
+{if $info.language == 'multi'}
+        </td>
+			{html_checkboxes name=$edit_field options=$info.sel2 selected=$smarty.session.p.$edit_field separator='<br />'}
+{/if}
+{elseif $info.kind == 'check_one'}
+			{html_checkboxes name=$ref_field options=$info.sel1 selected=$smarty.session.p.$ref_field separator='<br />'}
+{if $info.language == 'multi'}
+        </td>
+			{html_checkboxes name=$edit_field options=$info.sel2 selected=$smarty.session.p.$edit_field separator='<br />'}
+{/if}
+{elseif $info.kind == 'select'}
+            {html_options name=$ref_field options=$info.sel1 selected=$smarty.session.p.$ref_field}
+{if $info.language == 'multi'}
+        </td>
+        <td class="normal">
+            {html_options name=$edit_field options=$info.sel2 selected=$smarty.session.p.$edit_field}
+{/if}
+{elseif $info.kind == 'radio'}
+			{html_radios name=$ref_field options=$info.sel1 selected=$smarty.session.p.$ref_field separator='<br />'}
+{if $info.language == 'multi'}
+        </td>
+        <td class="normal">
+			{html_radios name=$edit_field options=$info.sel2 selected=$smarty.session.p.$edit_field separator='<br />'}
+{/if}
+{elseif $info.kind == 'zip'}
+{assign var="ref_field2" value="ref_`$info.field`2"}
+            <input id="{$ref_field}" type="text" name="{$ref_field}" value="{$smarty.session.p.$ref_field}" class="text zip">
+            -<input id="{$ref_field2}" type="text" name="{$ref_field2}" value="{$smarty.session.p.$ref_field2}" class="text zip">
+            <input id="{$info.field}_input" type="button" name="{$info.field}_input" value="住所自動入力" class="" onClick="zip_search();">
+{if $info.language == 'multi'}
+        </td>
+        <td class="normal">
+            <input id="{$ref_field}" type="text" name="{$ref_field}" value="{$smarty.session.p.$ref_field}" class="text zip">
+            -<input id="{$ref_field2}" type="text" name="{$ref_field2}" value="{$smarty.session.p.$ref_field2}" class="text zip">
+{/if}
+{elseif $info.kind == 'admin_zip'}
+{assign var="ref_field2" value="ref_`$info.field`2"}
+            <input id="{$ref_field}" type="text" name="{$ref_field}" value="{$smarty.session.p.$ref_field}" class="text zip">
+            -<input id="{$ref_field2}" type="text" name="{$ref_field2}" value="{$smarty.session.p.$ref_field2}" class="text zip">
+{*
+            <input id="{$info.field}_input" type="button" name="{$info.field}_input" value="住所自動入力" class="" onClick="admin_zip_search();">
+*}
+{if $info.language == 'multi'}
+        </td>
+        <td class="normal">
+            <input id="{$ref_field}" type="text" name="{$ref_field}" value="{$smarty.session.p.$ref_field}" class="text zip">
+            -<input id="{$ref_field2}" type="text" name="{$ref_field2}" value="{$smarty.session.p.$ref_field2}" class="text zip">
+{/if}
+{elseif $info.kind == 'tel'}
+{assign var="ref_field2" value="ref_`$info.field`2"}
+            +81(0)<input id="kanri_eng" type="text" name="{$ref_field}" value="{$smarty.session.p.$ref_field}" class="text">
+{elseif $info.kind == 'party'}
+{assign var="ref_field2" value="ref_`$info.field`2"}
+            <input type="radio" name="{$ref_field}_check" value="1" {if $smarty.session.p.$ref_field>0}checked="checked" {/if}/>{$info.sel1[1][0]}<input id="kanri_eng" type="text" name="{$ref_field}" value="{if $smarty.session.p.$ref_field>0}{$smarty.session.p.$ref_field}{/if}" class="text zip">{$info.sel1[1][1]}<input type="radio" name="{$ref_field}_check" value="0" {if $smarty.session.p.$ref_field==0}checked="checked" {/if}/>{$info.sel1[0][0]}
+{elseif $info.kind == 'seating'}
+{assign var="ref_field2" value="ref_`$info.field`2"}
+            {$info.sel1[1][0]}<input id="kanri_eng" type="text" name="{$ref_field}" value="{$smarty.session.p.$ref_field}" class="text zip">{$info.sel1[1][1]}<input id="kanri_eng" type="text" name="{$ref_field2}" value="{$smarty.session.p.$ref_field2}" class="text zip">{$info.sel1[1][2]}
+{/if}
+        </td>
+    </tr>
+{/if}
+{/foreach}
+
+
+
+
+
+      <div class="midasi">種別</div>
+      <div class="tw12">
+        <input type="text" name="s_org" id="s_org" size="20" value="{$smarty.session.p.s_org|escape}" placeholder="○○" autofocus>
+      </div>
+      <div class="f_select">
+        {html_options name=org options=$org_array selected=$smarty.session.p.org}
+      </div>
+      <div class="discription"> 記入例：①通常の場合［テキストボックスは市の名称］＋［選択欄：市立］　②都道府県立の場合［テキストボックスは県の名称］＋［選択欄：県立］　③私立の場合［テキストボックスは無記入］＋［選択欄：私立］　④何もつかない場合［テキストボックスは無記入］＋［選択欄：-］　⑤学校組合立の場合［テキストボックスに組合名称］＋［選択欄：学校組合立］ </div>
+      <div class="midasi">学校名</div>
+      <div class="tw100">
+        <input type="text" name="s_name" id="schoolname" size="30" value="{$smarty.session.p.s_name|escape}" placeholder="学校名">
+        中学校</div>
+      <div class="midasi">学校名フリガナ</div>
+      <div class="tw110">
+        <input type="text" name="s_name_kana" id="s_name_kana" value="{$smarty.session.p.s_name_kana|escape}" placeholder="学校名フリガナ">
+      </div>
+      <div class="midasi">学校名略称</div>
+      <div class="tw100">
+        <input type="text" name="s_name_ryaku" id="s_name_ryaku" value="{$smarty.session.p.s_name_ryaku|escape}" placeholder="学校名略称">
+      </div>
+      <div class="midasi">学校住所／郵便番号</div>
+      <div class="pref">
+        {html_options name=s_pref options=$pref_array selected=$smarty.session.p.s_pref}
+      </div>
+      <div class="tw8">
+        <input type="text" name="s_zip" id="s_zip" value="{$smarty.session.p.s_zip|escape}" placeholder="郵便番号">
+      </div>
+      <div class="tw100">
+        <textarea name="s_address" id="s_address" value="{$smarty.session.p.s_address|escape}" placeholder="学校住所" value="{$smarty.session.p.s_org|escape}" cols="38" rows="2"></textarea>
+      </div>
+      <div class="midasi">電話番号／FAX番号</div>
+      <div class="tw14">
+        <input type="text" name="s_phone" id="s_phone" value="{$smarty.session.p.s_phone|escape}" placeholder="電話番号">
+      </div>
+      <div class="tw14">
+        <input type="text" name="s_fax" id="s_fax" value="{$smarty.session.p.s_fax|escape}" placeholder="FAX番号">
+      </div>
+      <div class="midasi">学校長氏名</div>
+      <div class="tw8">
+        <input type="text" name="kouchou_sei" id="kouchou_sei" value="{$smarty.session.p.kouchou_sei|escape}" placeholder="姓">
+      </div>
+      <div class="tw8">
+        <input type="text" name="kouchou_name" id="kouchou_name" value="{$smarty.session.p.kouchou_name|escape}" placeholder="名">
+      </div>
+      <div class="midasi">申込日</div>
+      <div class="f_select">
+        {html_options name=mousikomi_month options=$month_array selected=$smarty.session.p.mousikomi_month}
+      </div>
+      <div class="f_select">
+        {html_options name=mousikomi_day options=$day_array selected=$smarty.session.p.mousikomi_day}
+      </div>
+      <div class="clear_fix"></div>
+    </div>
+    <div class="titlename2">
+      <h2>選択項目</h2>
+    </div>
+    <div class="f_radio">
+      <input name="shumoku_dantai_m" type="checkbox" value="1" {if $smarty.session.p.shumoku_dantai_m==1}checked="checked"{/if}>
+      男子団体　
+      <input name="shumoku_kojin_m" type="checkbox" value="1" {if $smarty.session.p.shumoku_kojin_m==1}checked="checked"{/if}>
+      男子個人　
+      <input name="shumoku_dantai_w" type="checkbox" value="1" {if $smarty.session.p.shumoku_dantai_w==1}checked="checked"{/if}>
+      女子団体　
+      <input name="shumoku_kojin_w" type="checkbox" value="1" {if $smarty.session.p.shumoku_kojin_w==1}checked="checked"{/if}>
+      女子個人</div>
+    <div class="titlename2">
+      <h2>個人情報入力</h2>
+    </div>
+    <div class="f_box">
+      <div class="data_title">
+        <h2>監督情報入力</h2>
+      </div>
+      <div class="midasi">監督氏名／氏名備考</div>
+      <div class="tw8">
+        <input type="text" name="kantoku_sei" id="kantoku_sei" value="{$smarty.session.p.kantoku_sei|escape}" placeholder="姓">
+      </div>
+      <div class="tw8">
+        <input type="text" name="kantoku_name" id="kantoku_name" value="{$smarty.session.p.kantoku_name|escape}" placeholder="名">
+      </div>
+      <div class="tw10">
+        <input type="text" name="kantoku_bikou" id="kantoku_bikou" value="{$smarty.session.p.kantoku_bikou|escape}" placeholder="備考：異体字など">
+      </div>
+      <div class="midasi">監督フリガナ</div>
+      <div class="tw12">
+        <input type="text" name="kantoku_sei_kana" id="kantoku_sei_kana" value="{$smarty.session.p.kantoku_sei_kana|escape}" placeholder="姓カナ">
+      </div>
+      <div class="tw12">
+        <input type="text" name="kantoku_name_kana" id="kantoku_name_kana" value="{$smarty.session.p.kantoku_name_kana|escape}" placeholder="名カナ">
+      </div>
+      <div class="midasi">職名</div>
+      <div class="f_radio">
+        <input name="kanktoku_shokumei" type="radio" value="1" {if $smarty.session.p.kanktoku_shokumei==1}checked="checked"{/if}>
+        教諭　
+        <input name="kanktoku_shokumei" type="radio" value="2" {if $smarty.session.p.kanktoku_shokumei==2}checked="checked"{/if}>
+        専任監督　 </div>
+      <div class="midasi">携帯番号／自宅電話</div>
+      <div class="tw10">
+        <input type="text" name="kantoku_keitai" id="kantoku_keitai" value="{$smarty.session.p.kantoku_keitai|escape}" placeholder="携帯番号">
+      </div>
+      <div class="tw10">
+        <input type="text" name="kantoku_jitaku" id="kantoku_keitai" value="{$smarty.session.p.kantoku_jitaku|escape}" placeholder="自宅電話">
+      </div>
+      <div class="midasi">メールアドレス</div>
+      <div class="tw110">
+        <input type="text" name="kantoku_email" id="kantoku_email" value="{$smarty.session.p.kantoku_email|escape}" placeholder="メールアドレス">
+      </div>
+      <div class="midasi">自宅住所／郵便番号</div>
+      <div class="pref">
+        {html_options name=kantoku_pref options=$pref_array selected=$smarty.session.p.kantoku_pref}
+      </div>
+      <div class="tw8">
+        <input type="text" name="kantoku_zip" id="kantoku_zip" value="{$smarty.session.p.kantoku_zip|escape}" placeholder="自宅郵便番号">
+      </div>
+      <div class="tw100">
+        <textarea name="kantoku_address" id="kantoku_address" placeholder="自宅住所" cols="38" rows="2">{$smarty.session.p.kantoku_address|escape}</textarea>
+      </div>
+      <div class="clear_fix"></div>
+    </div>
+    <div class="f_box">
+      <div class="data_title">
+        <h2>引率者情報入力</h2>
+      </div>
+      <div class="midasi">引率者氏名／氏名備考</div>
+      <div class="tw8">
+        <input type="text" name="insotu_sei" id="insotu_sei" value="{$smarty.session.p.insotu_sei|escape}" placeholder="姓">
+      </div>
+      <div class="tw8">
+        <input type="text" name="insotuu_name" id="insotu_name" value="{$smarty.session.p.insotuu_name|escape}" placeholder="名">
+      </div>
+      <div class="tw10">
+        <input type="text" name="insotu_bikou" id="insotu_bikou" value="{$smarty.session.p.insotu_bikou|escape}" placeholder="備考：異体字など">
+      </div>
+      <div class="midasi">引率者フリガナ</div>
+      <div class="tw12">
+        <input type="text" name="insotu_sei_kana" id="insotu_sei_kana" value="{$smarty.session.p.insotu_sei_kana|escape}" placeholder="姓カナ">
+      </div>
+      <div class="tw12">
+        <input type="text" name="insotu_name_kana" id="insotu_name_kana" value="{$smarty.session.p.insotu_name_kana|escape}" placeholder="名カナ">
+      </div>
+      <div class="midasi">携帯番号／自宅電話</div>
+      <div class="tw10">
+        <input type="text" name="insotu_keitai" id="insotu_keitai" value="{$smarty.session.p.insotu_keitai|escape}" placeholder="携帯番号">
+      </div>
+      <div class="tw10">
+        <input type="text" name="insotu_tel" id="insotu_tel" value="{$smarty.session.p.insotu_tel|escape}" placeholder="自宅電話">
+      </div>
+      <div class="midasi">自宅住所／郵便番号</div>
+      <div class="pref">
+        {html_options name=insotu_pref options=$pref_array selected=$smarty.session.p.insotu_pref}
+      </div>
+      <div class="tw8">
+        <input type="text" name="insotu_zip" id="insotu_zip" value="{$smarty.session.p.insotu_zip|escape}" placeholder="自宅郵便番号">
+      </div>
+      <div class="tw100">
+        <textarea name="insotu_address" id="insotu_address" placeholder="自宅住所" cols="38" rows="2"></textarea>
+      </div>
+      <div class="clear_fix"></div>
+    </div>
+    <div class="f_box">
+      <div class="data_title">
+        <h2>外部指導者情報入力</h2>
+      </div>
+      <div class="midasi">外部指導者氏名／氏名備考</div>
+      <div class="tw8">
+        <input type="text" name="gaibu_sei" id="gaibu_sei" value="{$smarty.session.p.gaibu_sei|escape}" placeholder="姓">
+      </div>
+      <div class="tw8">
+        <input type="text" name="gaibu_name" id="gaibu_name" value="{$smarty.session.p.gaibu_name|escape}" placeholder="名">
+      </div>
+      <div class="tw10">
+        <input type="text" name="gaibu_bikou" id="gaibu_bikou" value="{$smarty.session.p.gaibu_bikou|escape}" placeholder="備考：異体字など">
+      </div>
+      <div class="midasi">外部指導者フリガナ</div>
+      <div class="tw12">
+        <input type="text" name="gaibu_sei_kana" id="gaibu_sei_kana" value="{$smarty.session.p.gaibu_sei_kana|escape}" placeholder="姓カナ">
+      </div>
+      <div class="tw12">
+        <input type="text" name="gaibu_name_kana" id="gaibu_name_kana" value="{$smarty.session.p.gaibu_name_kana|escape}" placeholder="名カナ">
+      </div>
+      <div class="midasi">携帯番号／自宅電話</div>
+      <div class="tw10">
+        <input type="text" name="gaibu_keitai" id="gaibu_keitai" value="{$smarty.session.p.gaibu_keitai|escape}" placeholder="携帯番号">
+      </div>
+      <div class="tw10">
+        <input type="text" name="gaibu_tel" id="gaibu_tel" value="{$smarty.session.p.gaibu_tel|escape}" placeholder="自宅電話">
+      </div>
+      <div class="midasi">自宅住所／郵便番号</div>
+      <div class="pref">
+        {html_options name=gaibu_pref options=$pref_array selected=$smarty.session.p.gaibu_pref}
+      </div>
+      <div class="tw8">
+        <input type="text" name="gaibu_zip" id="gaibu_zip" value="{$smarty.session.p.gaibu_zip|escape}" placeholder="自宅郵便番号">
+      </div>
+      <div class="tw100">
+        <textarea name="gaibu_address" id="gaibu_address" placeholder="自宅住所" cols="38" rows="2"></textarea>
+      </div>
+      <div class="clear_fix"></div>
+    </div>
+    <div class="f_box">
+      <div class="data_title">
+        <h2>中学校体育連会長情報入力</h2>
+      </div>
+      <div class="midasi">中学校体育連会長氏名</div>
+      <div class="tw8">
+        <input type="text" name="gaibu_sei" id="gaibu_sei" value="{$smarty.session.p.gaibu_sei|escape}" placeholder="姓">
+      </div>
+      <div class="tw8">
+        <input type="text" name="gaibu_name" id="gaibu_name" value="{$smarty.session.p.gaibu_name|escape}" placeholder="名">
+      </div>
+      <div class="tw10">
+        <input type="text" name="gaibu_bikou" id="gaibu_bikou" value="{$smarty.session.p.gaibu_bikou|escape}" placeholder="備考：異体字など">
+      </div>
+      <div class="clear_fix"></div>
+    </div>
+    <div class="clear_fix"></div>
+    <div id="dantai_men">
+      <div class="titlename2">
+        <h2>男子団体</h2>
+      </div>
+      <div class="midasi">男子団体出場回数</div>
+      <div class="tw8">
+        <input type="text" name="dantai_kaisuu_m" id="dantai_kaisuu_m" value="{$smarty.session.p.dantai_kaisuu_m|escape}" placeholder="出場回数">
+        （今回含む） </div>
+{foreach from=$dantai_rank_array item=rank}
+      <!-- 個別情報 -->
+      <div class="f_box">
+        <div class="dantai_title1">
+          <h2>男子団体・{$rank.title}入力</h2>
+        </div>
+        <div class="midasi">氏名</div>
+        <div class="tw8">
+{assign var='field' value="dantai_sei_m`$rank.value`"}
+          <input type="text" name="{$field}" id="{$field}" value="{$smarty.session.p.$field|escape}" placeholder="{$rank.title}姓">
+        </div>
+        <div class="tw8">
+{assign var='field' value="dantai_mei_m`$rank.value`"}
+          <input type="text" name="{$field}" id="{$field}" value="{$smarty.session.p.$field|escape}" placeholder="{$rank.title}名">
+        </div>
+        <div class="tw10">
+{assign var='field' value="dantai_bikou_m`$rank.value`"}
+          <input type="text" name="{$field}" id="{$field}" value="{$smarty.session.p.$field|escape}" placeholder="備考：異体字など">
+        </div>
+        <div class="tw8">
+{assign var='field' value="dantai_dispname_m`$rank.value`"}
+          <input type="text" name="{$field}" id="{$field}" value="{$smarty.session.p.$field|escape}" placeholder="表示名">
+        </div>
+        <div class="midasi">フリガナ</div>
+        <div class="tw12">
+{assign var='field' value="dantai_sei_kana_m`$rank.value`"}
+          <input type="text" name="{$field}" id="{$field}" value="{$smarty.session.p.$field|escape}" placeholder="{$rank.title}姓カナ">
+        </div>
+        <div class="tw12">
+{assign var='field' value="dantai_mei_kana_m`$rank.value`"}
+          <input type="text" name="{$field}" id="{$field}" value="{$smarty.session.p.$field|escape}" placeholder="{$rank.title}名カナ">
+        </div>
+        <div class="midasi">学年／段位</div>
+        <div class="f_radio_2">
+{assign var='field' value="dantai_gakunen_m`$rank.value`"}
+          <input name="{$field}" type="radio" value="1" {if $smarty.session.p.$field==1}checked="checked"{/if}>
+          １年
+          <input name="{$field}" type="radio" value="2" {if $smarty.session.p.$field==2}checked="checked"{/if}>
+          ２年
+          <input name="{$field}" type="radio" value="3" {if $smarty.session.p.$field==3}checked="checked"{/if}>
+          ３年</div>
+        <div class="tw6">
+{assign var='field' value="dantai_dan_m`$rank.value`"}
+          <input type="text" name="{$field}" id="{$field}" value="{$smarty.session.p.$field|escape}" placeholder="段位">
+        </div>
+        <div class="midasi">生年月日／年齢</div>
+        <div class="f_select">
+{assign var='field' value="dantai_b_year_m`$rank.value`"}
+          {html_options name=$field options=$birth_year_array selected=$smarty.session.p.$field}
+        </div>
+        <div class="f_select">
+{assign var='field' value="dantai_b_month_m`$rank.value`"}
+          {html_options name=$field options=$month_array selected=$smarty.session.p.$field}
+        </div>
+        <div class="f_select">
+{assign var='field' value="dantai_b_day_m`$rank.value`"}
+          {html_options name=$field options=$day_array selected=$smarty.session.p.$field}
+        </div>
+        <div class="tw_age">
+{assign var='field' value="dantai_age_m`$rank.value`"}
+          <input type="text" name="{$field}" id="{$field}" value="{$smarty.session.p.$field|escape}" placeholder="年齢">
+          歳</div>
+        <div class="clear_fix"></div>
+      </div>
+{/foreach}
+      <div class="clear_fix"></div>
+    </div>
+    <div class="clear_fix"></div>
+    <!-- 女子団体 -->
+    <div id="dantai_women">
+      <div class="titlename2">
+        <h2>女子団体</h2>
+      </div>
+      <div class="midasi">女子団体出場回数</div>
+      <div class="tw8">
+        <input type="text" name="dantai_kaisuu_w" id="dantai_kaisuu_w" value="{$smarty.session.p.dantai_kaisuu_w|escape}" placeholder="出場回数">
+        （今回含む） </div>
+{foreach from=$dantai_rank_array item=rank}
+      <!-- 個別情報 -->
+      <div class="f_box">
+        <div class="dantai_title2">
+          <h2>女子団体・{$rank.title}入力</h2>
+        </div>
+        <div class="midasi">氏名</div>
+        <div class="tw8">
+{assign var='field' value="dantai_sei_w`$rank.value`"}
+          <input type="text" name="{$field}" id="{$field}" value="{$smarty.session.p.$field|escape}" placeholder="{$rank.title}姓">
+        </div>
+        <div class="tw8">
+{assign var='field' value="dantai_mei_w`$rank.value`"}
+          <input type="text" name="{$field}" id="{$field}" value="{$smarty.session.p.$field|escape}" placeholder="{$rank.title}名">
+        </div>
+        <div class="tw10">
+{assign var='field' value="dantai_bikou_w`$rank.value`"}
+          <input type="text" name="{$field}" id="{$field}" value="{$smarty.session.p.$field|escape}" placeholder="備考：異体字など">
+        </div>
+        <div class="tw8">
+{assign var='field' value="dantai_dispname_w`$rank.value`"}
+          <input type="text" name="{$field}" id="{$field}" value="{$smarty.session.p.$field|escape}" placeholder="表示名">
+        </div>
+        <div class="midasi">フリガナ</div>
+        <div class="tw12">
+{assign var='field' value="dantai_sei_kana_w`$rank.value`"}
+          <input type="text" name="{$field}" id="{$field}" value="{$smarty.session.p.$field|escape}" placeholder="{$rank.title}姓カナ">
+        </div>
+        <div class="tw12">
+{assign var='field' value="dantai_mei_kana_w`$rank.value`"}
+          <input type="text" name="{$field}" id="{$field}" value="{$smarty.session.p.$field|escape}" placeholder="{$rank.title}名カナ">
+        </div>
+        <div class="midasi">学年／段位</div>
+        <div class="f_radio_2">
+{assign var='field' value="dantai_gakunen_w`$rank.value`"}
+          <input name="{$field}" type="radio" value="1" {if $smarty.session.p.$field==1}checked="checked"{/if}>
+          １年
+          <input name="{$field}" type="radio" value="2" {if $smarty.session.p.$field==2}checked="checked"{/if}>
+          ２年
+          <input name="{$field}" type="radio" value="3" {if $smarty.session.p.$field==3}checked="checked"{/if}>
+          ３年</div>
+        <div class="tw6">
+{assign var='field' value="dantai_dan_w`$rank.value`"}
+          <input type="text" name="{$field}" id="{$field}" value="{$smarty.session.p.$field|escape}" placeholder="段位">
+        </div>
+        <div class="midasi">生年月日／年齢</div>
+        <div class="f_select">
+{assign var='field' value="dantai_b_year_w`$rank.value`"}
+          {html_options name=$field options=$birth_year_array selected=$smarty.session.p.$field}
+        </div>
+        <div class="f_select">
+{assign var='field' value="dantai_b_month_w`$rank.value`"}
+          {html_options name=$field options=$month_array selected=$smarty.session.p.$field}
+        </div>
+        <div class="f_select">
+{assign var='field' value="dantai_b_day_w`$rank.value`"}
+          {html_options name=$field options=$day_array selected=$smarty.session.p.$field}
+        </div>
+        <div class="tw_age">
+{assign var='field' value="dantai_age_w`$rank.value`"}
+          <input type="text" name="{$field}" id="{$field}" value="{$smarty.session.p.$field|escape}" placeholder="年齢">
+          歳</div>
+        <div class="clear_fix"></div>
+      </div>
+{/foreach}
+      <div class="clear_fix"></div>
+    </div>
+    <div id="kojin_men">
+      <div class="titlename2">
+        <h2>男子個人</h2>
+      </div>
+{section name=kojin_index start=1 loop=4 step=1}
+      <!-- 個別情報 -->
+      <div class="f_box">
+        <div class="kojin_title1">
+          <h2>男子個人{$smarty.section.kojin_index.index}入力</h2>
+        </div>
+        <div class="midasi">氏名</div>
+        <div class="tw8">
+{assign var='field' value="kojin_sei_m`$smarty.section.kojin_index.index`"}
+          <input type="text" name="{$field}" id="{$field}" value="{$smarty.session.p.$field|escape}" placeholder="個人{$smarty.section.kojin_index.index}姓">
+        </div>
+        <div class="tw8">
+{assign var='field' value="kojin_mei_m`$smarty.section.kojin_index.index`"}
+          <input type="text" name="{$field}" id="{$field}" value="{$smarty.session.p.$field|escape}" placeholder="個人{$smarty.section.kojin_index.index}名">
+        </div>
+        <div class="tw10">
+{assign var='field' value="kojin_bikou_m`$smarty.section.kojin_index.index`"}
+          <input type="text" name="{$field}" id="{$field}" value="{$smarty.session.p.$field|escape}" placeholder="備考：異体字など">
+        </div>
+        <div class="tw8">
+{assign var='field' value="kojin_dispname_m`$smarty.section.kojin_index.index`"}
+          <input type="text" name="{$field}" id="{$field}" value="{$smarty.session.p.$field|escape}" placeholder="表示名">
+        </div>
+        </div>
+        <div class="midasi">フリガナ</div>
+        <div class="tw12">
+{assign var='field' value="kojin_sei_kana_m`$smarty.section.kojin_index.index`"}
+          <input type="text" name="{$field}" id="{$field}" value="{$smarty.session.p.$field|escape}" placeholder="個人{$smarty.section.kojin_index.index}姓カナ">
+        </div>
+        <div class="tw12">
+{assign var='field' value="kojin_mei_kana_m`$smarty.section.kojin_index.index`"}
+          <input type="text" name="{$field}" id="{$field}" value="{$smarty.session.p.$field|escape}" placeholder="個人{$smarty.section.kojin_index.index}名カナ">
+        </div>
+        <div class="midasi">学年／段位</div>
+        <div class="f_radio_2">
+{assign var='field' value="kojin_gakunen_m`$smarty.section.kojin_index.index`"}
+          <input name="{$field}" type="radio" value="1" {if $smarty.session.p.$field==1}checked="checked"{/if}>
+          １年
+          <input name="{$field}" type="radio" value="2" {if $smarty.session.p.$field==2}checked="checked"{/if}>
+          ２年
+          <input name="{$field}" type="radio" value="3" {if $smarty.session.p.$field==3}checked="checked"{/if}>
+          ３年</div>
+        <div class="tw6">
+{assign var='field' value="kojin_dan_m`$smarty.section.kojin_index.index`"}
+          <input type="text" name="{$field}" id="{$field}" value="{$smarty.session.p.$field|escape}" placeholder="段位">
+        </div>
+        <div class="midasi">生年月日／年齢</div>
+        <div class="f_select">
+{assign var='field' value="kojin_b_year_m`$smarty.section.kojin_index.index`"}
+          {html_options name=$field options=$birth_year_array selected=$smarty.session.p.$field}
+        </div>
+        <div class="f_select">
+{assign var='field' value="kojin_b_month_m`$smarty.section.kojin_index.index`"}
+          {html_options name=$field options=$month_array selected=$smarty.session.p.$field}
+        </div>
+        <div class="f_select">
+{assign var='field' value="kojin_b_day_m`$smarty.section.kojin_index.index`"}
+          {html_options name=$field options=$day_array selected=$smarty.session.p.$field}
+        </div>
+        <div class="tw_age">
+{assign var='field' value="kojin_age_m`$smarty.section.kojin_index.index`"}
+          <input type="text" name="{$field}" id="{$field}" value="{$smarty.session.p.$field|escape}" placeholder="年齢">
+          歳</div>
+        <div class="clear_fix"></div>
+      </div>
+{/section}
+      <div class="clear_fix"></div>
+    </div>
+    <div id="kojin_women">
+      <div class="titlename2">女子個人</div>
+{section name=kojin_index start=1 loop=4 step=1}
+      <!-- 個別情報個人入力1 -->
+      <div class="f_box">
+        <div class="kojin_title2">
+          <h2>女子個人{$smarty.section.kojin_index.index}入力</h2>
+        </div>
+        <div class="midasi">氏名</div>
+        <div class="tw8">
+{assign var='field' value="kojin_sei_w`$smarty.section.kojin_index.index`"}
+          <input type="text" name="{$field}" id="{$field}" value="{$smarty.session.p.$field|escape}" placeholder="個人{$smarty.section.kojin_index.index}姓">
+        </div>
+        <div class="tw8">
+{assign var='field' value="kojin_mei_w`$smarty.section.kojin_index.index`"}
+          <input type="text" name="{$field}" id="{$field}" value="{$smarty.session.p.$field|escape}" placeholder="個人{$smarty.section.kojin_index.index}名">
+        </div>
+        <div class="tw10">
+{assign var='field' value="kojin_bikou_w`$smarty.section.kojin_index.index`"}
+          <input type="text" name="{$field}" id="{$field}" value="{$smarty.session.p.$field|escape}" placeholder="備考：異体字など">
+        </div>
+        <div class="tw8">
+{assign var='field' value="dantai_dispname_w`$smarty.section.kojin_index.index`"}
+          <input type="text" name="{$field}" id="{$field}" value="{$smarty.session.p.$field|escape}" placeholder="表示名">
+        </div>
+        <div class="midasi">フリガナ</div>
+        <div class="tw12">
+{assign var='field' value="kojin_sei_kana_w`$smarty.section.kojin_index.index`"}
+          <input type="text" name="{$field}" id="{$field}" value="{$smarty.session.p.$field|escape}" placeholder="個人{$smarty.section.kojin_index.index}姓カナ">
+        </div>
+        <div class="tw12">
+{assign var='field' value="kojin_mei_kana_w`$smarty.section.kojin_index.index`"}
+          <input type="text" name="{$field}" id="{$field}" value="{$smarty.session.p.$field|escape}" placeholder="個人{$smarty.section.kojin_index.index}名カナ">
+        </div>
+        <div class="midasi">学年／段位</div>
+        <div class="f_radio_2">
+{assign var='field' value="kojin_gakunen_w`$smarty.section.kojin_index.index`"}
+          <input name="{$field}" type="radio" value="1" {if $smarty.session.p.$field==1}checked="checked"{/if}>
+          １年
+          <input name="{$field}" type="radio" value="2" {if $smarty.session.p.$field==2}checked="checked"{/if}>
+          ２年
+          <input name="{$field}" type="radio" value="3" {if $smarty.session.p.$field==3}checked="checked"{/if}>
+          ３年</div>
+        <div class="tw6">
+{assign var='field' value="kojin_dan_w`$smarty.section.kojin_index.index`"}
+          <input type="text" name="{$field}" id="{$field}" value="{$smarty.session.p.$field|escape}" placeholder="段位">
+        </div>
+        <div class="midasi">生年月日／年齢</div>
+        <div class="f_select">
+{assign var='field' value="kojin_b_year_w`$smarty.section.kojin_index.index`"}
+          {html_options name=$field options=$birth_year_array selected=$smarty.session.p.$field}
+        </div>
+        <div class="f_select">
+{assign var='field' value="kojin_b_month_w`$smarty.section.kojin_index.index`"}
+          {html_options name=$field options=$month_array selected=$smarty.session.p.$field}
+        </div>
+        <div class="f_select">
+{assign var='field' value="kojin_b_day_w`$smarty.section.kojin_index.index`"}
+          {html_options name=$field options=$day_array selected=$smarty.session.p.$field}
+        </div>
+        <div class="tw_age">
+{assign var='field' value="kojin_age_w`$smarty.section.kojin_index.index`"}
+          <input type="text" name="{$field}" id="{$field}" value="{$smarty.session.p.$field|escape}" placeholder="年齢">
+          歳</div>
+        <div class="clear_fix"></div>
+      </div>
+{/section}
+      <div class="clear_fix"></div>
+    </div>
+    <div class="clear_fix"></div>
+    <div class="button">
+      <input name="exec" type="submit" value="送信">
+      <input name="cancel" type="submit" value="中止">
+    </div>
+  </form>
+</div>
+<footer>
+  <div class="jump"><a href="#main">このページのトップへ</a>
+    <div class="clear_fix"></div>
+  </div>
+</footer>
+</body>
+</html>

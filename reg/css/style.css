@@ -1,0 +1,385 @@
+@charset "UTF-8";
+body {
+	margin: 0px;
+	padding: 0px;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+}
+.titlename {
+	margin: 0px ;
+	padding: 5px;
+	background: #6AA;
+	color: #FFF;
+	border-left: 10px solid #036;
+}
+.titlename2 {
+	margin: 10px 0px 0px;
+	padding: 5px;
+	background: #EA6;
+	color: #FFF;
+	border-left: 10px solid #C60;
+	clear: left;
+}
+.titlename3 {
+	margin: 10px 0px 0px;
+	padding: 5px;
+	background: #EFEFEF;
+	color: #333;
+	clear: left;
+	border-top: 4px solid #AAA;
+}
+.dantai_title1 {
+	font-size: 12px;
+	margin: 0px;
+	padding: 5px;
+	background: #AEF;
+	color: #000;
+	border-left: 10px solid #36C;
+	clear: left;
+}
+.dantai_title2 {
+	font-size: 12px;
+	margin: 0px;
+	padding: 5px;
+	background: #FCC;
+	color: #000;
+	border-left: 10px solid #F36;
+	clear: left;
+}
+.kojin_title1 {
+	font-size: 12px;
+	margin: 0px;
+	padding: 5px;
+	background: #CFC;
+	color: #000;
+	border-left: 10px solid #393;
+	clear: left;
+}
+.kojin_title2 {
+	font-size: 12px;
+	margin: 0px;
+	padding: 5px;
+	background: #FCF;
+	color: #000;
+	border-left: 10px solid #C36;
+	clear: left;
+}
+.data_title {
+	font-size: 12px;
+	margin: 0px;
+	padding: 5px;
+	background: #EEE;
+	color: #000;
+	border-left: 10px solid #999;
+	clear: left;
+}
+form {
+	margin: 5px;
+	padding: 0px;
+}
+.f_box {
+	font-size: 12px;
+	margin: 5px 0px;
+	padding: 5px;
+	clear: left;
+	float: left;
+}
+.midasi {
+	padding: 8px 6px;
+	color: #036;
+	margin: 5px 0px;
+/*	font-size: 12px;*/
+	background: #eee;
+	border-left: 10px solid #036;
+	float: left;
+	clear: left;
+	width: 160px;
+}
+
+.f_radio {
+	margin: 5px 0px 5px 10px;
+	padding: 6px;
+	color: #333;
+	font-size: 12px;
+	float: left;
+}
+
+.f_radio_2 {
+	margin: 5px 20px 0px 0px;
+	padding: 6px;
+	color: #333;
+/*	font-size: 12px;*/
+	float: left;
+}
+
+.f_select {
+	margin: 5px 0px;
+	padding: 4px;
+	float: left;
+}
+
+.f_error {
+	color: #f00;
+}
+
+.pref {
+	margin: 5px 5px 5px 0px;
+	float: left;
+}
+
+.clear_fix {
+	clear: both;
+}
+
+.tw1 {
+	float: left;
+}
+
+.tw2 {
+	margin: 5px 0px;
+	padding: 6px;
+	border: none;
+	float: left;
+	font-size: 12px;
+}
+.tw2 input {
+	width: 2em;
+}
+.tw4 {
+	font-size: 12px;
+	margin: 5px 0px;
+	padding: 6px;
+	border: none;
+	float: left;
+}
+.tw4 input {
+	width: 4em;
+}
+.tw6 {
+	font-size: 12px;
+	margin: 5px 0px;
+	padding: 6px;
+	border: none;
+	float: left;
+}
+.tw6 input {
+	width: 6em;
+}
+.tw5 {
+/*	font-size: 12px;*/
+	margin: 5px 0px;
+	padding: 3px 6px 2px 6px;
+	border: none;
+	float: left;
+}
+.tw5 input {
+	width: 5em;
+}
+
+.name_font input {
+	font-size: 16px;
+}
+
+.tw8 {
+/*	font-size: 12px;*/
+/*	margin: 5px 0px;*/
+	padding: 4px 6px;
+	border: none;
+	float: left;
+}
+.tw8 input {
+	width: 8em;
+}
+.tw10 {
+/*	font-size: 12px;*/
+	margin: 5px 0px;
+	padding: 6px;
+	border: none;
+	float: left;
+}
+.tw10 input {
+	width: 10em;
+}
+.tw12 {
+/*	font-size: 12px;*/
+	margin: 5px 0px;
+	padding: 6px;
+	border: none;
+	float: left;
+}
+.tw12 input {
+	width: 12em;
+}
+.tw14 {
+/*	font-size: 12px;*/
+	margin: 5px 0px;
+	padding: 4px 6px;
+	border: none;
+	float: left;
+}
+.tw14 input {
+	width: 14em;
+}
+.tw90 {
+/*	font-size: 12px;*/
+	margin: 5px 0px;
+	padding: 6px;
+	border: none;
+	float: left;
+}
+.tw90 input {
+	width: 90%;
+}
+.tw100 {
+/*	font-size: 12px;*/
+	margin: 5px 0px;
+	padding: 4px 6px;
+	border: none;
+	float: left;
+	width: 26em;
+}
+
+.tw100 input {
+/*	width: 20em; */
+}
+.tw110 {
+/*	font-size: 12px;*/
+	margin: 5px 0px;
+	padding: 6px;
+	border: none;
+	float: left;
+	width: 26em;
+}
+
+.tw110 input {
+	width: 26em;
+}
+
+.tw180 {
+/*	font-size: 12px;*/
+	margin: 5px 0px;
+	padding: 6px;
+	border: none;
+	float: left;
+	width: 50em;
+}
+
+.tw200 {
+	/*	font-size: 12px;*/
+	margin: 5px 0px;
+	padding: 4px 6px;
+	border: none;
+	float: left;
+	width: 70em;
+}
+	
+.tw_age {
+	margin: 5px 0px 5px 10px;
+	padding: 6px;
+	border: none;
+	float: left;
+	font-size: 12px;
+}
+.tw_age input {
+	width: 3em;
+}
+
+footer {
+	background: #999;
+}
+
+.jump {
+	margin: 0px;
+	padding: 6px;
+	text-align: center;
+	margin: 0px auto;
+}
+.jump a {
+	font-size: 11px;
+	color: #069;
+	background: #fff;
+	display: block;
+	padding: 4px;
+	border: 1px solid #069;
+	text-decoration: none;
+}
+.jump a:hover {
+	color: #c00;
+	background: #fcc;
+	border: 1px solid #c00;
+}
+.button {
+	text-align: center;
+	margin: auto;
+}
+
+.discription {
+	margin: 0px 0px 0px 10px;
+	padding: 5px;
+	clear: left;
+	border: 1px solid #c66;
+	color: #c33;
+	font-size: 11px;
+	line-height: 16px;
+	font-weight: normal;
+}
+
+.photo_preview {
+	width: 400px;
+	height: 300px;
+	float: left;
+	margin: 0 16px 0 0;
+	background-color: #b5b5b5;
+}
+
+.photo_preview img {
+	width: 100%;
+}
+
+.photo_preview2 {
+	width: 300px;
+	height: 400px;
+	float: left;
+	margin: 0 16px 0 0;
+	background-color: #b5b5b5;
+}
+
+.photo_preview2 img {
+	width: 100%;
+}
+
+.photo_preview_sample {
+	margin: 0 0 0 0;
+}
+
+#actindicator {
+    width: 48px;
+    height: 48px;
+    display: none;
+    position: fixed;
+    _position: absolute; /* forIE6 */
+    top: 50%;
+    left: 50%;
+    margin-top: -24px; /* harlf of height */
+    margin-left: -24px; /* half of width */
+    z-index: 10000; /*　cboxOverlayが9999になっているため */
+}
+
+#actindicator_fade {
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: #ffffff;
+    opacity: 0.3;
+/*    position: absolute; */
+    position: fixed;
+    _position: absolute; /* forIE6 */
+    top: 0px;
+    left: 0px;
+    z-index: 50;
+}
+

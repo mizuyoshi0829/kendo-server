@@ -1,0 +1,9 @@
+{$htmlheader|default:''}
+    <h2>ログイン</h2>
+    <form action="info.php" method="post" name="f">
+      <p class="login_pass">パスワード：<input type="password" name="pass"></p>
+      <input type="hidden" name="mode" value="auth">
+      <input type="submit" name="exec" value="ログイン">
+    </form>
+    <script>document.f._password.focus();</script>
+{$htmlfooter|default:''}

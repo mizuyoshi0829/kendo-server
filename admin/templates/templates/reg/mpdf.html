@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport"
+content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link media="only screen and (max-device-width:480px)" href="{$root_url}css/mobile.css" type="text/css" rel="stylesheet" />
+<link media="screen and (min-device-width:481px)" href="{$root_url}css/style.css" type="text/css" rel="stylesheet" />
+<!--[if IE]>
+<link href="{$root_url}design.css" type="text/css" rel="stylesheet" />
+<![endif]-->
+<meta charset="UTF-8">
+<title>入力フォーム</title>
+</head>
+<body>
+<div id="main">
+  <div id="actindicator"><img src="../img/466.gif" width="48" height="48" alt="Loading..." /></div>
+  <div id="actindicator_fade"></div>
+  <form id="form_entry" name="form1" method="post" action="">
+    申込書をダウンロードします。<br /><br />
+    <input name="mode" type="hidden" value="pdf" />
+    <input name="info_id" type="hidden" value="{$info_id}" />
+    <input name="pdf_file_name" type="hidden" value="{$pdf_file_name}" />
+    <div class="button">
+      <input name="exec" type="submit" value="ダウンロード">
+    </div>
+  </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<?php
+	require_once dirname(dirname(__FILE__)).'/admin/class/page.php';
+	require_once dirname(dirname(__FILE__)).'/admin/class/result.php';
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>試合結果リアルタイム表示</title>
+<link href="realtime.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="container">
+  <div class="content" id="score1">
+  </div>
+  <div class="content" id="score2">
+  </div>
+</div>
+</body>
+</html>

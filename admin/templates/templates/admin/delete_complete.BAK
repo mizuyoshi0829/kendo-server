@@ -1,0 +1,12 @@
+{$htmlheader|smarty:nodefaults}
+    <h2>削除完了しました。</h2>
+    <br />
+    <br />
+    <br />
+    <form action="index.php" method="post" enctype="multipart/form-data">
+      <input type="submit" name="index" value="戻る">
+    </form>
+    <br />
+    <br />
+    <br />
+{$htmlfooter|smarty:nodefaults}

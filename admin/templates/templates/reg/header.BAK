@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<title>{$admin_title} 管理画面</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
+<script type="text/javascript" src="js/global.js"></script>
+</head>
+<body>
+<div id="header">
+  {$admin_title}管理画面
+</div>
+<div id="pagebody">
+  <div id="navi">
+{if $display_navi == 1 }
+    <p><a href="info.php?c=1">中学校男子の部(様式1)</a></p>
+    <p><a href="info.php?c=2">中学校女子の部(様式1)</a></p>
+    <p><a href="info.php?c=3">小学生の部(様式1)</a></p>
+    <p><a href="login.php">ログアウト</a></p>
+{else}
+    <p><a href="login.php">ログアウト</a></p>
+{*    <p><a href="{$top_url}">トップに戻る</a></p>*}
+{/if}
+  </div>
+  <div id="main">

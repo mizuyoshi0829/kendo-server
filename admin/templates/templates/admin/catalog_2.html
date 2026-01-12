@@ -1,0 +1,107 @@
+<style>
+{literal}
+body { font-family: ipapgothic, DejaVuSansCondensed, sans-serif; font-size: 7pt;  }
+p { text-align: justify; margin: 0pt; padding:2pt; }
+span { padding-left: 12pt; }
+td { text-align: justify; }
+
+.border_bt { border-top: none; border-right: none; border-bottom: solid 1px cmyk(0,0,0,100); border-left: none; }
+.border_r { border-top: none; border-right: solid 1px cmyk(0,0,0,100); border-bottom: none; border-left: none; }
+.border_none { border: none; }
+.border_all { border: solid 2px cmyk(0,0,0,100); }
+.cell_div_ { display: inline; text-align: justify; margin: 0pt; padding:2pt; }
+.cell_div20_ { display: inline; text-align: justify; margin: 0pt; padding:2pt; width: 20px; }
+.cell_div30_ { display: inline; text-align: justify; margin: 0pt; padding:2pt; width: 26px; }
+.cell_div_grade_ { display: inline; text-align: justify; margin: 0pt; padding-left: 24pt;width: 26px; }
+.cell_div { text-align: justify; margin: 0pt; padding:2pt; float: left; }
+.cell_div20 { text-align: justify; margin: 0pt; padding:2pt; float: left; width: 20px; }
+.cell_div30 { text-align: justify; margin: 0pt; padding:2pt; float: left; width: 26px; }
+.cell_div_grade { text-align: justify; margin: 0pt; padding-left: 24pt; overflow:hidden; }
+.smallfont { font-size: 6pt; }
+.smallfont2 { font-size: 5pt; }
+
+{/literal}
+</style>
+
+{section name=datalist loop=$list}
+{*
+{if $filter == '' || ($filter == 'entry' && $list[datalist].join=='1') || ($filter == 'entry_m' && $list[datalist].join_m=='1') || ($filter == 'entry_w' && $list[datalist].join_w=='1') }
+  <div style="width: 342px; height: 200px; padding: 2px; margin: 0px; border: none 1px cmyk(0,0,0,0); float: left;">
+*}
+  <div style="width: 400px; height: 200px; padding: 2px; margin: 0px; border: none 1px cmyk(0,0,0,0); float: left;">
+    <div class="border_all" style="width: 340px; height: 200px; margin: 0px; padding: 0px;">
+      <div class="border_bt" style="overflow:hidden;">
+        <div class="border_r" style="width: 200px; float: left;"><p lang="ja"{if $list[datalist].name|mb_strlen:'UTF-8' >=19} class="smallfont"{/if}>{$list[datalist].name|escape}</p></div>
+        <div style="float: left; border: none;"><p lang="ja">TEL&nbsp;&nbsp;{$list[datalist].tel|escape}</p></div>
+      </div>
+      <div class="border_bt" style="overflow:hidden;">
+        <div class="cell_div20" lang="ja">住所</div><div class="cell_div" lang="ja">{$list[datalist].address|escape}</div>
+      </div>
+      <div class="border_bt" style="overflow:hidden;">
+        <div class="border_r" style="width: 170px; float: left;">
+          <div class="cell_div20" lang="ja">監督</div><div class="cell_div" lang="ja">{$list[datalist].manager|escape}</div>
+        </div>
+        <div style="float: left;">{if $smarty.session.auth.series==3} <div class="cell_div20" lang="ja">主将</div><div class="cell_div" lang="ja">{$list[datalist].captain|escape}</div> {/if}</div>
+      </div>
+      <div class="border_bt" style="overflow:hidden;">
+        <div class="border_r" style="width: 113px; float: left;"><div class="cell_div20" lang="ja">先鋒</div><div class="cell_div{if $list[datalist].player1|mb_strlen:'UTF-8' >=10} smallfont{/if}" lang="ja">{$list[datalist].player1|escape}</div><div class="cell_div_grade" lang="ja">{$list[datalist].player1_grade|escape}</div></div>
+        <div class="border_r" style="width: 113px; float: left;"><div class="cell_div20" lang="ja">先鋒</div><div class="cell_div{if $list[datalist].player2|mb_strlen:'UTF-8' >=10} smallfont{/if}" lang="ja">{$list[datalist].player2|escape}&nbsp;{$list[datalist].player2_grade|escape}</div></div>
+        <div style="float: left;"><div class="cell_div20" lang="ja">中堅</div><div class="cell_div{if $list[datalist].player3|mb_strlen:'UTF-8' >=10} smallfont{/if}" lang="ja">{$list[datalist].player3|escape}&nbsp;{$list[datalist].player3_grade|escape}</div></div>
+      </div>
+      <div class="border_bt" style="overflow:hidden;">
+        <div class="border_r" style="width: 113px; float: left;"><div class="cell_div20" lang="ja">副将</div><div class="cell_div{if $list[datalist].player4|mb_strlen:'UTF-8' >=10} smallfont{/if}" lang="ja">{$list[datalist].player4|escape}&nbsp;{$list[datalist].player4_grade|escape}</div></div>
+        <div class="border_r" style="width: 113px; float: left;"><div class="cell_div20" lang="ja">大将</div><div class="cell_div{if $list[datalist].player5|mb_strlen:'UTF-8' >=10} smallfont{/if}" lang="ja">{$list[datalist].player5|escape}&nbsp;{$list[datalist].player5_grade|escape}</div></div>
+        <div style="float: left;"><div class="cell_div20" lang="ja">補員</div><div class="cell_div{if $list[datalist].player6|mb_strlen:'UTF-8' >=10} smallfont{/if}" lang="ja">{$list[datalist].player6|escape}&nbsp;{$list[datalist].player6_grade|escape}</div></div>
+      </div>
+      <div class="border_bt" style="overflow:hidden;">
+        <div class="border_r" style="width: 113px; float: left;"><div class="cell_div20" lang="ja">補員</div><div class="cell_div{if $list[datalist].player7|mb_strlen:'UTF-8' >=10} smallfont{/if}" lang="ja">{$list[datalist].player7|escape}&nbsp;{$list[datalist].player7_grade|escape}</div></div>
+        <div style="float: left;">&nbsp;</div>
+      </div>
+      <div class="border_none" style="overflow:hidden;">
+        <div class="border_r" style="width: 170px; height: 96px; float: left;{if $list[datalist].introduction|mb_strlen:'UTF-8' >=170} font-size: 5pt;{else} font-size: 6pt;{/if}"><p lang="ja">チーム紹介<br />{$list[datalist].introduction|escape|nl2br}</p></div>
+        <div style="width: 165px; height: 96px; float: left; font-size: 6pt;"><p lang="ja">近年の主な戦績<br />{$list[datalist].main_results|escape|nl2br}</p></div>
+      </div>
+    </div>
+    <div style="height: 1px; float: none; clear: both;"></div>
+  </div>
+{*
+{/if}
+*}
+{/section}
+
+{*
+{section name=datalist loop=$list}
+  <table border="1" width="400" cellspacing="0" cellpadding="5" style="padding: 16px;" >
+    <tr style="margin-top: 16px;">
+      <td colspan="4">{$list[datalist].name|escape}</td>
+      <td colspan="2">TEL&nbsp;{$list[datalist].tel|escape}</td>
+    </tr>
+    <tr>
+      <td colspan="6">{$list[datalist].address|escape}</td>
+    </tr>
+    <tr>
+      <td colspan="3">監督&nbsp;{$list[datalist].manager|escape}</td>
+      <td colspan="3">主将&nbsp;{$list[datalist].captain|escape}</td>
+    </tr>
+    <tr>
+      <td colspan="2" style="width: 130px;">先鋒&nbsp;{$list[datalist].player1|escape}&nbsp;{$list[datalist].player1_grade|escape}</td>
+      <td colspan="2" style="width: 130px;">次峰&nbsp;{$list[datalist].player2|escape}&nbsp;{$list[datalist].player2_grade|escape}</td>
+      <td colspan="2" style="width: 130px;">中堅&nbsp;{$list[datalist].player3|escape}&nbsp;{$list[datalist].player3_grade|escape}</td>
+    </tr>
+    <tr>
+      <td colspan="2">副将&nbsp;{$list[datalist].player4|escape}&nbsp;{$list[datalist].player4_grade|escape}</td>
+      <td colspan="2">大将&nbsp;{$list[datalist].player5|escape}&nbsp;{$list[datalist].player5_grade|escape}</td>
+      <td colspan="2">補員1&nbsp;{$list[datalist].player6|escape}&nbsp;{$list[datalist].player6_grade|escape}</td>
+    </tr>
+    <tr>
+      <td colspan="2">補員2&nbsp;{$list[datalist].player7|escape}&nbsp;{$list[datalist].player7_grade|escape}</td>
+      <td colspan="2">&nbsp;</td>
+      <td colspan="2">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="3" rowspan="5">チーム紹介<br />{$list[datalist].introduction|escape|nl2br}</td>
+      <td colspan="3" rowspan="5">主な戦績<br />{$list[datalist].main_results|escape|nl2br}</td>
+    </tr>
+  </table>
+{/section}
+*}

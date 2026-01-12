@@ -1,0 +1,68 @@
+{$htmlheader|smarty:nodefaults}
+    <h2>以下の内容に変更します。よろしいでしょうか？</h2>
+    <table id="ex_t" border="0" cellspacing="1" cellpadding="0">
+      <tr>
+        <td class="td_left3">部門</td>
+        <td class="td_right">{$category_name}の部</td>
+      </tr>
+      <tr>
+        <td class="td_left3">都道府県</td>
+        <td class="td_right">{$smarty.session.p.pref_name|escape}</td>
+      </tr>
+      <tr>
+{if $smarty.session.p.category == 3}
+        <td class="td_left3">団体名</td>
+{else}
+        <td class="td_left3">学校名</td>
+{/if}
+        <td class="td_right"><label class="formtxt">{$smarty.session.p.name|escape}</label></td>
+      </tr>
+      <tr>
+        <td class="td_left3">住所</td>
+        <td class="td_right"><label id="formtxt">{$smarty.session.p.address|escape}</label></td>
+      </tr>
+      <tr>
+        <td class="td_left3">電話番号</td>
+        <td class="td_right">{$smarty.session.p.tel|escape}</td>
+      </tr>
+      <tr>
+        <td class="td_left3">記入責任者</td>
+        <td class="td_right">{$smarty.session.p.responsible|escape}</td>
+      </tr>
+      <tr>
+        <td class="td_left3">連絡先</td>
+        <td class="td_right">{$smarty.session.p.contact|escape}</td>
+      </tr>
+      <tr>
+        <td class="td_left3">E-mail</td>
+        <td class="td_right">{$smarty.session.p.email|escape}</td>
+      </tr>
+      <tr>
+        <td colspan="2" class="style2">錬成会・交通手段について</td>
+      </tr>
+      <tr>
+        <td class="td_left3">錬成会参加</td>
+        <td class="td_right">
+          <span class="style2">{$smarty.session.p.rensei_name}</span><br />
+          {if $smarty.session.p.rensei_flag==1}{$smarty.session.p.rensei_flag_name}{/if}
+        </td>
+      </tr>
+      <tr>
+        <td class="td_left3">連絡欄</td>
+        <td class="td_right">{$smarty.session.p.comment|escape}</td>
+      </tr>
+      <tr>
+        <td class="td_left3">宿泊予定</td>
+        <td class="td_right">{$smarty.session.p.stay_name}</td>
+      </tr>
+    </table>
+    <br />
+    <form action="info.php" method="post">
+      <input type="hidden" name="mode" value="exec1">
+      <input type="submit" name="reinput" value="再編集">
+      <input type="submit" name="exec" value="変更">
+    </form>
+    <br />
+    <br />
+    <br />
+{$htmlfooter|smarty:nodefaults}

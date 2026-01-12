@@ -1,0 +1,79 @@
+{$htmlheader|smarty:nodefaults}
+    <h2>写真一覧&nbsp;<a href="/slideshow/demo.html" target="_blank">→スライドショーページ確認</a></h2>
+    <form action="gallery_photo.php" method="post">
+      <input type="hidden" name="mode" value="new" />
+      <input type="submit" name="submit" value="新規登録" />
+    </form>
+{if $pagenum > 1 }
+    <div class="pagenavi">
+{if $currpage > 1 }<a href="gallery_photo.php?p={$currpage-1}">{/if}←{if $currpage > 1 }</a>{/if}&nbsp;
+{section name=i1 start=1 loop=$pagenum+1 step=1}
+{if $smarty.section.i1.index == $currpage}
+{$smarty.section.i1.index}&nbsp;
+{else}
+<a href="gallery_photo.php?p={$smarty.section.i1.index}">{$smarty.section.i1.index}</a>&nbsp;
+{/if}
+{/section}
+{if $currpage < $pagenum }<a href="gallery_photo.php?p={$currpage+1}">{/if}→{if $currpage < $pagenum }</a>{/if}
+    </div>
+{/if}
+    <table id="ex_t" border="0" cellspacing="1" cellpadding="0">
+      <tr>
+        <td class="td_left">&nbsp;</td>
+        <td class="td_right3">入力年月日</td>
+        <td class="td_right">写真</td>
+        <td class="td_right">タイトル</td>
+        <td class="td_right">スライドショー公開</td>
+        <td class="td_right2">編集</td>
+        <td class="td_right2">削除</td>
+      </tr>
+{foreach from=$list item=lv name=datalist}
+      <tr>
+        <td class="td_left" {if $lv.del=='1'}bgcolor="#ffbbbb"{/if}>{$lv.id}</td>
+        <td class="td_right3" {if $lv.del=='1'}bgcolor="#ffbbbb"{/if}>{$lv.create_date}</td>
+        <td class="td_right" {if $lv.del=='1'}bgcolor="#ffbbbb"{/if}>{$lv.image}</td>
+        <td class="td_right" {if $lv.del=='1'}bgcolor="#ffbbbb"{/if}>{$lv.title|escape|nl2br}</td>
+        <td class="td_right" {if $lv.del=='1'}bgcolor="#ffbbbb"{/if}>
+          <form action="gallery_photo.php" method="post">
+            <input type="hidden" name="id" value="{$lv.id}">
+{if $lv.slideshow=='1'}
+            <input type="hidden" name="mode" value="slideshowoff">
+            <input type="submit" name="submit" value="公開">
+{else}
+            <input type="hidden" name="mode" value="slideshowon">
+            <input type="submit" name="submit" value="非公開">
+{/if}
+          </form>
+        </td>
+        <td class="td_right2" {if $lv.del=='1'}bgcolor="#ffbbbb"{/if}>
+          <form action="gallery_photo.php" method="post">
+            <input type="hidden" name="id" value="{$lv.id}">
+            <input type="hidden" name="mode" value="edit">
+            <input type="submit" name="edit" value="編集">
+          </form>
+        </td>
+{if $lv.del=='1'}
+        <td class="td_right2" bgcolor="#ffbbbb">
+          <form action="gallery_photo.php" method="post">
+            削除済み
+            <input type="hidden" name="id" value="{$lv.id}">
+            <input type="hidden" name="mode" value="undelete">
+            <input type="submit" name="submit" value="削除取り消し">
+          </form>
+        </td>
+{else}
+        <td class="td_right">
+          <form action="gallery_photo.php" method="post">
+            <input type="hidden" name="id" value="{$lv.id}">
+            <input type="hidden" name="mode" value="delete">
+            <input type="submit" name="submit" value="削除">
+          </form>
+        </td>
+{/if}
+      </tr>
+{/foreach}
+    </table>
+    <br />
+    <br />
+    <br />
+{$htmlfooter|smarty:nodefaults}

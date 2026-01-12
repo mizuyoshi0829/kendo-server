@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport"
+content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link media="only screen and (max-device-width:480px)" href="{$root_url}css/mobile.css" type="text/css" rel="stylesheet" />
+<link media="screen and (min-device-width:481px)" href="{$root_url}css/style.css" type="text/css" rel="stylesheet" />
+<!--[if IE]>
+<link href="{$root_url}design.css" type="text/css" rel="stylesheet" />
+<![endif]-->
+
+<meta charset="UTF-8">
+<title>入力フォーム</title>
+</head>
+
+<body>
+<div id="main">
+  <form id="form" name="form1" method="post" action="">
+    <input name="mode" type="hidden" value="confirm" />
+{foreach from=$fields_info item=info}
+{if $info.kind != ''}
+{if $info.kind == 'title1'}
+    <div class="titlename"><h1>{$info.name}{if $info.placeholder != ''}&nbsp;<a {$info.select_info} >{$info.placeholder}</a>{/if}</h1></div>
+{if $mform_msg != ''}
+    <div class="discription">{$mform_msg}</div>
+{/if}
+    <div class="f_box">
+{elseif $info.kind == 'title2'}
+      <div class="titlename2"><h2>{$info.name}{if $info.placeholder != ''}&nbsp;<a {$info.select_info} >{$info.placeholder}</a>{/if}</h2></div>
+{else}
+      <div class="midasi">{$info.name}</div>
+{/if}
+{assign var="edit_field" value=$info.field}
+{if $info.kind == 'text'}
+      <div class="tw{$info.text_width}">
+        <input type="text" name="{$edit_field}" value="{$smarty.session.p.$edit_field}" class="text" placeholder="{$info.placeholder}" >
+      </div>
+{elseif $info.kind == 'textarea'}
+      <div class="tw{$info.text_width}">
+        <textarea name="{$edit_field}" cols="40" rows="3" maxlength="100" placeholder="{$info.placeholder}" >{$smarty.session.p.$edit_field}</textarea>
+      </div>
+{elseif $info.kind == 'check'}
+      <div class="f_radio">
+        {html_checkboxes name=$edit_field options=$info.sel selected=$smarty.session.p.$edit_field separator='<br />'}
+      </div>
+{elseif $info.kind == 'check_one'}
+      <div class="f_radio">
+        {html_checkboxes name=$edit_field options=$info.sel selected=$smarty.session.p.$edit_field separator='<br />'}
+      </div>
+{elseif $info.kind == 'select' || $info.kind == 'pref_select'}
+      <div class="f_select">
+        {html_options name=$edit_field options=$info.sel selected=$smarty.session.p.$edit_field}
+      </div>
+{elseif $info.kind == 'radio'}
+      <div class="f_radio">
+        {html_radios name=$edit_field options=$info.sel selected=$smarty.session.p.$edit_field separator='<br />'}
+      </div>
+{elseif $info.kind == 'name'}
+{assign var="edit_field_sei" value="`$edit_field`_sei"}
+{assign var="edit_field_mei" value="`$edit_field`_mei"}
+      <div class="tw{$info.text_width}">
+        <input id="{$edit_field_sei}" type="text" name="{$edit_field_sei}" value="{$smarty.session.p.$edit_field_sei}" class="text" placeholder="姓" >
+        <input id="{$edit_field_mei}" type="text" name="{$edit_field_mei}" value="{$smarty.session.p.$edit_field_mei}" class="text" placeholder="名" >
+      </div>
+{elseif $info.kind == 'name2'}
+{assign var="edit_field_sei" value="`$edit_field`_sei"}
+{assign var="edit_field_mei" value="`$edit_field`_mei"}
+{assign var="edit_field_add" value="`$edit_field`_add"}
+{assign var="edit_field_disp" value="`$edit_field`_disp"}
+      <div class="tw{$info.text_width}">
+        <input id="{$edit_field_sei}" type="text" name="{$edit_field_sei}" value="{$smarty.session.p.$edit_field_sei}" class="text" placeholder="姓" >
+        <input id="{$edit_field_mei}" type="text" name="{$edit_field_mei}" value="{$smarty.session.p.$edit_field_mei}" class="text" placeholder="名" >
+        <input id="{$edit_field_add}" type="text" name="{$edit_field_add}" value="{$smarty.session.p.$edit_field_add}" class="text" placeholder="備考：異体字など" >
+        <input id="{$edit_field_disp}" type="text" name="{$edit_field_disp}" value="{$smarty.session.p.$edit_field_disp}" class="text" placeholder="表示名" >
+      </div>
+{elseif $info.kind == 'tel_fax'}
+{assign var="edit_field_tel" value="`$edit_field`_tel"}
+{assign var="edit_field_fax" value="`$edit_field`_fax"}
+      <div class="tw{$info.text_width}">
+        <input id="{$edit_field_tel}" type="text" name="{$edit_field_tel}" value="{$smarty.session.p.$edit_field_tel}" class="text" placeholder="電話番号" >
+        <input id="{$edit_field_fax}" type="text" name="{$edit_field_fax}" value="{$smarty.session.p.$edit_field_fax}" class="text" placeholder="FAX番号" >
+      </div>
+{elseif $info.kind == 'mobile_tel'}
+{assign var="edit_field_mobile" value="`$edit_field`_mobile"}
+{assign var="edit_field_tel" value="`$edit_field`_tel"}
+      <div class="tw{$info.text_width}">
+        <input id="{$edit_field_mobile}" type="text" name="{$edit_field_mobile}" value="{$smarty.session.p.$edit_field_mobile}" class="text" placeholder="携帯番号" >
+        <input id="{$edit_field_tel}" type="text" name="{$edit_field_tel}" value="{$smarty.session.p.$edit_field_tel}" class="text" placeholder="電話番号" >
+      </div>
+{elseif $info.kind == 'school_org'}
+{assign var="edit_field_school_name" value="`$edit_field`_school_name"}
+      <div class="tw{$info.text_width}">
+        <input id="{$edit_field_school_name}" type="text" name="{$edit_field_school_name}" value="{$smarty.session.p.$edit_field_school_name}" class="text" placeholder="○○" >
+        {html_options name=$edit_field options=$org_array selected=$smarty.session.p.$edit_field}
+      </div>
+{elseif $info.kind == 'address'}
+{assign var="edit_field_zip1" value="`$edit_field`_zip1"}
+{assign var="edit_field_zip2" value="`$edit_field`_zip2"}
+{assign var="edit_field_pref" value="`$edit_field`_pref"}
+      <div class="tw8">
+        <input id="{$edit_field_zip1}" type="text" name="{$edit_field_zip1}" value="{$smarty.session.p.$edit_field_zip1}" class="text" placeholder="郵便番号" >
+        -<input id="{$edit_field_zip2}" type="text" name="{$edit_field_zip2}" value="{$smarty.session.p.$edit_field_zip2}" class="text" placeholder="郵便番号">
+        <input id="{$edit_field}_input" type="button" name="{$edit_field}_input" value="住所自動入力" class="" onClick="zip_search();"><br />
+        {html_options name=$edit_field_pref options=$pref_array selected=$smarty.session.p.$edit_field_pref}
+        <input style="width: 400px;" id="{$edit_field}" type="text" name="{$edit_field}" value="{$smarty.session.p.$edit_field}" class="text" placeholder="住所" >
+      </div>
+{elseif $info.kind == 'grade_j'}
+      <div class="tw{$info.text_width}">
+        {html_options name=$edit_field options=$grade_junior_array selected=$smarty.session.p.$edit_field}
+      </div>
+{elseif $info.kind == 'grade_e'}
+      <div class="tw{$info.text_width}">
+        {html_options name=$edit_field options=$grade_elementary_array selected=$smarty.session.p.$edit_field}
+      </div>
+{elseif $info.kind == 'email'}
+      <div class="tw{$info.text_width}">
+        <input type="text" name="{$edit_field}" value="{$smarty.session.p.$edit_field}" class="text" placeholder="{$info.placeholder}" >
+      </div>
+{elseif $info.kind == 'include'}
+{assign var="include_file" value="reg/mform_`$smarty.session.auth.series`_`$info.select_info`.html"}
+{include file="$include_file"}
+{/if}
+{/if}
+{/foreach}
+      <div class="clear_fix"></div>
+    </div>
+    <div class="clear_fix"></div>
+    <div class="button">
+      <input name="exec" type="submit" value="送信">
+<!--      <input name="cancel" type="submit" value="中止"> -->
+    </div>
+  </form>
+</div>
+<footer>
+  <div class="jump"><a href="#main">このページのトップへ</a>
+    <div class="clear_fix"></div>
+  </div>
+</footer>
+</body>
+</html>

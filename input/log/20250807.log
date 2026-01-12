@@ -1,0 +1,2855 @@
+[2025/08/07 23:39:36]--------------------------------------------------
+post:Array
+(
+    [input_match_no] => 
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 13569
+    [player2_id] => 19457
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_2] => 2
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_1] => 4
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [l] => 
+    [t] => 2
+    [m] => 1
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 2
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2025
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&l=&t=2&m=1
+    [QUERY_STRING] => a=0&s=60&l=&t=2&m=1
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 51082
+    [SCRIPT_FILENAME] => /var/www/html/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.1.43
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.1.126
+    [SERVER_NAME] => 192.168.1.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=48cd7f1be230e44c4c9918fec319b792
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.1.126/input/kojin_result.php?a=0&m=1
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_ORIGIN] => http://192.168.1.126
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 214
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.1.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aJU5ODNt_9bTmsm8Ajop5wAAAI4
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1754609976.6605
+    [REQUEST_TIME] => 1754609976
+)
+
+[2025/08/07 23:41:06]--------------------------------------------------
+post:Array
+(
+    [input_match_no] => 
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 13569
+    [player2_id] => 19457
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_2] => 2
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_1] => 4
+    [waza2_3] => 0
+    [extra] => 1
+    [match_time] => 188
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [l] => 
+    [t] => 2
+    [m] => 1
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 2
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2025
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&l=&t=2&m=1
+    [QUERY_STRING] => a=0&s=60&l=&t=2&m=1
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 51096
+    [SCRIPT_FILENAME] => /var/www/html/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.1.43
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.1.126
+    [SERVER_NAME] => 192.168.1.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=48cd7f1be230e44c4c9918fec319b792
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.1.126/input/kojin_result.php?a=0&m=1
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_ORIGIN] => http://192.168.1.126
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 225
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.1.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aJU5kjNt_9bTmsm8Ajop6AAAAJI
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1754610066.2675
+    [REQUEST_TIME] => 1754610066
+)
+
+[2025/08/07 23:41:31]--------------------------------------------------
+post:Array
+(
+    [input_match_no] => 
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 3841
+    [player2_id] => 29185
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 0
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_1] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [l] => 
+    [t] => 2
+    [m] => 2
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 2
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2025
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&l=&t=2&m=2
+    [QUERY_STRING] => a=0&s=60&l=&t=2&m=2
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 51100
+    [SCRIPT_FILENAME] => /var/www/html/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.1.43
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.1.126
+    [SERVER_NAME] => 192.168.1.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=48cd7f1be230e44c4c9918fec319b792
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.1.126/input/kojin_result.php?a=0&m=2
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_ORIGIN] => http://192.168.1.126
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 233
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.1.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aJU5qzNt_9bTmsm8Ajop6wAAAJc
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1754610091.3877
+    [REQUEST_TIME] => 1754610091
+)
+
+[2025/08/07 23:42:11]--------------------------------------------------
+post:Array
+(
+    [input_match_no] => 
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 24065
+    [player2_id] => 34817
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 5
+    [waza1_2] => 5
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [l] => 
+    [t] => 2
+    [m] => 3
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 2
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2025
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&l=&t=2&m=3
+    [QUERY_STRING] => a=0&s=60&l=&t=2&m=3
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 51105
+    [SCRIPT_FILENAME] => /var/www/html/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.1.43
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.1.126
+    [SERVER_NAME] => 192.168.1.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=48cd7f1be230e44c4c9918fec319b792
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.1.126/input/kojin_result.php?a=0&m=3
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_ORIGIN] => http://192.168.1.126
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 214
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.1.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aJU50zNt_9bTmsm8Ajop9gAAAJA
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1754610131.2917
+    [REQUEST_TIME] => 1754610131
+)
+
+[2025/08/07 23:43:59]--------------------------------------------------
+post:Array
+(
+    [input_match_no] => 
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 13569
+    [player2_id] => 19457
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 4
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [l] => 
+    [t] => 2
+    [m] => 1
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 2
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2025
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&l=&t=2&m=1
+    [QUERY_STRING] => a=0&s=60&l=&t=2&m=1
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 51118
+    [SCRIPT_FILENAME] => /var/www/html/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.1.43
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.1.126
+    [SERVER_NAME] => 192.168.1.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=48cd7f1be230e44c4c9918fec319b792
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.1.126/input/kojin_result.php?a=0&m=1
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_ORIGIN] => http://192.168.1.126
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 224
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.1.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aJU6PzNt_9bTmsm8AjoqDQAAAIA
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1754610239.5195
+    [REQUEST_TIME] => 1754610239
+)
+
+[2025/08/07 23:44:51]--------------------------------------------------
+post:Array
+(
+    [input_match_no] => 
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 40193
+    [player2_id] => 10241
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 1
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [l] => 
+    [t] => 1
+    [m] => 1
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 5
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2025
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&l=&t=1&m=1
+    [QUERY_STRING] => a=0&s=61&l=&t=1&m=1
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 59888
+    [SCRIPT_FILENAME] => /var/www/html/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.1.42
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.1.126
+    [SERVER_NAME] => 192.168.1.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=8df59ab108b8866c65f6ec2dd2ae6e04
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.1.126/input/kojin_result.php?a=0&m=1
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_ORIGIN] => http://192.168.1.126
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 224
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.1.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aJU6c63qhGLM74WGv5zZ6QAAANE
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1754610291.0083
+    [REQUEST_TIME] => 1754610291
+)
+
+[2025/08/07 23:45:27]--------------------------------------------------
+post:Array
+(
+    [input_match_no] => 
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 34049
+    [player2_id] => 14337
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 1
+    [waza1_3] => 4
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 3
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [l] => 
+    [t] => 2
+    [m] => 1
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 1
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2025
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&l=&t=2&m=1
+    [QUERY_STRING] => a=0&s=60&l=&t=2&m=1
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 57866
+    [SCRIPT_FILENAME] => /var/www/html/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.1.41
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.1.126
+    [SERVER_NAME] => 192.168.1.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=1c50d0e0970ece2489e07d5a3f12b8b3
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.1.126/input/kojin_result.php?a=0&m=1
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_ORIGIN] => http://192.168.1.126
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 204
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.1.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aJU6lzNt_9bTmsm8AjoqJgAAAJc
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1754610327.4438
+    [REQUEST_TIME] => 1754610327
+)
+
+[2025/08/07 23:45:42]--------------------------------------------------
+post:Array
+(
+    [input_match_no] => 
+    [mode] => update_match
+    [end_match] => 1
+    [player1_id] => 34049
+    [player2_id] => 14337
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 1
+    [waza1_3] => 4
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 3
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [l] => 
+    [t] => 2
+    [m] => 1
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 1
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2025
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&l=&t=2&m=1
+    [QUERY_STRING] => a=0&s=60&l=&t=2&m=1
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 57868
+    [SCRIPT_FILENAME] => /var/www/html/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.1.41
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.1.126
+    [SERVER_NAME] => 192.168.1.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=1c50d0e0970ece2489e07d5a3f12b8b3
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.1.126/input/kojin_result.php?a=0&s=60&l=&t=2&m=1
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_ORIGIN] => http://192.168.1.126
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 204
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.1.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aJU6pjNt_9bTmsm8AjoqKgAAAIQ
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1754610342.5617
+    [REQUEST_TIME] => 1754610342
+)
+
+[2025/08/07 23:45:49]--------------------------------------------------
+post:Array
+(
+    [input_match_no] => 
+    [mode] => update_match
+    [end_match] => 1
+    [player1_id] => 34049
+    [player2_id] => 14337
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 1
+    [waza1_3] => 4
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 3
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [l] => 
+    [t] => 2
+    [m] => 1
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 1
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2025
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&l=&t=2&m=1
+    [QUERY_STRING] => a=0&s=60&l=&t=2&m=1
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 57871
+    [SCRIPT_FILENAME] => /var/www/html/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.1.41
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.1.126
+    [SERVER_NAME] => 192.168.1.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=1c50d0e0970ece2489e07d5a3f12b8b3
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.1.126/input/kojin_result.php?a=0&s=60&l=&t=2&m=1
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_ORIGIN] => http://192.168.1.126
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 204
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.1.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aJU6rTNt_9bTmsm8AjoqLAAAAIk
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1754610349.0431
+    [REQUEST_TIME] => 1754610349
+)
+
+[2025/08/07 23:45:59]--------------------------------------------------
+post:Array
+(
+    [input_match_no] => 
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 3841
+    [player2_id] => 29185
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_2] => 1
+    [waza1_3] => 4
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_1] => 2
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [l] => 
+    [t] => 2
+    [m] => 2
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 2
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2025
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&l=&t=2&m=2
+    [QUERY_STRING] => a=0&s=60&l=&t=2&m=2
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 51131
+    [SCRIPT_FILENAME] => /var/www/html/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.1.43
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.1.126
+    [SERVER_NAME] => 192.168.1.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=48cd7f1be230e44c4c9918fec319b792
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.1.126/input/kojin_result.php?a=0&m=2
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_ORIGIN] => http://192.168.1.126
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 211
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.1.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aJU6tzNt_9bTmsm8AjoqMwAAAJE
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1754610359.8579
+    [REQUEST_TIME] => 1754610359
+)
+
+[2025/08/07 23:46:10]--------------------------------------------------
+post:Array
+(
+    [input_match_no] => 
+    [mode] => update_match
+    [end_match] => 1
+    [player1_id] => 34049
+    [player2_id] => 14337
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 1
+    [waza1_3] => 4
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 3
+    [match_time] => 234
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [l] => 
+    [t] => 2
+    [m] => 1
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 1
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2025
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&l=&t=2&m=1
+    [QUERY_STRING] => a=0&s=60&l=&t=2&m=1
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 57872
+    [SCRIPT_FILENAME] => /var/www/html/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.1.41
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.1.126
+    [SERVER_NAME] => 192.168.1.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=1c50d0e0970ece2489e07d5a3f12b8b3
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.1.126/input/kojin_result.php?a=0&s=60&l=&t=2&m=1
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_ORIGIN] => http://192.168.1.126
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 207
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.1.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aJU6wjNt_9bTmsm8AjoqOQAAAII
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1754610370.5992
+    [REQUEST_TIME] => 1754610370
+)
+
+[2025/08/07 23:47:17]--------------------------------------------------
+post:Array
+(
+    [input_match_no] => 
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 14593
+    [player2_id] => 40961
+    [faul1_1] => 0
+    [faul1_2] => 1
+    [waza1_1] => 1
+    [waza1_3] => 2
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 3
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [l] => 
+    [t] => 1
+    [m] => 1
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 8
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2025
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&l=&t=1&m=1
+    [QUERY_STRING] => a=0&s=61&l=&t=1&m=1
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 51921
+    [SCRIPT_FILENAME] => /var/www/html/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.1.36
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.1.126
+    [SERVER_NAME] => 192.168.1.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=2d493214976068ab0a5c2b7cc458cfb3
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.1.126/input/kojin_result.php?m=1
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_ORIGIN] => http://192.168.1.126
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 204
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.1.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aJU7BeE6436MiGSl1mjzcgAAAE0
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1754610437.8307
+    [REQUEST_TIME] => 1754610437
+)
+
+[2025/08/07 23:47:31]--------------------------------------------------
+post:Array
+(
+    [input_match_no] => 
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 24321
+    [player2_id] => 18945
+    [faul1_1] => 0
+    [faul1_2] => 1
+    [waza1_1] => 1
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [extra] => 1
+    [match_time] => 443
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [l] => 
+    [t] => 2
+    [m] => 2
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 1
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2025
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&l=&t=2&m=2
+    [QUERY_STRING] => a=0&s=60&l=&t=2&m=2
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 57885
+    [SCRIPT_FILENAME] => /var/www/html/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.1.41
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.1.126
+    [SERVER_NAME] => 192.168.1.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=1c50d0e0970ece2489e07d5a3f12b8b3
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.1.126/input/kojin_result.php?a=0&m=2
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_ORIGIN] => http://192.168.1.126
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 235
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.1.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aJU7E-E6436MiGSl1mjzgAAAAEY
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1754610451.1997
+    [REQUEST_TIME] => 1754610451
+)
+
+[2025/08/07 23:47:51]--------------------------------------------------
+post:Array
+(
+    [input_match_no] => 
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 9217
+    [player2_id] => 39169
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 1
+    [waza1_3] => 3
+    [faul2_1] => 0
+    [faul2_2] => 1
+    [waza2_2] => 3
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [l] => 
+    [t] => 2
+    [m] => 4
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 2
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2025
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&l=&t=2&m=4
+    [QUERY_STRING] => a=0&s=60&l=&t=2&m=4
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 51146
+    [SCRIPT_FILENAME] => /var/www/html/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.1.43
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.1.126
+    [SERVER_NAME] => 192.168.1.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=48cd7f1be230e44c4c9918fec319b792
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.1.126/input/kojin_result.php?a=0&m=4
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_ORIGIN] => http://192.168.1.126
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 203
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.1.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aJU7JzNt_9bTmsm8AjoqSAAAAIg
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1754610471.2618
+    [REQUEST_TIME] => 1754610471
+)
+
+[2025/08/07 23:48:16]--------------------------------------------------
+post:Array
+(
+    [input_match_no] => 
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 29953
+    [player2_id] => 15361
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 1
+    [waza1_3] => 3
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 2
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [l] => 
+    [t] => 1
+    [m] => 1
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 7
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2025
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&l=&t=1&m=1
+    [QUERY_STRING] => a=0&s=61&l=&t=1&m=1
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 50533
+    [SCRIPT_FILENAME] => /var/www/html/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.1.45
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.1.126
+    [SERVER_NAME] => 192.168.1.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=8abaebc31d15642ffd00db53e1cc345c
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.1.126/input/kojin_result.php?m=1
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_ORIGIN] => http://192.168.1.126
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 204
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.1.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aJU7P-E6436MiGSl1mjzlQAAAEE
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1754610495.9254
+    [REQUEST_TIME] => 1754610495
+)
+
+[2025/08/07 23:48:21]--------------------------------------------------
+post:Array
+(
+    [input_match_no] => 
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 28929
+    [player2_id] => 34561
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 1
+    [waza1_3] => 3
+    [faul2_1] => 2
+    [faul2_2] => 1
+    [waza2_2] => 2
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [l] => 
+    [t] => 2
+    [m] => 1
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 4
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2025
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&l=&t=2&m=1
+    [QUERY_STRING] => a=0&s=60&l=&t=2&m=1
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 50347
+    [SCRIPT_FILENAME] => /var/www/html/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.1.48
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.1.126
+    [SERVER_NAME] => 192.168.1.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=1190c3059d15e54bc9b34998c5b64027
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.1.126/input/kojin_result.php?m=1
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_ORIGIN] => http://192.168.1.126
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 204
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.1.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aJU7ReE6436MiGSl1mjzlwAAAEk
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1754610501.0339
+    [REQUEST_TIME] => 1754610501
+)
+
+[2025/08/07 23:48:36]--------------------------------------------------
+post:Array
+(
+    [input_match_no] => 
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 18689
+    [player2_id] => 29697
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 0
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_1] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [l] => 
+    [t] => 2
+    [m] => 1
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 3
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2025
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&l=&t=2&m=1
+    [QUERY_STRING] => a=0&s=60&l=&t=2&m=1
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 54573
+    [SCRIPT_FILENAME] => /var/www/html/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.1.38
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.1.126
+    [SERVER_NAME] => 192.168.1.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=fe7a0a0f6735ebb5ebb2a22b2c4e2529
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.1.126/input/kojin_result.php?a=0&m=1
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_ORIGIN] => http://192.168.1.126
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 234
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.1.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aJU7VOE6436MiGSl1mjznAAAAEo
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1754610516.8992
+    [REQUEST_TIME] => 1754610516
+)
+
+[2025/08/07 23:48:38]--------------------------------------------------
+post:Array
+(
+    [input_match_no] => 
+    [mode] => update_match
+    [end_match] => 1
+    [player1_id] => 24321
+    [player2_id] => 18945
+    [faul1_1] => 0
+    [faul1_2] => 1
+    [waza1_1] => 1
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [extra] => 1
+    [match_time] => 443
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [l] => 
+    [t] => 2
+    [m] => 2
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 1
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2025
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&l=&t=2&m=2
+    [QUERY_STRING] => a=0&s=60&l=&t=2&m=2
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 57891
+    [SCRIPT_FILENAME] => /var/www/html/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.1.41
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.1.126
+    [SERVER_NAME] => 192.168.1.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=1c50d0e0970ece2489e07d5a3f12b8b3
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.1.126/input/kojin_result.php?a=0&m=2
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_ORIGIN] => http://192.168.1.126
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 235
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.1.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aJU7VuE6436MiGSl1mjznQAAAEc
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1754610518.0566
+    [REQUEST_TIME] => 1754610518
+)
+
+[2025/08/07 23:48:47]--------------------------------------------------
+post:Array
+(
+    [input_match_no] => 
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 18689
+    [player2_id] => 29697
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 1
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [l] => 
+    [t] => 2
+    [m] => 1
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 3
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2025
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&l=&t=2&m=1
+    [QUERY_STRING] => a=0&s=60&l=&t=2&m=1
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 54574
+    [SCRIPT_FILENAME] => /var/www/html/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.1.38
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.1.126
+    [SERVER_NAME] => 192.168.1.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=fe7a0a0f6735ebb5ebb2a22b2c4e2529
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.1.126/input/kojin_result.php?a=0&m=1
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_ORIGIN] => http://192.168.1.126
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 224
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.1.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aJU7X-E6436MiGSl1mjzqgAAAEk
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1754610527.744
+    [REQUEST_TIME] => 1754610527
+)
+
+[2025/08/07 23:49:37]--------------------------------------------------
+post:Array
+(
+    [input_match_no] => 
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 13569
+    [player2_id] => 3841
+    [faul1_1] => 2
+    [faul1_2] => 1
+    [waza1_1] => 3
+    [waza1_3] => 3
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [l] => 
+    [t] => 2
+    [m] => 5
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 2
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2025
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&l=&t=2&m=5
+    [QUERY_STRING] => a=0&s=60&l=&t=2&m=5
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 51159
+    [SCRIPT_FILENAME] => /var/www/html/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.1.43
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.1.126
+    [SERVER_NAME] => 192.168.1.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=48cd7f1be230e44c4c9918fec319b792
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.1.126/input/kojin_result.php?a=0&m=5
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_ORIGIN] => http://192.168.1.126
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 203
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.1.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aJU7keE6436MiGSl1mjzxgAAAEM
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1754610577.4818
+    [REQUEST_TIME] => 1754610577
+)
+
+[2025/08/07 23:51:10]--------------------------------------------------
+post:Array
+(
+    [input_match_no] => 
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 8961
+    [player2_id] => 13825
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 4
+    [waza1_3] => 1
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 1
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [l] => 
+    [t] => 2
+    [m] => 2
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 4
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2025
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&l=&t=2&m=2
+    [QUERY_STRING] => a=0&s=60&l=&t=2&m=2
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 50385
+    [SCRIPT_FILENAME] => /var/www/html/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.1.48
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.1.126
+    [SERVER_NAME] => 192.168.1.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=1190c3059d15e54bc9b34998c5b64027
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.1.126/input/kojin_result.php?a=0&m=2
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_ORIGIN] => http://192.168.1.126
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 211
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.1.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aJU77uE6436MiGSl1mj0AAAAAEo
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1754610670.8883
+    [REQUEST_TIME] => 1754610670
+)
+
+[2025/08/07 23:51:38]--------------------------------------------------
+post:Array
+(
+    [input_match_no] => 
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 20225
+    [player2_id] => 30209
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 2
+    [waza1_3] => 1
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [l] => 
+    [t] => 1
+    [m] => 2
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 5
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2025
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&l=&t=1&m=2
+    [QUERY_STRING] => a=0&s=61&l=&t=1&m=2
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 59905
+    [SCRIPT_FILENAME] => /var/www/html/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.1.42
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.1.126
+    [SERVER_NAME] => 192.168.1.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=8df59ab108b8866c65f6ec2dd2ae6e04
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.1.126/input/kojin_result.php?a=0&m=2
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_ORIGIN] => http://192.168.1.126
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 204
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.1.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aJU8CuE6436MiGSl1mj0CQAAAEI
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1754610698.6903
+    [REQUEST_TIME] => 1754610698
+)
+
+[2025/08/07 23:52:06]--------------------------------------------------
+post:Array
+(
+    [input_match_no] => 
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 4609
+    [player2_id] => 15105
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 5
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [l] => 
+    [t] => 1
+    [m] => 3
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 5
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2025
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&l=&t=1&m=3
+    [QUERY_STRING] => a=0&s=61&l=&t=1&m=3
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 59907
+    [SCRIPT_FILENAME] => /var/www/html/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.1.42
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.1.126
+    [SERVER_NAME] => 192.168.1.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=8df59ab108b8866c65f6ec2dd2ae6e04
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.1.126/input/kojin_result.php?a=0&m=3
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_ORIGIN] => http://192.168.1.126
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 223
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.1.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aJU8JuE6436MiGSl1mj0EwAAAFI
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1754610726.747
+    [REQUEST_TIME] => 1754610726
+)
+
+[2025/08/07 23:52:21]--------------------------------------------------
+post:Array
+(
+    [input_match_no] => 
+    [mode] => update_match
+    [end_match] => 1
+    [player1_id] => 8961
+    [player2_id] => 13825
+    [faul1_1] => 0
+    [faul1_2] => 1
+    [waza1_1] => 2
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 2
+    [waza2_3] => 0
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [l] => 
+    [t] => 2
+    [m] => 2
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 4
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2025
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&l=&t=2&m=2
+    [QUERY_STRING] => a=0&s=60&l=&t=2&m=2
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 50399
+    [SCRIPT_FILENAME] => /var/www/html/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.1.48
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.1.126
+    [SERVER_NAME] => 192.168.1.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=1190c3059d15e54bc9b34998c5b64027
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.1.126/input/kojin_result.php?a=0&s=60&l=&t=2&m=2
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_ORIGIN] => http://192.168.1.126
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 221
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.1.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aJU8NeE6436MiGSl1mj0GgAAAEU
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1754610741.0765
+    [REQUEST_TIME] => 1754610741
+)
+
+[2025/08/07 23:52:31]--------------------------------------------------
+post:Array
+(
+    [input_match_no] => 
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 9473
+    [player2_id] => 30721
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 1
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 3
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [l] => 
+    [t] => 1
+    [m] => 1
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 6
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2025
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&l=&t=1&m=1
+    [QUERY_STRING] => a=0&s=61&l=&t=1&m=1
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 52636
+    [SCRIPT_FILENAME] => /var/www/html/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.1.32
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.1.126
+    [SERVER_NAME] => 192.168.1.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=d0e874d7c8dfc0e6d814d9393cdbc7cd
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.1.126/input/kojin_result.php?m=1
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_ORIGIN] => http://192.168.1.126
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 213
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.1.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aJU8PuE6436MiGSl1mj0IAAAAEc
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1754610750.9336
+    [REQUEST_TIME] => 1754610750
+)
+
+[2025/08/07 23:52:58]--------------------------------------------------
+post:Array
+(
+    [input_match_no] => 
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 8705
+    [player2_id] => 29441
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 1
+    [waza1_2] => 1
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [l] => 
+    [t] => 2
+    [m] => 3
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 1
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2025
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&l=&t=2&m=3
+    [QUERY_STRING] => a=0&s=60&l=&t=2&m=3
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 57923
+    [SCRIPT_FILENAME] => /var/www/html/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.1.41
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.1.126
+    [SERVER_NAME] => 192.168.1.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=1c50d0e0970ece2489e07d5a3f12b8b3
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.1.126/input/kojin_result.php?a=0&m=3
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_ORIGIN] => http://192.168.1.126
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 213
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.1.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aJU8WuE6436MiGSl1mj0KAAAAEY
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1754610778.3449
+    [REQUEST_TIME] => 1754610778
+)
+
+[2025/08/07 23:53:19]--------------------------------------------------
+post:Array
+(
+    [input_match_no] => 
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 25345
+    [player2_id] => 14849
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 1
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [l] => 
+    [t] => 1
+    [m] => 2
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 6
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2025
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&l=&t=1&m=2
+    [QUERY_STRING] => a=0&s=61&l=&t=1&m=2
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 52642
+    [SCRIPT_FILENAME] => /var/www/html/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.1.32
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.1.126
+    [SERVER_NAME] => 192.168.1.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=d0e874d7c8dfc0e6d814d9393cdbc7cd
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.1.126/input/kojin_result.php?a=0&m=2
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_ORIGIN] => http://192.168.1.126
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 224
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.1.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aJU8b-E6436MiGSl1mj0OwAAAEo
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1754610799.9093
+    [REQUEST_TIME] => 1754610799
+)
+
+[2025/08/07 23:53:51]--------------------------------------------------
+post:Array
+(
+    [input_match_no] => 
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 39681
+    [player2_id] => 34305
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 1
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [l] => 
+    [t] => 2
+    [m] => 2
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 3
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2025
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&l=&t=2&m=2
+    [QUERY_STRING] => a=0&s=60&l=&t=2&m=2
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 54595
+    [SCRIPT_FILENAME] => /var/www/html/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.1.38
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.1.126
+    [SERVER_NAME] => 192.168.1.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=fe7a0a0f6735ebb5ebb2a22b2c4e2529
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.1.126/input/kojin_result.php?a=0&m=2
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_ORIGIN] => http://192.168.1.126
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 224
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.1.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aJU8j-E6436MiGSl1mj0RgAAAEM
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1754610831.8788
+    [REQUEST_TIME] => 1754610831
+)
+
+[2025/08/07 23:55:07]--------------------------------------------------
+post:Array
+(
+    [input_match_no] => 
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 19969
+    [player2_id] => 40705
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 3
+    [waza1_3] => 3
+    [faul2_1] => 0
+    [faul2_2] => 1
+    [waza2_2] => 3
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [l] => 
+    [t] => 1
+    [m] => 3
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 6
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2025
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&l=&t=1&m=3
+    [QUERY_STRING] => a=0&s=61&l=&t=1&m=3
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 52648
+    [SCRIPT_FILENAME] => /var/www/html/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.1.32
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.1.126
+    [SERVER_NAME] => 192.168.1.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=d0e874d7c8dfc0e6d814d9393cdbc7cd
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.1.126/input/kojin_result.php?a=0&m=3
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_ORIGIN] => http://192.168.1.126
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 204
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.1.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aJU82-E6436MiGSl1mj0bAAAAE8
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1754610907.1399
+    [REQUEST_TIME] => 1754610907
+)
+
+[2025/08/07 23:55:13]--------------------------------------------------
+post:Array
+(
+    [input_match_no] => 
+    [mode] => update_match
+    [end_match] => 1
+    [player1_id] => 19969
+    [player2_id] => 40705
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 3
+    [waza1_3] => 3
+    [faul2_1] => 0
+    [faul2_2] => 1
+    [waza2_2] => 3
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [l] => 
+    [t] => 1
+    [m] => 3
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 6
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2025
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&l=&t=1&m=3
+    [QUERY_STRING] => a=0&s=61&l=&t=1&m=3
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 52650
+    [SCRIPT_FILENAME] => /var/www/html/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.1.32
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.1.126
+    [SERVER_NAME] => 192.168.1.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=d0e874d7c8dfc0e6d814d9393cdbc7cd
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.1.126/input/kojin_result.php?a=0&s=61&l=&t=1&m=3
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_ORIGIN] => http://192.168.1.126
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 204
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.1.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aJU84TNt_9bTmsm8AjoqZAAAAIo
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1754610913.4659
+    [REQUEST_TIME] => 1754610913
+)
+
+[2025/08/07 23:55:41]--------------------------------------------------
+post:Array
+(
+    [input_match_no] => 
+    [mode] => update_match
+    [end_match] => 1
+    [player1_id] => 14593
+    [player2_id] => 40961
+    [faul1_1] => 0
+    [faul1_2] => 1
+    [waza1_1] => 1
+    [waza1_3] => 2
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 3
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [l] => 
+    [t] => 1
+    [m] => 1
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 8
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2025
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&l=&t=1&m=1
+    [QUERY_STRING] => a=0&s=61&l=&t=1&m=1
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 52044
+    [SCRIPT_FILENAME] => /var/www/html/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.1.36
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.1.126
+    [SERVER_NAME] => 192.168.1.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=2d493214976068ab0a5c2b7cc458cfb3
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.1.126/input/kojin_result.php?a=0&m=1
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_ORIGIN] => http://192.168.1.126
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 204
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.1.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aJU8_eE6436MiGSl1mj0hQAAAEY
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1754610941.8788
+    [REQUEST_TIME] => 1754610941
+)
+

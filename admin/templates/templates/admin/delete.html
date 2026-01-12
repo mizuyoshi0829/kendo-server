@@ -1,0 +1,16 @@
+{$htmlheader|smarty:nodefaults}
+    <h2>以下のデータを削除します。よろしいでしょうか？</h2>
+    <table id="ex_t" border="0" cellspacing="1" cellpadding="0">
+      <tr><td class="td_right">データ番号</td><td class="td_right">{$smarty.session.p.id}</td><tr>
+      <tr><td class="td_right">入力年月日</td><td class="td_right">{$smarty.session.p.create_date}</td><tr>
+      <tr><td class="td_right">タイトル</td><td class="td_right">{$smarty.session.p.title}</td><tr>
+    </table>
+    <form action="index.php" method="post">
+      <input type="hidden" name="mode" value="exec_delete">
+      <input type="submit" name="cancel" value="中止">
+      <input type="submit" name="exec" value="削除">
+    </form>
+    <br />
+    <br />
+    <br />
+{$htmlfooter|smarty:nodefaults}

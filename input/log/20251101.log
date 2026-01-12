@@ -1,0 +1,94 @@
+[2025/11/01 02:10:42]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 1
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 513
+    [player2_id] => 769
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 2
+    [waza1_3] => 1
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 3
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 107
+    [t] => 3
+    [m] => 1
+)
+session:Array
+(
+    [auth] => Array
+        (
+            [year] => 2025
+            [series_info_id] => 37
+        )
+
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 16
+            [place] => 1
+            [admin] => 0
+            [series] => 107
+            [series_info_id] => 37
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=107&t=3&m=1
+    [QUERY_STRING] => a=0&s=107&t=3&m=1
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 54478
+    [SCRIPT_FILENAME] => /var/www/html/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_NAME] => localhost
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_PRIORITY] => u=0, i
+    [HTTP_SEC_FETCH_USER] => ?1
+    [HTTP_SEC_FETCH_SITE] => same-origin
+    [HTTP_SEC_FETCH_MODE] => navigate
+    [HTTP_SEC_FETCH_DEST] => document
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_COOKIE] => _ga=GA1.1.1912648119.1760828514; _ga_YS49JN1DL1=GS2.1.s1761960886$o9$g0$t1761960886$j60$l0$h0; _gid=GA1.1.384937286.1761920067; PHPSESSID=35958e671d324b416617f1e077bc251d
+    [HTTP_REFERER] => http://localhost/input/kojin_result.php?a=0&m=1
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_ORIGIN] => http://localhost
+    [CONTENT_LENGTH] => 201
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate, br, zstd
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.7,en;q=0.3
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0
+    [HTTP_HOST] => localhost
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aQVsIpvASUVKsM2zOsAlEwAAAJI
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1761963042.9571
+    [REQUEST_TIME] => 1761963042
+)
+

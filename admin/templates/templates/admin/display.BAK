@@ -1,0 +1,92 @@
+{$htmlheader|smarty:nodefaults}
+    <h2>{$edit_title}</h2>
+    <br />
+    <form action="info.php" method="post" enctype="multipart/form-data">
+      <input type="hidden" name="mode" value="exec">
+      <table id="ex_t" border="0" cellspacing="1" cellpadding="0">
+{foreach from=$fields_info item=info}
+        <tr>
+{if $info.kind != ''}
+{if $info.kind == 'title1'}
+          <td colspan="2"><h1>{$info.name}</h1></td>
+{if $mform_msg != ''}
+          <td colspan="2">{$mform_msg}</td>
+{/if}
+    <div class="f_box">
+{elseif $info.kind == 'title2'}
+          <td colspan="2"><h2>{$info.name}</h2></td>
+{else}
+          <td class="td_left3">{$info.name}</td>
+{/if}
+{assign var="edit_field" value=$info.field}
+          <td class="td_right">
+{if $info.kind == 'text'}
+            {$smarty.session.p.$edit_field}
+{elseif $info.kind == 'textarea'}
+            {$smarty.session.p.$edit_field|nl2br}
+{elseif $info.kind == 'check'}
+{assign var="edit_field_name" value="`$edit_field`_name"}
+            {$smarty.session.p.$edit_field_name}
+{elseif $info.kind == 'check_one'}
+{assign var="edit_field_name" value="`$edit_field`_name"}
+            {$smarty.session.p.$edit_field_name}
+{elseif $info.kind == 'select' || $info.kind == 'pref_select'}
+{assign var="edit_field_name" value="`$edit_field`_name"}
+            {$smarty.session.p.$edit_field_name}
+{elseif $info.kind == 'radio'}
+{assign var="edit_field_name" value="`$edit_field`_name"}
+            {$smarty.session.p.$edit_field_name}
+{elseif $info.kind == 'name'}
+{assign var="edit_field_sei" value="`$edit_field`_sei"}
+{assign var="edit_field_mei" value="`$edit_field`_mei"}
+            {$smarty.session.p.$edit_field_sei}{$smarty.session.p.$edit_field_mei}
+{elseif $info.kind == 'name2'}
+{assign var="edit_field_sei" value="`$edit_field`_sei"}
+{assign var="edit_field_mei" value="`$edit_field`_mei"}
+{assign var="edit_field_add" value="`$edit_field`_add"}
+{assign var="edit_field_disp" value="`$edit_field`_disp"}
+            {$smarty.session.p.$edit_field_sei}{$smarty.session.p.$edit_field_mei}{if $smarty.session.p.$edit_field_add != ''}(備考：{$smarty.session.p.$edit_field_add}){/if}{if $smarty.session.p.$edit_field_disp != ''}(表示名：{$smarty.session.p.$edit_field_disp}){/if}
+{elseif $info.kind == 'tel_fax'}
+{assign var="edit_field_tel" value="`$edit_field`_tel"}
+{assign var="edit_field_fax" value="`$edit_field`_fax"}
+            TEL：{$smarty.session.p.$edit_field_tel} FAX：{$smarty.session.p.$edit_field_fax}
+{elseif $info.kind == 'mobile_tel'}
+{assign var="edit_field_mobile" value="`$edit_field`_mobile"}
+{assign var="edit_field_tel" value="`$edit_field`_tel"}
+            TEL：{$smarty.session.p.$edit_field_mobile} FAX：{$smarty.session.p.$edit_field_tel}
+{elseif $info.kind == 'school_org'}
+{assign var="edit_field_school_name" value="`$edit_field`_school_name"}
+{assign var="edit_field_name" value="`$edit_field`_name"}
+            {$smarty.session.p.$edit_field_school_name}
+            {$smarty.session.p.$edit_field_name}
+{elseif $info.kind == 'address'}
+{assign var="edit_field_zip1" value="`$edit_field`_zip1"}
+{assign var="edit_field_zip2" value="`$edit_field`_zip2"}
+{assign var="edit_field_pref_name" value="`$edit_field`_pref_name"}
+            〒{$smarty.session.p.$edit_field_zip1}-{$smarty.session.p.$edit_field_zip2}&nbsp;
+            {$smarty.session.p.$edit_field_pref_name}{$smarty.session.p.$edit_field}
+{elseif $info.kind == 'grade_j'}
+{assign var="edit_field_name" value="`$edit_field`_name"}
+            {$smarty.session.p.$edit_field_name}
+{elseif $info.kind == 'grade_e'}
+{assign var="edit_field_name" value="`$edit_field`_name"}
+            {$smarty.session.p.$edit_field_name}
+{elseif $info.kind == 'email'}
+            {$smarty.session.p.$edit_field}
+{elseif $info.kind == 'include'}
+{assign var="include_file" value="admin/confirm_`$smarty.session.auth.series`_`$info.select_info`.html"}
+{include file="$include_file"}
+{/if}
+{/if}
+          </td>
+        </tr>
+{/foreach}
+      </table>
+      <br />
+      <input type="submit" name="cancel" value="中止">
+      <input type="submit" name="exec" value="実行">
+    </form>
+    <br />
+    <br />
+    <br />
+{$htmlfooter|smarty:nodefaults}

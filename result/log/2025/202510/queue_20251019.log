@@ -1,0 +1,19 @@
+[2025/10/19 00:01:13] cli
+[2025/10/19 00:01:13] Array
+(
+    [0] => kn         21165 83.3  0.2 493008 45632 pts/1    S+   09:01   0:00 /usr/bin/php /var/www/html/result/pdf_queue.php
+)
+
+[2025/10/19 00:01:13] SELECT * FROM `pdf_queue` WHERE `deleted_at` is null ORDER BY `id` ASC
+[2025/10/19 00:01:13] queue (1)
+[2025/10/19 00:01:13]    queue (9:1:11)
+[2025/10/19 00:01:13]    queue (9:1:11)----------------
+[2025/10/19 00:01:13] SELECT * FROM `pdf_queue` WHERE `deleted_at` is null ORDER BY `id` ASC
+[2025/10/19 00:01:13] queue (0)
+[2025/10/19 00:04:55] cli
+[2025/10/19 00:04:55] SELECT * FROM `pdf_queue` WHERE `deleted_at` is null ORDER BY `id` ASC
+[2025/10/19 00:04:55] queue (1)
+[2025/10/19 00:04:55]    queue (9:1:11)
+[2025/10/19 00:04:55]    queue (9:1:11)----------------
+[2025/10/19 00:04:55] SELECT * FROM `pdf_queue` WHERE `deleted_at` is null ORDER BY `id` ASC
+[2025/10/19 00:04:55] queue (0)

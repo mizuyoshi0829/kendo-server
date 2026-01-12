@@ -1,0 +1,125 @@
+{$htmlheader|default:''}
+    <h2>団体({if $mw =='m'}男子{elseif $mw =='w'}女子{/if})リーグ戦
+      <div style="float: right;">
+{if $smarty.session.auth.locked == 0}
+      <form action="dantai_league.php?s={$series}&mw={$mw}" method="post" enctype="multipart/form-data">
+        <input name="csv_file" type="file" value="" />
+        <input type="hidden" name="mode" value="loadcsv" />
+        <input type="submit" name="submit" value="csvデータ読み込み" />
+      </form>
+{else}
+        <input name="csv_file" type="file" value="" />
+        <input type="button" name="submit" value="csvデータ読み込み" />
+{/if}
+      </div>
+    </h2>
+{**}
+    <form action="dantai_league.php?s={$series}&mw={$mw}" method="post">
+      <input type="hidden" name="mode" value="clear" />
+      <input type="hidden" name="category" value="{$category}" />
+      <input type="submit" name="submit" value="試合データクリア" />
+    </form>
+{**}
+    <form action="dantai_league.php?s={$series}&mw={$mw}" method="post">
+      <input type="hidden" name="mode" value="output" />
+      <input type="hidden" name="category" value="{$category}" />
+      <input type="submit" name="submit" value="ファイル出力" />
+    </form>
+    <form action="dantai_league.php?s={$series}&mw={$mw}" method="post">
+      <input type="hidden" name="mode" value="output_excel_chart" />
+      <input type="submit" name="submit" value="リーグ成績表excel出力" />
+    </form>
+    <form action="dantai_league.php?s={$series}&mw={$mw}" method="post">
+      <input type="hidden" name="mode" value="output_excel_result" />
+      <input type="submit" name="submit" value="対戦詳細結果excel出力" />
+    </form>
+{if $smarty.session.auth.locked == 0}
+    <form action="dantai_league.php?s={$series}&mw={$mw}" method="post">
+{/if}
+{section name=league_data loop=$league_list}
+    <table id="ex_t" border="0" cellspacing="1" cellpadding="0">
+      <tr>
+        <td class="td_right2">
+          {$league_list[league_data].name}
+        </td>
+        <td class="td_right2">
+{if $smarty.session.auth.locked == 0}
+            <input type="hidden" name="mode" value="update">
+            <input type="submit" name="edit" value="データ更新">
+{else}
+            <input type="button" name="edit" value="データ更新">
+{/if}
+        </td>
+        <td class="td_right2" colspan="{$league_list[league_data].team_num+5}">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="td_right">対戦学校</td>
+        <td class="td_right" colspan="{$league_list[league_data].team_num}">試合
+        <td class="td_right" rowspan="2">得点</td>
+        <td class="td_right" rowspan="2">勝者数</td>
+        <td class="td_right" rowspan="2">勝本数</td>
+        <td class="td_right" rowspan="2">順位</td>
+        <td class="td_right" rowspan="2"><input type="checkbox" name="extra_match_exists_{$smarty.section.league_data.iteration}" value="1" {if $league_list[league_data].extra_match_exists=='1'}checked="checked" {/if}/>代表戦</td>
+        <td class="td_right" rowspan="2">勝ち上がり</td>
+        </td>
+      </tr>
+      <tr>
+        <td class="td_right">----</td>
+{section name=dantai_index_row start=0 loop=$league_list[league_data].team_num step=1}
+        <td class="td_right">
+{foreach from=$entry_list key=k item=v}
+{if $league_list[league_data].team[$smarty.section.dantai_index_row.index].team == $k}{$v}{/if}
+{/foreach}
+        </td>
+{/section}
+      </tr>
+{assign var='match_no' value=1}
+{assign var='match_no_index' value=0}
+{section name=dantai_index_row start=0 loop=$league_list[league_data].team_num step=1}
+      <tr>
+        <td class="td_right">
+          {html_options name="entry_`$smarty.section.league_data.iteration`_`$smarty.section.dantai_index_row.iteration`" options=$entry_list selected=$league_list[league_data].team[$smarty.section.dantai_index_row.index].team}
+        </td>
+{section name=dantai_index_col start=0 loop=$league_list[league_data].team_num step=1}
+{if $smarty.section.dantai_index_row.iteration == $smarty.section.dantai_index_col.iteration}
+        <td class="td_right">----</td>
+{elseif $smarty.section.dantai_index_row.iteration < $smarty.section.dantai_index_col.iteration}
+        <td class="td_right">
+          {html_options name="place_`$smarty.section.league_data.iteration`_`$match_no`" options=$place_array selected=$league_list[league_data].match[$match_no_index].place}
+          {html_options name="place_match_`$smarty.section.league_data.iteration`_`$match_no`" options=$place_match_no_array selected=$league_list[league_data].match[$match_no_index].place_match_no}
+          <a href="../input/dantai_result.php?a=1&p={$league_list[league_data].match[$match_no_index].place}&m={$league_list[league_data].match[$match_no_index].place_match_no}&lg=1&v={$seriesinfo.navi_id}">{if $league_list[league_data].match[$match_no_index].winner==1}○{elseif $league_list[league_data].match[$match_no_index].winner==2}△{else}□{/if}</a>
+        </td>
+{assign var='match_no' value=$match_no+1}
+{assign var='match_no_index' value=$match_no_index+1}
+{else}
+        <td class="td_right"></td>
+{/if}
+{/section}
+        <td class="td_right"> {$league_list[league_data].team[$smarty.section.dantai_index_row.index].point/2}</td>
+        <td class="td_right"> {$league_list[league_data].team[$smarty.section.dantai_index_row.index].win}</td>
+        <td class="td_right"> {$league_list[league_data].team[$smarty.section.dantai_index_row.index].hon}</td>
+        <td class="td_right" {if $league_list[league_data].team[$smarty.section.dantai_index_row.index].advanced == 1}bgcolor="#ffbbbb"{/if}>{$league_list[league_data].team[$smarty.section.dantai_index_row.index].standing}</td>
+{if $smarty.section.dantai_index_row.iteration == 1}
+        <td class="td_right" rowspan="{$league_list[league_data].team_num}">
+{assign var='extra_no_index' value=$league_list[league_data].match_num}
+{section name=extra_index start=0 loop=$league_list[league_data].extra_match_num step=1}
+            <a href="../input/dantai_result2.php?a=1&p=1&m={$smarty.section.extra_index.iteration+$league_list[league_data].id*1000}&lg=1&v={$seriesinfo.navi_id}">{$smarty.section.extra_index.iteration}</a><br />
+{assign var='extra_no_index' value=$extra_no_index+1}
+{/section}
+        </td>
+{/if}
+        <td class="td_right"><input type="checkbox" name="advanced_{$smarty.section.league_data.iteration}_{$smarty.section.dantai_index_row.iteration}" value="1" {if $league_list[league_data].team[$smarty.section.dantai_index_row.index].real_advanced=='1'}checked="checked" {/if}/></td>
+      </tr>
+{/section}
+      <tr>
+        <td class="td_right" colspan="7">&nbsp;</td>
+      </tr>
+    </table>
+{/section}
+{if $smarty.session.auth.locked == 0}
+    </form>
+{/if}
+    <br />
+    <br />
+    <br />
+{$htmlfooter|default:''}

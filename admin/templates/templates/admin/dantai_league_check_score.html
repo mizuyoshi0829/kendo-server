@@ -1,0 +1,84 @@
+{$htmlheader|default:''}
+{if $mw =='m'}
+  {if $seriesinfo.dantai_m_name == ''}
+    <h2>団体リーグスコアーチェック</h2>
+  {else}
+    <h2>{$seriesinfo.dantai_m_name}リーグスコアーチェック</h2>
+  {/if}
+{/if}
+{if $mw =='w'}
+  {if $seriesinfo.dantai_w_name == ''}
+    <h2>団体リーグスコアーチェック</h2>
+  {else}
+    <h2>{$seriesinfo.dantai_w_name}リーグスコアーチェック</h2>
+  {/if}
+{/if}
+    </h2>
+{section name=league_data loop=$league_list}
+    <table id="ex_t" border="0" cellspacing="1" cellpadding="0" style="width: 640px;">
+      <tr>
+        <td class="td_right">
+          {$league_list[league_data].name}
+        </td>
+        <td class="td_right" colspan="{$league_list[league_data].team_num}">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="td_right">対戦団体</td>
+        <td class="td_right" colspan="{$league_list[league_data].team_num}">試合
+        </td>
+      </tr>
+      <tr>
+        <td class="td_right">----</td>
+{section name=dantai_index_row start=0 loop=$league_list[league_data].team_num step=1}
+        <td class="td_right">
+{foreach from=$entry_list key=k item=v}
+{if $league_list[league_data].team[$smarty.section.dantai_index_row.index].team == $k}{$v}{/if}
+{/foreach}
+        </td>
+{/section}
+      </tr>
+{assign var='match_no' value=1}
+{assign var='match_no_index' value=0}
+{section name=dantai_index_row start=0 loop=$league_list[league_data].team_num step=1}
+      <tr>
+        <td class="td_right">
+          {foreach from=$entry_list key=k item=v}
+          {if $league_list[league_data].team[$smarty.section.dantai_index_row.index].team == $k}{$v}{/if}
+          {/foreach}
+        </td>
+{section name=dantai_index_col start=0 loop=$league_list[league_data].team_num step=1}
+{if $smarty.section.dantai_index_row.iteration == $smarty.section.dantai_index_col.iteration}
+        <td class="td_right">----</td>
+{elseif $smarty.section.dantai_index_row.iteration < $smarty.section.dantai_index_col.iteration}
+        <td class="td_right">
+{if $league_list[league_data].match[$match_no_index].place > 0 && $league_list[league_data].match[$match_no_index].place_match_no > 0}
+          <form action="dantai_league_check_score.php?s={$seriesinfo.dantai_league_m}&mw=m" method="post">
+{if $league_list[league_data].match[$match_no_index].approval==1}
+            承認済み
+            <input type="hidden" name="id" value="{$league_list[league_data].match[$match_no_index].match}">
+            <input type="hidden" name="mode" value="unapproval">
+            <input type="submit" name="submit" value="取り消し">
+{else}
+            未承認
+            <input type="hidden" name="id" value="{$league_list[league_data].match[$match_no_index].match}">
+            <input type="hidden" name="mode" value="approval">
+            <input type="submit" name="submit" value="承認">
+{/if}
+          </form>
+          <a href="/result/{{$smarty.session.auth.result_path_prefix}}/pdf/match{$league_list[league_data].match[$match_no_index].match}.pdf" target="_blank">PDF</a>
+{/if}
+        </td>
+{assign var='match_no' value=$match_no+1}
+{assign var='match_no_index' value=$match_no_index+1}
+{else}
+        <td class="td_right"></td>
+{/if}
+{/section}
+      </tr>
+{/section}
+    </table>
+{/section}
+    <br />
+    <br />
+    <br />
+{$htmlfooter|default:''}

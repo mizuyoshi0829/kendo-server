@@ -1,0 +1,27 @@
+{$htmlheader|smarty:nodefaults}
+    <h2>以下の内容に変更します。よろしいでしょうか？</h2>
+    <table id="ex_t" border="0" cellspacing="1" cellpadding="0">
+      <tr>
+        <td class="td_left2">タイトル</td>
+        <td class="td_right">{$smarty.session.p.title|escape|nl2br}</td>
+      </tr>
+      <tr>
+        <td class="td_left2">写真</td>
+        <td class="td_right">
+          <div style="padding: 16px 32px 16px 16px">
+            <img src="/galleryimage/{$smarty.session.p.image}.jpg" width="200" />
+          </div>
+          <p>{$smarty.session.p.image}.jpg</p>
+        </td>
+      </tr>
+    </table>
+    <br />
+    <form action="gallery_photo.php" method="post">
+      <input type="hidden" name="mode" value="exec">
+      <input type="submit" name="reinput" value="再編集">
+      <input type="submit" name="exec" value="変更">
+    </form>
+    <br />
+    <br />
+    <br />
+{$htmlfooter|smarty:nodefaults}

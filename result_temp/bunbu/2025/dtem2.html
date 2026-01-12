@@ -1,0 +1,878 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>試合結果速報</title>
+</head>
+<body>
+<!--
+-->
+<style>
+body { font-family: 'DejaVu Sans Condensed'; font-size: 5pt;  }
+.content {
+    width: 900px;
+    height: 980px;
+    font-size: 5px;
+    margin: 16px;
+}
+.div_result_tournament_name {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    width: 160px;
+}
+.div_result_tournament_name_name {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    vertical-align: middle;
+    font-size: 11pt;
+    width: 186px;
+}
+.div_result_tournament_name_name.small {
+    font-size: 8pt;
+}
+.div_result_tournament_name_pref {
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    text-align: left;
+    font-size: 11pt;
+    width: 72px;
+}
+.div_result_tournament_name_num {
+    margin: 0;
+    padding: 0 4px 0 4px;
+    vertical-align: top;
+    text-align: right;
+    font-size: 11pt;
+    width: 16px;
+}
+.div_result_tournament_name_num2 {
+    margin: 0;
+    padding: 0 4px 0 4px;
+    text-align: left;
+    width: 16px;
+}
+.div_result_tournament {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+.div_result_one_tournament {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    width: 30px;
+    font-size: 6pt;
+    display: inline; float: left;
+}
+.div_result_one_tournament2 {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    width: 30px;
+    font-size: 6pt;
+    display: inline; float: left;
+}
+.div_border_none {
+    border: none;
+    padding: 1px 0 0 1px;
+}
+.div_border_none2 {
+    border: none;
+    padding: 0 1px 1px 0;
+}
+.div_border_b {
+    border-top: none;
+    border-bottom: solid 1px #000000;
+    border-right: solid 1px #ffffff;
+    border-left: none;
+}
+.div_border_b_win {
+    border-top: none;
+    border-bottom: solid 1px #ff0000;
+    border-right: solid 1px #ffffff;
+    border-left: none;
+}
+.div_border_b_up {
+    border-top: none;
+    border-bottom: solid 1px #ff0000;
+    border-right: solid 1px #ffffff;
+    border-left: none;
+}
+.div_border_b2 {
+    border-top: none;
+    border-bottom: solid 1px #000000;
+    border-left: solid 1px #ffffff;
+    border-right: none;
+}
+.div_border_b2_win {
+    border-top: none;
+    border-bottom: solid 1px #ff0000;
+    border-left: solid 1px #ffffff;
+    border-right: none;
+}
+.div_border_b2_up {
+    border-top: none;
+    border-bottom: solid 1px #ff0000;
+    border-left: solid 1px #ffffff;
+    border-right: none;
+}
+.div_border_br {
+    border-top: none;
+    border-bottom: solid 1px #000000;
+    border-right: solid 1px #000000;
+    border-left: none;
+}
+.div_border_br_win {
+    border-top: none;
+    border-bottom: solid 1px #ff0000;
+    border-right: solid 1px #ff0000;
+    border-left: none;
+}
+.div_border_br_up {
+    border-top: none;
+    border-bottom: solid 1px #ff0000;
+    border-right: solid 1px #000000;
+    border-left: none;
+}
+.div_border_br_final {
+    border-top: none;
+    border-bottom: solid 1px #ff0000;
+    border-right: solid 1px #ff0000;
+    border-left: none;
+}
+.div_border_br_final2 {
+    border-top: none;
+    border-bottom: solid 1px #000000;
+    border-right: solid 1px #ff0000;
+    border-left: none;
+}
+.div_border_r {
+    border-top: none;
+    border-bottom: none;
+    border-right: solid 1px #000000;
+    border-left: none;
+    padding: 0 0 1px 0;
+}
+.div_border_r_win {
+    border-top: none;
+    border-bottom: none;
+    border-right: solid 1px #ff0000;
+    border-left: none;
+    padding: 0 0 1px 0;
+}
+.div_border_r_up {
+    border-top: none;
+    border-bottom: none;
+    border-right: solid 1px #ff0000;
+    border-left: none;
+    padding: 0 0 1px 0;
+}
+.div_border_bl {
+    border-top: none;
+    border-bottom: solid 1px #000000;
+    border-left: solid 1px #000000;
+    border-right: none;
+}
+.div_border_bl_win {
+    border-top: none;
+    border-bottom: solid 1px #ff0000;
+    border-left: solid 1px #ff0000;
+    border-right: none;
+}
+.div_border_bl_up {
+    border-top: none;
+    border-bottom: solid 1px #ff0000;
+    border-left: solid 1px #000000;
+    border-right: none;
+}
+.div_border_l {
+    border-top: none;
+    border-bottom: none;
+    border-left: solid 1px #000000;
+    border-right: none;
+    padding: 0 0 1px 0;
+}
+.div_border_l_win {
+    border-top: none;
+    border-bottom: none;
+    border-left: solid 1px #ff0000;
+    border-right: none;
+    padding: 0 0 1px 0;
+}
+.div_border_l_up {
+    border-top: none;
+    border-bottom: none;
+    border-left: solid 1px #000000;
+    border-right: none;
+    padding: 0 0 1px 0;
+}
+.tb_result_tournament_name {
+    text-align: left;
+    width: 80px;
+}
+.tb_result_tournament_name_pref {
+    text-align: left;
+    width: 60px;
+    padding: 0 4px 0 4px;
+}
+.tb_result_tournament_name_num {
+    text-align: right;
+    width: 10px;
+    padding: 0 4px 0 4px;
+}
+.tb_result_tournament_name_num2 {
+    text-align: left;
+    width: 10px;
+    padding: 0 2px 0 8px;
+}
+.tb_result_tournament {
+    text-align: right;
+    width: 40px;
+}
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+</style>
+<H1 style="border-bottom: solid 1px #000000;" lang="ja">予選会トーナメント表</H1>
+<!-- <h2 align="left" class="tx-h1"><a href="index_em.html">←戻る</a></h2> -->
+<h2 align="left" class="tx-h1"><a href="index_ew.html">←戻る</a></h2>
+<div class="container">
+  <div class="content">
+    <table style="border-collapse: separate; border-spacing: 0;">
+      <tr>
+<td height="6" class="div_result_tournament_name_name" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_pref" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_num" lang="ja"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_result_tournament_name_num" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_name" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_pref" lang="ja"></td>
+
+      </tr>
+      <tr>
+<td class="div_result_tournament_name_name" rowspan="3" lang="ja">上の台剣友会</td>
+<td class="div_result_tournament_name_pref" rowspan="3" lang="ja">(千葉)</td>
+<td class="div_result_tournament_name_num" rowspan="3" lang="ja">1</td>
+<td height="6" class="div_border_b_up div_result_one_tournament"></td>
+<td height="6" class="div_border_b_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_b_win div_result_one_tournament"></td>
+<td class="div_result_tournament_name_num" rowspan="3" lang="ja">16</td>
+<td class="div_result_tournament_name_name" rowspan="3" lang="ja">養浩館道場</td>
+<td class="div_result_tournament_name_pref" rowspan="3" lang="ja">(神奈川)</td>
+
+      </tr>
+      <tr>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+
+      </tr>
+      <tr>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_b_win div_result_one_tournament"></td>
+<td height="6" class="div_border_l_win div_result_one_tournament2">　<a href="rm2770.html">5 - 0</a></td>
+
+      </tr>
+      <tr>
+<td height="6" class="div_result_tournament_name_name" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_pref" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_num" lang="ja"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r_win div_result_one_tournament"><a href="rm2754.html">2 - 1</a>　</td>
+<td height="6" class="div_border_b_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_result_tournament_name_num" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_name" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_pref" lang="ja"></td>
+
+      </tr>
+      <tr>
+<td class="div_result_tournament_name_name" rowspan="3" lang="ja">高山剣道連盟</td>
+<td class="div_result_tournament_name_pref" rowspan="3" lang="ja">(長野)</td>
+<td class="div_result_tournament_name_num" rowspan="3" lang="ja">2</td>
+<td height="6" class="div_border_b div_result_one_tournament"></td>
+<td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_bl div_result_one_tournament"></td>
+<td class="div_result_tournament_name_num" rowspan="3" lang="ja">17</td>
+<td class="div_result_tournament_name_name" rowspan="3" lang="ja">寺尾剣道ク</td>
+<td class="div_result_tournament_name_pref" rowspan="3" lang="ja">(長野)</td>
+
+      </tr>
+      <tr>
+<td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td>
+      </tr>
+      <tr>
+<td height="6" class="div_border_r div_result_one_tournament"><a href="rm2763.html">0 - 5</a>　</td>
+<td height="6" class="div_border_br_up div_result_one_tournament"></td>
+<td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_b_win div_result_one_tournament"></td>
+<td height="6" class="div_border_l_win div_result_one_tournament2">　<a href="rm2758.html">4 - 1</a></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td>
+      </tr>
+      <tr>
+<td height="6" class="div_result_tournament_name_name" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_pref" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_num" lang="ja"></td>
+<td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_result_tournament_name_num" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_name" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_pref" lang="ja"></td>
+
+      </tr>
+      <tr>
+<td class="div_result_tournament_name_name" rowspan="3" lang="ja">山梨健友会</td>
+<td class="div_result_tournament_name_pref" rowspan="3" lang="ja">(山梨)</td>
+<td class="div_result_tournament_name_num" rowspan="3" lang="ja">3</td>
+<td height="6" class="div_border_br_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_b div_result_one_tournament"></td>
+<td class="div_result_tournament_name_num" rowspan="3" lang="ja">18</td>
+<td class="div_result_tournament_name_name" rowspan="3" lang="ja">岡谷剣道協会</td>
+<td class="div_result_tournament_name_pref" rowspan="3" lang="ja">(長野)</td>
+
+      </tr>
+      <tr>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_l div_result_one_tournament2"></td>
+
+      </tr>
+      <tr>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r_win div_result_one_tournament"><a href="rm2750.html">2 - 1</a>　</td>
+<td height="6" class="div_border_b_up div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_bl_up div_result_one_tournament"></td>
+<td height="6" class="div_border_l div_result_one_tournament2">　<a href="rm2771.html">0 - 3</a></td>
+
+      </tr>
+      <tr>
+<td height="6" class="div_result_tournament_name_name" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_pref" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_num" lang="ja"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_result_tournament_name_num" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_name" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_pref" lang="ja"></td>
+
+      </tr>
+      <tr>
+<td class="div_result_tournament_name_name" rowspan="3" lang="ja">更埴東部</td>
+<td class="div_result_tournament_name_pref" rowspan="3" lang="ja">(長野)</td>
+<td class="div_result_tournament_name_num" rowspan="3" lang="ja">4</td>
+<td height="6" class="div_border_b div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_bl_win div_result_one_tournament"></td>
+<td class="div_result_tournament_name_num" rowspan="3" lang="ja">19</td>
+<td class="div_result_tournament_name_name" rowspan="3" lang="ja">周南スポ少</td>
+<td class="div_result_tournament_name_pref" rowspan="3" lang="ja">(千葉)</td>
+
+      </tr>
+      <tr>
+<td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td>
+      </tr>
+      <tr>
+<td height="6" class="div_border_r div_result_one_tournament"><a href="rm2764.html">0 - 5</a>　</td>
+<td height="6" class="div_border_b_up div_result_one_tournament"></td>
+<td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_b_up div_result_one_tournament"></td>
+<td height="6" class="div_border_l_win div_result_one_tournament2">　<a href="rm2752.html">2 - 1</a></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td>
+      </tr>
+      <tr>
+<td height="6" class="div_result_tournament_name_name" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_pref" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_num" lang="ja"></td>
+<td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_result_tournament_name_num" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_name" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_pref" lang="ja"></td>
+
+      </tr>
+      <tr>
+<td class="div_result_tournament_name_name" rowspan="3" lang="ja">東深沢ＳＣ</td>
+<td class="div_result_tournament_name_pref" rowspan="3" lang="ja">(東京)</td>
+<td class="div_result_tournament_name_num" rowspan="3" lang="ja">5</td>
+<td height="6" class="div_border_br_win div_result_one_tournament"></td>
+<td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_b div_result_one_tournament"></td>
+<td class="div_result_tournament_name_num" rowspan="3" lang="ja">20</td>
+<td class="div_result_tournament_name_name" rowspan="3" lang="ja">大剣会</td>
+<td class="div_result_tournament_name_pref" rowspan="3" lang="ja">(静岡)</td>
+
+      </tr>
+      <tr>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_l div_result_one_tournament2"></td>
+
+      </tr>
+      <tr>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r div_result_one_tournament"><a href="rm2755.html">1 - 3</a>　</td>
+<td height="6" class="div_border_br_up div_result_one_tournament"></td>
+<td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_b_win div_result_one_tournament"></td>
+<td height="6" class="div_border_l div_result_one_tournament2">　<a href="rm2772.html">0 - 4</a></td>
+
+      </tr>
+      <tr>
+<td height="6" class="div_result_tournament_name_name" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_pref" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_num" lang="ja"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_result_tournament_name_num" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_name" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_pref" lang="ja"></td>
+
+      </tr>
+      <tr>
+<td class="div_result_tournament_name_name" rowspan="3" lang="ja">松代育成会</td>
+<td class="div_result_tournament_name_pref" rowspan="3" lang="ja">(長野)</td>
+<td class="div_result_tournament_name_num" rowspan="3" lang="ja">6</td>
+<td height="6" class="div_border_b div_result_one_tournament"></td>
+<td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_bl_win div_result_one_tournament"></td>
+<td class="div_result_tournament_name_num" rowspan="3" lang="ja">21</td>
+<td class="div_result_tournament_name_name" rowspan="3" lang="ja">錬武館</td>
+<td class="div_result_tournament_name_pref" rowspan="3" lang="ja">(神奈川)</td>
+
+      </tr>
+      <tr>
+<td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td>
+      </tr>
+      <tr>
+<td height="6" class="div_border_r div_result_one_tournament"><a href="rm2765.html">0 - 3</a>　</td>
+<td height="6" class="div_border_br_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_bl_up div_result_one_tournament"></td>
+<td height="6" class="div_border_l_win div_result_one_tournament2">　<a href="rm2759.html">4 - 1</a></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td>
+      </tr>
+      <tr>
+<td height="6" class="div_result_tournament_name_name" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_pref" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_num" lang="ja"></td>
+<td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_result_tournament_name_num" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_name" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_pref" lang="ja"></td>
+
+      </tr>
+      <tr>
+<td class="div_result_tournament_name_name" rowspan="3" lang="ja">五葉館</td>
+<td class="div_result_tournament_name_pref" rowspan="3" lang="ja">(栃木)</td>
+<td class="div_result_tournament_name_num" rowspan="3" lang="ja">7</td>
+<td height="6" class="div_border_br_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_b_win div_result_one_tournament"></td>
+<td class="div_result_tournament_name_num" rowspan="3" lang="ja">22</td>
+<td class="div_result_tournament_name_name" rowspan="3" lang="ja">櫻上水剣友会</td>
+<td class="div_result_tournament_name_pref" rowspan="3" lang="ja">(東京)</td>
+
+      </tr>
+      <tr>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+
+      </tr>
+      <tr>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r div_result_one_tournament"><a href="rm2748.html">0 - 3</a>　</td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_bl_up div_result_one_tournament"></td>
+<td height="6" class="div_border_l_win div_result_one_tournament2">　<a href="rm2773.html">4 - 0</a></td>
+
+      </tr>
+      <tr>
+<td height="6" class="div_result_tournament_name_name" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_pref" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_num" lang="ja"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_result_tournament_name_num" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_name" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_pref" lang="ja"></td>
+
+      </tr>
+      <tr>
+<td class="div_result_tournament_name_name" rowspan="3" lang="ja">志道館学園</td>
+<td class="div_result_tournament_name_pref" rowspan="3" lang="ja">(岐阜)</td>
+<td class="div_result_tournament_name_num" rowspan="3" lang="ja">8</td>
+<td height="6" class="div_border_b_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_bl div_result_one_tournament"></td>
+<td class="div_result_tournament_name_num" rowspan="3" lang="ja">23</td>
+<td class="div_result_tournament_name_name" rowspan="3" lang="ja">権堂剣友会</td>
+<td class="div_result_tournament_name_pref" rowspan="3" lang="ja">(長野)</td>
+
+      </tr>
+      <tr>
+<td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_r_win div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_l div_result_one_tournament2">　<a href="rm2749.html">2 - 2</a></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td>
+      </tr>
+      <tr>
+<td height="6" class="div_border_r_win div_result_one_tournament"><a href="rm2766.html">4 - 1</a>　</td>
+<td height="6" class="div_border_b_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_br_final div_result_one_tournament"></td><td height="6" class="div_border_b div_result_one_tournament"></td><td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td>
+      </tr>
+      <tr>
+<td height="6" class="div_result_tournament_name_name" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_pref" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_num" lang="ja"></td>
+<td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_result_tournament_name_num" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_name" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_pref" lang="ja"></td>
+
+      </tr>
+      <tr>
+<td class="div_result_tournament_name_name" rowspan="3" lang="ja">吉岡ＳＳ剣道部</td>
+<td class="div_result_tournament_name_pref" rowspan="3" lang="ja">(群馬)</td>
+<td class="div_result_tournament_name_num" rowspan="3" lang="ja">9</td>
+<td height="6" class="div_border_br div_result_one_tournament"></td>
+<td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament" style="text-align: right;"><a href="rm01.html">4 -</a></td><td height="6" class="div_border_none div_result_one_tournament" style="text-align: left;"><a href="rm01.html"> 0</a></td><td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_b div_result_one_tournament"></td>
+<td class="div_result_tournament_name_num" rowspan="3" lang="ja">24</td>
+<td class="div_result_tournament_name_name" rowspan="3" lang="ja">北子安スポ</td>
+<td class="div_result_tournament_name_pref" rowspan="3" lang="ja">(千葉)</td>
+
+      </tr>
+      <tr>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_l div_result_one_tournament2"></td>
+
+      </tr>
+      <tr>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r_win div_result_one_tournament"><a href="rm2756.html">4 - 0</a>　</td>
+<td height="6" class="div_border_b_win div_result_one_tournament"></td>
+<td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_b_win div_result_one_tournament"></td>
+<td height="6" class="div_border_l div_result_one_tournament2">　<a href="rm2774.html">0 - 5</a></td>
+
+      </tr>
+      <tr>
+<td height="6" class="div_result_tournament_name_name" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_pref" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_num" lang="ja"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_result_tournament_name_num" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_name" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_pref" lang="ja"></td>
+
+      </tr>
+      <tr>
+<td class="div_result_tournament_name_name" rowspan="3" lang="ja">神科剣道教室</td>
+<td class="div_result_tournament_name_pref" rowspan="3" lang="ja">(長野)</td>
+<td class="div_result_tournament_name_num" rowspan="3" lang="ja">10</td>
+<td height="6" class="div_border_b_win div_result_one_tournament"></td>
+<td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_bl_win div_result_one_tournament"></td>
+<td class="div_result_tournament_name_num" rowspan="3" lang="ja">25</td>
+<td class="div_result_tournament_name_name" rowspan="3" lang="ja">加能剣友会</td>
+<td class="div_result_tournament_name_pref" rowspan="3" lang="ja">(石川)</td>
+
+      </tr>
+      <tr>
+<td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td>
+      </tr>
+      <tr>
+<td height="6" class="div_border_r_win div_result_one_tournament"><a href="rm2767.html">2 - 2</a>　</td>
+<td height="6" class="div_border_br_up div_result_one_tournament"></td>
+<td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_b_win div_result_one_tournament"></td>
+<td height="6" class="div_border_l_win div_result_one_tournament2">　<a href="rm2760.html">5 - 0</a></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td>
+      </tr>
+      <tr>
+<td height="6" class="div_result_tournament_name_name" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_pref" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_num" lang="ja"></td>
+<td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_result_tournament_name_num" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_name" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_pref" lang="ja"></td>
+
+      </tr>
+      <tr>
+<td class="div_result_tournament_name_name" rowspan="3" lang="ja">八重原剣道</td>
+<td class="div_result_tournament_name_pref" rowspan="3" lang="ja">(千葉)</td>
+<td class="div_result_tournament_name_num" rowspan="3" lang="ja">11</td>
+<td height="6" class="div_border_br div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_b div_result_one_tournament"></td>
+<td class="div_result_tournament_name_num" rowspan="3" lang="ja">26</td>
+<td class="div_result_tournament_name_name" rowspan="3" lang="ja">美里剣道ク</td>
+<td class="div_result_tournament_name_pref" rowspan="3" lang="ja">(長野)</td>
+
+      </tr>
+      <tr>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_l div_result_one_tournament2"></td>
+
+      </tr>
+      <tr>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r_win div_result_one_tournament"><a href="rm2751.html">4 - 0</a>　</td>
+<td height="6" class="div_border_br_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_bl_up div_result_one_tournament"></td>
+<td height="6" class="div_border_l div_result_one_tournament2">　<a href="rm2775.html">1 - 4</a></td>
+
+      </tr>
+      <tr>
+<td height="6" class="div_result_tournament_name_name" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_pref" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_num" lang="ja"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_result_tournament_name_num" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_name" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_pref" lang="ja"></td>
+
+      </tr>
+      <tr>
+<td class="div_result_tournament_name_name" rowspan="3" lang="ja">北長野剣友会</td>
+<td class="div_result_tournament_name_pref" rowspan="3" lang="ja">(長野)</td>
+<td class="div_result_tournament_name_num" rowspan="3" lang="ja">12</td>
+<td height="6" class="div_border_b div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_bl_win div_result_one_tournament"></td>
+<td class="div_result_tournament_name_num" rowspan="3" lang="ja">27</td>
+<td class="div_result_tournament_name_name" rowspan="3" lang="ja">濟命館道場</td>
+<td class="div_result_tournament_name_pref" rowspan="3" lang="ja">(岐阜)</td>
+
+      </tr>
+      <tr>
+<td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_bl_win div_result_one_tournament"></td>
+<td height="6" class="div_border_l_win div_result_one_tournament2">　<a href="rm2753.html">2 - 1</a></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td>
+      </tr>
+      <tr>
+<td height="6" class="div_border_r div_result_one_tournament"><a href="rm2768.html">0 - 3</a>　</td>
+<td height="6" class="div_border_b_up div_result_one_tournament"></td>
+<td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td>
+      </tr>
+      <tr>
+<td height="6" class="div_result_tournament_name_name" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_pref" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_num" lang="ja"></td>
+<td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_result_tournament_name_num" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_name" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_pref" lang="ja"></td>
+
+      </tr>
+      <tr>
+<td class="div_result_tournament_name_name" rowspan="3" lang="ja">葦立剣友会</td>
+<td class="div_result_tournament_name_pref" rowspan="3" lang="ja">(東京)</td>
+<td class="div_result_tournament_name_num" rowspan="3" lang="ja">13</td>
+<td height="6" class="div_border_br_win div_result_one_tournament"></td>
+<td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_b div_result_one_tournament"></td>
+<td class="div_result_tournament_name_num" rowspan="3" lang="ja">28</td>
+<td class="div_result_tournament_name_name" rowspan="3" lang="ja">玄武館</td>
+<td class="div_result_tournament_name_pref" rowspan="3" lang="ja">(山梨)</td>
+
+      </tr>
+      <tr>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_l div_result_one_tournament2"></td>
+
+      </tr>
+      <tr>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r div_result_one_tournament"><a href="rm2757.html">0 - 3</a>　</td>
+<td height="6" class="div_border_br_up div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_b_up div_result_one_tournament"></td>
+<td height="6" class="div_border_l div_result_one_tournament2">　<a href="rm2776.html">0 - 2</a></td>
+
+      </tr>
+      <tr>
+<td height="6" class="div_result_tournament_name_name" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_pref" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_num" lang="ja"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_result_tournament_name_num" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_name" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_pref" lang="ja"></td>
+
+      </tr>
+      <tr>
+<td class="div_result_tournament_name_name" rowspan="3" lang="ja">坂城錬成会</td>
+<td class="div_result_tournament_name_pref" rowspan="3" lang="ja">(長野)</td>
+<td class="div_result_tournament_name_num" rowspan="3" lang="ja">14</td>
+<td height="6" class="div_border_b div_result_one_tournament"></td>
+<td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_l div_result_one_tournament2"></td>
+<td height="6" class="div_border_bl_win div_result_one_tournament"></td>
+<td class="div_result_tournament_name_num" rowspan="3" lang="ja">29</td>
+<td class="div_result_tournament_name_name" rowspan="3" lang="ja">豊受剣和会</td>
+<td class="div_result_tournament_name_pref" rowspan="3" lang="ja">(群馬)</td>
+
+      </tr>
+      <tr>
+<td height="6" class="div_border_r div_result_one_tournament"></td>
+<td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_bl_up div_result_one_tournament"></td>
+<td height="6" class="div_border_l div_result_one_tournament2">　<a href="rm2761.html">0 - 4</a></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td>
+      </tr>
+      <tr>
+<td height="6" class="div_border_r div_result_one_tournament"><a href="rm2769.html">0 - 5</a>　</td>
+<td height="6" class="div_border_br_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td>
+      </tr>
+      <tr>
+<td height="6" class="div_result_tournament_name_name" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_pref" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_num" lang="ja"></td>
+<td height="6" class="div_border_r_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_l_win div_result_one_tournament2"></td>
+<td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_result_tournament_name_num" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_name" lang="ja"></td>
+<td height="6" class="div_result_tournament_name_pref" lang="ja"></td>
+
+      </tr>
+      <tr>
+<td class="div_result_tournament_name_name" rowspan="3" lang="ja">解脱錬心館</td>
+<td class="div_result_tournament_name_pref" rowspan="3" lang="ja">(埼玉)</td>
+<td class="div_result_tournament_name_num" rowspan="3" lang="ja">15</td>
+<td height="6" class="div_border_br_win div_result_one_tournament"></td>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_bl_win div_result_one_tournament"></td>
+<td height="6" class="div_border_b_up div_result_one_tournament"></td>
+<td class="div_result_tournament_name_num" rowspan="3" lang="ja">30</td>
+<td class="div_result_tournament_name_name" rowspan="3" lang="ja">清野秀武舘</td>
+<td class="div_result_tournament_name_pref" rowspan="3" lang="ja">(長野)</td>
+
+      </tr>
+      <tr>
+<td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td><td height="6" class="div_border_none2 div_result_one_tournament"></td>    </div>
+    </table>
+  <br /><br /><br />
+  </div>
+</body>
+</html>

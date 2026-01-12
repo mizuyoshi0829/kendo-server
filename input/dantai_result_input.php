@@ -1,0 +1,421 @@
+<?php
+    require_once dirname(dirname(__FILE__)).'/admin/common/common.php';
+    require_once dirname(dirname(__FILE__)).'/admin/common/config.php';
+//    require_once dirname(dirname(dirname(__FILE__))).'/kendo/admin/class/admin/reg_2b.php';
+//    require_once dirname(dirname(__FILE__)).'/admin/class/admin/reg_3.php';
+//    require_once dirname(dirname(__FILE__)).'/admin/class/admin/reg_4.php';
+//    require_once dirname(dirname(dirname(__FILE__))).'/kendo/admin/class/admin/reg_5.php';
+//    require_once dirname(dirname(dirname(__FILE__))).'/kendo/admin/class/admin/reg_6.php';
+//    require_once dirname(dirname(dirname(__FILE__))).'/kendo/admin/class/admin/reg_7_8.php';
+//    require_once dirname(dirname(dirname(__FILE__))).'/kendo/admin/class/admin/reg_9_10.php';
+    require_once dirname(dirname(__FILE__)).'/admin/class/page.php';
+    require_once dirname(dirname(__FILE__)).'/admin/class/page_dantai_match.php';
+    require_once dirname(dirname(__FILE__)).'/admin/class/page_dantai_league.php';
+    require_once dirname(dirname(__FILE__)).'/admin/class/page_dantai_tournament.php';
+
+    session_start();
+    $objPage = new form_page();
+    $objMatch = new form_page_dantai_match( $objPage );
+    $objLeague = new form_page_dantai_league( $objPage );
+    $objTournament = new form_page_dantai_tournament( $objPage );
+    $place = get_field_string_number( $_GET, 'p', 1 );
+    $category = get_field_string_number( $_GET, 'c', 1 );
+    $admin = get_field_string_number( $_GET, 'a', 0 );
+
+    $admin = get_field_string_number( $_POST, 'admin', 0 );
+    $navi_id = get_field_string_number( $_POST, 'navi_id', 1 );
+    $match_id = get_field_string_number( $_POST, 'match_id', 1 );
+    $match_no = get_field_string_number( $_POST, 'match_no', 1 );
+    $place_match_no = get_field_string_number( $_POST, 'place_match_no', 1 );
+    $mode = get_field_string( $_POST, 'mode' );
+    $place = get_field_string_number( $_POST, 'place', 1 );
+    $league = get_field_string_number( $_POST, 'league', 0 );
+    $tournament = get_field_string_number( $_POST, 'tournament', 0 );
+    $series_info_id = get_field_string_number( $_POST, 'series_info_id', 0 );
+    $inc = dirname(dirname(__FILE__)) . '/admin/class/admin/reg_s' . $series_info_id . 'd.php';
+    if( file_exists( $inc ) ){
+        require_once $inc;
+    }
+
+    $data = $objMatch->get_dantai_one_result( $match_id );
+//print_r($data);
+    $series = get_field_string_number( $data, 'series', 0 );
+    $series_mw = get_field_string( $data, 'series_mw' );
+    $league = get_field_string_number( $data, 'league', 0 );
+    $tournament = get_field_string_number( $data, 'tournament', 0 );
+    $series_info = $objPage->get_series_list( $series );
+
+    $objPage->update_navi_current_input_match_no( $navi_id, $place, $place_match_no, $match_no );
+    $contents = file_get_contents(
+        __HTTP_BASE__.'result/resultapi.php?n=1&p='.$place.'&v='.$navi_id
+    );
+    if( $league > 0 ){
+        $league_param = $objLeague->get_dantai_league_parameter( $series );
+        $league_data = $objLeague->get_dantai_league_list( $series, $series_mw, $league_param );
+        $entry_list = $objPage->get_entry_data_list3( $series, $series_mw );
+    		$func = 'output_league_match_for_HTML2_'.$series;
+		    $func( $series_info, $league_param, $league_data, $entry_list, $series_mw );
+    } else {
+        $tournament_list = $objPage->get_dantai_tournament_data( $series, $series_mw );
+        $entry_list = $objPage->get_entry_data_list3( $series, $series_mw );
+        $func = 'output_tournament_match_for_HTML2_'.$series;
+        $func( $series_info, $tournament_list, $entry_list, $series_mw );
+    }
+
+/*
+    if( $mode == 'updatedb' ){
+        $input_match_no = get_field_string_number( $_POST, 'input_match_no', 0 );
+        if( $input_match_no != 0 ){
+            $data['matches'][$input_match_no]['player1'] = get_field_string_number( $_POST, 'input_player1', 0 );
+            $data['matches'][$input_match_no]['faul1_1'] = get_field_string_number( $_POST, 'input_faul1_1', 0 );
+            $data['matches'][$input_match_no]['faul1_2'] = get_field_string_number( $_POST, 'input_faul1_2', 0 );
+            $data['matches'][$input_match_no]['waza1_1'] = get_field_string_number( $_POST, 'input_waza1_1', 0 );
+            $data['matches'][$input_match_no]['waza1_2'] = get_field_string_number( $_POST, 'input_waza1_2', 0 );
+            $data['matches'][$input_match_no]['waza1_3'] = get_field_string_number( $_POST, 'input_waza1_3', 0 );
+            $data['matches'][$input_match_no]['player2'] = get_field_string_number( $_POST, 'input_player2', 0 );
+            $data['matches'][$input_match_no]['faul2_1'] = get_field_string_number( $_POST, 'input_faul2_1', 0 );
+            $data['matches'][$input_match_no]['faul2_2'] = get_field_string_number( $_POST, 'input_faul2_2', 0 );
+            $data['matches'][$input_match_no]['waza2_1'] = get_field_string_number( $_POST, 'input_waza2_1', 0 );
+            $data['matches'][$input_match_no]['waza2_2'] = get_field_string_number( $_POST, 'input_waza2_2', 0 );
+            $data['matches'][$input_match_no]['waza2_3'] = get_field_string_number( $_POST, 'input_waza2_3', 0 );
+            $data['matches'][$input_match_no]['extra'] = get_field_string_number( $_POST, 'extra', 0 );
+            $data['matches'][$input_match_no]['match_time'] = get_field_string( $_POST, 'match_time' );
+        //    $data['matches'][$input_match_no]['end_match'] = 1;
+            $result1 = 0;
+            $result1str = '';
+            $result2 = 0;
+            $result2str = '';
+            $match_end = 0;
+            if( $data['fusen'] == 1 ){
+                if( $data['winner'] == 1 ){
+                    $result1 = 1;
+                    $result1str = '不戦勝';
+                } else if( $data['winner'] == 2 ){
+                    $result2 = 1;
+                    $result2str = '不戦勝';
+                }
+                $match_end = 1;
+            } else {
+                $win1 = array();
+                $win1str = array();
+                $win1sum = 0;
+                $hon1 = array();
+                $hon1sum = 0;
+                $win2 = array();
+                $win2str = array();
+                $win2sum = 0;
+                $hon2 = array();
+                $hon2sum = 0;
+                $endnum = 0;
+                $win = array();
+                $winner = 0;
+                for( $i1 = 1; $i1 <= 6; $i1++ ){
+                    $win1[$i1] = 0;
+                    $win1str[$i1] = '';
+                    $hon1[$i1] = 0;
+                    $win2[$i1] = 0;
+                    $win2str[$i1] = '';
+                    $hon2[$i1] = 0;
+                    $win[$i1] = 0;
+                    if( $i1 <= 5 ){
+                        for( $i2 = 1; $i2 <= 3; $i2++ ){
+                            if( $data['matches'][$i1]['waza1_'.$i2] != 0 ){
+                                $hon1[$i1]++;
+                            }
+                            if( $data['matches'][$i1]['waza2_'.$i2] != 0 ){
+                                $hon2[$i1]++;
+                            }
+                        }
+                        $hon1sum += $hon1[$i1];
+                        $hon2sum += $hon2[$i1];
+                    }
+                }
+                $dbs = db_connect( DATABASE_HOST, DATABASE_USER, DATABASE_PASSWORD, DATABASE_NAME );
+                $onedata = db_get_one_data( $dbs, 'dantai_match', '*', '`id`='.$match_id );
+                $onematch_id = get_field_string_number( $data, 'match'.$input_match_no, 0 );
+                if( $onematch_id != 0 ){
+                    $sql = 'update `one_match`'
+                        . ' set `faul1_1`='.$data['matches'][$input_match_no]['faul1_1'].','
+                        . '`faul1_2`='.$data['matches'][$input_match_no]['faul1_2'].','
+                        . '`waza1_1`='.$data['matches'][$input_match_no]['waza1_1'].','
+                        . '`waza1_2`='.$data['matches'][$input_match_no]['waza1_2'].','
+                        . '`waza1_3`='.$data['matches'][$input_match_no]['waza1_3'].','
+                        . '`faul2_1`='.$data['matches'][$input_match_no]['faul2_1'].','
+                        . '`faul2_2`='.$data['matches'][$input_match_no]['faul2_2'].','
+                        . '`waza2_1`='.$data['matches'][$input_match_no]['waza2_1'].','
+                        . '`waza2_2`='.$data['matches'][$input_match_no]['waza2_2'].','
+                        . '`waza2_3`='.$data['matches'][$input_match_no]['waza2_3'].','
+                    //    . '`hon1`='.$hon1[$input_match_no].','
+                    //    . '`hon2`='.$hon2[$input_match_no].','
+                        . ' where `id`='.$onematch_id;
+                    $sql2 = $sql."<br />\n";
+                //    db_query( $dbs, $sql );
+                }
+                $sql = 'update `dantai_match`'
+                    . ' set `hon1`='.$hon1sum.','
+                    . '`hon2`='.$hon2sum.','
+                    . ' where `id`='.$id;
+                $sql3 = $sql."<br />\n";
+            //    db_query( $dbs, $sql );
+            }
+        }
+    }
+*/
+
+    $p['input_player1'] = $data['matches'][$match_no]['player1'];
+    $p['input_player1_change_name'] = $data['matches'][$match_no]['player1_change_name'];
+    $p['input_faul1_1'] = $data['matches'][$match_no]['faul1_1'];
+    $p['input_faul1_2'] = $data['matches'][$match_no]['faul1_2'];
+    $p['input_waza1_1'] = $data['matches'][$match_no]['waza1_1'];
+    $p['input_waza1_2'] = $data['matches'][$match_no]['waza1_2'];
+    $p['input_waza1_3'] = $data['matches'][$match_no]['waza1_3'];
+    $p['input_player2'] = $data['matches'][$match_no]['player2'];
+    $p['input_player2_change_name'] = $data['matches'][$match_no]['player2_change_name'];
+    $p['input_faul2_1'] = $data['matches'][$match_no]['faul2_1'];
+    $p['input_faul2_2'] = $data['matches'][$match_no]['faul2_2'];
+    $p['input_waza2_1'] = $data['matches'][$match_no]['waza2_1'];
+    $p['input_waza2_2'] = $data['matches'][$match_no]['waza2_2'];
+    $p['input_waza2_3'] = $data['matches'][$match_no]['waza2_3'];
+    $p['extra'] = $data['matches'][$match_no]['extra'];
+    $p['match_time'] = $data['matches'][$match_no]['match_time'];
+    $p['match_time_minute'] = $data['matches'][$match_no]['match_time_minute'];
+    $p['match_time_second'] = $data['matches'][$match_no]['match_time_second'];
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>試合結果入力フォーム</title>
+<link href="main__.css" rel="stylesheet" type="text/css" />
+<link href="result02.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="jquery-3.0.0.min.js"></script>
+<script type="text/javascript">
+function update_realtime( field, value )
+{
+<?php if( $series_info['locked'] == 0 ): ?>
+    $.get(
+        '<?php echo __HTTP_BASE__; ?>result/resultapi.php',
+        { n: 2, v: <?php echo $navi_id; ?>, p: <?php echo $place; ?>, m: <?php echo $match_id; ?>, mn: <?php echo $match_no; ?>, fd: field, va: value }
+    );
+<?php endif; ?>
+}
+
+function change_extra()
+{
+    var obj1 = document.getElementById("extra");
+    if( obj1.checked ){
+        update_realtime( "extra", 1 );
+    } else {
+        update_realtime( "extra", 0 );
+    }
+}
+
+function change_faul( team, no )
+{
+    var obj1 = document.getElementById("input_faul"+team+"_"+no);
+    update_realtime( "faul"+team+"_"+no, obj1.value );
+}
+
+function change_waza( team, no )
+{
+    var obj1 = document.getElementById("input_waza1_"+no);
+    var obj2 = document.getElementById("input_waza2_"+no);
+    if( team == 1 ){
+        update_realtime( "waza1_"+no, obj1.value );
+    } else {
+        update_realtime( "waza2_"+no, obj2.value );
+    }
+    if( obj1.selectedIndex == 0 && obj2.selectedIndex == 0 ){
+        obj1.disabled = false;
+        obj2.disabled = false;
+        return;
+    }
+    if( team == 1 ){
+        if( obj1.selectedIndex == 0 ){
+            obj2.disabled = false;
+        } else {
+            obj2.disabled = true;
+        }
+    } else {
+        if( obj2.selectedIndex == 0 ){
+            obj1.disabled = false;
+        } else {
+            obj1.disabled = true;
+        }
+    }
+}
+
+</script>
+
+</head>
+
+<body>
+<!--
+<?php //echo $sql2; ?>
+<?php //echo $sql3; ?>
+<?php //print_r($data); ?>
+<?php //echo DATABASE_NAME; ?>
+-->
+<div class="container">
+  <div class="content">
+    <br />
+    <br />
+    <br />
+    <div align="center" class="tbscorein">
+    <form action="dantai_result.php?a=<?php echo $admin; ?>&s=<?php echo $series; ?>&l=<?php echo $league; ?>&t=<?php echo $tournament; ?>&m=<?php echo $place_match_no; ?>" method="post">
+      <input name="input_match_no" type="hidden" value="<?php echo $match_no; ?>" />
+      <input name="mode" type="hidden" value="update_match" />
+      <table class="tb_score_in" width="960" border="0">
+        <tr>
+<?php if( isset($data['entry1']['school_name_ryaku']) ): ?>
+          <td rowspan="2" class="tbnamecolor tbprefnamehalf"><span class="tbprefname"><?php echo get_field_string($data['entry1'],'school_name_ryaku');?></span></td>
+<?php else: ?>
+          <td rowspan="2" class="tbnamecolor tbprefnamehalf"><span class="tbprefname"><?php echo get_field_string($data['entry1'],'school_name');?></span></td>
+<?php endif; ?>
+          <td class="tbname01 tb_srect">
+            <?php if( $match_no == 1 ): ?>先鋒<?php endif; ?>
+            <?php if( $match_no == 2 ): ?>次鋒<?php endif; ?>
+            <?php if( $match_no == 3 ): ?>中堅<?php endif; ?>
+            <?php if( $match_no == 4 ): ?>副将<?php endif; ?>
+            <?php if( $match_no == 5 ): ?>大将<?php endif; ?>
+            <?php if( $match_no == 6 ): ?>代表戦<?php endif; ?>
+          </td>
+          <td class="tbname01 tb_srect" rowspan="2">
+            <select name="input_faul1_1" class="tb_srect" id="input_faul1_1" onChange="change_faul(1,1);">
+              <option value="0" <?php if($p['input_faul1_1']==0): ?>selected="selected"<?php endif; ?>>-</option>
+              <option value="2" <?php if($p['input_faul1_1']==2): ?>selected="selected"<?php endif; ?>>指</option>
+            </select>
+            <select name="input_faul1_2" class="tb_srect" id="input_faul1_2" onChange="change_faul(1,2);">
+              <option value="0" <?php if($p['input_faul1_2']==0): ?>selected="selected"<?php endif; ?>>-</option>
+              <option value="1" <?php if($p['input_faul1_2']==1): ?>selected="selected"<?php endif; ?>>▲</option>
+            </select>
+          </td>
+<?php for( $i1 = 1; $i1 <= 3; $i1++ ): ?>
+          <td class="tbname01 tb_srect" rowspan="2">
+            <select name="input_waza1_<?php echo $i1; ?>" class="tb_srect" id="input_waza1_<?php echo $i1; ?>"<?php if($p['input_waza1_'.$i1]==0 && $p['input_waza2_'.$i1]!=0): ?> disabled="disabled"<?php endif; ?> onChange="change_waza(1,<?php echo $i1; ?>);">
+              <option value="0"<?php if($p['input_waza1_'.$i1]==0): ?> selected="selected"<?php endif; ?>>-</option>
+              <option value="1"<?php if($p['input_waza1_'.$i1]==1): ?> selected="selected"<?php endif; ?>>メ</option>
+              <option value="2"<?php if($p['input_waza1_'.$i1]==2): ?> selected="selected"<?php endif; ?>>ド</option>
+              <option value="3"<?php if($p['input_waza1_'.$i1]==3): ?> selected="selected"<?php endif; ?>>コ</option>
+<?php if( $series_info['enable_tsuki'] == 1 ): ?>
+              <option value="6"<?php if($p['input_waza1_'.$i1]==6): ?> selected="selected"<?php endif; ?>>ツ</option>
+<?php endif; ?>
+              <option value="4"<?php if($p['input_waza1_'.$i1]==4): ?> selected="selected"<?php endif; ?>>反</option>
+              <option value="5"<?php if($p['input_waza1_'.$i1]==5): ?> selected="selected"<?php endif; ?>>不戦勝</option>
+            </select>
+          </td>
+<?php endfor; ?>
+        </tr>
+        <tr>
+          <td class="tbname01 tb_srect">
+            <select name="input_player1" class="tb_srect" id="input_player1">
+              <option value="0"<?php if($p['input_player1']==0): ?> selected="selected"<?php endif; ?>>-</option>
+<?php
+    for( $pn = 1; $pn <= 7; $pn++ ){
+        $dantai_name_field_header = $objMatch->get_dantai_name_field_header( $series_info, $series_mw, $pn );
+        if( $data['entry1'][$dantai_name_field_header.'_sei'] != '' ){
+?>
+              <option value="<?php echo $pn; ?>"<?php if($p['input_player1']==$pn): ?> selected="selected"<?php endif; ?>><?php echo $data['entry1'][$dantai_name_field_header.'_sei'],' ',$data['entry1'][$dantai_name_field_header.'_mei']; ?></option>
+<?php
+        }
+    }
+?>
+<!--
+              <option value="8"<?php if( $p['input_player1'] == 8 ): ?> selected="selected"<?php endif; ?>>補員3</option>
+              <option value="9"<?php if( $p['input_player1'] == 9 ): ?> selected="selected"<?php endif; ?>>補員4</option>
+              <option value="10"<?php if( $p['input_player1'] == 10 ): ?> selected="selected"<?php endif; ?>>補員5</option>
+-->
+              <option value="1000"<?php if( $p['input_player1'] == 1000 ): ?> selected="selected"<?php endif; ?>>その他</option>
+            </select><br />
+            <input name="input_player1_change_name" type="text" size="6" value="<?php echo $p['input_player1_change_name']; ?>" />
+          </td>
+        </tr>
+        <tr>
+<?php if( isset($data['entry2']['school_name_ryaku']) ): ?>
+          <td rowspan="2" class="tbnamecolor tbprefnamehalf"><span class="tbprefname"><?php echo get_field_string($data['entry2'],'school_name_ryaku');?></span></td>
+<?php else: ?>
+          <td rowspan="2" class="tbnamecolor tbprefnamehalf"><span class="tbprefname"><?php echo get_field_string($data['entry2'],'school_name');?></span></td>
+<?php endif; ?>
+          <td class="tbname01 tb_srect">
+            <?php if( $match_no == 1 ): ?>先鋒<?php endif; ?>
+            <?php if( $match_no == 2 ): ?>次鋒<?php endif; ?>
+            <?php if( $match_no == 3 ): ?>中堅<?php endif; ?>
+            <?php if( $match_no == 4 ): ?>副将<?php endif; ?>
+            <?php if( $match_no == 5 ): ?>大将<?php endif; ?>
+            <?php if( $match_no == 6 ): ?>代表戦<?php endif; ?>
+          </td>
+          <td class="tbname01 tb_srect" rowspan="2">
+            <select name="input_faul2_1" class="tb_srect" id="input_faul2_1" onChange="change_faul(2,1);">
+              <option value="0" <?php if($p['input_faul2_1']==0): ?>selected="selected"<?php endif; ?>>-</option>
+              <option value="2" <?php if($p['input_faul2_1']==2): ?>selected="selected"<?php endif; ?>>指</option>
+            </select>
+            <select name="input_faul2_2" class="tb_srect" id="input_faul2_2" onChange="change_faul(2,2);">
+              <option value="0" <?php if($p['input_faul2_2']==0): ?>selected="selected"<?php endif; ?>>-</option>
+              <option value="1" <?php if($p['input_faul2_2']==1): ?>selected="selected"<?php endif; ?>>▲</option>
+            </select>
+          </td>
+<?php for( $i1 = 1; $i1 <= 3; $i1++ ): ?>
+          <td class="tbname01 tb_srect" rowspan="2">
+            <select name="input_waza2_<?php echo $i1; ?>" class="tb_srect" id="input_waza2_<?php echo $i1; ?>"<?php if($p['input_waza2_'.$i1]==0 && $p['input_waza1_'.$i1]!=0): ?> disabled="disabled"<?php endif; ?> onChange="change_waza(2,<?php echo $i1; ?>);">
+              <option value="0"<?php if($p['input_waza2_'.$i1]==0): ?> selected="selected"<?php endif; ?>>-</option>
+              <option value="1"<?php if($p['input_waza2_'.$i1]==1): ?> selected="selected"<?php endif; ?>>メ</option>
+              <option value="2"<?php if($p['input_waza2_'.$i1]==2): ?> selected="selected"<?php endif; ?>>ド</option>
+              <option value="3"<?php if($p['input_waza2_'.$i1]==3): ?> selected="selected"<?php endif; ?>>コ</option>
+<?php if( $series_info['enable_tsuki'] == 1 ): ?>
+              <option value="6"<?php if($p['input_waza2_'.$i1]==6): ?> selected="selected"<?php endif; ?>>ツ</option>
+<?php endif; ?>
+              <option value="4"<?php if($p['input_waza2_'.$i1]==4): ?> selected="selected"<?php endif; ?>>反</option>
+              <option value="5"<?php if($p['input_waza2_'.$i1]==5): ?> selected="selected"<?php endif; ?>>不戦勝</option>
+            </select>
+          </td>
+<?php endfor; ?>
+        </tr>
+        <tr>
+          <td class="tbname01 tb_srect">
+            <select name="input_player2" class="tb_srect" id="input_player2">
+              <option value="0"<?php if($p['input_player2']==0): ?> selected="selected"<?php endif; ?>>-</option>
+<?php
+    for( $pn = 1; $pn <= 7; $pn++ ){
+        $dantai_name_field_header = $objMatch->get_dantai_name_field_header( $series_info, $series_mw, $pn );
+        if( $data['entry2'][$dantai_name_field_header.'_sei'] != '' ){
+?>
+              <option value="<?php echo $pn; ?>"<?php if($p['input_player2']==$pn): ?> selected="selected"<?php endif; ?>><?php echo $data['entry2'][$dantai_name_field_header.'_sei'],' ',$data['entry2'][$dantai_name_field_header.'_mei']; ?></option>
+<?php
+        }
+    }
+?>
+<!--
+              <option value="8"<?php if( $p['input_player2'] == 8 ): ?> selected="selected"<?php endif; ?>>補員3</option>
+              <option value="9"<?php if( $p['input_player2'] == 9 ): ?> selected="selected"<?php endif; ?>>補員4</option>
+              <option value="10"<?php if( $p['input_player2'] == 10 ): ?> selected="selected"<?php endif; ?>>補員5</option>
+-->
+              <option value="1000"<?php if( $p['input_player2'] == 1000 ): ?> selected="selected"<?php endif; ?>>その他</option>
+            </select><br />
+            <input name="input_player2_change_name" type="text" size="6" value="<?php echo $p['input_player2_change_name']; ?>" />
+          </td>
+        </tr>
+        <tr>
+          <td class="tbnamecolor tbprefnamehalf">&nbsp;</td>
+          <td class="tbname01"><input type="checkbox" name="extra" id="extra" value="1" <?php if($p['extra']==1): ?>checked="checked" <?php endif; ?> onChange="change_extra();" />延長</td>
+          <td class="tbname01" colspan="2">
+            試合時間：<input name="match_time_minute" type="text" class="" size="6" value="<?php echo $p['match_time_minute']; ?>" />分
+              <input name="match_time_second" type="text" class="" size="6" value="<?php echo $p['match_time_second']; ?>" />秒
+          </td>
+          <td class="tbname01" colspan="2">&nbsp;</td>
+        </tr>
+      </table>
+      <br />
+<!--      <input name="input_update_noend" type="submit" class="" id="input_update" value="更新" /> -->
+      <br />
+      <br />
+      <br />
+      <input name="input_update" type="submit" class="" id="input_update" value="対戦終了" />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input name="input_cancel" type="submit" class="" id="input_cancel" value="中断" />
+      </form>
+    <!-- end .content --></div>
+  </div>
+  <!-- end .container --></div>
+</body>
+</html>

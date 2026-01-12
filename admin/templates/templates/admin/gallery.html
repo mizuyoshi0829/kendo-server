@@ -1,0 +1,58 @@
+{$htmlheader|smarty:nodefaults}
+    <h2>ギャラリー&nbsp;<a href="/gallery/test.html" target="_blank">→ギャラリーページ確認</a></h2>
+    <table border="0" cellspacing="1" cellpadding="0">
+      <tr>
+        <td class="td_left3">見出し</td>
+        <td class="td_right">{$top_title}</td>
+        <td class="td_right">
+          <form action="gallery.php" method="post">
+            <input type="hidden" name="mode" value="edit_toptitle" />
+            <input type="submit" name="submit" value="変更" />
+          </form>
+        </td>
+      </tr>
+    </table>
+    <table id="ex_t" border="0" cellspacing="1" cellpadding="0">
+{foreach from=$list item=lv name=gallerylist}
+{if ($smarty.foreach.gallerylist.index % 4) == 0}
+      <tr>
+{/if}
+        <td>
+          <div style="margin: 5px;">
+{if $lv.image != ''}<a href="/galleryimage/{$lv.image}.jpg" target="_blank"><img src="/galleryimage/{$lv.image}.jpg" width="200" /></a>{/if}
+          </div>
+          <p>{$lv.image}.jpg</p>
+          <p>
+            <form action="gallery.php" method="post">
+              アップロード済みのデータから選択：<br />
+              <input type="hidden" name="id" value="{$lv.id}">
+              <input type="hidden" name="mode" value="change_image">
+              <select name="g{$lv.id}" style="width: 150px;" >
+                {html_options options=$title_list selected=$lv.photo_id}
+              </select>
+              &nbsp;<input type="submit" name="edit" value="変更">
+            </form>
+          </p>
+          <p>
+            <form action="gallery.php" method="post" enctype="multipart/form-data">
+              新しくアップロード：<br />
+              <input type="hidden" name="id" value="{$lv.id}">
+              <input type="hidden" name="mode" value="upload_image">
+              <input type="file" id="image_input" name="image_file" size="20" /><br />
+              タイトル：<input type="text" name="image_title" size="30" maxlength="128" value="">
+              <input type="submit" name="submit" value="上のデータをアップロード" />
+            </form>
+          </p>
+        </td>
+{if ($smarty.foreach.gallerylist.index % 4) == 3}
+      </tr>
+{/if}
+{/foreach}
+{if ( count($gallerylist) % 4) != 3}
+      </tr>
+{/if}
+    </table>
+    <br />
+    <br />
+    <br />
+{$htmlfooter|smarty:nodefaults}

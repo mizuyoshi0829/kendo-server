@@ -1,0 +1,58 @@
+{$htmlheader|smarty:nodefaults}
+    <h2>{$edit_title}</h2>
+    <br />
+    <form action="info.php" method="post" enctype="multipart/form-data">
+      <input type="hidden" name="mode" value="confirm">
+      <table id="ex_t" border="0" cellspacing="1" cellpadding="0">
+        <tr>
+          <td class="td_left3">タイトル</td>
+          <td class="td_right"><input type="text" name="title" size="120" maxlength="128" value="{$smarty.session.p.title}"></td>
+        </tr>
+        <tr>
+          <td class="td_left3">コメント</td>
+          <td class="td_right"><textarea class="ckeditor" name="comment" rows="30" cols="60">{$smarty.session.p.comment}</textarea></td>
+        </tr>
+
+        <tr>
+          <td class="td_left3">画像位置</td>
+          <td class="td_right">
+            <input type="radio" name="image_pos" value="0"{if $smarty.session.p.image_pos == 0} checked{/if}><img src="images/pos1.gif" />
+            <input type="radio" name="image_pos" value="1"{if $smarty.session.p.image_pos == '' || $smarty.session.p.image_pos == 1} checked{/if}><img src="images/pos2.gif" />
+            <input type="radio" name="image_pos" value="2"{if $smarty.session.p.image_pos == 2} checked{/if}><img src="images/pos3.gif" />
+            <input type="radio" name="image_pos" value="3"{if $smarty.session.p.image_pos == 3} checked{/if}><img src="images/pos4.gif" />
+            <input type="radio" name="image_pos" value="4"{if $smarty.session.p.image_pos == 4} checked{/if}><img src="images/pos5.gif" />
+            <input type="radio" name="image_pos" value="5"{if $smarty.session.p.image_pos == 5} checked{/if}><img src="images/pos6.gif" />
+            <input type="radio" name="image_pos" value="6"{if $smarty.session.p.image_pos == 6} checked{/if}><img src="images/pos7.gif" />
+          </td>
+        </tr>
+        <tr>
+          <td class="td_left3">写真１</td>
+          <td class="td_right">
+            <div style="margin: 5px;">
+{if $smarty.session.p.image1 != ''}<a href="/infoimage/{$smarty.session.p.image1}">{$smarty.session.p.image1}</a>{/if}
+            </div>
+            <input type="file" id="image_input" name="image1" size="60" />
+            &nbsp;<input type="submit" name="upload_image1" value="アップロード" />
+            &nbsp;<input type="submit" name="delete_image1" value="削除" />
+          </td>
+        </tr>
+        <tr>
+          <td class="td_left3">写真２</td>
+          <td class="td_right">
+            <div style="margin: 5px;">
+{if $smarty.session.p.image2 != ''}<a href="/infoimage/{$smarty.session.p.image2}">{$smarty.session.p.image2}</a>{/if}
+            </div>
+            <input type="file" id="image_input" name="image2" size="60" />
+            &nbsp;<input type="submit" name="upload_image2" value="アップロード" />
+            &nbsp;<input type="submit" name="delete_image2" value="削除" />
+          </td>
+        </tr>
+      </table>
+      <br />
+      <input type="submit" name="cancel" value="中止">
+      <input type="submit" name="exec" value="実行">
+    </form>
+    <br />
+    <br />
+    <br />
+{$htmlfooter|smarty:nodefaults}

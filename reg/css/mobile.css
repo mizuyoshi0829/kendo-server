@@ -1,0 +1,302 @@
+@charset "UTF-8";
+body {
+	margin: 0px;
+	padding: 0px;
+}
+#main {
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+}
+.titlename {
+	font-size: 12px;
+	margin: 0px;
+	padding: 5px;
+	background: #6AA;
+	color: #FFF;
+	border-left: 10px solid #036;
+	clear: left;
+}
+.titlename2 {
+	font-size: 12px;
+	margin: 0px;
+	padding: 5px;
+	background: #CC3;
+	color: #000;
+	border-left: 10px solid #C60;
+	clear: left;
+}
+.titlename3 {
+	font-size: 12px;
+	margin: 10px 0px 0px;
+	padding: 5px;
+	background: #EFEFEF;
+	color: #333;
+	border-top: 3px solid #999;
+	clear: left;
+}
+.dantai_title1 {
+	font-size: 12px;
+	margin: 0px;
+	padding: 5px;
+	background: #AEF;
+	color: #000;
+	border-left: 10px solid #36C;
+	clear: left;
+}
+.dantai_title2 {
+	font-size: 12px;
+	margin: 0px;
+	padding: 5px;
+	background: #FCC;
+	color: #000;
+	border-left: 10px solid #F36;
+	clear: left;
+}
+.kojin_title1 {
+	font-size: 12px;
+	margin: 0px;
+	padding: 5px;
+	background: #CFC;
+	color: #000;
+	border-left: 10px solid #393;
+	clear: left;
+}
+.kojin_title2 {
+	font-size: 12px;
+	margin: 0px;
+	padding: 5px;
+	background: #FCF;
+	color: #000;
+	border-left: 10px solid #C36;
+	clear: left;
+}
+.data_title {
+	font-size: 12px;
+	margin: 0px;
+	padding: 5px;
+	background: #EEE;
+	color: #000;
+	border-left: 10px solid #999;
+	clear: left;
+}
+
+form {
+	margin: 5px;
+	padding: 0px;
+}
+.f_box {
+	margin: 0px 0px 10px;
+	padding: 5px;
+	font-size: 11px;
+}
+
+.midasi {
+	margin: 5px 0px 0px;
+	padding: 6px;
+	color: #ccc;
+	font-size: 11px;
+	background: #0f2c4c;
+	clear: left;
+}
+.f_radio {
+	margin: 0px;
+	padding: 6px;
+	color: #333;
+	font-size: 11px;
+}
+
+.f_radio_2 {
+	margin: 0px 20px 0px 0px;
+	padding: 6px;
+	color: #333;
+	font-size: 11px;
+	float: left;
+}
+
+.f_select {
+	font-size: 11px;
+	margin: 0px 5px 5px 0px;
+	padding: 6px 0px;
+	float: left;
+}
+.pref {
+	margin: 0px 5px 5px 0px;
+	padding: 6px;
+	float: left;
+}
+
+.clear_fix {
+	clear: both;
+}
+
+.tw2 {
+	margin: 0px;
+	padding: 6px;
+	border: none;
+	float: left;
+	font-size: 11px;
+}
+.tw2 input {
+	width: 2em;
+}
+.tw4 {
+	margin: 0px;
+	padding: 6px;
+	border: none;
+	float: left;
+	font-size: 11px;
+}
+.tw4 input {
+	width: 4em;
+}
+.tw6 {
+	margin: 0px;
+	padding: 6px;
+	border: none;
+	float: left;
+	font-size: 11px;
+}
+.tw6 input {
+	width: 6em;
+}
+.tw8 {
+	margin: 0px;
+	padding: 6px;
+	border: none;
+	float: left;
+	font-size: 11px;
+}
+.tw8 input {
+	width: 8em;
+}
+
+.tw10 {
+	font-size: 11px;
+	margin: 0px;
+	padding: 6px;
+	border: none;
+	float: left;
+}
+.tw10 input {
+	width: 10em;
+}
+.tw12 {
+	font-size: 11px;
+	margin: 0px;
+	padding: 6px;
+	border: none;
+	float: left;
+}
+.tw12 input {
+	width: 12em;
+}
+
+.tw14 {
+	margin: 0px;
+	padding: 6px;
+	border: none;
+	float: left;
+}
+.tw14 input {
+	width: 14em;
+}
+.tw20 {
+	margin: 0px;
+	padding: 6px;
+	border: none;
+	float: left;
+}
+.tw20 input {
+	width: 20em;
+}
+
+.tw90 {
+	margin: 0px;
+	padding: 6px;
+	border: none;
+	font-size: 11px;
+}
+.tw90 input {
+	width: 90%;
+}
+
+.tw100 {
+	font-size: 11px;
+	margin: 0px;
+	padding: 6px;
+	border: none;
+	float: left;
+	width: 26em;
+}
+
+.tw100 input {
+	width: 20em;
+}
+
+.tw110 {
+	font-size: 11px;
+	margin: 0px;
+	padding: 6px;
+	border: none;
+	float: left;
+	width: 26em;
+}
+
+.tw110 input {
+	width: 26em;
+}
+
+.tw_age {
+	margin: 5px 0px 5px 10px;
+	padding: 6px;
+	border: none;
+	float: left;
+	font-size: 11px;
+}
+.tw_age input {
+	width: 3em;
+}
+
+footer {
+	background: #999;
+}
+
+.jump {
+	margin: 0px;
+	padding: 6px;
+	text-align: center;
+	margin: 0px auto;
+}
+.jump a {
+	font-size: 11px;
+	color: #069;
+	background: #fff;
+	display: block;
+	padding: 4px;
+	border: 1px solid #069;
+	text-decoration: none;
+}
+.jump a:hover {
+	color: #c00;
+	background: #fcc;
+	border: 1px solid #c00;
+}
+.button {
+	text-align: center;
+	margin: auto;
+}
+
+.discription {
+	margin: 0px 0px 0px 10px;
+	padding: 5px;
+	clear: left;
+	border: 1px solid #c66;
+	color: #c33;
+	font-size: 11px;
+	line-height: 14px;
+	font-weight: normal;
+}

@@ -1,0 +1,12 @@
+      <div class="tw100i">
+{if $smarty.session.p.traffic=='mycar'}自家用車({$smarty.session.p.traffic_mycar}台){/if}
+{if $smarty.session.p.traffic=='bus_l'}バス運転手あり(大){/if}
+{if $smarty.session.p.traffic=='bus_m'}バス運転手あり(中){/if}
+{if $smarty.session.p.traffic=='bus_s'}バス運転手あり(マイクロ){/if}
+{if $smarty.session.p.traffic=='bus_non_l'}バス運転手なし(大){/if}
+{if $smarty.session.p.traffic=='bus_non_m'}バス運転手なし(中){/if}
+{if $smarty.session.p.traffic=='bus_non_s'}バス運転手なし(マイクロ){/if}
+{if $smarty.session.p.traffic=='share'}他のチームに便乗({$smarty.session.p.traffic_share}){/if}
+{if $smarty.session.p.traffic=='train'}電車{/if}
+{if $smarty.session.p.traffic=='other'}その他({$smarty.session.p.traffic_other}){/if}
+        </div>

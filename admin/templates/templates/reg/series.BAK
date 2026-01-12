@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport"
+content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link media="only screen and (max-device-width:480px)" href="{$root_url}css/mobile.css" type="text/css" rel="stylesheet" />
+<link media="screen and (min-device-width:481px)" href="{$root_url}css/style.css" type="text/css" rel="stylesheet" />
+<!--[if IE]>
+<link href="{$root_url}design.css" type="text/css" rel="stylesheet" />
+<![endif]-->
+
+<meta charset="UTF-8">
+<title>種目選択</title>
+</head>
+
+<body>
+<div id="main">
+  <div class="titlename"><h1>種目を選択して下さい。</h1></div>
+  <a href="reg_dm.php" class="twindex_button">男子団体</a>
+  <div class="clear_fix"></div>
+  <a href="reg_dw.php" class="twindex_button">女子団体</a>
+  <div class="clear_fix"></div>
+  <a href="reg_km.php" class="twindex_button">男子個人</a>
+  <div class="clear_fix"></div>
+  <a href="reg_kw.php" class="twindex_button">女子個人</a>
+  <div class="clear_fix"></div>
+</body>
+</html>

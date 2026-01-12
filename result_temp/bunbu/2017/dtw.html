@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>試合結果速報</title>
+</head>
+<body>
+<style>
+body { font-family: 'DejaVu Sans Condensed'; font-size: 5pt;  }
+.content {
+    width: 900px;
+    height: 980px;
+    font-size: 5px;
+    margin: 16px;
+}
+.div_result_tournament_name {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    width: 160px;
+}
+.div_result_tournament_name_name {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    vertical-align: top;
+    font-size: 11pt;
+    width: 96px;
+}
+.div_result_tournament_name_pref {
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    text-align: left;
+    font-size: 11pt;
+    width: 72px;
+}
+.div_result_tournament_name_num {
+    margin: 0;
+    padding: 0 4px 0 4px;
+    vertical-align: top;
+    text-align: right;
+    font-size: 11pt;
+    width: 16px;
+}
+.div_result_tournament_name_num2 {
+    margin: 0;
+    padding: 0 4px 0 4px;
+    text-align: left;
+    width: 16px;
+}
+.div_result_tournament {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+.div_result_one_tournament {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    width: 30px;
+    font-size: 6pt;
+    display: inline; float: left;
+}
+.div_result_one_tournament2 {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    width: 30px;
+    font-size: 6pt;
+    display: inline; float: left;
+}
+.div_border_none {
+    border: none;
+    padding: 1px 0 0 1px;
+}
+.div_border_none2 {
+    border: none;
+    padding: 0 1px 1px 0;
+}
+.div_border_b {
+    border-top: none;
+    border-bottom: solid 1px #000000;
+    border-right: solid 1px #ffffff;
+    border-left: none;
+}
+.div_border_b_win {
+    border-top: none;
+    border-bottom: solid 1px #ff0000;
+    border-right: solid 1px #ffffff;
+    border-left: none;
+}
+.div_border_b_up {
+    border-top: none;
+    border-bottom: solid 1px #ff0000;
+    border-right: solid 1px #ffffff;
+    border-left: none;
+}
+.div_border_b2 {
+    border-top: none;
+    border-bottom: solid 1px #000000;
+    border-left: solid 1px #ffffff;
+    border-right: none;
+}
+.div_border_b2_win {
+    border-top: none;
+    border-bottom: solid 1px #ff0000;
+    border-left: solid 1px #ffffff;
+    border-right: none;
+}
+.div_border_b2_up {
+    border-top: none;
+    border-bottom: solid 1px #ff0000;
+    border-left: solid 1px #ffffff;
+    border-right: none;
+}
+.div_border_br {
+    border-top: none;
+    border-bottom: solid 1px #000000;
+    border-right: solid 1px #000000;
+    border-left: none;
+}
+.div_border_br_win {
+    border-top: none;
+    border-bottom: solid 1px #ff0000;
+    border-right: solid 1px #ff0000;
+    border-left: none;
+}
+.div_border_br_up {
+    border-top: none;
+    border-bottom: solid 1px #ff0000;
+    border-right: solid 1px #000000;
+    border-left: none;
+}
+.div_border_br_final {
+    border-top: none;
+    border-bottom: solid 1px #ff0000;
+    border-right: solid 1px #ff0000;
+    border-left: none;
+}
+.div_border_br_final2 {
+    border-top: none;
+    border-bottom: solid 1px #000000;
+    border-right: solid 1px #ff0000;
+    border-left: none;
+}
+.div_border_r {
+    border-top: none;
+    border-bottom: none;
+    border-right: solid 1px #000000;
+    border-left: none;
+    padding: 0 0 1px 0;
+}
+.div_border_r_win {
+    border-top: none;
+    border-bottom: none;
+    border-right: solid 1px #ff0000;
+    border-left: none;
+    padding: 0 0 1px 0;
+}
+.div_border_r_up {
+    border-top: none;
+    border-bottom: none;
+    border-right: solid 1px #ff0000;
+    border-left: none;
+    padding: 0 0 1px 0;
+}
+.div_border_bl {
+    border-top: none;
+    border-bottom: solid 1px #000000;
+    border-left: solid 1px #000000;
+    border-right: none;
+}
+.div_border_bl_win {
+    border-top: none;
+    border-bottom: solid 1px #ff0000;
+    border-left: solid 1px #ff0000;
+    border-right: none;
+}
+.div_border_bl_up {
+    border-top: none;
+    border-bottom: solid 1px #ff0000;
+    border-left: solid 1px #000000;
+    border-right: none;
+}
+.div_border_l {
+    border-top: none;
+    border-bottom: none;
+    border-left: solid 1px #000000;
+    border-right: none;
+    padding: 0 0 1px 0;
+}
+.div_border_l_win {
+    border-top: none;
+    border-bottom: none;
+    border-left: solid 1px #ff0000;
+    border-right: none;
+    padding: 0 0 1px 0;
+}
+.div_border_l_up {
+    border-top: none;
+    border-bottom: none;
+    border-left: solid 1px #000000;
+    border-right: none;
+    padding: 0 0 1px 0;
+}
+.tb_result_tournament_name {
+    text-align: left;
+    width: 80px;
+}
+.tb_result_tournament_name_pref {
+    text-align: left;
+    width: 60px;
+    padding: 0 4px 0 4px;
+}
+.tb_result_tournament_name_num {
+    text-align: right;
+    width: 10px;
+    padding: 0 4px 0 4px;
+}
+.tb_result_tournament_name_num2 {
+    text-align: left;
+    width: 10px;
+    padding: 0 2px 0 8px;
+}
+.tb_result_tournament {
+    text-align: right;
+    width: 40px;
+}
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+</style>
+<H1 style="border-bottom: solid 1px #000000;" lang="ja">中学校女子トーナメント表</H1>
+<div class="container">
+  <div class="content">
+    <table style="border-collapse: separate; border-spacing: 0;">
+      <tr>
+<td height="6" class="div_border_r div_result_one_tournament"></td><td height="6" class="div_border_none div_result_one_tournament"></td>    </div>
+    </table>
+  <br /><br /><br />
+  </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{$htmlheader|smarty:nodefaults}
+    <h2>以下の内容に変更します。よろしいでしょうか？</h2>
+    <table id="ex_t" border="0" cellspacing="1" cellpadding="0">
+      <tr>
+        <td class="td_left2">タイトル</td>
+        <td class="td_right">{$smarty.session.title|escape}</td>
+      </tr>
+      </tr>
+    </table>
+    <br />
+    <form action="gallery.php" method="post">
+      <input type="hidden" name="mode" value="exec_toptitle">
+      <input type="submit" name="reinput" value="再編集">
+      <input type="submit" name="exec" value="変更">
+    </form>
+    <br />
+    <br />
+    <br />
+{$htmlfooter|smarty:nodefaults}

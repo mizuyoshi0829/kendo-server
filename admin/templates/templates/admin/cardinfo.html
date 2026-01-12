@@ -1,0 +1,78 @@
+{$htmlheader|smarty:nodefaults}
+    <h2>{$category_name}登録情報一覧</h2>
+    <form action="info.php" method="post">
+      <input type="hidden" name="mode" value="new" />
+      <input type="hidden" name="category" value="{$category}" />
+      <input type="submit" name="submit" value="新規登録" />
+    </form>
+    <form action="info.php" method="post">
+      <input type="hidden" name="mode" value="output" />
+      <input type="hidden" name="category" value="{$category}" />
+      <input type="submit" name="submit" value="ファイル出力" />
+    </form>
+    <table id="ex_t" border="0" cellspacing="1" cellpadding="0">
+      <tr>
+        <td class="td_left">&nbsp;</td>
+{*        <td class="td_right4">入力年月日</td> *}
+        <td class="td_right">名前</td>
+        <td class="td_right" colspan="2">並び替え</td>
+        <td class="td_right2">編集</td>
+        <td class="td_right2">削除</td>
+      </tr>
+{section name=datalist loop=$list}
+      <tr>
+        <td class="td_left" {if $list[datalist].del=='1'}bgcolor="#ffbbbb"{/if}>{$smarty.section.datalist.iteration}</td>
+{*        <td class="td_right4" {if $list[datalist].del=='1'}bgcolor="#ffbbbb"{/if}>{$list[datalist].create_date}</td> *}
+        <td class="td_right" {if $list[datalist].del=='1'}bgcolor="#ffbbbb"{/if}>{$list[datalist].s_name|escape}</td>
+        <td class="td_right2">
+{if !$smarty.section.datalist.first}
+          <form action="info.php" method="post">
+            <input type="hidden" name="mode" value="exchange" />
+            <input type="hidden" name="id" value="{$list[datalist].id}" />
+            <input type="hidden" name="id2" value="{$list[datalist.index_prev].id}" />
+            <input type="submit" name="submit" value="↑" />
+          </form>
+{/if}
+        </td>
+        <td class="td_right2">
+{if !$smarty.section.datalist.last}
+          <form action="info.php" method="post">
+            <input type="hidden" name="mode" value="exchange" />
+            <input type="hidden" name="id" value="{$list[datalist].id}" />
+            <input type="hidden" name="id2" value="{$list[datalist.index_next].id}" />
+            <input type="submit" name="submit" value="↓" />
+          </form>
+{/if}
+        </td>
+        <td class="td_right2">
+          <form action="info.php" method="post">
+            <input type="hidden" name="id" value="{$list[datalist].id}">
+            <input type="hidden" name="mode" value="edit">
+            <input type="submit" name="edit" value="編集">
+          </form>
+        </td>
+{if $list[datalist].del=='1'}
+        <td class="td_right2" bgcolor="#ffbbbb">
+          <form action="info.php" method="post">
+            削除済み
+            <input type="hidden" name="id" value="{$list[datalist].id}">
+            <input type="hidden" name="mode" value="undelete">
+            <input type="submit" name="submit" value="削除取り消し">
+          </form>
+        </td>
+{else}
+        <td class="td_right">
+          <form action="info.php" method="post">
+            <input type="hidden" name="id" value="{$list[datalist].id}">
+            <input type="hidden" name="mode" value="delete">
+            <input type="submit" name="submit" value="削除">
+          </form>
+        </td>
+{/if}
+      </tr>
+{/section}
+    </table>
+    <br />
+    <br />
+    <br />
+{$htmlfooter|smarty:nodefaults}

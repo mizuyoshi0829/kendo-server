@@ -1,0 +1,106 @@
+<style>
+{assign var="font-size" value="9"}
+{assign var="font-hight" value="12"}
+{assign var="font_line_height" value="21.2"}
+{assign var="font_line_height2" value="22"}
+{assign var="one-hight" value="108"}
+{literal}
+html,body { font-family: ipa; font-size: 13pt; }
+p { text-align: center; margin: 0pt; padding:2.5pt; }
+p.p3 { text-align: center; margin: 0pt; padding: 2.5pt; }
+p.p3s { text-align: center; margin: 0pt; padding:2.5pt 1pt 2.5pt 1pt; }
+p.pk { text-align: left; margin: 0pt; padding:5pt; }
+p.pp { text-align: center; margin: 0pt; padding:2pt; font-size: 15pt; font-weight: bold; }
+p.ps { text-align: left; margin: 0pt; padding:2pt 2pt 2pt 8pt; font-size: 15pt; font-weight: bold; }
+span { padding-left: 12pt; }
+td { text-align: center; }
+
+.border_bt { border-top: none; border-right: none; border-bottom: solid 1pt cmyk(0,0,0,100); border-left: none; }
+.border_r { border-top: none; border-right: solid 1pt cmyk(0,0,0,100); border-bottom: none; border-left: none; }
+.border_none { border: none; }
+.border_all { border: solid 2pt cmyk(0,0,0,100); }
+.cell_div_ { display: inline; text-align: justify; margin: 0pt; padding:2pt; }
+.cell_div20_ { display: inline; text-align: justify; margin: 0pt; padding:2pt; width: 20px; }
+.cell_div30_ { display: inline; text-align: justify; margin: 0pt; padding:2pt; width: 26px; }
+.cell_div_grade_ { display: inline; text-align: justify; margin: 0pt; padding-left: 24pt;width: 26px; }
+.cell_div { text-align: justify; margin: 0pt; padding:2pt; float: left; }
+.cell_div20 { text-align: justify; margin: 0pt; padding:2pt; float: left; width: 20px; }
+.cell_div30 { text-align: justify; margin: 0pt; padding:2pt; float: left; width: 26px; }
+.cell_div_grade { text-align: justify; margin: 0pt; padding-left: 24pt; overflow:hidden; }
+.smallfont { font-size: 6pt; }
+.smallfont2 { font-size: 5pt; }
+.member { height: 20pt; text-align: justify; margin: 0pt; padding:2pt; }
+
+{/literal}
+</style>
+
+{section name=datalist loop=$list}
+  <div style="width: 672pt; height: 230pt; padding: 2pt; margin: 0px; border: none 1pt cmyk(0,0,0,0);">
+    <div class="border_all" style="width: 100%; height: 220px; margin: 0px; padding: 0px;">
+      <div class="border_bt" style="overflow:hidden; height: 20pt;">
+        <div class="border_r" style="width: 10%; float: left;"><p lang="ja" class="pp">{$list[datalist].pref_name|escape}</p></div>
+        <div style="float: left; border: none;"><p lang="ja" class="ps">{$list[datalist].school_name|escape}</p></div>
+      </div>
+      <div class="border_none" style="overflow:hidden; height: 198pt;">
+        <div class="border_r" style="width: 250pt; height: 192pt; float: left; padding: 4pt;"><div style="text-align: center;"><img src="upload/trim/{$list[datalist].photo|escape}_trim.jpg"></div></div>
+        <div class="border_r" style="width: 150pt; height: 200pt; float: left;"><p lang="ja" class="pk">{$list[datalist].introduction|escape|nl2br}</p></div>
+        <div class="border_none" style="float: left;">
+          <div class="border_bt" style="overflow:hidden;">
+            <div class="border_r" style="width: 45pt; float: left; height: {$font_line_height}pt;"><p lang="ja" class="p3">監督</p></div>
+            <div class="border_r" style="width: 91pt; float: left; height: {$font_line_height}pt;"><p lang="ja" class="p3">{$list[datalist].insotu1_sei|escape}&nbsp;{$list[datalist].insotu1_mei|escape}</p></div>
+            <div class="border_r" style="width: 66pt; float: left; height: {$font_line_height}pt;"><p lang="ja" class="p3">出場回数</p></div>
+            <div class="border_none" style="width: 26pt; float: left; height: {$font_line_height}pt;"><p lang="ja" class="p3s">{$list[datalist].entry_num|escape}</p></div>
+          </div>
+          <div class="border_bt" style="overflow:hidden;">
+            <div class="border_r" style="width: 45pt; float: left; height: {$font_line_height}pt;"><p lang="ja" class="p3">選手</p></div>
+            <div class="border_r" style="width: 45pt; float: left; height: {$font_line_height}pt;"><p lang="ja" class="p3">学年</p></div>
+            <div class="border_r" style="width: 45pt; float: left; height: {$font_line_height}pt;"><p lang="ja" class="p3">段位</p></div>
+            <div class="border_none" style="width: 90pt; float: left; height: {$font_line_height}pt;"><p lang="ja" class="p3">氏名</p></div>
+          </div>
+          <div class="border_bt" style="overflow:hidden; height: 20pt; height:">
+            <div class="border_r" style="width: 45pt; float: left; height: {$font_line_height}pt;"><p lang="ja" class="p3">先鋒</p></div>
+            <div class="border_r" style="width: 45pt; float: left; height: {$font_line_height}pt;"><p lang="ja" class="p3">{$list[datalist].player1_gakunen|escape}</p></div>
+            <div class="border_r" style="width: 45pt; float: left; height: {$font_line_height}pt;"><p lang="ja" class="p3">{$list[datalist].player1_dan|escape}</p></div>
+            <div class="border_none" style="width: 90pt; float: left; height: {$font_line_height}pt;"><p lang="ja" class="p3">{$list[datalist].player1_sei|escape}&nbsp;{$list[datalist].player1_mei|escape}</p></div>
+          </div>
+          <div class="border_bt" style="overflow:hidden;">
+            <div class="border_r" style="width: 45pt; float: left; height: {$font_line_height}pt;"><p lang="ja" class="p3">次鋒</p></div>
+            <div class="border_r" style="width: 45pt; float: left; height: {$font_line_height}pt;"><p lang="ja" class="p3">{$list[datalist].player2_gakunen|escape}</p></div>
+            <div class="border_r" style="width: 45pt; float: left; height: {$font_line_height}pt;"><p lang="ja" class="p3">{$list[datalist].player2_dan|escape}</p></div>
+            <div class="border_none" style="width: 90pt; float: left; height: {$font_line_height}pt;"><p lang="ja" class="p3">{$list[datalist].player2_sei|escape}&nbsp;{$list[datalist].player2_mei|escape}</p></div>
+          </div>
+          <div class="border_bt" style="overflow:hidden;">
+            <div class="border_r" style="width: 45pt; float: left; height: {$font_line_height}pt;"><p lang="ja" class="p3">中堅</p></div>
+            <div class="border_r" style="width: 45pt; float: left; height: {$font_line_height}pt;"><p lang="ja" class="p3">{$list[datalist].player3_gakunen|escape}</p></div>
+            <div class="border_r" style="width: 45pt; float: left; height: {$font_line_height}pt;"><p lang="ja" class="p3">{$list[datalist].player3_dan|escape}</p></div>
+            <div class="border_none" style="width: 90pt; float: left; height: {$font_line_height}pt;"><p lang="ja" class="p3">{$list[datalist].player3_sei|escape}&nbsp;{$list[datalist].player3_mei|escape}</p></div>
+          </div>
+          <div class="border_bt" style="overflow:hidden; height: 20pt;">
+            <div class="border_r" style="width: 45pt; float: left; height: {$font_line_height}pt;"><p lang="ja" class="p3">副将</p></div>
+            <div class="border_r" style="width: 45pt; float: left; height: {$font_line_height}pt;"><p lang="ja" class="p3">{$list[datalist].player4_gakunen|escape}</p></div>
+            <div class="border_r" style="width: 45pt; float: left; height: {$font_line_height}pt;"><p lang="ja" class="p3">{$list[datalist].player4_dan|escape}</p></div>
+            <div class="border_none" style="width: 90pt; float: left; height: {$font_line_height}pt;"><p lang="ja" class="p3">{$list[datalist].player4_sei|escape}&nbsp;{$list[datalist].player4_mei|escape}</p></div>
+          </div>
+          <div class="border_bt" style="overflow:hidden;">
+            <div class="border_r" style="width: 45pt; float: left; height: {$font_line_height}pt;"><p lang="ja" class="p3">大将</p></div>
+            <div class="border_r" style="width: 45pt; float: left; height: {$font_line_height}pt;"><p lang="ja" class="p3">{$list[datalist].player5_gakunen|escape}</p></div>
+            <div class="border_r" style="width: 45pt; float: left; height: {$font_line_height}pt;"><p lang="ja" class="p3">{$list[datalist].player5_dan|escape}</p></div>
+            <div class="border_none" style="width: 90pt; float: left; height: {$font_line_height}pt;"><p lang="ja" class="p3">{$list[datalist].player5_sei|escape}&nbsp;{$list[datalist].player5_mei|escape}</p></div>
+          </div>
+          <div class="border_bt" style="overflow:hidden;">
+            <div class="border_r" style="width: 45pt; float: left; height: {$font_line_height}pt;"><p lang="ja" class="p3">補員</p></div>
+            <div class="border_r" style="width: 45pt; float: left; height: {$font_line_height}pt;"><p lang="ja" class="p3">{$list[datalist].player6_gakunen|escape}</p></div>
+            <div class="border_r" style="width: 45pt; float: left; height: {$font_line_height}pt;"><p lang="ja" class="p3">{$list[datalist].player6_dan|escape}</p></div>
+            <div class="border_none" style="width: 90pt; float: left; height: {$font_line_height}pt;"><p lang="ja" class="p3">{$list[datalist].player6_sei|escape}&nbsp;{$list[datalist].player6_mei|escape}</p></div>
+          </div>
+          <div class="border_none" style="overflow:hidden;">
+            <div class="border_r" style="width: 45pt; float: left; height: {$font_line_height2}pt;"><p lang="ja" class="p3">補員</p></div>
+            <div class="border_r" style="width: 45pt; float: left; height: {$font_line_height2}pt;"><p lang="ja" class="p3">{$list[datalist].player7_gakunen|escape}</p></div>
+            <div class="border_r" style="width: 45pt; float: left; height: {$font_line_height2}pt;"><p lang="ja" class="p3">{$list[datalist].player7_dan|escape}</p></div>
+            <div class="border_none" style="width: 90pt; float: left; height: {$font_line_height2}pt;"><p lang="ja" class="p3">{$list[datalist].player7_sei|escape}&nbsp;{$list[datalist].player7_mei|escape}</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{/section}

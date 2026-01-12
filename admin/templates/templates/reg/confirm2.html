@@ -1,0 +1,147 @@
+{$htmlheader|smarty:nodefaults}
+    <h2>以下の内容で申し込みます。</h2>
+    <p class="style6">※青色文字の内容はパンフレットに掲載されます</p>
+    <form id="form1" name="form1" method="post" action="">
+      <input name="mode" type="hidden" value="exec" />
+      <table border="1" cellspacing="0" cellpadding="4">
+        <tr><td>部門</td><td>{$category_name}の部</td></tr>
+        <tr>
+          <td>都道府県</td>
+          <td>{$smarty.session.p.pref_name|escape}</td>
+        </tr>
+        <tr>
+          <td>団体名</td>
+          <td>{$smarty.session.p.name|escape}</td>
+        </tr>
+        <tr>
+          <td>住所</td>
+          <td>{$smarty.session.p.address|escape}</td>
+        </tr>
+        <tr>
+          <td>電話番号</td>
+          <td>{$smarty.session.p.tel|escape}</td>
+        </tr>
+        <tr>
+          <td>監督名</td>
+          <td>{$smarty.session.p.manager|escape}</td>
+        </tr>
+        <tr>
+          <td class="style2">協力審判員</td>
+          <td class="style2">{$smarty.session.p.referee|escape}</td>
+        </tr>
+        <tr>
+          <td class="style2">段位</td>
+          <td class="style2">{$smarty.session.p.rank|escape}</td>
+        </tr>
+{if $smarty.session.p.category < 3}
+        <tr>
+          <td class="style2">審判希望部門</td>
+          <td>
+            {if $smarty.session.p.refereeing_category==1}中学男子{/if}
+            {if $smarty.session.p.refereeing_category==2}中学女子{/if}
+          </td>
+        </tr>
+{/if}
+        <tr>
+          <td>主将</td>
+          <td>{$smarty.session.p.captain|escape}</td>
+        </tr>
+        <tr>
+{if $smarty.session.p.category==3}
+          <td>先鋒氏名</td>
+{else}
+          <td>選手氏名1</td>
+{/if}
+          <td>{$smarty.session.p.player1|escape}</td>
+        </tr>
+        <tr>
+          <td>学年</td>
+          <td>{$smarty.session.p.player1_grade|escape}</td>
+        </tr>
+        <tr>
+{if $smarty.session.p.category==3}
+          <td>次鋒氏名</td>
+{else}
+          <td>選手氏名2</td>
+{/if}
+          <td>{$smarty.session.p.player2|escape}</td>
+        </tr>
+        <tr>
+          <td>学年</td>
+          <td>{$smarty.session.p.player2_grade|escape}</td>
+        </tr>
+        <tr>
+{if $smarty.session.p.category==3}
+          <td>中堅氏名</td>
+{else}
+          <td>選手氏名3</td>
+{/if}
+          <td>{$smarty.session.p.player3|escape}</td>
+        </tr>
+        <tr>
+          <td>学年</td>
+          <td>{$smarty.session.p.player3_grade|escape}</td>
+        </tr>
+        <tr>
+{if $smarty.session.p.category==3}
+          <td>副将氏名</td>
+{else}
+          <td>選手氏名4</td>
+{/if}
+          <td>{$smarty.session.p.player4|escape}</td>
+        </tr>
+        <tr>
+          <td>学年</td>
+          <td>{$smarty.session.p.player4_grade|escape}</td>
+        </tr>
+        <tr>
+{if $smarty.session.p.category==3}
+          <td>大将氏名</td>
+{else}
+          <td>選手氏名5</td>
+{/if}
+          <td>{$smarty.session.p.player5|escape}</td>
+        </tr>
+        <tr>
+          <td>学年</td>
+          <td>{$smarty.session.p.player5_grade|escape}</td>
+        </tr>
+        <tr>
+          <td>チーム紹介</td>
+          <td>{$smarty.session.p.introduction|escape}</td>
+        </tr>
+        <tr>
+          <td>主な戦績</td>
+          <td>{$smarty.session.p.main_results|escape}</td>
+        </tr>
+        <tr>
+          <td colspan="2" class="style2">交通手段について</td>
+        </tr>
+        <tr>
+          <td class="style2">交通手段</td>
+          <td class="style2">{$smarty.session.p.transport_name|escape}&nbsp;
+          {$smarty.session.p.transport_num|escape}台</span>&nbsp;<span class="style2">その他</span>
+          {$smarty.session.p.transport_other|escape}</td>
+        </tr>
+        <tr>
+          <td class="style2">お弁当</td>
+          <td class="style2">18日（土）{$smarty.session.p.lunch1|escape}個
+            &nbsp;&nbsp;&nbsp;19日（日）{$smarty.session.p.lunch2|escape}個
+          </td>
+        </tr>
+        <tr>
+          <td class="style2">連絡欄</td>
+          <td class="style2">{$smarty.session.p.comment|escape}</td>
+        </tr>
+        <tr>
+          <td class="style2">宿泊</td>
+          <td class="style2">{$smarty.session.p.stay_name|escape}</td>
+        </tr>
+      </table>
+      <div class="submitbtn">
+        <input name="reinput" type="submit" tabindex="14" value="修正する" />
+        <input name="exec" type="submit" tabindex="14" value="送信する" />
+        <span class="style4">※申し込みを受けましたら確認メールを返信いたします。</span>
+      </div>
+    </form>
+{$htmlfooter|smarty:nodefaults}

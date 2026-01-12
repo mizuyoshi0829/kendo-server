@@ -1,0 +1,69 @@
+{$htmlheader|smarty:nodefaults}
+    <h2>個人({if $series_mw =='m'}男子{/if}{if $series_mw =='w'}女子{/if})トーナメント
+      <div style="float: right;">
+      <form action="kojin_tournament.php?s={$series}&mw={$series_mw}" method="post" enctype="multipart/form-data">
+        <input name="csv_file" type="file" value="" />
+        <input type="hidden" name="mode" value="loadcsv" />
+        <input type="submit" name="submit" value="csvデータ読み込み" />
+      </form></div>
+    </h2>
+    <form action="kojin_tournament.php?s={$series}&mw={$series_mw}" method="post">
+      <input type="hidden" name="mode" value="clear" />
+      <input type="submit" name="submit" value="試合データクリア" />
+    </form>
+    <form action="kojin_tournament.php?s={$series}&mw={$series_mw}" method="post">
+      <input type="hidden" name="mode" value="output_excel_result" />
+      <input type="submit" name="submit" value="トーナメント結果excel出力" />
+    </form>
+    <form action="kojin_tournament.php?s={$series}&mw={$series_mw}" method="post">
+      <input type="hidden" name="mode" value="update" />
+      <input type="submit" name="submit" value="更新" />
+<!--
+    <form action="info.php" method="post">
+      <input type="hidden" name="mode" value="output" />
+      <input type="hidden" name="category" value="{$category}" />
+      <input type="submit" name="submit" value="ファイル出力" />
+    </form>
+-->
+    <table id="ex_t" border="0" cellspacing="1" cellpadding="0">
+      <tr>
+        <td class="td_right" colspan="2">氏名</td>
+        <td class="td_right" colspan="3">試合
+        </td>
+      </tr>
+{section name=tournament_player loop=$tournament_data.player}
+      <tr>
+        <td class="td_right" colspan="2">
+          {html_options name="entry_`$smarty.section.tournament_player.iteration`" options=$tournament_players selected=$tournament_data.player[$smarty.section.tournament_player.index].player}
+        </td>
+{section name=tournament_match_offset start=0 loop=$tournament_data.match_level step=1}
+{assign var='match_no' value=$tournament_data.match_array[tournament_player][tournament_match_offset]-1}
+{if $tournament_data.match_array[tournament_player][tournament_match_offset] > 0 }
+{if $tournament_data.match_array[tournament_player][tournament_match_offset] < 1000 }
+        <td class="td_right" rowspan="2">
+          {html_options name="place_`$tournament_data.match_array[tournament_player][tournament_match_offset]`" options=$place_array selected=$tournament_data.match[$match_no].place}
+          {html_options name="place_match_`$tournament_data.match_array[tournament_player][tournament_match_offset]`" options=$place_match_no_array selected=$tournament_data.match[$match_no].place_match_no}<br />
+          <a href="../../input/kojin_result.php?a=1&p={$tournament_data.match[$match_no].place}&m={$tournament_data.match[$match_no].place_match_no}&lg=1">結果</a>
+        </td>
+{elseif $tournament_data.match_array[tournament_player][tournament_match_offset] >= 2000}
+{assign var='name_offset' value=$tournament_data.match_array[tournament_player][tournament_match_offset]%1000}
+{assign var='name_offset2' value=$name_offset-1}
+        <td class="td_right">{$tournament_data.match[$name_offset2].player2_name}</td>
+{elseif $tournament_data.match_array[tournament_player][tournament_match_offset] >= 1000}
+{assign var='name_offset' value=$tournament_data.match_array[tournament_player][tournament_match_offset]%1000}
+{assign var='name_offset2' value=$name_offset-1}
+        <td class="td_right">{$tournament_data.match[$name_offset2].player1_name}</td>
+{else}
+        <td class="td_right"></td>
+{/if}
+{elseif $tournament_data.match_array[tournament_player][tournament_match_offset] == 0}
+        <td class="td_right"></td>
+{/if}
+{/section}
+{/section}
+    </table>
+	</form>
+    <br />
+    <br />
+    <br />
+{$htmlfooter|smarty:nodefaults}

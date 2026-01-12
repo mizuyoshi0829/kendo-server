@@ -1,0 +1,42 @@
+{$htmlheader|smarty:nodefaults}
+    <h2>データ一覧</h2>
+    <form action="index.php" method="post">
+      <input type="submit" name="check" value="重複チェック" />
+      <input type="submit" name="csv" value="CSV出力" />
+    </form>
+    <table id="ex_t" border="0" cellspacing="1" cellpadding="0">
+      <tr>
+        <td class="td_left">データ番号</td>
+        <td class="td_right">入力年月日</td>
+        <td class="td_right">名前</td>
+        <td class="td_right">メールアドレス</td>
+        <td class="td_right">&nbsp;</td>
+        <td class="td_right">&nbsp;</td>
+      </tr>
+{section name=i1 loop=$fields}
+      <tr>
+        <td class="td_left">{$fields[i1].id}</td>
+        <td class="td_right">{$fields[i1].create_date}</td>
+        <td class="td_right">{$fields[i1].name1}&nbsp;{$fields[i1].name2}</td>
+        <td class="td_right">{$fields[i1].mail}</td>
+        <td class="td_right">
+          <form action="index.php" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="id" value="{$fields[i1].id}">
+            <input type="hidden" name="mode" value="edit">
+            <input type="submit" name="submit" value="編集">
+          </form>
+        </td>
+        <td class="td_right">
+          <form action="index.php" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="id" value="{$fields[i1].id}">
+            <input type="hidden" name="mode" value="delete">
+            <input type="submit" name="submit" value="削除">
+          </form>
+        </td>
+      </tr>
+{/section}
+    </table>
+    <br />
+    <br />
+    <br />
+{$htmlfooter|smarty:nodefaults}

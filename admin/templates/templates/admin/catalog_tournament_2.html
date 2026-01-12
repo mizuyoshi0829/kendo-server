@@ -1,0 +1,112 @@
+<?php 
+	require_once dirname(dirname(__FILE__)).DIRECTORY_SEPARATOR.'reg'.DIRECTORY_SEPARATOR.'admin'.DIRECTORY_SEPARATOR.'common'.DIRECTORY_SEPARATOR.'common.php';
+	require_once dirname(dirname(__FILE__)).DIRECTORY_SEPARATOR.'reg'.DIRECTORY_SEPARATOR.'admin'.DIRECTORY_SEPARATOR.'common'.DIRECTORY_SEPARATOR.'config.php';
+	require_once dirname(dirname(__FILE__)).DIRECTORY_SEPARATOR.'reg'.DIRECTORY_SEPARATOR.'admin'.DIRECTORY_SEPARATOR.'class'.DIRECTORY_SEPARATOR.'page.php';
+
+	$objPage = new form_page();
+	$category = get_field_string_number( $_GET, 'c', 1 );
+	$entry_list = $objPage->get_entry_array_for_smarty($category);
+	$place_array = $objPage->get_place_array_for_smarty(null);
+	$place_match_no_array = $objPage->get_place_match_no_array_for_smarty(null);
+//print_r($list);
+	$dantai_league_array = $objPage->get_dantai_league_array_for_smarty($category);
+	$dantai_league_standing_array = $objPage->get_league_standing_array_for_smarty(null);
+	$list = $objPage->get_entry_data_list( $category );
+	$tournament_data = $objPage->get_dantai_tournament_data($category);
+
+	function display_waza( $match_no, $player )
+	{
+		global $tournament_data;
+
+		echo $tournament_data['match'][$match_no-1]['hon'.$player],'/',$tournament_data['match'][$match_no-1]['win'.$player];
+	}
+
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>試合結果速報</title>
+<link href="main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<?php //print_r($tournament_data); ?>
+<?php //print_r($_POST); ?>
+
+<div class="container">
+  <div class="content">
+
+    <h2>団体戦<?php if($category==1): ?>男子<?php else: ?>女子<?php endif; ?>決勝トーナメント</h2>
+
+    <table id="ex_t" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td class="td_right" colspan="2">&nbsp;</td>
+        <td class="td_right" colspan="4">&nbsp;</td>
+      </tr>
+<?php for( $tournament_team = 0; $tournament_team < count($tournament_data['team'])*2; $tournament_team++ ): ?>
+      <tr>
+<?php if( ( $tournament_team % 2 ) == 0 ): ?>
+        <td class="tb_result_tournament" rowspan="2" colspan="2">
+<?php foreach($entry_list as $k => $v){ if($tournament_data['team'][$tournament_team/2]['team']==$k){ echo $v; } } ?>
+        </td>
+<?php endif; ?>
+<?php
+	$lineStart = 1;
+	$lineHeight = 2;
+	$lineStep = 4;
+	$lineMatch = 1;
+	for( $i1 = 1; $i1 < $tournament_data['match_level']; $i1++ ){ $lineMatch *= 2; }
+	for( $tournament_match_offset = 0; $tournament_match_offset <  $tournament_data['match_level']; $tournament_match_offset++ ){
+		$lineOffset = $tournament_team % $lineStep;
+		$match_no = $lineMatch + intval( $tournament_team / $lineStep );
+		$player1 = $tournament_data['match'][$match_no-1]['team1'];
+		$player2 = $tournament_data['match'][$match_no-1]['team2'];
+		$winner = $tournament_data['match'][$match_no-1]['winner'];
+		if( $lineOffset == $lineStart ){
+?>
+        <td class="tb_result_tournament" style="border-right:2px <?php if( $winner == 1 ): ?>#ff0000<?php else: ?>#aaaaaa<?php endif; ?> solid">&nbsp;</td>
+<?php
+		} else if( $lineOffset > $lineStart && $lineOffset < ( $lineStart + $lineHeight / 2 ) ){
+?>
+        <td class="tb_result_tournament" style="border-right:2px <?php if( $winner == 1 ): ?>#ff0000<?php else: ?>#aaaaaa<?php endif; ?> solid">&nbsp;</td>
+<?php
+		} else if( $lineOffset >= ( $lineStart + $lineHeight / 2 )  && $lineOffset < ( $lineStart + $lineHeight ) ){
+?>
+        <td class="tb_result_tournament" style="border-right:2px <?php if( $winner == 2 ): ?>#ff0000<?php else: ?>#aaaaaa<?php endif; ?> solid">&nbsp;</td>
+<?php
+		} else if( $lineOffset == ( $lineStart - 1 ) ){
+?>
+        <td class="tb_result_tournament" style="border-bottom:2px <?php if( $player1 != 0 ): ?>#ff0000<?php else: ?>#aaaaaa<?php endif; ?> solid">&nbsp;<?php display_waza( $match_no, 1 ); ?></td>
+<?php
+		} else if( $lineOffset == ( $lineStart + $lineHeight ) ){
+?>
+        <td class="tb_result_tournament" style="border-top:2px <?php if( $player2 != 0 ): ?>#ff0000<?php else: ?>#aaaaaa<?php endif; ?> solid">&nbsp;<?php display_waza( $match_no, 2 ); ?></td>
+<?php
+		} else if( $lineOffset > ( $lineStart + $lineHeight ) ){
+?>
+        <td class="tb_result_tournament">&nbsp;</td>
+<?php
+		} else if( $lineOffset < ( $lineStart - 1 ) ){
+?>
+        <td class="tb_result_tournament">&nbsp;</td>
+<?php
+		}
+		$lineStart *= 2;
+		$lineHeight *= 2;
+		$lineStep *= 2;
+		$lineMatch /= 2;
+	}
+?>
+      </tr>
+<?php endfor; ?>
+    </table>
+    <h2 align="left" class="tx-h1"><a href="index.html">←戻る</a></h2>
+    <br />
+    <br />
+    </div>
+    <!-- end .content --></div>
+  </div>
+  <!-- end .container --></div>
+</body>
+</html>

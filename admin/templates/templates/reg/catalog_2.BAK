@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport"
+content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link media="only screen and (max-device-width:480px)" href="{$root_url}css/mobile.css" type="text/css" rel="stylesheet" />
+<link media="screen and (min-device-width:481px)" href="{$root_url}css/style.css" type="text/css" rel="stylesheet" />
+<!--[if IE]>
+<link href="{$root_url}design.css" type="text/css" rel="stylesheet" />
+<![endif]-->
+
+<meta charset="UTF-8">
+<title>カタログ出力見本</title>
+</head>
+
+<body>
+  <table border="1" width="800" cellspacing="0" cellpadding="5" style="padding: 16px;" >
+    <tr>
+      <td colspan="4">{$name|escape}</td>
+      <td colspan="4">住所&nbsp;{$address|escape}</td>
+      <td colspan="2">TEL&nbsp;{$tel|escape}</td>
+    </tr>
+    <tr>
+      <td colspan="5">監督&nbsp;{$manager|escape}</td>
+      <td colspan="5">主将&nbsp;{$captain|escape}</td>
+    </tr>
+    <tr>
+      <td colspan="2">先鋒&nbsp;{$player1|escape}&nbsp;{$player1_grade|escape}</td>
+      <td colspan="2">次峰&nbsp;{$player2|escape}&nbsp;{$player2_grade|escape}</td>
+      <td colspan="2">中堅&nbsp;{$player3|escape}&nbsp;{$player3_grade|escape}</td>
+      <td colspan="2">副将&nbsp;{$player4|escape}&nbsp;{$player4_grade|escape}</td>
+      <td colspan="2">大将&nbsp;{$player5|escape}&nbsp;{$player5_grade|escape}</td>
+    </tr>
+    <tr>
+      <td colspan="2">補員1&nbsp;{$player1|escape}&nbsp;{$player1_grade|escape}</td>
+      <td colspan="2">補員2&nbsp;{$player2|escape}&nbsp;{$player2_grade|escape}</td>
+      <td colspan="6">&nbsp;</td>
+    </tr>
+    <tr rowspan="5">
+      <td colspan="6">チーム紹介<br />{$introduction|escape|nl2br}</td>
+      <td colspan="4">近年の主な戦績<br />{$main_results|escape|nl2br}</td>
+    </tr>
+  </table>
+  <div style="padding: 16px;">
+    <input type="button" value="閉じる" onclick="window.close()">
+  </div>
+</body>
+</html>

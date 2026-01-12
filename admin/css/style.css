@@ -1,0 +1,299 @@
+@charset "utf-8";
+
+/********* HTMLリセット *********************************************/
+
+body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, pre, blockquote, th, td, form, fieldset, input, textarea {
+	margin: 0;
+	padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+em, strong, code, address, th {
+	font-weight: normal;
+	font-style: normal;
+}
+ul, ol {
+	list-style: none;
+}
+q:before, q:after {
+	content: "";
+}
+abbr, acronym {
+	border: 0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+th {
+	text-align: left;
+}
+fieldset, img {
+	border: 0;
+}
+
+/********* HTML再定義 ***********************************************/
+
+body {
+	line-height: 1.4;
+	font-size : 14px;
+	background-color: #ffffff;
+	color: #000000;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+}
+
+h1 {
+	line-height: 1.0;
+	margin-bottom: 15px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #999999;
+	font-size: 200%;
+	font-weight: bold;
+}
+h2 {
+/*	margin: 10px 0;*/
+/*	padding: 5px 0;*/
+	border-top: 1px solid #AAAAAA;
+	border-bottom: 1px solid #AAAAAA;
+	font-weight: bold;
+}
+
+p {
+	margin: 10px 0;
+}
+em, strong {
+	font-style: normal;
+	font-weight: bold;
+}
+ul {
+	margin: 10px 20px;
+}
+ul li {
+	list-style: disc;
+}
+dl {
+	margin: 10px 0;
+}
+dl dd {
+	margin-left: 30px;
+}
+address {
+	padding-top: 10px;
+	border-top: 1px solid #999999;
+}
+
+form legend {
+	display: none;
+}
+form input, form textarea {
+	padding: 1px;
+}
+form dl dt {
+	float: left;
+	clear: left;
+	width: 5em;
+}
+form ul {
+	margin: 15px 0px;
+}
+form ul li {
+	list-style: none;
+}
+form p input {
+	padding: 2px;
+}
+
+a:link, a:visited {
+	color: #0000CC;
+	text-decoration: underline;
+}
+a:active, a:hover {
+	color: #FF7700;
+	text-decoration: underline;
+}
+
+/********* ヘッダー ***********************************************/
+
+#header {
+	font-size: 16px;
+	font-weight: bold;
+	margin: 10px 0;
+	padding: 10px;
+	border-top: 1px solid #AAAAAA;
+	border-bottom: 1px solid #AAAAAA;
+	font-weight: bold;
+/*	width: 740px;*/
+	width: 980px;
+}
+
+/********* ページ本体 ***********************************************/
+
+#pagebody {
+	float: left;
+	width: 980px;
+/*	width: 760px;*/
+/*	height: 600px;*/
+	margin: 0 0 10px 0;
+	background-color: #ffffff;
+}
+
+/********* ナビゲーション ***********************************************/
+
+#navi {
+/*	margin: 10px 10px 30px 10px;*/
+	margin: 0;
+	padding: 0 5px 0 5px;
+	background-color: #ffffff;
+	width: 150px;
+	float: left;
+}
+
+#navi p{
+	background-color: #E3E3E3;
+	margin: 0;
+	padding: 5px;
+	border: 1px solid #C1C1C1;
+	text-align: center;
+	font-size: 13px;
+}
+
+/********* メイン ***********************************************/
+
+#main {
+/*	margin: 10px 10px 30px 10px;*/
+	margin: 0;
+	padding: 0 5px 5px 15px;
+	background-color: #ffffff;
+	float: right;
+/*	width: 610px;*/
+	width: 784px;
+	border-left: 1px solid #AAAAAA;
+}
+
+#main h2 {
+	margin: 0;
+	padding: 0 0 0 15px;
+	background-color: #cccccc;
+	font-size: 16px;
+}
+
+#main .navilink {
+	background-color: #E3E3E3;
+	margin: 0;
+	padding: 5px;
+	border: 1px solid #C1C1C1;
+	text-align: center;
+	font-size: 13px;
+	width: 64px;
+}
+
+#main .login_pass {
+	padding: 15px 5px 5px 30px;
+	height: 40px;
+}
+
+#main .login_link {
+	padding: 5px 5px 5px 30px;
+}
+
+#main input {
+	font-size: 13px;
+}
+
+#main .pagenavi {
+	margin: 15px 0;
+}
+
+#main table {
+	margin: 15px 0;
+/*	width: 600px;*/
+	width: 780px;
+	font-size: 12px;
+}
+
+#main td {
+	border: 0px;
+}
+
+#main .td_main {
+	border: 1px solid #C1C1C1;
+}
+
+#main .td_left {
+	border: 1px solid #C1C1C1;
+	text-align: right;
+	padding: 3px 5px 3px 3px;
+	width: 25pt;
+}
+
+#main .td_left2 {
+	border: 1px solid #C1C1C1;
+	text-align: right;
+	padding: 3px 5px 3px 3px;
+	width: 50pt;
+}
+
+#main .td_left3 {
+	border: 1px solid #C1C1C1;
+	text-align: right;
+	padding: 3px 5px 3px 3px;
+	width: 75pt;
+}
+
+#main .td_right {
+	border: 1px solid #C1C1C1;
+	text-align: left;
+	padding: 3px 3px 3px 5px;
+/*	width: 79%;*/
+}
+
+#main .td_right2 {
+	border: 1px solid #C1C1C1;
+	text-align: left;
+	padding: 3px 3px 3px 5px;
+	width: 25pt;
+}
+
+#main .td_right3 {
+	border: 1px solid #C1C1C1;
+	text-align: left;
+	padding: 3px 3px 3px 5px;
+	width: 50pt;
+}
+
+#main .td_right4 {
+	border: 1px solid #C1C1C1;
+	text-align: left;
+	padding: 3px 3px 3px 5px;
+	width: 75pt;
+}
+
+#main .td_right5 {
+	border: 1px solid #C1C1C1;
+	text-align: left;
+	padding: 3px 3px 3px 5px;
+	width: 100pt;
+}
+
+/********* フッター ***********************************************/
+
+#footer {
+	clear: both;
+/*	width: 750px;*/
+	width: 980px;
+	margin: 50px 0 0 0;
+	padding: 5px;
+	border-top: 1px solid #AAAAAA;
+	border-bottom: 1px solid #AAAAAA;
+	color: #cccccc;
+	text-align: right;
+}
+
+#footer_title {
+	margin: 50px 0 0 0;
+	color: #cccccc;
+	text-align: right;
+}
+

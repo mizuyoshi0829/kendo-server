@@ -1,0 +1,95 @@
+{$htmlheader|smarty:nodefaults}
+    <h2>以下の内容に変更します。よろしいでしょうか？</h2>
+    <table id="ex_t" border="0" cellspacing="1" cellpadding="0">
+      <tr>
+        <td class="td_left3">部門</td>
+        <td class="td_right">{$category_name}の部</td>
+      </tr>
+      <tr>
+        <td class="td_left3">都道府県</td>
+        <td class="td_right"><select name="pref" id="pref" tabindex="1">
+          <option>選んで下さい</option>
+{foreach name=pref from=$prefTbl item=plv}
+            <option value="{$smarty.foreach.pref.iteration}" {if $smarty.foreach.pref.iteration == $smarty.session.p.pref}selected="selected" {/if}>{$plv}</option>
+{/foreach}
+          </select></td>
+      </tr>
+      <tr>
+{if $smarty.session.p.category == 3}
+        <td class="td_left3">団体名</td>
+{else}
+        <td class="td_left3">学校名</td>
+{/if}
+        <td class="td_right"><label class="formtxt">{$smarty.session.p.name|escape}</label></td>
+      </tr>
+      <tr>
+        <td class="td_left3">住所</td>
+        <td class="td_right"><label id="formtxt">{$smarty.session.p.address|escape}</label></td>
+      </tr>
+      <tr>
+        <td class="td_left3">電話番号</td>
+        <td class="td_right">{$smarty.session.p.tel|escape}</td>
+      </tr>
+      <tr>
+        <td class="td_left3">記入責任者</td>
+        <td class="td_right">{$smarty.session.p.responsible|escape}</td>
+      </tr>
+      <tr>
+        <td class="td_left3">連絡先</td>
+        <td class="td_right">{$smarty.session.p.contact|escape}</td>
+      </tr>
+      <tr>
+        <td class="td_left3">E-mail</td>
+        <td class="td_right">{$smarty.session.p.email|escape}</td>
+      </tr>
+      <tr>
+        <td colspan="2" class="style2">錬成会・交通手段について</td>
+      </tr>
+      <tr>
+        <td class="td_left3">錬成会参加</td>
+        <td class="td_right">
+          <span class="style2">
+          <select name="rensei" id="rensei">
+              <option value="0">選んで下さい</option>
+{foreach name=rensei from=$renseiTbl item=rlv}
+              <option value="{$smarty.foreach.rensei.iteration}" {if $smarty.foreach.rensei.iteration == $smarty.session.p.rensei}selected="selected" {/if}>{$rlv}</option>
+{/foreach}
+            </select>
+            </span><br />
+            <input name="rensei_flag" type="checkbox" id="rensei_flag" tabindex="27" value="1" {if $smarty.session.p.rensei_flag==1}checked="checked" {/if}/>
+{if $smarty.session.p.category == 1}
+            <span class="style2">女子も錬成会に参加&nbsp;</span><span class="style4">※女子が大会に参加しない場合のみ記入して下さい</span>
+{/if}
+{if $smarty.session.p.category == 2}
+            <span class="style2">男子も錬成会に参加&nbsp;</span><span class="style4">※男子が大会に参加しない場合のみ記入して下さい</span>
+{/if}
+{if $smarty.session.p.category == 3}
+            <span class="style2">錬成会のみに参加&nbsp;</span><span class="style4">※大会に参加しない場合のみチェックして下さい</span>
+{/if}
+        </td>
+      </tr>
+      <tr>
+        <td class="td_left3">連絡欄</td>
+        <td class="td_right">{$smarty.session.p.comment|escape}</td>
+      </tr>
+      <tr>
+        <td class="td_left3">宿泊予定</td>
+        <td class="td_right">
+          <select name="stay" id="stay" tabindex="13">
+          <option value="0">選んで下さい</option>
+{foreach name=stay from=$stayTbl item=slv}
+            <option value="{$smarty.foreach.stay.iteration}" {if $smarty.foreach.stay.iteration == $smarty.session.p.stay}selected="selected" {/if}>{$slv}</option>
+{/foreach}
+        </select></td>
+      </tr>
+    </table>
+    <br />
+    <form action="info.php" method="post">
+      <input type="hidden" name="mode" value="exec1">
+      <input type="submit" name="reinput" value="再編集">
+      <input type="submit" name="exec" value="変更">
+    </form>
+    <br />
+    <br />
+    <br />
+{$htmlfooter|smarty:nodefaults}

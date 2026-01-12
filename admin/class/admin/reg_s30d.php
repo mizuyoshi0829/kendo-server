@@ -1,0 +1,3222 @@
+<?php
+
+	function __get_league_parameter_58_59( $series_mw )
+	{
+		$param = array(
+			'mw' => $series_mw,
+			'team_num' => 3,
+			'match_num' => 3,
+			'match_info' => array( array( 0, 1 ), array( 0, 2 ), array( 1, 2 ) ),
+			'place_num' => 8,
+			'place_group_num' => 2,
+			'place_match_info' => array( array( 1, 3, 5 ), array( 2, 4, 6 ) ),
+			'group_num' => 4,
+			'chart_tbl' => array( array( 0, 1, 2 ), array( 1, 0, 3 ), array( 2, 3, 0 ) ),
+			'chart_team_tbl' => array( array( 0, 1, 2 ), array( 2, 0, 1 ), array( 1, 2, 0 ) )
+		);
+		return $param;
+	}
+
+	function get_league_parameter_58()
+	{
+        return __get_league_parameter_58_59( 'm' );
+	}
+
+	function get_league_parameter_59()
+	{
+        return __get_league_parameter_58_59( 'w' );
+	}
+
+	function __get_tournament_parameter_58_59()
+	{
+		$param = array(
+			'mw' => $series_mw,
+			'team_num' => 8,
+			'match_num' => 7,
+			'match_info' => array( array( 0, 1 ), array( 1, 2 ), array( 2, 0 ) ),
+			'match_level' => 3,
+			'place_num' => 8,
+			'place_group_num' => 2,
+			'place_match_info' => array( array( 1, 3, 5 ), array( 2, 4, 6 ) ),
+			'group_num' => 16
+		);
+		return $param;
+	}
+
+	function __get_pref_order_58_59( $no, $offset )
+	{
+		$tbl = [
+			0,
+            0,
+            0,  0,  0,  0,  0,  0,
+            2, 1, 3, 4, 7, 5, 8,
+			0, 0, 0, 0, 6, 0,
+            0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0,
+            0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0
+		];
+			/*
+            8,  9, 10, 11, 12, 13, 14, 19,
+		array( 'value' => 8, 'title' => '茨城県' ),
+		array( 'value' => 9, 'title' => '栃木県' ),
+		array( 'value' => 10, 'title' => '群馬県' ),
+		array( 'value' => 11, 'title' => '埼玉県' ),
+		array( 'value' => 12, 'title' => '千葉県' ),
+		array( 'value' => 13, 'title' => '東京都' ),
+		array( 'value' => 14, 'title' => '神奈川県' ),
+		array( 'value' => 19, 'title' => '山梨県' ),
+			*/
+		$pos = $tbl[$no];
+		if( $offset == 1 ){
+			if( $pos >= 6 ){ return 0; }
+		} else if( $offset == 2 ){
+			if( $pos <= 4 ){ return 0; }
+			return $pos - 4;
+		}
+		return $pos;
+	}
+
+	function get_tournament_parameter_58()
+	{
+		__get_tournament_parameter_58_59( 'm' );
+	}
+
+	function get_tournament_parameter_59()
+	{
+		__get_tournament_parameter_58_59( 'w' );
+	}
+
+	//---------------------------------------------------------------
+	//
+	//---------------------------------------------------------------
+    function __out_PDF_string_raw( $pdf, $x, $y, $size, $text )
+    {
+        $pdf->SetFont( 'kozminproregular', '', $size );
+        $pdf->Text( $x, $y, $text );
+    }
+
+    function __out_PDF_string( $pdf, $tbl, $field, $text )
+    {
+        __out_PDF_string_raw( $pdf, $tbl[$field]['x'], $tbl[$field]['y'], $tbl[$field]['size'], $text );
+    }
+
+    function __out_PDF_field_string( $pdf, $tbl )
+    {
+        if( $tbl['mode'] == 'name' ){
+            $text = get_field_string( $_SESSION['p'], $tbl['field'].'_sei', '' ) . ' ' . get_field_string( $_SESSION['p'], $tbl['field'].'_mei', '' );
+        } else {
+            $text = get_field_string( $_SESSION['p'], $tbl['field'], '' );
+        }
+        __out_PDF_string_raw( $pdf, $tbl['x'], $tbl['y'], $tbl['size'], $text );
+
+//        echo $tbl['x'],':',$tbl['y'],':',$tbl['size'],':',$tbl['field'],':',$text,"<br />\n";
+    }
+
+	function __get_entry_data_58_59_list_for_PDF( $series, $series_mw, $kaisai_rev, $offset )
+	{
+		$c = new common();
+		$preftbl = $c->get_pref_array();
+		$gakunentbl = $c->get_grade_junior_array();
+
+		$dbs = db_connect( DATABASE_HOST, DATABASE_USER, DATABASE_PASSWORD, DATABASE_NAME );
+		$sql = 'select * from `entry_info`'
+			.' where `series`='.$series
+				. ' and `year`='.$_SESSION['auth']['year']
+//			    . ' and `disp_order`<=48'
+				. ' order by `disp_order` asc';
+		$list = db_query_list( $dbs, $sql );
+		$data = array();
+		for( $i1 = 0; $i1 < 5*6; $i1++ ){
+			$data[$i1] = [ 'id' => 0 ];
+		}
+//echo $sql, "\n";
+//print_r($data);
+		$kaisai = 0;
+		foreach( $list as $lv ){
+			$id = intval( $lv['id'] );
+			$lv['join'] = 0;
+			$lv['school_name'] = '';
+			$sql = 'select * from `entry_field` where `info`=' . $id;
+			$field_list = db_query_list( $dbs, $sql );
+			$fields = array();
+			foreach( $field_list as $fv ){
+				$fields[$fv['field']] = $fv['data'];
+			}
+//print_r($fields);
+			if( get_field_string_number( $fields, 'join', 0 ) == 0 ){ continue; }
+			$pref = intval( $fields['school_address_pref'] );
+			if( $pref == 0 ){ continue; }
+			$prefpos = __get_pref_order_58_59( $pref, $offset );
+			if( $prefpos == 0 ){ continue; }
+			$lv['pref_name'] = $c->get_pref_name( $preftbl, $pref );
+			$lv['school_name'] = get_field_string( $fields, 'school_name' );
+			$lv['introduction'] = get_field_string( $fields, 'introduction' );
+			$lv['insotu1_sei'] = get_field_string( $fields, 'insotu1_sei' );
+			$lv['insotu1_mei'] = get_field_string( $fields, 'insotu1_mei' );
+			$lv['photo'] = get_field_string( $fields, 'photo' );
+			$lv['entry_num'] = get_field_string( $fields, 'entry_num' );
+			$lv['yosen_rank'] = get_field_string_number( $fields, 'yosen_rank', 0 );
+			if( $lv['yosen_rank'] == 0 ){ continue; }
+			for( $i1 = 1; $i1 <= 7; $i1++ ){
+				$gakunen = get_field_string_number( $fields, 'player'.$i1.'_gakunen_dan_gakunen', 0 );
+				$lv['player'.$i1.'_gakunen'] = $c->get_grade_junior_name( $gakunentbl, $gakunen );
+				$lv['player'.$i1.'_dan'] = get_field_string( $fields, 'player'.$i1.'_gakunen_dan_dan' );
+				$lv['player'.$i1.'_sei'] = get_field_string( $fields, 'player'.$i1.'_sei' );
+				$lv['player'.$i1.'_mei'] = get_field_string( $fields, 'player'.$i1.'_mei' );
+			}
+			/*
+			if( $prefpos == 47 ){
+				if( $kaisai == 0 ){
+					$kaisai = 1;
+					if( $kaisai_rev == 1 ){ $prefpos++; }
+				} else {
+					if( $kaisai_rev == 0 ){ $prefpos++; }
+				}
+			}
+			*/
+			$pos = ( $prefpos - 1 ) * 6 + $lv['yosen_rank'] - 1; 
+			$data[$pos] = $lv;
+		}
+		db_close( $dbs );
+//print_r($data);
+		return $data;
+
+/*
+		$dbs = db_connect( DATABASE_HOST, DATABASE_USER, DATABASE_PASSWORD, DATABASE_NAME );
+		$sql = 'select `entry_info`.* from `entry_info` where `entry_info`.`del`=0 and `entry_info`.`series`=6 order by `disp_order` asc';
+		$list = db_query_list( $dbs, $sql );
+		$ret = array();
+		foreach( $list as $lv ){
+			$id = intval( $lv['id'] );
+			if( $id == 0 ){ continue; }
+			$sql = 'select * from `entry_field` where `info`='. $id . ' and `year`='.$_SESSION['auth']['year'];
+			$flist = db_query_list( $dbs, $sql );
+			$fields = array();
+			foreach( $flist as $fv ){
+				$fields[$fv['field']] = $fv['data'];
+			}
+//print_r($fields);
+//exit;
+			$school_address_pref = get_field_string_number( $fields, 'school_address_pref', 0 );
+			$pref_name = '';
+			foreach( $pref_array as $pv ){
+				if( $pv['value'] == $school_address_pref ){
+					$pref_name = $pv['title'];
+					break;
+				}
+			}
+			$sdata = array(
+				'name' => $pref_name . '　' . get_field_string( $fields, 'school_name_org' ) . '立' . get_field_string( $fields, 'school_name' ),
+				'address' => $pref_name . ' ' . get_field_string( $fields, 'school_address' ),
+				'tel' => get_field_string( $fields, 'school_phone_tel' )
+			);
+
+			if( get_field_string_number( $fields, 'shumoku_dantai_w_taikai', 0 ) != 1 ){
+				continue;
+			}
+			$pdata = array(
+				'name' => $sdata['name'],
+				'address' => $sdata['address'],
+				'tel' => mb_convert_kana( $sdata['tel'], 'krn' ),
+				'captain' => '',
+				'introduction' => get_field_string( $fields, 'introduction_w' ),
+				'main_results' => get_field_string( $fields, 'main_results_w' )
+			);
+			$pdata['manager'] = '';
+			if( $fields['kantoku_w_tantou'] == '1' ){
+				$pdata['manager'] = get_field_string( $fields, 'insotu1_sei' ).' '.get_field_string( $fields, 'insotu1_mei' );
+			} else if( $fields['kantoku_w_tantou'] == '2' ){
+				$pdata['manager'] = get_field_string( $fields, 'insotu2_sei' ).' '.get_field_string( $fields, 'insotu2_mei' );
+			} else if( $fields['kantoku_w_tantou'] == '3' ){
+				$pdata['manager'] = get_field_string( $fields, 'insotu3_sei' ).' '.get_field_string( $fields, 'insotu3_mei' );
+			}
+			for( $i1 = 1; $i1 <= 7; $i1++ ){
+				$grade = get_field_string_number( $fields, 'dantai_gakunen_dan_w'.$i1.'_gakunen', 0 );
+				$grade_name = '';
+				foreach( $grade_junior_array as $gv ){
+					if( $gv['value'] == $grade ){
+						$grade_name = $gv['title'];
+						break;
+					}
+				}
+				$pdata['player'.$i1]
+					= mb_convert_kana( get_field_string( $fields, 'dantai_w'.$i1.'_sei' )
+						 . ' ' . get_field_string( $fields, 'dantai_w'.$i1.'_mei' ),
+						'sk'
+					). ' ' . $grade_name;
+			}
+			$ret[] = $pdata;
+		}
+		return $ret;
+*/
+	}
+
+	function __get_entry_data_58_59_for_ID_PDF( $list )
+	{
+		$xoffset = -28;
+		$yoffset = -43;
+		$clip_x_min = 40;
+		$clip_y_min = 115;
+		$clip_width_max = 103;
+		$clip_height_max = 52;
+		$pdata = [];
+		$idata = [];
+		foreach( $list as $lv ){
+			if( $lv['id'] == 0 ){ continue; }
+			if( $lv['photo'] !== '' ){
+				$image = dirname(dirname(dirname(__FILE__))) . '/upload/pdf/' . $lv['photo'] . '_01.jpg';
+				$image_size = getimagesize($image);
+				$adv_width = $image_size[0] / $clip_width_max;
+				$adv_height = $image_size[1] / $clip_height_max;
+				if( $adv_width >= $adv_height ){
+					$clip_width = $clip_width_max;
+					$clip_height = intval( $image_size[1] / $adv_width );
+					$clip_x = $clip_x_min;
+					$clip_y = intval( $clip_y_min + ( $clip_height_max - $clip_height ) / 2 );
+				} else {
+					$clip_width = intval( $image_size[0] / $adv_height );
+					$clip_height = $clip_height_max;
+					$clip_x = intval( $clip_x_min + ( $clip_width_max - $clip_width ) / 2 );
+					$clip_y = $clip_y_min;
+				}
+			}
+			for( $i1 = 1; $i1 <= 8; $i1++ ){
+				$data = [
+					json_encode([
+						'kind' => 'text',
+						'x' => 45+$xoffset, 'y' => 96+$yoffset+2,
+						'text' => $lv['pref_name'],
+						'size' => 16,
+					]),
+					json_encode([
+						'kind' => 'cell',
+						'x' => 45+$xoffset, 'y' => 102+$yoffset+2,
+						'width' => 92, 'height' => 10,
+						'border' => 0, 'align' => 'L',
+						'text' => $lv['school_name'],
+						'size' => 22,
+					]),
+				];
+				if( $lv['photo'] != '' ){
+					$data[] = json_encode([
+						'kind' => 'jpeg',
+						'x' => $clip_x+$xoffset, 'y' => $clip_y+$yoffset+1,
+						'width' => $clip_width,
+						'height' => $clip_height,
+						'image' => $image,
+					]);
+				}
+				/*
+				$name = [
+					'kind' => 'cell',
+					'x' => 40, 'y' => 170,
+					'width' => 103, 'height' => 10,
+					'border' => 1, 'align' => 'C',
+					'size' => 22,
+				];
+				*/
+				$name = [
+					'kind' => 'cell',
+					'x' => 56+$xoffset, 'y' => 170+$yoffset,
+					'width' => 70, 'height' => 10,
+					'border' => 0, 'align' => 'C',
+					'size' => 22,
+				];
+				$name2 = [
+					'kind' => 'text',
+					'x' => 125+$xoffset, 'y' => 172.5+$yoffset,
+					'width' => 16, 'height' => 7,
+					'border' => 0, 'align' => 'R',
+					'size' => 16,
+				];
+				if( $i1 == 8 ){
+					$name['text'] = $lv['insotu1_sei'].'　'.$lv['insotu1_mei'];
+					$name2['text'] = '先生';
+				} else {
+					$name['text'] = $lv['player'.$i1.'_sei'].'　'.$lv['player'.$i1.'_mei'];
+					$name2['text'] = '選手';
+				}
+				$data[] = json_encode( $name );
+				$data[] = json_encode( $name2 );
+				if( $i1 == 8 ){
+					$idata[] = $data;
+				} else {
+					$pdata[] = $data;
+				}
+			}
+		}
+		return [ 'player' => $pdata, 'insotu' => $idata ];
+	}
+
+	function __output_entry_data_58_59_for_PDF()
+	{
+		$list = __get_entry_data_58_59_list_for_PDF( 58, 'm', 1 );
+
+	}
+
+	function get_entry_data_58_list_for_PDF()
+	{
+		return __get_entry_data_58_59_list_for_PDF( 58, 'm', 1 );
+	}
+
+	function get_entry_data_59_list_for_PDF()
+	{
+		return __get_entry_data_58_59_list_for_PDF( 59, 'w', 1 );
+	}
+
+	function get_entry_data_58_for_catalog_PDF($objPage)
+	{
+		$list = __get_entry_data_58_59_list_for_PDF( 58, 'm', 1, 1 );
+		$template = 'catalog_58';
+		$fname = 'catalog_団体男子.' . date('YmdHis') . sprintf("%04d",microtime()*1000) . '.pdf';
+		$objPage->fetch_template_for_pdf( $list, $template, $fname );
+		return $fname;
+	}
+
+	function get_entry_data_58_for_catalog_PDF2($objPage)
+	{
+		$list = __get_entry_data_58_59_list_for_PDF( 58, 'm', 1, 2 );
+		$template = 'catalog_58';
+		$fname = 'catalog_団体男子2.' . date('YmdHis') . sprintf("%04d",microtime()*1000) . '.pdf';
+		$objPage->fetch_template_for_pdf( $list, $template, $fname );
+		return $fname;
+	}
+
+	function get_entry_data_58_for_ID_PDF($objPage)
+	{
+		$list = __get_entry_data_58_59_list_for_PDF( 58, 'm', 1, 0 );
+		$iddata = __get_entry_data_58_59_for_ID_PDF( $list );
+		$edata = [
+			[
+				'template' => 'excel/ID_58_player.2024.pdf',
+				'data' => $iddata['player'],
+			],[
+				'template' => 'excel/ID_58_insotu.2024.pdf',
+				'data' => $iddata['insotu'],
+			],
+		];
+		$ftime = date('YmdHis') . sprintf("%04d",microtime()*1000);
+		$fname = 'IDカード_団体男子.' . $ftime . '.pdf';
+		$path = $objPage->embed_data_for_PDF( $edata, $fname );
+		return $fname;
+	}
+
+	function get_entry_data_59_for_catalog_PDF($objPage)
+	{
+		$list = __get_entry_data_58_59_list_for_PDF( 59, 'w', 1, 1 );
+		$template = 'catalog_59';
+		$fname = 'catalog_団体女子.' . date('YmdHis') . sprintf("%04d",microtime()*1000) . '.pdf';
+		$objPage->fetch_template_for_pdf( $list, $template, $fname );
+		return $fname;
+	}
+
+	function get_entry_data_59_for_catalog_PDF2($objPage)
+	{
+		$list = __get_entry_data_58_59_list_for_PDF( 59, 'w', 1, 2 );
+		$template = 'catalog_59';
+		$fname = 'catalog_団体女子2.' . date('YmdHis') . sprintf("%04d",microtime()*1000) . '.pdf';
+		$objPage->fetch_template_for_pdf( $list, $template, $fname );
+		return $fname;
+	}
+
+	function get_entry_data_59_for_ID_PDF($objPage)
+	{
+		$list = __get_entry_data_58_59_list_for_PDF( 59, 'w', 0 );
+		$iddata = __get_entry_data_58_59_for_ID_PDF( $list );
+		$edata = [
+			[
+				'template' => 'excel/ID_59_player.2024.pdf',
+				'data' => $iddata['player'],
+			],[
+				'template' => 'excel/ID_59_insotu.2024.pdf',
+				'data' => $iddata['insotu'],
+			],
+		];
+		$ftime = date('YmdHis') . sprintf("%04d",microtime()*1000);
+		$fname = 'IDカード_団体女子.' . $ftime . '.pdf';
+		$path = $objPage->embed_data_for_PDF( $edata, $fname );
+		return $fname;
+	}
+
+	function get_entry_data_list_58_sql( $mw )
+	{
+		$sql = 'select `entry_info`.`id` as `id`,'
+			. ' `f1`.`data` as `school_name`,'
+			. ' `f2`.`data` as `school_name_ryaku`,'
+			. ' `f3`.`data` as `join`'
+			. ' from `entry_info`'
+			. ' inner join `entry_field` as `f1` on `f1`.`info`=`entry_info`.`id` and `f1`.`field`=\'school_name\''
+			. ' inner join `entry_field` as `f2` on `f2`.`info`=`entry_info`.`id` and `f2`.`field`=\'school_name_ryaku\''
+			. ' inner join `entry_field` as `f3` on `f3`.`info`=`entry_info`.`id` and `f3`.`field`=\'shumoku_dantai_' . $mw . '_taikai\''
+			.' where `entry_info`.`del`=0 and `entry_info`.`series`=3 and `f3`.`data`=\'1\' order by `disp_order` asc';
+		return $sql;
+	}
+
+	//---------------------------------------------------------------
+	//
+	//---------------------------------------------------------------
+
+	function __output_league_58_59_for_HTML( $objPage, $navi_info, $league_param, $league_list, $entry_list, $mw )
+	{
+//echo $path;
+//print_r($league_list);
+		if( $mw == 'm' ){
+			$mwstr = '男子';
+        } else if( $mw == 'w' ){
+			$mwstr = '女子';
+		} else {
+			$mwstr = '';
+		}
+		$header = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">'."\n";
+		$header .= '<html xmlns="http://www.w3.org/1999/xhtml">'."\n";
+		$header .= '<head>'."\n";
+		$header .= '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />'."\n";
+		$header .= '<title>'.$mwstr.'団体リーグ表</title>'."\n";
+		$header .= '<link href="preleague_s.css" rel="stylesheet" type="text/css" />'."\n";
+		$header .= '</head>'."\n";
+		$header .= '<body>'."\n";
+		//$header .= '<!--'."\n";
+		//$header .= print_r($league_list,true) . "\n";
+		//$header .= print_r($entry_list,true) . "\n";
+		//$header .= '-->'."\n";
+		$header .= '<div class="container">'."\n";
+		$header .= '  <div class="content">'."\n";
+
+		$footer = '     <h2 align="left" class="tx-h1"><a href="index_'.$mw.'.html">←戻る</a></h2>'."\n";
+		$footer .= '    <br />'."\n";
+		$footer .= '    <br />'."\n";
+		$footer .= '    </div>'."\n";
+		$footer .= '    <!-- end .content --></div>'."\n";
+		$footer .= '  </div>'."\n";
+		$footer .= '  <!-- end .container --></div>'."\n";
+		$footer .= "\n";
+		$footer .= $objPage->get_google_analytics_script();
+		$footer .= '</body>'."\n";
+		$footer .= '</html>'."\n";
+
+        $tindex = 1;
+		$html = '';
+		for( $league_data = 0; $league_data < count( $league_list ); $league_data++ ){
+			if( ( $league_data % 4 ) == 0 ){
+				$html = $header . '    <h2>' . $mwstr . '団体予選リーグ表';
+				if( $league_data == 0 ){
+					$html .= '(A-D)';
+				} else if( $league_data == 4 ){
+					$html .= '(E-H)';
+				} else if( $league_data == 8 ){
+					$html .= '(I-L)';
+				} else if( $league_data == 12 ){
+					$html .= '(M-P)';
+				}
+				$html .= '</h2>'."\n";
+			}
+			$match_tbl = $league_param['chart_tbl'];
+			$team_num = intval( $league_list[$league_data]['team_num'] );
+			//print_r($match_tbl);
+			$html .= '    <table class="match_t" border="1" cellspacing="0" cellpadding="2">'."\n";
+			$html .= '      <tr>'."\n";
+			$html .= '        <td class="td_name">'.$league_list[$league_data]['name'].'</td>'."\n";
+			for( $dantai_index_row=0; $dantai_index_row<$league_list[$league_data]['team_num']; $dantai_index_row++ ){
+				$html .= '        <td class="td_match">'."\n";
+				foreach( $entry_list as $ev ){
+					if( $league_list[$league_data]['team'][$dantai_index_row]['team'] == $ev['id'] ){
+						$html .= ( $ev['school_name'] . '<br />(' . $ev['school_address_pref_name'] . ')' );
+					}
+				}
+				$html .= '        </td>'."\n";
+			}
+			$html .= '        <td class="td_score">得点</td>'."\n";
+			$html .= '        <td class="td_score">勝者数</td>'."\n";
+			$html .= '        <td class="td_score">勝本数</td>'."\n";
+			$html .= '        <td class="td_score">順位</td>'."\n";
+			$html .= '        </td>'."\n";
+			$html .= '      </tr>'."\n";
+			for( $dantai_index_row=0; $dantai_index_row<$league_list[$league_data]['team_num']; $dantai_index_row++ ){
+				$html .= '      <tr>'."\n";
+				$html .= '        <td class="td_right">'."\n";
+				foreach( $entry_list as $ev ){
+					if( $league_list[$league_data]['team'][$dantai_index_row]['team'] == $ev['id'] ){
+						$html .= ( $ev['school_name'] . '<br />(' . $ev['school_address_pref_name'] . ')' );
+					}
+				}
+				$html .= '        </td>'."\n";
+				for( $dantai_index_col=0; $dantai_index_col<$league_list[$league_data]['team_num']; $dantai_index_col++ ){
+					$match_no_index = $match_tbl[$dantai_index_row][$dantai_index_col];
+					$match_team_index = $league_param['chart_team_tbl'][$dantai_index_row][$dantai_index_col];
+					if( $match_no_index == 0 ){
+						$html .= '        <td class="td_right">----</td>'."\n";
+					} else if( $match_team_index == 1 ){
+						$html .= '        <td class="td_right">'."\n";
+						if( $match_no_index > 0 && $league_list[$league_data]['match'][$match_no_index-1]['end_match'] == 5 ){
+							$html .= '<div class="tb_frame_result_content">'."\n";
+							if( $league_list[$league_data]['match'][$match_no_index-1]['winner'] == 1 ){
+								$html .= '  <span class="result-circle"></span>'."\n";
+							} else if( $league_list[$league_data]['match'][$match_no_index-1]['winner']==2 ){
+								$html .= '  <span class="result-triangle"><img class="tri-image" src="tri.png" /></span>'."\n";
+							} else {
+								$html .= '  <span class="result-square"></span>'."\n";
+							}
+							$html .= '  <div class="tb_frame_result_hon">'.$league_list[$league_data]['match'][$match_no_index-1]['hon1'].'</div>'."\n";
+							$html .= '  <div class="tb_frame_result_win">'.$league_list[$league_data]['match'][$match_no_index-1]['win1'].'</div>'."\n";
+							$html .= '</div>'."\n";
+							//$html .= $league_list[$league_data]['match'][$match_no_index-1]['hon1'].'-'.$league_list[$league_data]['match'][$match_no_index-1]['win1'];
+						}
+						$html .= '        </td>'."\n";
+					} else {
+						$html .= '        <td class="td_right">'."\n";
+						if( $match_no_index > 0 && $league_list[$league_data]['match'][$match_no_index-1]['end_match'] == 5 ){
+							$html .= '<div class="tb_frame_result_content">'."\n";
+							if( $league_list[$league_data]['match'][$match_no_index-1]['winner']==2 ){
+								$html .= '  <span class="result-circle"></span>'."\n";
+							} else if( $league_list[$league_data]['match'][$match_no_index-1]['winner']==1 ){
+								$html .= '  <span class="result-triangle"><img class="tri-image" src="tri.png" /></span>'."\n";
+							} else {
+								$html .= '  <span class="result-square"></span>'."\n";
+							}
+//							$html .= $league_list[$league_data]['match'][$match_no_index-1]['hon2'].'-'.$league_list[$league_data]['match'][$match_no_index-1]['win2'];
+
+							$html .= '  <div class="tb_frame_result_hon">'.$league_list[$league_data]['match'][$match_no_index-1]['hon2'].'</div>'."\n";
+							$html .= '  <div class="tb_frame_result_win">'.$league_list[$league_data]['match'][$match_no_index-1]['win2'].'</div>'."\n";
+							$html .= '</div>'."\n";
+
+
+						}
+						$html .= '        </td>'."\n";
+					}
+				}
+				$html .= '        <td class="td_right">'.($league_list[$league_data]['team'][$dantai_index_row]['point']/2).'</td>'."\n";
+				$html .= '        <td class="td_right">'.$league_list[$league_data]['team'][$dantai_index_row]['win'].'</td>'."\n";
+				$html .= '        <td class="td_right">'.$league_list[$league_data]['team'][$dantai_index_row]['hon'].'</td>'."\n";
+
+				if( $league_list[$league_data]['end_match'] == $league_list[$league_data]['match_num'] ){
+					$html .= '        <td class="td_right" ';
+					if( $league_list[$league_data]['team'][$dantai_index_row]['advanced'] == 1){
+						$html .= 'bgcolor="#ffbbbb"';
+					}
+					$html .= '>' . $league_list[$league_data]['team'][$dantai_index_row]['standing'] . '</td>'."\n";
+				} else {
+					$html .= '        <td class="td_right">&nbsp;</td>'."\n";
+				}
+				$html .= '      </tr>'."\n";
+			}
+			$html .= '    </table>'."\n";
+			$html .= '    <br />'."\n";
+			$html .= '    <br />'."\n";
+			if( ( $league_data % 4 ) == 3 ){
+				$html .= $footer;
+				if( $league_data == 3 ){
+                    $file = 'dl_' . $mw . '1';
+				} else if( $league_data == 7 ){
+                    $file = 'dl_' . $mw . '2';
+				} else if( $league_data == 11 ){
+                    $file = 'dl_' . $mw . '3';
+				} else if( $league_data == 15 ){
+                    $file = 'dl_' . $mw . '4';
+				}
+				$path = $navi_info['result_path'] . '/' . $file . '.html';
+				$fp = fopen( $path, 'w' );
+				fwrite( $fp, $html );
+				fclose( $fp );
+
+				$data = [
+					'mode' => 2,
+					'navi' => $navi_info['navi_id'],
+					'place' => $file,
+					'file' => $path,
+					'series' => $navi_info['result_path_prefix'] . '/' . $navi_info['reg_year'],
+				];
+				$objPage->update_realtime_queue( $data );
+	
+			}
+		}
+	}
+
+	function output_league_58_for_HTML( $navi_info, $league_param, $league_list, $entry_list )
+	{
+        $objPage = new form_page();
+        $objLeague = new form_page_dantai_league( $objPage );
+        $objLeague->output_league_for_HTML( $navi_info, $league_param, $league_list, $entry_list, 'm', false );
+//print_r($league_list);
+        //$objPage->output_league_for_HTML( $navi_info, $league_param, $league_list, $entry_list, 'm', false );
+		//__output_league_58_59_for_HTML( $objPage, $navi_info, $league_param, $league_list, $entry_list, 'm' );
+	}
+
+	function output_league_59_for_HTML( $navi_info, $league_param, $league_list, $entry_list )
+	{
+        $objPage = new form_page();
+        $objLeague = new form_page_dantai_league( $objPage );
+        $objLeague->output_league_for_HTML( $navi_info, $league_param, $league_list, $entry_list, 'w', false );
+        //$objPage->output_league_for_HTML( $navi_info, $league_param, $league_list, $entry_list, 'w', false );
+		//__output_league_58_59_for_HTML( $objPage, $navi_info, $league_param, $league_list, $entry_list, 'w' );
+	}
+
+	//---------------------------------------------------------------
+	//
+	//---------------------------------------------------------------
+
+	function __output_league_58_59_for_Excel( $objPage, $series, $series_info, $league_param, $league_list, $entry_list, $mw )
+	{
+//print_r($league_list);
+		if( $mw == 'm' ){
+			$mwstr = '男子';
+		} else {
+			$mwstr = '女子';
+		}
+		require_once dirname(dirname(dirname(__FILE__))).'/phpExcel/Classes/PHPExcel.php';
+		require_once dirname(dirname(dirname(__FILE__))).'/phpExcel/Classes/PHPExcel/IOFactory.php';
+		$ftime = date('YmdHis') . sprintf("%04d",microtime()*1000);
+        $file_name = $series_info['reg_year'].'kantoDantaiLeagueResults_' . $mw . '.' . $ftime . '.xls';
+		$file_path = $series_info['output_path'] . '/' . $file_name;
+		$reader = PHPExcel_IOFactory::createReader('Excel5');
+		$excel = $reader->load(dirname(dirname(dirname(__FILE__))).'/templates/excel/dantaiLeagueChartBase_'.$series.'.xls');
+		$excel->setActiveSheetIndex( 0 );		//何番目のシートに有効にするか
+		$sheet = $excel->getActiveSheet();	//有効になっているシートを取得
+		$sheet->setCellValueByColumnAndRow( 1, 1, '令和6年度 第49回関東中学校剣道大会' );
+		//$sheet->setCellValueByColumnAndRow( 0, 2, $mwstr.'団体戦　予選リーグ結果' );
+		$col = 1;
+		$row = 3;
+		$colStr = 'Q';
+		$html = '';
+		for( $league_data = 0; $league_data < count( $league_list ); $league_data++ ){
+			//$match_tbl = $league_param['chart_tbl'];
+			$match_tbl = $league_list[$league_data]['chart_tbl'];
+			$team_num = intval( $league_list[$league_data]['team_num'] );
+			//print_r($match_tbl);
+			for( $dantai_index_row=0; $dantai_index_row<$league_list[$league_data]['team_num']; $dantai_index_row++ ){
+				foreach( $entry_list as $ev ){
+					if( $league_list[$league_data]['team'][$dantai_index_row]['team'] == $ev['id'] ){
+						if( isset($ev['school_name_ryaku']) ){
+							$sheet->setCellValueByColumnAndRow( $col+$dantai_index_row*3+4, $row, $ev['school_name_ryaku'] );
+						} else {
+							$sheet->setCellValueByColumnAndRow( $col+$dantai_index_row*3+4, $row, $ev['school_name'] );
+						}
+						$sheet->setCellValueByColumnAndRow( $col+$dantai_index_row*3+4, $row+1, '('.$ev['school_address_pref_name'].')' );
+					}
+				}
+			}
+			for( $dantai_index_row=0; $dantai_index_row<$league_list[$league_data]['team_num']; $dantai_index_row++ ){
+				foreach( $entry_list as $ev ){
+					if( $league_list[$league_data]['team'][$dantai_index_row]['team'] == $ev['id'] ){
+						$sheet->setCellValueByColumnAndRow( $col, $row+$dantai_index_row*2+2, $ev['school_name_ryaku'] );
+						$sheet->setCellValueByColumnAndRow( $col, $row+$dantai_index_row*2+3, '('.$ev['school_address_pref_name'].')' );
+					}
+				}
+
+				for( $dantai_index_col=0; $dantai_index_col<$league_list[$league_data]['team_num']; $dantai_index_col++ ){
+					$match_no_index = $match_tbl[$dantai_index_row][$dantai_index_col];
+					//$match_team_index = $league_param['chart_team_tbl'][$dantai_index_row][$dantai_index_col];
+					$match_team_index = $league_list[$league_data]['chart_team_tbl'][$dantai_index_row][$dantai_index_col];
+					if( $match_team_index == 1 ){
+						if( $match_no_index > 0 && $league_list[$league_data]['match'][$match_no_index-1]['end_match'] == 5 ){
+							$cord = $objPage->get_excel_coordinates( $col+$dantai_index_col*3+4, $row+$dantai_index_row*2+2 );
+							if( $league_list[$league_data]['match'][$match_no_index-1]['winner'] == 1 ){
+								$objDrawing = new PHPExcel_Worksheet_Drawing();
+								$objDrawing->setName( $cord );
+								$objDrawing->setDescription( $cord );
+								$objDrawing->setPath(dirname(dirname(__FILE__)).'/cir.png');
+								$objDrawing->setWidth(76);
+								$objDrawing->setHeight(76);
+								$objDrawing->setWorksheet($sheet);
+								$objDrawing->setCoordinates( $cord );
+								$objDrawing->setOffsetX(15);
+								$objDrawing->setOffsetY(16);
+							} else if( $league_list[$league_data]['match'][$match_no_index-1]['winner']==2 ){
+								$objDrawing = new PHPExcel_Worksheet_Drawing();
+								$objDrawing->setName( $cord );
+								$objDrawing->setDescription( $cord );
+								$objDrawing->setPath(dirname(dirname(__FILE__)).'/tri.png');
+								$objDrawing->setWidth(76);
+								$objDrawing->setHeight(76);
+								$objDrawing->setWorksheet($sheet);
+								$objDrawing->setCoordinates( $cord );
+								$objDrawing->setOffsetX(15);
+								$objDrawing->setOffsetY(16);
+							} else {
+								$objDrawing = new PHPExcel_Worksheet_Drawing();
+								$objDrawing->setName( $cord );
+								$objDrawing->setDescription( $cord );
+								$objDrawing->setPath(dirname(dirname(__FILE__)).'/squ.png');
+								$objDrawing->setWidth(72);
+								$objDrawing->setHeight(72);
+								$objDrawing->setWorksheet($sheet);
+								$objDrawing->setCoordinates( $cord );
+								$objDrawing->setOffsetX(17);
+								$objDrawing->setOffsetY(16);
+							}
+							$sheet->setCellValueByColumnAndRow(
+								$col+$dantai_index_col*3+5, $row+$dantai_index_row*2+2,
+								$league_list[$league_data]['match'][$match_no_index-1]['hon1']
+							);
+							$sheet->setCellValueByColumnAndRow(
+								$col+$dantai_index_col*3+5, $row+$dantai_index_row*2+3,
+								$league_list[$league_data]['match'][$match_no_index-1]['win1']
+							);
+						}
+					} else {
+						if( $match_no_index > 0 && $league_list[$league_data]['match'][$match_no_index-1]['end_match'] == 5 ){
+							$cord = $objPage->get_excel_coordinates( $col+$dantai_index_col*3+4, $row+$dantai_index_row*2+2 );
+							if( $league_list[$league_data]['match'][$match_no_index-1]['winner'] == 2 ){
+								$objDrawing = new PHPExcel_Worksheet_Drawing();
+								$objDrawing->setName( $cord );
+								$objDrawing->setDescription( $cord );
+								$objDrawing->setPath(dirname(dirname(__FILE__)).'/cir.png');
+								$objDrawing->setWidth(76);
+								$objDrawing->setHeight(76);
+								$objDrawing->setWorksheet($sheet);
+								$objDrawing->setCoordinates( $cord );
+								$objDrawing->setOffsetX(15);
+								$objDrawing->setOffsetY(16);
+							} else if( $league_list[$league_data]['match'][$match_no_index-1]['winner'] == 1 ){
+								$objDrawing = new PHPExcel_Worksheet_Drawing();
+								$objDrawing->setName( $cord );
+								$objDrawing->setDescription( $cord );
+								$objDrawing->setPath(dirname(dirname(__FILE__)).'/tri.png');
+								$objDrawing->setWidth(76);
+								$objDrawing->setHeight(76);
+								$objDrawing->setWorksheet($sheet);
+								$objDrawing->setCoordinates( $cord );
+								$objDrawing->setOffsetX(15);
+								$objDrawing->setOffsetY(16);
+							} else {
+								$objDrawing = new PHPExcel_Worksheet_Drawing();
+								$objDrawing->setName( $cord );
+								$objDrawing->setDescription( $cord );
+								$objDrawing->setPath(dirname(dirname(__FILE__)).'/squ.png');
+								$objDrawing->setWidth(72);
+								$objDrawing->setHeight(72);
+								$objDrawing->setWorksheet($sheet);
+								$objDrawing->setCoordinates( $cord );
+								$objDrawing->setOffsetX(17);
+								$objDrawing->setOffsetY(16);
+							}
+							$sheet->setCellValueByColumnAndRow(
+								$col+$dantai_index_col*3+5, $row+$dantai_index_row*2+2,
+								$league_list[$league_data]['match'][$match_no_index-1]['hon2']
+							);
+							$sheet->setCellValueByColumnAndRow(
+								$col+$dantai_index_col*3+5, $row+$dantai_index_row*2+3,
+								$league_list[$league_data]['match'][$match_no_index-1]['win2']
+							);
+						}
+					}
+				}
+				$sheet->setCellValueByColumnAndRow(
+					$col+13, $row+$dantai_index_row*2+2,
+					($league_list[$league_data]['team'][$dantai_index_row]['point']/2)
+				);
+				$sheet->setCellValueByColumnAndRow(
+					$col+14, $row+$dantai_index_row*2+2,
+					$league_list[$league_data]['team'][$dantai_index_row]['win']
+				);
+				$sheet->setCellValueByColumnAndRow(
+					$col+15, $row+$dantai_index_row*2+2,
+					$league_list[$league_data]['team'][$dantai_index_row]['hon']
+				);
+				$sheet->setCellValueByColumnAndRow(
+					$col+16, $row+$dantai_index_row*2+2,
+					$league_list[$league_data]['team'][$dantai_index_row]['standing']
+				);
+
+			}
+			if( ( $league_data % 4 ) == 3 ){
+				$col += 19;
+				$row = 3;
+			} else {
+				$row += 10;
+			}
+		}
+		$writer = PHPExcel_IOFactory::createWriter( $excel, 'Excel2007' );
+		$writer->save( $file_path );
+		return $file_name;
+	}
+
+	function output_league_58_for_Excel( $objPage, $series_info, $league_param, $league_list, $entry_list )
+	{
+		return __output_league_58_59_for_Excel( $objPage, 58, $series_info, $league_param, $league_list, $entry_list, 'm' );
+	}
+
+	function output_league_59_for_Excel( $objPage, $series_info, $league_param, $league_list, $entry_list )
+	{
+		return __output_league_58_59_for_Excel( $objPage, 59, $series_info, $league_param, $league_list, $entry_list, 'w' );
+	}
+
+	//---------------------------------------------------------------
+	//
+	//---------------------------------------------------------------
+	function __output_league_match_for_HTML2_58_59( $objPage, $navi_info, $league_param, $league_list, $entry_list, $mw )
+	{
+		if( $mw == 'm' ){
+			$mwstr = '男子';
+		} else {
+			$mwstr = '女子';
+		}
+		$header = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">'."\n";
+		$header .= '<html xmlns="http://www.w3.org/1999/xhtml">'."\n";
+		$header .= '<head>'."\n";
+		$header .= '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />'."\n";
+		$header .= '<title>'.$mwstr.'団体リーグ結果</title>'."\n";
+		$header .= '<link href="preleague_m.css" rel="stylesheet" type="text/css" />'."\n";
+		$header .= '</head>'."\n";
+		$header .= '<body>'."\n";
+		//$header .= '<!--'."\n";
+		//$header .= print_r($league_list,true) . "\n";
+		//$header .= print_r($entry_list,true) . "\n";
+		//$header .= '-->'."\n";
+		$header .= '<div class="container">'."\n";
+		$header .= '  <div class="content">'."\n";
+
+		$footer = '     <h2 align="left" class="tx-h1"><a href="index_'.$mw.'.html">←戻る</a></h2>'."\n";
+		$footer .= '    <br />'."\n";
+		$footer .= '    <br />'."\n";
+		$footer .= '    </div>'."\n";
+		$footer .= '    <!-- end .content --></div>'."\n";
+		$footer .= '  </div>'."\n";
+		$footer .= '  <!-- end .container --></div>'."\n";
+		$footer .= "\n";
+		$footer .= $objPage->get_google_analytics_script();
+		$footer .= '</body>'."\n";
+		$footer .= '</html>'."\n";
+
+		$html = '';
+		for( $league_data = 0; $league_data < count( $league_list ); $league_data++ ){
+			if( ( $league_data % 4 ) == 0 ){
+				$html = $header . '    <h2>' . $mwstr . '団体予選リーグ結果';
+				if( $league_data == 0 ){
+					$html .= '(A-D)';
+				} else if( $league_data == 4 ){
+					$html .= '(E-H)';
+				} else if( $league_data == 8 ){
+					$html .= '(I-L)';
+				} else if( $league_data == 12 ){
+					$html .= '(M-P)';
+				}
+				$html .= '</h2>'."\n";
+			}
+			for( $match_index = 0; $match_index < $league_list[$league_data]['match_num']; $match_index++ ){
+				$html .= '<h3>' . $league_list[$league_data]['name'] . '&nbsp;第'.($match_index+1).'試合</h3>';
+				$html .= $objPage->output_one_match_for_HTML2( $navi_info, $league_list[$league_data]['match'][$league_param['place_match_info'][$match_index]], $entry_list, $mw );
+			//$html .= '<h3>' . $league_list[$league_data]['name'] . '&nbsp;第2試合</h3>';
+			//$html .= $objPage->output_one_match_for_HTML2( $league_list[$league_data]['match'][2], $entry_list, $mw );
+			//$html .= '<h3>' . $league_list[$league_data]['name'] . '&nbsp;第3試合</h3>';
+			//$html .= $objPage->output_one_match_for_HTML2( $league_list[$league_data]['match'][1], $entry_list, $mw );
+			}
+			if( ( $league_data % 4 ) == 3 ){
+				$html .= $footer;
+				if( $league_data == 3 ){
+					$file = 'dlm_' . $mw . '1';
+				} else if( $league_data == 7 ){
+					$file = 'dlm_' . $mw . '2';
+				} else if( $league_data == 11 ){
+					$file = 'dlm_' . $mw . '3';
+				} else if( $league_data == 15 ){
+					$file = 'dlm_' . $mw . '4';
+				}
+				$path = $navi_info['result_path'] . '/' . $file . '.html';
+				$fp = fopen( $path, 'w' );
+				fwrite( $fp, $html );
+				fclose( $fp );
+
+				$data = [
+					'mode' => 2,
+					'navi' => $navi_info['navi_id'],
+					'place' => $file,
+					'file' => $path,
+					'series' => $navi_info['result_path_prefix'] . '/' . $navi_info['reg_year'],
+				];
+				$objPage->update_realtime_queue( $data );
+			}
+		}
+	}
+
+	function output_league_match_for_HTML2_58( $navi_info, $league_param, $league_list, $entry_list )
+	{
+        $objPage = new form_page();
+        $objLeague = new form_page_dantai_league( $objPage );
+        $objLeague->output_league_match_for_HTML2( $navi_info, $league_param, $league_list, $entry_list, 'm', true );
+		//__output_league_match_for_HTML2_58_59( $objPage, $navi_info, $league_param, $league_list, $entry_list, 'm' );
+        //$objPage->output_league_match_for_HTML2( $navi_info, $league_param, $league_list, $entry_list, 'm' );
+	}
+
+	function output_league_match_for_HTML2_59( $navi_info, $league_param, $league_list, $entry_list )
+	{
+        $objPage = new form_page();
+        $objLeague = new form_page_dantai_league( $objPage );
+        $objLeague->output_league_match_for_HTML2( $navi_info, $league_param, $league_list, $entry_list, 'w', true );
+		//__output_league_match_for_HTML2_58_59( $objPage, $navi_info, $league_param, $league_list, $entry_list, 'w' );
+        //$objPage->output_league_match_for_HTML2( $navi_info, $league_param, $league_list, $entry_list, 'w' );
+	}
+
+	//---------------------------------------------------------------
+	//
+	//---------------------------------------------------------------
+
+	function __output_league_match_for_excel_58_59( $objPage, $series, $series_info, $league_param, $league_list, $entry_list, $mw )
+	{
+        $objMatch = new form_page_dantai_match( $objPage );
+		if( $mw == 'm' ){
+			$mwstr = '男子';
+		} else {
+			$mwstr = '女子';
+		}
+		require_once dirname(dirname(dirname(__FILE__))).'/phpExcel/Classes/PHPExcel.php';
+		require_once dirname(dirname(dirname(__FILE__))).'/phpExcel/Classes/PHPExcel/IOFactory.php';
+
+//print_r($league_list);
+//exit;
+		$ftime = date('YmdHis') . sprintf("%04d",microtime()*1000);
+        $file_name = $series_info['reg_year'].'kantoDantaiLeagueMatchResults_'.$mw.'.'.$ftime.'.xls';
+		$file_path = $series_info['output_path'] . '/' . $file_name;
+		$reader = PHPExcel_IOFactory::createReader('Excel5');
+		$excel = $reader->load(dirname(dirname(dirname(__FILE__))).'/templates/excel/dantaiLeagueResultsBase_3_'.$series.'.xls');
+		$excel->setActiveSheetIndex( 0 );		//何番目のシートに有効にするか
+		$sheet = $excel->getActiveSheet();	//有効になっているシートを取得
+		$sheet->setCellValueByColumnAndRow( 0, 1, '令和6年度 第49回関東中学校剣道大会' );
+		//$sheet->setCellValueByColumnAndRow( 0, 2, $mwstr.'団体戦　予選リーグ結果' );
+
+		$col = 0;
+		$row = 5;
+		$colStr = 'Q';
+		for( $league_data = 0; $league_data < count( $league_list ); $league_data++ ){
+			for( $match = 0; $match < $league_list[$league_data]['match_num']; $match++ ){
+				$objMatch->output_one_match_for_excel( $sheet, $col, $row, $series_info, $league_list[$league_data]['match'][$league_list[$league_data]['place_match_info'][$match]], $entry_list, $mw, 48, 26 );
+				//$objPage->output_one_match_for_excel( $sheet, $col, $row, $series_info, $league_list[$league_data]['match'][$match], $entry_list, $mw, 46, 26 );
+				$row += 6;
+			}
+			if( ( $league_data % 4 == 3 ) ){
+				$col += 24;
+				$row = 5;
+				$ofs = intval( $league_data / 4 );
+				if( $ofs == 0 ){
+					$colStr = 'AO';
+				} else if( $ofs == 1 ){
+					$colStr = 'BM';
+				} else if( $ofs == 2 ){
+					$colStr = 'CK';
+				}
+			}
+		}
+		$writer = PHPExcel_IOFactory::createWriter( $excel, 'Excel2007' );
+		$writer->save( $file_path );
+		return $file_name;
+	}
+
+	function output_league_match_for_excel_58( $objPage, $series_info, $league_param, $league_list, $entry_list )
+	{
+		return __output_league_match_for_excel_58_59( $objPage, 58, $series_info, $league_param, $league_list, $entry_list, 'm' );
+	}
+
+	function output_league_match_for_excel_59( $objPage, $series_info, $league_param, $league_list, $entry_list )
+	{
+		return __output_league_match_for_excel_58_59( $objPage, 59, $series_info, $league_param, $league_list, $entry_list, 'w' );
+	}
+
+	//---------------------------------------------------------------
+	//
+	//---------------------------------------------------------------
+
+	function __output_tournament_match_58_59_for_excel( $objPage, $series_info, $tournament_param, $tournament_list, $league_data, $entry_list, $mw )
+	{
+		if( $mw == 'm' ){
+			$mwstr = '男子';
+		} else {
+			$mwstr = '女子';
+		}
+		require_once dirname(dirname(dirname(__FILE__))).'/phpExcel/Classes/PHPExcel.php';
+		require_once dirname(dirname(dirname(__FILE__))).'/phpExcel/Classes/PHPExcel/IOFactory.php';
+		$file_name = 'H30kantoDantaiTournamentMatchResults_' . $mw . '.xls';
+		$file_path = $series_info['output_path'] . '/' . $file_name;
+
+		$reader = PHPExcel_IOFactory::createReader('Excel5');
+		$excel = $reader->load(dirname(dirname(dirname(__FILE__))).'/templates/excel/dantaiTournamentMatchResultsBase2.xls');
+		$excel->setActiveSheetIndex( 0 );		//何番目のシートに有効にするか
+		$sheet = $excel->getActiveSheet();	//有効になっているシートを取得
+		$sheet->setCellValueByColumnAndRow( 0, 2, $mwstr.'団体決勝トーナメント結果' );
+
+        $tournament_data = $tournament_list[0];
+		$col = 0;
+		$row = 4;
+
+		for( $match = 1; $match <= 15; $match++ ){
+            if( $match <= 4 ){
+                $sheet->setCellValueByColumnAndRow( 0, $row, '準々決勝 第'.($match).'試合' );
+            } else if( $match <= 6 ){
+                $sheet->setCellValueByColumnAndRow( 0, $row, '準決勝 第'.($match-4).'試合' );
+            } else if( $match == 7 ){
+                $sheet->setCellValueByColumnAndRow( 0, $row, '決勝' );
+            } else if( $match == 8 ){
+                $sheet->setCellValueByColumnAndRow( 0, $row, '団体順位決定戦' );
+            }
+            $row++;
+            for( $r = 0; $r < 5; $r++ ) {
+                for( $c = 0; $c < 28; $c++ ){
+                    // セルを取得
+                    $cell = $sheet->getCellByColumnAndRow($c, $r+5);
+                    // セルスタイルを取得
+                    $style = $sheet->getStyleByColumnAndRow($c, $r+5);
+                    // 数値から列文字列に変換する (0,1) → A1
+                    $offsetCell = PHPExcel_Cell::stringFromColumnIndex($c) . (string)($row + $r);
+                    // セル値をコピー
+                    $sheet->setCellValue($offsetCell, $cell->getValue());
+                    // スタイルをコピー
+                    $sheet->duplicateStyle($style, $offsetCell);
+
+                    $mg_range = 'B' . $row . ":D" . $row;
+                    $sheet->mergeCells( $mg_range );
+                    $mg_range = 'E' . $row . ":G" . $row;
+                    $sheet->mergeCells( $mg_range );
+                    $mg_range = 'H' . $row . ":J" . $row;
+                    $sheet->mergeCells( $mg_range );
+                    $mg_range = 'K' . $row . ":M" . $row;
+                    $sheet->mergeCells( $mg_range );
+                    $mg_range = 'N' . $row . ":P" . $row;
+                    $sheet->mergeCells( $mg_range );
+                    $mg_range = 'Q' . $row . ":T" . $row;
+                    $sheet->mergeCells( $mg_range );
+                    $mg_range = 'U' . $row . ":W" . $row;
+                    $sheet->mergeCells( $mg_range );
+                    $mg_range = 'A' . ($row+1) . ":A" . ($row+2); 
+                    $sheet->mergeCells( $mg_range );
+                    $mg_range = 'B' . ($row+1) . ":D" . ($row+1);
+                    $sheet->mergeCells( $mg_range );
+                    $mg_range = 'E' . ($row+1) . ":G" . ($row+1);
+                    $sheet->mergeCells( $mg_range );
+                    $mg_range = 'H' . ($row+1) . ":J" . ($row+1);
+                    $sheet->mergeCells( $mg_range );
+                    $mg_range = 'K' . ($row+1) . ":M" . ($row+1);
+                    $sheet->mergeCells( $mg_range );
+                    $mg_range = 'N' . ($row+1) . ":P" . ($row+1);
+                    $sheet->mergeCells( $mg_range );
+                    $mg_range = 'Q' . ($row+1) . ":Q" . ($row+2);
+                    $sheet->mergeCells( $mg_range );
+                    $mg_range = 'T' . ($row+1) . ":T" . ($row+2);
+                    $sheet->mergeCells( $mg_range );
+                    $mg_range = 'U' . ($row+1) . ":W" . ($row+1);
+                    $sheet->mergeCells( $mg_range );
+                    $mg_range = 'A' . ($row+3) . ":A" . ($row+4); 
+                    $sheet->mergeCells( $mg_range );
+                    $mg_range = 'B' . ($row+4) . ":D" . ($row+4);
+                    $sheet->mergeCells( $mg_range );
+                    $mg_range = 'E' . ($row+4) . ":G" . ($row+4);
+                    $sheet->mergeCells( $mg_range );
+                    $mg_range = 'H' . ($row+4) . ":J" . ($row+4);
+                    $sheet->mergeCells( $mg_range );
+                    $mg_range = 'K' . ($row+4) . ":M" . ($row+4);
+                    $sheet->mergeCells( $mg_range );
+                    $mg_range = 'N' . ($row+4) . ":P" . ($row+4);
+                    $sheet->mergeCells( $mg_range );
+                    $mg_range = 'Q' . ($row+3) . ":Q" . ($row+4);
+                    $sheet->mergeCells( $mg_range );
+                    $mg_range = 'T' . ($row+3) . ":T" . ($row+4);
+                    $sheet->mergeCells( $mg_range );
+                    $mg_range = 'U' . ($row+4) . ":W" . ($row+4);
+                    $sheet->mergeCells( $mg_range );
+                    $mg_range = 'R' . ($row+1) . ":S" . ($row+1);
+                    $sheet->mergeCells( $mg_range );
+                    $mg_range = 'R' . ($row+2) . ":S" . ($row+2);
+                    $sheet->mergeCells( $mg_range );
+                    $mg_range = 'R' . ($row+3) . ":S" . ($row+3);
+                    $sheet->mergeCells( $mg_range );
+                    $mg_range = 'R' . ($row+4) . ":S" . ($row+4);
+                    $sheet->mergeCells( $mg_range );
+                }
+            }
+            $row += 5;
+        }
+
+		$col = 0;
+		$row = 6;
+		for( $i1 = 1; $i1 <= 4; $i1++ ){
+            $objPage->output_one_match_for_excel( $sheet, $col, $row, $series_info, $tournament_data['match'][$i1+2], $entry_list, $mw, 46, 46 );
+            $row += 6;
+        }
+		for( $i1 = 1; $i1 <= 2; $i1++ ){
+            $objPage->output_one_match_for_excel( $sheet, $col, $row, $series_info, $tournament_data['match'][$i1], $entry_list, $mw, 46, 46 );
+            $row += 6;
+        }
+        $objPage->output_one_match_for_excel( $sheet, $col, $row, $series_info, $tournament_data['match'][0], $entry_list, $mw, 46, 46 );
+        $row += 6;
+        $objPage->output_one_match_for_excel( $sheet, $col, $row, $series_info, $tournament_data['match'][7], $entry_list, $mw, 46, 46 );
+
+		$writer = PHPExcel_IOFactory::createWriter( $excel, 'Excel2007' );
+		$writer->save( $file_path );
+		return $file_name;
+    }
+
+	function output_tournament_match_58_for_excel( $objPage, $series_info, $tournament_param, $tournament_data, $league_data, $entry_list )
+	{
+		//return __output_tournament_match_58_59_for_excel( $objPage, $series_info, $tournament_param, $tournament_data, $league_data, $entry_list, 'm' );
+		return __output_tournament_58_59_for_excel( $objPage, $series_info, $tournament_param, $tournament_data, $league_data, $entry_list, 'm', 58, 59 );
+
+	}
+
+	function output_tournament_match_59_for_excel( $objPage, $series_info, $tournament_param, $tournament_data, $league_data, $entry_list )
+	{
+		//return __output_tournament_match_58_59_for_excel( $objPage, $series_info, $tournament_param, $tournament_data, $league_data, $entry_list, 'w' );
+		return __output_tournament_58_59_for_excel( $objPage, $series_info, $tournament_param, $tournament_data, $league_data, $entry_list, 'w', 58, 59 );
+	}
+
+	//---------------------------------------------------------------
+	//
+	//---------------------------------------------------------------
+
+	function __output_tournament_58_59_for_excel( $objPage, $series_info, $tournament_param, $tournament_list, $league_data, $entry_list, $mw, $series_m, $series_w )
+	{
+        $objMatch = new form_page_dantai_match( $objPage );
+        $tournament_data = $tournament_list[0];
+		if( $mw == 'm' ){
+			$mwstr = '男子';
+		} else {
+			$mwstr = '女子';
+		}
+		require_once dirname(dirname(dirname(__FILE__))).'/phpExcel/Classes/PHPExcel.php';
+		require_once dirname(dirname(dirname(__FILE__))).'/phpExcel/Classes/PHPExcel/IOFactory.php';
+//print_r($tournament_data);
+//exit;
+		$ftime = date('YmdHis') . sprintf("%04d",microtime()*1000);
+        $file_name = $series_info['reg_year'].'kantoDantaiTournamentResults_'.$mw.'.'.$ftime.'.xls';
+        $file_path = $series_info['output_path'] . '/' . $file_name;
+        $excel = new PHPExcel();
+        $reader = PHPExcel_IOFactory::createReader('Excel5');
+        $excel = $reader->load(dirname(dirname(dirname(__FILE__))).'/templates/excel/dantaiTournamentResultsBase_58_59.xls');
+        $excel->setActiveSheetIndex( 0 );        //何番目のシートに有効にするか
+        $sheet = $excel->getActiveSheet();    //有効になっているシートを取得
+		$sheet->setCellValueByColumnAndRow( 0, 1, '令和６年度 第49回関東中学校剣道大会' );
+		$sheet->setCellValueByColumnAndRow( 0, 2, $mwstr.'団体戦　決勝トーナメント結果' );
+		$col = 0;
+		$row = 5;
+		$colStr = 'Q';
+
+		$objMatch->output_one_match_for_excel( $sheet, 0, 53, $series_info, $tournament_data['match'][7], $entry_list, $mw, 50, 36 );
+		$objMatch->output_one_match_for_excel( $sheet, 0, 59, $series_info, $tournament_data['match'][8], $entry_list, $mw, 50, 36 );
+		$objMatch->output_one_match_for_excel( $sheet, 0, 65, $series_info, $tournament_data['match'][9], $entry_list, $mw, 50, 36 );
+		$objMatch->output_one_match_for_excel( $sheet, 0, 71, $series_info, $tournament_data['match'][10], $entry_list, $mw, 50, 36 );
+		$objMatch->output_one_match_for_excel( $sheet, 0, 77, $series_info, $tournament_data['match'][11], $entry_list, $mw, 50, 36 );
+
+		$objMatch->output_one_match_for_excel( $sheet, 24, 53, $series_info, $tournament_data['match'][12], $entry_list, $mw, 50, 36 );
+		$objMatch->output_one_match_for_excel( $sheet, 24, 59, $series_info, $tournament_data['match'][13], $entry_list, $mw, 50, 36 );
+		$objMatch->output_one_match_for_excel( $sheet, 24, 65, $series_info, $tournament_data['match'][14], $entry_list, $mw, 50, 36 );
+		$objMatch->output_one_match_for_excel( $sheet, 24, 71, $series_info, $tournament_data['match'][3], $entry_list, $mw, 50, 36 );
+		$objMatch->output_one_match_for_excel( $sheet, 24, 77, $series_info, $tournament_data['match'][4], $entry_list, $mw, 50, 36 );
+
+		$objMatch->output_one_match_for_excel( $sheet, 48, 53, $series_info, $tournament_data['match'][5], $entry_list, $mw, 50, 36 );
+		$objMatch->output_one_match_for_excel( $sheet, 48, 59, $series_info, $tournament_data['match'][6], $entry_list, $mw, 50, 36 );
+		$objMatch->output_one_match_for_excel( $sheet, 48, 65, $series_info, $tournament_data['match'][1], $entry_list, $mw, 50, 36 );
+		$objMatch->output_one_match_for_excel( $sheet, 48, 71, $series_info, $tournament_data['match'][2], $entry_list, $mw, 50, 36 );
+		$objMatch->output_one_match_for_excel( $sheet, 48, 77, $series_info, $tournament_data['match'][0], $entry_list, $mw, 50, 36 );
+
+        $styleArrayH = array(
+            'borders' => array(
+                'top' => array(
+                    'style' => PHPExcel_Style_Border::BORDER_THIN,
+                    'color' => array('argb' => 'FF000000')
+                )
+            )
+        );
+        $styleArrayV = array(
+            'borders' => array(
+                'right' => array(
+                    'style' => PHPExcel_Style_Border::BORDER_THIN,
+                    'color' => array('argb' => 'FF000000')
+                )
+            )
+        );
+        $styleArrayV2 = array(
+            'borders' => array(
+                'left' => array(
+                    'style' => PHPExcel_Style_Border::BORDER_THIN,
+                    'color' => array('argb' => 'FF000000')
+                )
+            )
+        );
+        $styleArrayHR = array(
+            'borders' => array(
+                'top' => array(
+                    'style' => PHPExcel_Style_Border::BORDER_THICK,
+                    'color' => array('argb' => 'FFFF0000')
+                )
+            )
+        );
+        $styleArrayVR = array(
+            'borders' => array(
+                'right' => array(
+                    'style' => PHPExcel_Style_Border::BORDER_THICK,
+                    'color' => array('argb' => 'FFFF0000')
+                )
+            )
+        );
+        $styleArrayVR2 = array(
+            'borders' => array(
+                'left' => array(
+                    'style' => PHPExcel_Style_Border::BORDER_THICK,
+                    'color' => array('argb' => 'FFFF0000')
+                )
+            )
+        );
+		$col = 0;
+		$row = 4;
+		$wincolofs = 3;
+		$mode1 = 'l';
+		$mode2 = 'l';
+		$chartRow1 = 'B';
+		$chartRow2 = 'D';
+		$chartRow3 = 'D';
+		$chartRow4 = 'E';
+		$chartRow5 = 'G';
+				$sheet->getStyle('A2:D2')->applyFromArray($styleArrayVR);
+		for( $i1 = 7; $i1 <= 14; $i1++ ){
+			$winstr = $objPage->get_tounament_chart_winstring_for_excel( $tournament_data['match'][$i1], $mode1, $mode2 );
+			$sheet->setCellValueByColumnAndRow( $col, $row, $tournament_data['match'][$i1]['team1_name'] );
+			for( $i2 = 0; $i2 < count($entry_list); $i2++ ){
+				if( $tournament_data['match'][$i1]['team1'] == $entry_list[$i2]['id'] ){
+					$sheet->setCellValueByColumnAndRow( $col, $row+2, '('.$entry_list[$i2]['school_address_pref_name'].')' );
+					break;
+				}
+			}
+			if( $tournament_data['match'][$i1]['winner'] != 0 ){
+				$sheet->getStyle($chartRow4.($row+5).':'.$chartRow5.($row+5))->applyFromArray($styleArrayHR);
+				if( $i1 >= 11 ){
+					$sheet->setCellValueByColumnAndRow( $col+$wincolofs, $row, $winstr[1][2].' '.$winstr[1][1] );
+				} else {
+					$sheet->setCellValueByColumnAndRow( $col+$wincolofs, $row, $winstr[1][1].' '.$winstr[1][2] );
+				}
+			}
+			if( $tournament_data['match'][$i1]['winner'] == 1 ){
+				$sheet->getStyle($chartRow1.($row+2).':'.$chartRow2.($row+2))->applyFromArray($styleArrayHR);
+				$sheet->getStyle($chartRow3.($row+2).':'.$chartRow3.($row+4))->applyFromArray($styleArrayVR);
+			}
+			$row += 6;
+			$sheet->setCellValueByColumnAndRow( $col, $row, $tournament_data['match'][$i1]['team2_name'] );
+			for( $i2 = 0; $i2 < count($entry_list); $i2++ ){
+				if( $tournament_data['match'][$i1]['team2'] == $entry_list[$i2]['id'] ){
+					$sheet->setCellValueByColumnAndRow( $col, $row+2, '('.$entry_list[$i2]['school_address_pref_name'].')' );
+					break;
+				}
+			}
+			if( $tournament_data['match'][$i1]['winner'] != 0 ){
+				if( $i1 >= 11 ){
+					$sheet->setCellValueByColumnAndRow( $col+$wincolofs, $row+2, $winstr[2][2].' '.$winstr[2][1] );
+				} else {
+					$sheet->setCellValueByColumnAndRow( $col+$wincolofs, $row+2, $winstr[2][1].' '.$winstr[2][2] );
+				}
+			}
+			if( $tournament_data['match'][$i1]['winner'] == 2 ){
+				$sheet->getStyle($chartRow1.($row+2).':'.$chartRow2.($row+2))->applyFromArray($styleArrayHR);
+				$sheet->getStyle($chartRow3.($row-1).':'.$chartRow3.($row+1))->applyFromArray($styleArrayVR);
+			}
+			$row += 6;
+			if( $i1 == 10 ){
+				$row = 4;
+				$col = 66;
+				$wincolofs = -4;
+				$mode1 = 'r';
+				$mode2 = 'r';
+				$chartRow1 = 'BL';
+				$chartRow2 = 'BN';
+				$chartRow3 = 'BK';
+				$chartRow4 = 'BI';
+				$chartRow5 = 'BK';
+			}
+		}
+
+		$col = 7;
+		$row = 7;
+		$wincolofs = 7;
+		$mode1 = 'l';
+		$mode2 = 'l';
+		$chartRow1 = 'M';
+		$chartRow2 = 'O';
+		$chartRow3 = 'O';
+		$chartRow4 = 'P';
+		$chartRow5 = 'R';
+		for( $i1 = 3; $i1 <= 6; $i1++ ){
+			$winstr = $objPage->get_tounament_chart_winstring_for_excel( $tournament_data['match'][$i1], $mode1, $mode2 );
+			if( $tournament_data['match'][$i1]['winner'] != 0 ){
+				$sheet->getStyle($chartRow4.($row+8).':'.$chartRow5.($row+8))->applyFromArray($styleArrayHR);
+				if( $i1 >= 5 ){
+					$sheet->setCellValueByColumnAndRow( $col+$wincolofs, $row, $winstr[1][2].' '.$winstr[1][1] );
+				} else {
+					$sheet->setCellValueByColumnAndRow( $col+$wincolofs, $row, $winstr[1][1].' '.$winstr[1][2] );
+				}
+			}
+			$sheet->setCellValueByColumnAndRow( $col, $row, $tournament_data['match'][$i1]['team1_name'] );
+			for( $i2 = 0; $i2 < count($entry_list); $i2++ ){
+				if( $tournament_data['match'][$i1]['team1'] == $entry_list[$i2]['id'] ){
+					$sheet->setCellValueByColumnAndRow( $col, $row+2, '('.$entry_list[$i2]['school_address_pref_name'].')' );
+					break;
+				}
+			}
+			if( $tournament_data['match'][$i1]['winner'] == 1 ){
+				$sheet->getStyle($chartRow1.($row+2).':'.$chartRow2.($row+2))->applyFromArray($styleArrayHR);
+				$sheet->getStyle($chartRow3.($row+2).':'.$chartRow3.($row+7))->applyFromArray($styleArrayVR);
+			}
+			$row += 12;
+
+			$sheet->setCellValueByColumnAndRow( $col, $row, $tournament_data['match'][$i1]['team2_name'] );
+			for( $i2 = 0; $i2 < count($entry_list); $i2++ ){
+				if( $tournament_data['match'][$i1]['team2'] == $entry_list[$i2]['id'] ){
+					$sheet->setCellValueByColumnAndRow( $col, $row+2, '('.$entry_list[$i2]['school_address_pref_name'].')' );
+					break;
+				}
+			}
+			if( $tournament_data['match'][$i1]['winner'] != 0 ){
+				if( $i1 >= 5 ){
+					$sheet->setCellValueByColumnAndRow( $col+$wincolofs, $row+2, $winstr[2][2].' '.$winstr[2][1] );
+				} else {
+					$sheet->setCellValueByColumnAndRow( $col+$wincolofs, $row+2, $winstr[2][1].' '.$winstr[2][2] );
+				}
+			}
+			if( $tournament_data['match'][$i1]['winner'] == 2 ){
+				$sheet->getStyle($chartRow1.($row+2).':'.$chartRow2.($row+2))->applyFromArray($styleArrayHR);
+				$sheet->getStyle($chartRow3.($row-4).':'.$chartRow3.($row+1))->applyFromArray($styleArrayVR);
+			}
+			$row += 12;
+			if( $i1 == 4 ){
+				$row = 7;
+				$col = 55;
+				$wincolofs = -4;
+				$mode1 = 'r';
+				$mode2 = 'r';
+				$chartRow1 = 'BA';
+				$chartRow2 = 'BC';
+				$chartRow3 = 'AZ';
+				$chartRow4 = 'AX';
+				$chartRow5 = 'AZ';
+			}
+		}
+
+		$winstr = $objPage->get_tounament_chart_winstring_for_excel( $tournament_data['match'][1], 'l', 'l' );
+		if( $tournament_data['match'][1]['winner'] != 0 ){
+			$sheet->getStyle('Y27')->applyFromArray($styleArrayHR);
+			$sheet->setCellValueByColumnAndRow( 24, 13, $winstr[1][1].' '.$winstr[1][2] );
+			$sheet->setCellValueByColumnAndRow( 24, 39, $winstr[2][1].' '.$winstr[2][2] );
+		}
+		$sheet->setCellValueByColumnAndRow( 18, 13, $tournament_data['match'][1]['team1_name'] );
+		for( $i2 = 0; $i2 < count($entry_list); $i2++ ){
+			if( $tournament_data['match'][1]['team1'] == $entry_list[$i2]['id'] ){
+				$sheet->setCellValueByColumnAndRow( 18, 15, '('.$entry_list[$i2]['school_address_pref_name'].')' );
+				break;
+			}
+		}
+		if( $tournament_data['match'][1]['winner'] == 1 ){
+			$sheet->getStyle('X15')->applyFromArray($styleArrayHR);
+			$sheet->getStyle('X15:X26')->applyFromArray($styleArrayVR);
+		}
+		$sheet->setCellValueByColumnAndRow( 18, 37, $tournament_data['match'][1]['team2_name'] );
+		for( $i2 = 0; $i2 < count($entry_list); $i2++ ){
+			if( $tournament_data['match'][1]['team2'] == $entry_list[$i2]['id'] ){
+				$sheet->setCellValueByColumnAndRow( 18, 39, '('.$entry_list[$i2]['school_address_pref_name'].')' );
+				break;
+			}
+		}
+		if( $tournament_data['match'][1]['winner'] == 2 ){
+			$sheet->getStyle('X39')->applyFromArray($styleArrayHR);
+			$sheet->getStyle('X27:X38')->applyFromArray($styleArrayVR);
+		}
+
+		$winstr = $objPage->get_tounament_chart_winstring_for_excel( $tournament_data['match'][2], 'r', 'r' );
+		if( $tournament_data['match'][2]['winner'] != 0 ){
+			$sheet->getStyle('AS27:AT27')->applyFromArray($styleArrayH);
+			$sheet->setCellValueByColumnAndRow( 45, 13, $winstr[1][2].' '.$winstr[1][1] );
+			$sheet->setCellValueByColumnAndRow( 45, 39, $winstr[2][2].' '.$winstr[2][1] );
+		}
+		$sheet->setCellValueByColumnAndRow( 48, 13, $tournament_data['match'][2]['team1_name'] );
+		for( $i2 = 0; $i2 < count($entry_list); $i2++ ){
+			if( $tournament_data['match'][2]['team1'] == $entry_list[$i2]['id'] ){
+				$sheet->setCellValueByColumnAndRow( 48, 15, '('.$entry_list[$i2]['school_address_pref_name'].')' );
+				break;
+			}
+		}
+		if( $tournament_data['match'][2]['winner'] == 1 ){
+			$sheet->getStyle('AU15:AV15')->applyFromArray($styleArrayHR);
+			$sheet->getStyle('AT15:AT26')->applyFromArray($styleArrayVR);
+		}
+		$sheet->setCellValueByColumnAndRow( 48, 37, $tournament_data['match'][2]['team2_name'] );
+		for( $i2 = 0; $i2 < count($entry_list); $i2++ ){
+			if( $tournament_data['match'][2]['team2'] == $entry_list[$i2]['id'] ){
+				$sheet->setCellValueByColumnAndRow( 48, 39, '('.$entry_list[$i2]['school_address_pref_name'].')' );
+				break;
+			}
+		}
+		if( $tournament_data['match'][2]['winner'] == 2 ){
+			$sheet->getStyle('AU39:AV39')->applyFromArray($styleArrayHR);
+			$sheet->getStyle('AT27:AT38')->applyFromArray($styleArrayVR);
+		}
+
+		$winstr = $objPage->get_tounament_chart_winstring_for_excel( $tournament_data['match'][0], 'l', 'r' );
+		if( $tournament_data['match'][0]['winner'] != 0 ){
+			$sheet->getStyle('AH22:AH26')->applyFromArray($styleArrayVR);
+			$sheet->setCellValueByColumnAndRow( 31, 25, $winstr[1][1].' '.$winstr[1][2] );
+			$sheet->setCellValueByColumnAndRow( 35, 25, $winstr[2][2].' '.$winstr[2][1] );
+		}
+		$sheet->setCellValueByColumnAndRow( 25, 25, $tournament_data['match'][0]['team1_name'] );
+		for( $team1_index = 0; $team1_index < count($entry_list); $team1_index++ ){
+			if( $tournament_data['match'][0]['team1'] == $entry_list[$team1_index]['id'] ){
+				$sheet->setCellValueByColumnAndRow( 25, 27, '('.$entry_list[$team1_index]['school_address_pref_name'].')' );
+				break;
+			}
+		}
+		if( $tournament_data['match'][0]['winner'] == 1 ){
+			$sheet->getStyle('AE27:AH27')->applyFromArray($styleArrayHR);
+		}
+		$sheet->setCellValueByColumnAndRow( 38, 25, $tournament_data['match'][0]['team2_name'] );
+		for( $team2_index = 0; $team2_index < count($entry_list); $team2_index++ ){
+			if( $tournament_data['match'][0]['team2'] == $entry_list[$team2_index]['id'] ){
+				$sheet->setCellValueByColumnAndRow( 38, 27, '('.$entry_list[$team2_index]['school_address_pref_name'].')' );
+				break;
+			}
+		}
+		if( $tournament_data['match'][0]['winner'] == 2 ){
+			$sheet->getStyle('AI27:AL27')->applyFromArray($styleArrayHR);
+		}
+
+		if( $tournament_data['match'][0]['winner'] == 1 ){
+			$sheet->setCellValueByColumnAndRow( 31, 18, $tournament_data['match'][0]['team1_name'] );
+			$sheet->setCellValueByColumnAndRow( 31, 20, '('.$entry_list[$team1_index]['school_address_pref_name'].')' );
+		} else if( $tournament_data['match'][0]['winner'] == 2 ){
+			$sheet->setCellValueByColumnAndRow( 31, 18, $tournament_data['match'][0]['team2_name'] );
+			$sheet->setCellValueByColumnAndRow( 31, 20, '('.$entry_list[$team2_index]['school_address_pref_name'].')' );
+		}
+
+		$writer = PHPExcel_IOFactory::createWriter( $excel, 'Excel2007' );
+		$writer->save( $file_path );
+		return $file_name;
+	}
+
+	function output_tournament_58_for_excel( $objPage, $series_info, $tournament_param, $tournament_data, $league_data, $entry_list )
+	{
+		return __output_tournament_58_59_for_excel( $objPage, $series_info, $tournament_param, $tournament_data, $league_data, $entry_list, 'm', 58, 59 );
+	}
+
+	function output_tournament_59_for_excel( $objPage, $series_info, $tournament_param, $tournament_data, $league_data, $entry_list )
+	{
+		return __output_tournament_58_59_for_excel( $objPage, $series_info, $tournament_param, $tournament_data, $league_data, $entry_list, 'w', 58, 59 );
+	}
+
+	//---------------------------------------------------------------
+	//
+	//---------------------------------------------------------------
+
+	function __output_tournament_chart_58_59_for_excel( $objPage, $series_info, $tournament_param, $tournament_list, $league_data, $entry_list, $mw )
+	{
+		if( $mw == 'm' ){
+			$mwstr = '男子';
+		} else {
+			$mwstr = '女子';
+		}
+		require_once dirname(dirname(dirname(__FILE__))).'/phpExcel/Classes/PHPExcel.php';
+		require_once dirname(dirname(dirname(__FILE__))).'/phpExcel/Classes/PHPExcel/IOFactory.php';
+		$ftime = date('YmdHis') . sprintf("%04d",microtime()*1000);
+		$file_name = $series_info['reg_year'].'kantoDantaiTournamentChartResults_'.$mw.'.'.$ftime.'.xlsx';
+		$file_path = $series_info['output_path'] . '/' . $file_name;
+		$reader = PHPExcel_IOFactory::createReader('Excel2007');
+		$excel = $reader->load(dirname(dirname(dirname(__FILE__))).'/templates/excel/dantaiTournamentChartBase_58_59'.'.'.$series_info['reg_year'].'.xlsx');
+		$excel->setActiveSheetIndex( 0 );		//何番目のシートに有効にするか
+		$sheet = $excel->getActiveSheet();	//有効になっているシートを取得
+		//$sheet->setCellValue( 'S2', '令和６年度 第49回関東中学校剣道大会' );
+		$sheet->setCellValue( 'V4', $mwstr.'団体戦結果' );
+
+		$styleArrayH = array(
+			'borders' => array(
+				'top' => array(
+					'style' => PHPExcel_Style_Border::BORDER_THICK,
+					'color' => array('argb' => 'FFFF0000')
+				)
+			)
+		);
+		$styleArrayV = array(
+			'borders' => array(
+				'right' => array(
+					'style' => PHPExcel_Style_Border::BORDER_THICK,
+					'color' => array('argb' => 'FFFF0000')
+				)
+			)
+		);
+
+        foreach( $tournament_list as $tournament_data ){
+//print_r($tournament_data);
+//print_r($league_data);
+//exit;
+		$row = 7;
+		$chartRowLeagueName = 'B';
+		$chartRowLeagueSchool = 'C';
+		$chartRowLeaguePref = 'E';
+		$chartRowName = 'I';
+		$chartRowName2 = 'N';
+		$chartRowStart = 'J';
+		$chartRowEnd = 'L';
+		$chartRowV = 'L';
+		$chartRowStart2 = 'M';
+		$chartRowEnd2 = 'M';
+		$chartRowWin = 'K';
+		$chartRowWin2 = 'L';
+		for( $i1 = 7; $i1 <= 14; $i1++ ){
+			foreach( $league_data as $lv ){
+				for( $tn = 0; $tn < 3; $tn++ ){
+					if( $lv['team'][$tn]['team'] == $tournament_data['match'][$i1]['team1'] ){
+						$sheet->setCellValue( $chartRowLeagueName.$row, substr( $lv['name'], 0, 1 ) );
+						for( $tn2 = 0; $tn2 < 3; $tn2++ ){
+							for( $i2 = 0; $i2 < count($entry_list); $i2++ ){
+								if( $lv['team'][$tn2]['team'] == $entry_list[$i2]['id'] ){
+									/*
+									if( mb_strlen( $entry_list[$i2]['school_name'], 'UTF-8' ) > 13 ){
+										$sheet->getStyle($chartRowLeagueSchool.($row+$tn2*2))->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+										$sheet->getStyle($chartRowLeagueSchool.($row+$tn2*2))->getAlignment()->setShrinkToFit(true);
+									}
+									*/
+									if( isset($entry_list[$i2]['school_name_ryaku']) ){
+										$sheet->setCellValue( $chartRowLeagueSchool.($row+$tn2*2), $entry_list[$i2]['school_name_ryaku'] );
+									} else {
+										$sheet->setCellValue( $chartRowLeagueSchool.($row+$tn2*2), $entry_list[$i2]['school_name'] );
+									}
+									$sheet->setCellValue( $chartRowLeaguePref.($row+$tn2*2), $entry_list[$i2]['school_address_pref_name'] );
+									break;
+								}
+							}
+						}
+						break;
+					}
+				}
+			}
+			$winstr = $objPage->get_tounament_chart_winstring_for_excel( $tournament_data['match'][$i1] );
+			$sheet->setCellValue( $chartRowName.$row, $tournament_data['match'][$i1]['team1_name'] );
+			$sheet->setCellValue( $chartRowWin.($row+1), $winstr[1][0] );
+			$sheet->setCellValue( $chartRowWin.($row+2), $winstr[1][1] );
+			$sheet->setCellValue( $chartRowWin2.($row+1), $winstr[1][2] );
+			if( $tournament_data['match'][$i1]['winner'] == 1 ){
+				$sheet->getStyle($chartRowStart.($row+3).':'.$chartRowEnd.($row+3))->applyFromArray($styleArrayH);
+				$sheet->getStyle($chartRowV.($row+3).':'.$chartRowV.($row+6))->applyFromArray($styleArrayV);
+				$sheet->getStyle($chartRowStart2.($row+7).':'.$chartRowEnd2.($row+7))->applyFromArray($styleArrayH);
+				$sheet->setCellValue( $chartRowName2.($row+2), $tournament_data['match'][$i1]['team1_name'] );
+				for( $i2 = 0; $i2 < count($entry_list); $i2++ ){
+					if( $tournament_data['match'][$i1]['team1'] == $entry_list[$i2]['id'] ){
+						$sheet->setCellValue( $chartRowName2.($row+8), $entry_list[$i2]['school_address_pref_name'] );
+						break;
+					}
+				}
+			}
+			$row += 8;
+			foreach( $league_data as $lv ){
+				for( $tn = 0; $tn < 3; $tn++ ){
+					if( $lv['team'][$tn]['team'] == $tournament_data['match'][$i1]['team2'] ){
+						$sheet->setCellValue( $chartRowLeagueName.$row, substr( $lv['name'], 0, 1 ) );
+						for( $tn2 = 0; $tn2 < 3; $tn2++ ){
+							for( $i2 = 0; $i2 < count($entry_list); $i2++ ){
+								if( $lv['team'][$tn2]['team'] == $entry_list[$i2]['id'] ){
+									if( isset($entry_list[$i2]['school_name_ryaku']) ){
+										$sheet->setCellValue( $chartRowLeagueSchool.($row+$tn2*2), $entry_list[$i2]['school_name_ryaku'] );
+									} else {
+										$sheet->setCellValue( $chartRowLeagueSchool.($row+$tn2*2), $entry_list[$i2]['school_name'] );
+									}
+									$sheet->setCellValue( $chartRowLeaguePref.($row+$tn2*2), $entry_list[$i2]['school_address_pref_name'] );
+									break;
+								}
+							}
+						}
+						break;
+					}
+				}
+			}
+			$sheet->setCellValue( $chartRowName.$row, $tournament_data['match'][$i1]['team2_name'] );
+			$sheet->setCellValue( $chartRowWin.($row+3), $winstr[2][0] );
+			$sheet->setCellValue( $chartRowWin.($row+4), $winstr[2][1] );
+			$sheet->setCellValue( $chartRowWin2.($row+3), $winstr[2][2] );
+			if( $tournament_data['match'][$i1]['winner'] == 2 ){
+				$sheet->getStyle($chartRowStart.($row+3).':'.$chartRowEnd.($row+3))->applyFromArray($styleArrayH);
+				$sheet->getStyle($chartRowV.($row-1).':'.$chartRowV.($row+2))->applyFromArray($styleArrayV);
+				$sheet->getStyle($chartRowStart2.($row-1).':'.$chartRowEnd2.($row-1))->applyFromArray($styleArrayH);
+				$sheet->setCellValue( $chartRowName2.($row-6), $tournament_data['match'][$i1]['team2_name'] );
+				for( $i2 = 0; $i2 < count($entry_list); $i2++ ){
+					if( $tournament_data['match'][$i1]['team2'] == $entry_list[$i2]['id'] ){
+						$sheet->setCellValue( $chartRowName2.$row, $entry_list[$i2]['school_address_pref_name'] );
+						break;
+					}
+				}
+			}
+			$row += 8;
+			if( $i1 == 10 ){
+				$row = 7;
+				$chartRowName = 'AY';
+				$chartRowName2 = 'AT';
+				$chartRowStart = 'AV';
+				$chartRowEnd = 'AX';
+				$chartRowWin = 'AW';
+				$chartRowWin2 = 'AV';
+				$chartRowV = 'AU';
+				$chartRowStart2 = 'AU';
+				$chartRowEnd2 = 'AU';
+				$chartRowLeagueName = 'BB';
+				$chartRowLeagueSchool = 'BC';
+				$chartRowLeaguePref = 'BE';
+			}
+		}
+
+		$row = 14;
+		$chartRowName = 'S';
+		$chartRowStart = 'O';
+		$chartRowEnd = 'Q';
+		$chartRowV = 'Q';
+		$chartRowStart2 = 'R';
+		$chartRowEnd2 = 'R';
+		$chartRowWin = 'P';
+		$chartRowWin2 = 'Q';
+		for( $i1 = 3; $i1 <= 6; $i1++ ){
+			$winstr = $objPage->get_tounament_chart_winstring_for_excel( $tournament_data['match'][$i1] );
+			$sheet->setCellValue( $chartRowWin.($row-2), $winstr[1][0] );
+			$sheet->setCellValue( $chartRowWin.($row-1), $winstr[1][1] );
+			$sheet->setCellValue( $chartRowWin2.($row-2), $winstr[1][2] );
+			if( $tournament_data['match'][$i1]['winner'] == 1 ){
+				$sheet->getStyle($chartRowStart.$row.':'.$chartRowEnd.$row)->applyFromArray($styleArrayH);
+				$sheet->getStyle($chartRowV.$row.':'.$chartRowV.($row+7))->applyFromArray($styleArrayV);
+				$sheet->getStyle($chartRowStart2.($row+8).':'.$chartRowEnd2.($row+8))->applyFromArray($styleArrayH);
+				$sheet->setCellValue( $chartRowName.($row+3), $tournament_data['match'][$i1]['team1_name'] );
+				for( $i2 = 0; $i2 < count($entry_list); $i2++ ){
+					if( $tournament_data['match'][$i1]['team1'] == $entry_list[$i2]['id'] ){
+						$sheet->setCellValue( $chartRowName.($row+9), $entry_list[$i2]['school_address_pref_name'] );
+						break;
+					}
+				}
+			}
+			$sheet->setCellValue( $chartRowWin.($row+16), $winstr[2][0] );
+			$sheet->setCellValue( $chartRowWin.($row+17), $winstr[2][1] );
+			$sheet->setCellValue( $chartRowWin2.($row+16), $winstr[2][2] );
+			if( $tournament_data['match'][$i1]['winner'] == 2 ){
+				$sheet->getStyle($chartRowStart.($row+16).':'.$chartRowEnd.($row+16))->applyFromArray($styleArrayH);
+				$sheet->getStyle($chartRowV.($row+8).':'.$chartRowV.($row+15))->applyFromArray($styleArrayV);
+				$sheet->getStyle($chartRowStart2.($row+8).':'.$chartRowEnd2.($row+8))->applyFromArray($styleArrayH);
+				$sheet->setCellValue( $chartRowName.($row+3), $tournament_data['match'][$i1]['team2_name'] );
+				for( $i2 = 0; $i2 < count($entry_list); $i2++ ){
+					if( $tournament_data['match'][$i1]['team2'] == $entry_list[$i2]['id'] ){
+						$sheet->setCellValue( $chartRowName.($row+9), $entry_list[$i2]['school_address_pref_name'] );
+						break;
+					}
+				}
+			}
+			$row += 32;
+			if( $i1 == 4 ){
+				$row = 14;
+				$chartRowName = 'AO';
+				$chartRowStart = 'AQ';
+				$chartRowEnd = 'AS';
+				$chartRowV = 'AP';
+				$chartRowStart2 = 'AP';
+				$chartRowEnd2 = 'AP';
+				$chartRowWin = 'AR';
+				$chartRowWin2 = 'AQ';
+			}
+		}
+
+		$row = 22;
+		$chartRowName = 'X';
+		$chartRowStart = 'T';
+		$chartRowEnd = 'V';
+		$chartRowV = 'V';
+		$chartRowStart2 = 'W';
+		$chartRowEnd2 = 'W';
+		$chartRowWin = 'U';
+		$chartRowWin2 = 'V';
+		for( $i1 = 1; $i1 <= 2; $i1++ ){
+			$winstr = $objPage->get_tounament_chart_winstring_for_excel( $tournament_data['match'][$i1] );
+			$sheet->setCellValue( $chartRowWin.($row-2), $winstr[1][0] );
+			$sheet->setCellValue( $chartRowWin.($row-1), $winstr[1][1] );
+			$sheet->setCellValue( $chartRowWin2.($row-2), $winstr[1][2] );
+			if( $tournament_data['match'][$i1]['winner'] == 1 ){
+				$sheet->getStyle($chartRowStart.$row.':'.$chartRowEnd.$row)->applyFromArray($styleArrayH);
+				$sheet->getStyle($chartRowV.$row.':'.$chartRowV.($row+15))->applyFromArray($styleArrayV);
+				$sheet->getStyle($chartRowStart2.($row+16).':'.$chartRowEnd2.($row+16))->applyFromArray($styleArrayH);
+				$sheet->setCellValue( $chartRowName.($row+11), $tournament_data['match'][$i1]['team1_name'] );
+				for( $i2 = 0; $i2 < count($entry_list); $i2++ ){
+					if( $tournament_data['match'][$i1]['team1'] == $entry_list[$i2]['id'] ){
+						$sheet->setCellValue( $chartRowName.($row+17), $entry_list[$i2]['school_address_pref_name'] );
+						break;
+					}
+				}
+			}
+			$sheet->setCellValue( $chartRowWin.($row+32), $winstr[2][0] );
+			$sheet->setCellValue( $chartRowWin.($row+33), $winstr[2][1] );
+			$sheet->setCellValue( $chartRowWin2.($row+32), $winstr[2][2] );
+			if( $tournament_data['match'][$i1]['winner'] == 2 ){
+				$sheet->getStyle($chartRowStart.($row+32).':'.$chartRowEnd.($row+32))->applyFromArray($styleArrayH);
+				$sheet->getStyle($chartRowV.($row+16).':'.$chartRowV.($row+31))->applyFromArray($styleArrayV);
+				$sheet->getStyle($chartRowStart2.($row+16).':'.$chartRowEnd2.($row+16))->applyFromArray($styleArrayH);
+				$sheet->setCellValue( $chartRowName.($row+11), $tournament_data['match'][$i1]['team2_name'] );
+				for( $i2 = 0; $i2 < count($entry_list); $i2++ ){
+					if( $tournament_data['match'][$i1]['team2'] == $entry_list[$i2]['id'] ){
+						$sheet->setCellValue( $chartRowName.($row+17), $entry_list[$i2]['school_address_pref_name'] );
+						break;
+					}
+				}
+			}
+			$row = 22;
+			$chartRowName = 'AI';
+			$chartRowStart = 'AK';
+			$chartRowEnd = 'AN';
+			$chartRowV = 'AJ';
+			$chartRowStart2 = 'AJ';
+			$chartRowEnd2 = 'AJ';
+			$chartRowWin = 'AL';
+			$chartRowWin2 = 'AK';
+		}
+
+		$winstr = $objPage->get_tounament_chart_winstring_for_excel( $tournament_data['match'][0] );
+		$sheet->setCellValue( 'Z36', $winstr[1][0] );
+		$sheet->setCellValue( 'Z37', $winstr[1][1] );
+		$sheet->setCellValue( 'AA36', $winstr[1][2] );
+		if( $tournament_data['match'][0]['winner'] == 1 ){
+			$sheet->getStyle( 'Y38:AC38' )->applyFromArray($styleArrayH);
+			$sheet->getStyle( 'AC33:AC37' )->applyFromArray($styleArrayV);
+			$sheet->setCellValue( 'AC19', $tournament_data['match'][0]['team1_name'] );
+			for( $i2 = 0; $i2 < count($entry_list); $i2++ ){
+				if( $tournament_data['match'][0]['team1'] == $entry_list[$i2]['id'] ){
+					$sheet->setCellValue( 'AC29', $entry_list[$i2]['school_address_pref_name'] );
+					break;
+				}
+			}
+		}
+		$sheet->setCellValue( 'AG36', $winstr[2][0] );
+		$sheet->setCellValue( 'AG37', $winstr[2][1] );
+		$sheet->setCellValue( 'AF36', $winstr[2][2] );
+		if( $tournament_data['match'][0]['winner'] == 2 ){
+			$sheet->getStyle( 'AD38:AH38' )->applyFromArray($styleArrayH);
+			$sheet->getStyle( 'AC33:AC37' )->applyFromArray($styleArrayV);
+			$sheet->setCellValue( 'AC19', $tournament_data['match'][0]['team2_name'] );
+			for( $i2 = 0; $i2 < count($entry_list); $i2++ ){
+				if( $tournament_data['match'][0]['team2'] == $entry_list[$i2]['id'] ){
+					$sheet->setCellValue( 'AC29', $entry_list[$i2]['school_address_pref_name'] );
+					break;
+				}
+			}
+		}
+
+		if( $tournament_data['match'][0]['winner'] != 0 ){
+			if( $tournament_data['match'][0]['winner'] == 1 ){
+				$team[0] = $tournament_data['match'][0]['team1'];
+				$team[1] = $tournament_data['match'][0]['team2'];
+			} else if( $tournament_data['match'][0]['winner'] == 2 ){
+				$team[0] = $tournament_data['match'][0]['team2'];
+				$team[1] = $tournament_data['match'][0]['team1'];
+			}
+			if( $tournament_data['match'][1]['team1'] == $team[0] ){
+				$team[2] = $tournament_data['match'][1]['team2'];
+				if( $tournament_data['match'][2]['winner'] == 1 ){
+					$team[3] = $tournament_data['match'][2]['team2'];
+				} else if( $tournament_data['match'][2]['winner'] == 2 ){
+					$team[3] = $tournament_data['match'][2]['team1'];
+				}
+			} else if( $tournament_data['match'][1]['team2'] == $team[0] ){
+				$team[2] = $tournament_data['match'][1]['team1'];
+				if( $tournament_data['match'][2]['winner'] == 1 ){
+					$team[3] = $tournament_data['match'][2]['team2'];
+				} else if( $tournament_data['match'][2]['winner'] == 2 ){
+					$team[3] = $tournament_data['match'][2]['team1'];
+				}
+			} else if( $tournament_data['match'][2]['team1'] == $team[0] ){
+				$team[3] = $tournament_data['match'][2]['team2'];
+				if( $tournament_data['match'][1]['winner'] == 1 ){
+					$team[2] = $tournament_data['match'][1]['team2'];
+				} else if( $tournament_data['match'][1]['winner'] == 2 ){
+					$team[2] = $tournament_data['match'][1]['team1'];
+				}
+			} else if( $tournament_data['match'][2]['team2'] == $team[0] ){
+				$team[3] = $tournament_data['match'][2]['team1'];
+				if( $tournament_data['match'][1]['winner'] == 1 ){
+					$team[2] = $tournament_data['match'][1]['team2'];
+				} else if( $tournament_data['match'][1]['winner'] == 2 ){
+					$team[2] = $tournament_data['match'][1]['team1'];
+				}
+			}
+			for( $i1 = 0; $i1 <= 3; $i1++ ){
+				for( $i2 = 0; $i2 < count($entry_list); $i2++ ){
+					if( $team[$i1] == $entry_list[$i2]['id'] ){
+						$sheet->setCellValue(
+							'Z'.(47+$i1),
+							$entry_list[$i2]['school_name'].'（'.$entry_list[$i2]['school_address_pref_name'].'）'
+						);
+						break;
+					}
+				}
+			}
+		}
+        }
+
+		$writer = PHPExcel_IOFactory::createWriter( $excel, 'Excel2007' );
+		$writer->save( $file_path );
+		return $file_name;
+	}
+
+	function output_tournament_chart_58_for_excel( $objPage, $series_info, $tournament_param, $tournament_data, $league_data, $entry_list )
+	{
+		return __output_tournament_chart_58_59_for_excel( $objPage, $series_info, $tournament_param, $tournament_data, $league_data, $entry_list, 'm' );
+	}
+
+	function output_tournament_chart_59_for_excel( $objPage, $series_info, $tournament_param, $tournament_data, $league_data, $entry_list )
+	{
+		return __output_tournament_chart_58_59_for_excel( $objPage, $series_info, $tournament_param, $tournament_data, $league_data, $entry_list, 'w' );
+	}
+
+	//---------------------------------------------------------------
+	//
+	//---------------------------------------------------------------
+
+	function __output_tournament_match_for_HTML2_58_59( $objPage, $series_info, $tournament_list, $entry_list, $mw )
+	{
+		if( $mw == 'm' ){
+			$mwstr = '男子';
+		} else {
+			$mwstr = '女子';
+		}
+		$header = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">'."\n";
+		$header .= '<html xmlns="http://www.w3.org/1999/xhtml">'."\n";
+		$header .= '<head>'."\n";
+		$header .= '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />'."\n";
+		$header .= '<title>'.$mwstr.'団体決勝トーナメント結果</title>'."\n";
+		$header .= '<link href="preleague_m.css" rel="stylesheet" type="text/css" />'."\n";
+		$header .= '</head>'."\n";
+		$header .= '<body>'."\n";
+		//$header .= '<!--'."\n";
+		//$header .= print_r($league_list,true) . "\n";
+		//$header .= print_r($entry_list,true) . "\n";
+		//$header .= '-->'."\n";
+		$header .= '<div class="container">'."\n";
+		$header .= '  <div class="content">'."\n";
+
+		$footer = '     <h2 align="left" class="tx-h1"><a href="index_'.$mw.'.html">←戻る</a></h2>'."\n";
+		$footer .= '    <br />'."\n";
+		$footer .= '    <br />'."\n";
+		$footer .= '    </div>'."\n";
+		$footer .= '    <!-- end .content --></div>'."\n";
+		$footer .= '  </div>'."\n";
+		$footer .= '  <!-- end .container --></div>'."\n";
+		$footer .= "\n";
+		$footer .= $objPage->get_google_analytics_script();
+		$footer .= '</body>'."\n";
+		$footer .= '</html>'."\n";
+
+        $tindex = 1;
+		$html = $header . '    <h2>' . $mwstr . '団体決勝トーナメント結果</h2>'."\n";
+		for( $i1 = 1; $i1 <= 8; $i1++ ){
+			$html .= '<h3>団体決勝トーナメント&nbsp;一回戦&nbsp;第'.$i1.'試合</h3>';
+			$html .= $objPage->output_one_match_for_HTML2( $series_info, $tournament_list[0]['match'][$i1+6], $entry_list, $mw );
+		}
+		for( $i1 = 1; $i1 <= 4; $i1++ ){
+			$html .= '<h3>団体決勝トーナメント&nbsp;準々決勝&nbsp;第'.$i1.'試合</h3>';
+			$html .= $objPage->output_one_match_for_HTML2( $series_info, $tournament_list[0]['match'][$i1+2], $entry_list, $mw );
+		}
+		for( $i1 = 1; $i1 <= 2; $i1++ ){
+			$html .= '<h3>団体決勝トーナメント&nbsp;準決勝&nbsp;第'.$i1.'試合</h3>';
+			$html .= $objPage->output_one_match_for_HTML2( $series_info, $tournament_list[0]['match'][$i1], $entry_list, $mw );
+		}
+		$html .= '<h3>団体決勝トーナメント&nbsp;決勝</h3>';
+		$html .= $objPage->output_one_match_for_HTML2( $series_info, $tournament_list[0]['match'][0], $entry_list, $mw );
+		$html .= $footer;
+        $file = 'dtm_' . $series_info['result_prefix'] . $mw . $tindex;
+        $path = $series_info['result_path'] . '/' . $file . '.html';
+		$fp = fopen( $path, 'w' );
+		fwrite( $fp, $html );
+		fclose( $fp );
+		$data = [
+			'mode' => 2,
+			'navi' => $series_info['navi_id'],
+			'place' => $file,
+			'file' => $path,
+			'series' => $series_info['result_path_prefix'],
+		];
+		$objPage->update_realtime_queue( $data );
+	}
+
+	function output_tournament_match_for_HTML2_58( $series_info, $tournament_list, $entry_list )
+	{
+        $objPage = new form_page();
+		__output_tournament_match_for_HTML2_58_59( $objPage, $series_info, $tournament_list, $entry_list, 'm' );
+	}
+
+	function output_tournament_match_for_HTML2_59( $series_info, $tournament_list, $entry_list )
+	{
+        $objPage = new form_page();
+		__output_tournament_match_for_HTML2_58_59( $objPage, $series_info, $tournament_list, $entry_list, 'w' );
+	}
+
+	//---------------------------------------------------------------
+	//
+	//---------------------------------------------------------------
+
+	function __output_tournament_58_59_for_HTML( $objPage, $series_info, $tournament_list, $entry_list, $mw )
+	{
+//print_r($tournament_data);
+//print_r($entry_list);
+		if( $mw == 'm' ){
+			$mwstr = '男子';
+			$table_name_rowspan = 3;
+			$table_name_name_width = 160;
+			$table_name_pref_width = 120;
+			$table_height = 11; //6;
+			$table_font_size = 18; //11;
+			$table_place_font_size = 8; //6;
+			$table_cell_width = 40; //30;
+		} else {
+			$mwstr = '女子';
+			$table_name_rowspan = 3;
+			$table_name_name_width = 160;
+			$table_name_pref_width = 120;
+			$table_height = 11;
+			$table_font_size = 18; //11;
+			$table_place_font_size = 8; //6;
+			$table_cell_width = 40;
+		}
+        $table_win_border_size = '2px';
+        $table_normal_border_size = '1px';
+        $tindex = 1;
+        foreach( $tournament_list as $tournament_data ){
+
+		$pdf = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">' . "\n"
+	//	$pdf = '' . "\n"
+			. '<html xmlns="http://www.w3.org/1999/xhtml">' . "\n"
+			. '<head>' . "\n"
+			. '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />' . "\n"
+			. '<title>試合結果速報</title>' . "\n"
+		//	. '<link href="main.css" rel="stylesheet" type="text/css" />' . "\n"
+			. '</head>' . "\n"
+			. '<body>' . "\n"
+			. '<style>' . "\n"
+			. 'body { font-family: \'DejaVu Sans Condensed\'; font-size: 5pt;  }'. "\n"
+			. '.content {' . "\n"
+		//	. '    position: relative;' . "\n"
+			. '    width: 980px;' . "\n"
+			. '    height: 980px;' . "\n"
+			. '    font-size: 5px;' . "\n"
+			. '    margin: 16px;' . "\n"
+			. '}' . "\n"
+			. '.div_result_tournament_name {' . "\n"
+			. '    margin: 0;' . "\n"
+			. '    padding: 0;' . "\n"
+			. '    text-align: left;' . "\n"
+			. '    width: 160px;' . "\n"
+		//	. '    height: 8px;' . "\n"
+		//	. '    float: left;' . "\n"
+		//	. '    display: inline; text-align: justify;' . "\n"
+		//	. '    display: inline; position: absolute;' . "\n"
+			. '}' . "\n"
+			. '.div_result_tournament_name_name {' . "\n"
+			. '    margin: 0;' . "\n"
+			. '    padding: 0;' . "\n"
+			. '    text-align: left;' . "\n"
+			. '    vertical-align: top;' . "\n"
+			. '    font-size: '.$table_font_size.'pt;' . "\n"
+		//	. '    position: absolute;' . "\n"
+		//	. '    top: 11px;' . "\n"
+		//	. '    left: 0px;' . "\n"
+			. '    width: '.$table_name_name_width.'px;' . "\n"
+		//	. '    height: 5px;' . "\n"
+		//	. '    float: left;' . "\n"
+			. '}' . "\n"
+			. '.div_result_tournament_name_pref {' . "\n"
+			. '    margin: 0;' . "\n"
+			. '    padding: 0;' . "\n"
+			. '    vertical-align: top;' . "\n"
+			. '    text-align: left;' . "\n"
+			. '    font-size: '.$table_font_size.'pt;' . "\n"
+		//	. '    position: absolute;' . "\n"
+		//	. '    top: 11px;' . "\n"
+		//	. '    left: 80px;' . "\n"
+		//	. '    float: left;' . "\n"
+			. '    width: '.$table_name_pref_width.'px;' . "\n"
+		//	. '    height: 5px;' . "\n"
+			. '}' . "\n"
+			. '.div_result_tournament_name_num {' . "\n"
+			. '    margin: 0;' . "\n"
+			. '    padding: 0 4px 0 4px;' . "\n"
+			. '    vertical-align: top;' . "\n"
+			. '    text-align: right;' . "\n"
+			. '    font-size: '.$table_font_size.'pt;' . "\n"
+		//	. '    position: absolute;' . "\n"
+		//	. '    top: 11px;' . "\n"
+		//	. '    left: 140px;' . "\n"
+		//	. '    float: left;' . "\n"
+			. '    width: 16px;' . "\n"
+		//	. '    height: 5px;' . "\n"
+			. '}' . "\n"
+			. '.div_result_tournament_name_num2 {' . "\n"
+			. '    margin: 0;' . "\n"
+			. '    padding: 0 4px 0 4px;' . "\n"
+			. '    text-align: left;' . "\n"
+			. '    width: 16px;' . "\n"
+			. '}' . "\n"
+			. '.div_result_tournament {' . "\n"
+			. '    margin: 0;' . "\n"
+			. '    padding: 0;' . "\n"
+			. '    text-align: left;' . "\n"
+		//	. '    width: 160px;' . "\n"
+		//	. '    height: 8px;' . "\n"
+		//	. '    float: left;' . "\n"
+		//	. '    display: inline; text-align: justify;' . "\n"
+		//	. '    display: inline; position: absolute;' . "\n"
+			. '}' . "\n"
+			. '.div_result_one_tournament {' . "\n"
+			. '    margin: 0;' . "\n"
+			. '    padding: 0;' . "\n"
+			. '    text-align: right;' . "\n"
+			. '    width: '.$table_cell_width.'px;' . "\n"
+			. '    font-size: '.$table_place_font_size.'pt;' . "\n"
+		//	. '    height: 5px;' . "\n"
+		//    . '    position: absolute;' . "\n"
+			. '    display: inline; float: left;' . "\n"
+			. '}' . "\n"
+			. '.div_result_one_tournament2 {' . "\n"
+			. '    margin: 0;' . "\n"
+			. '    padding: 0;' . "\n"
+			. '    text-align: left;' . "\n"
+			. '    width: '.$table_cell_width.'px;' . "\n"
+			. '    font-size: '.$table_place_font_size.'pt;' . "\n"
+		//	. '    height: 5px;' . "\n"
+		//    . '    position: absolute;' . "\n"
+			. '    display: inline; float: left;' . "\n"
+			. '}' . "\n"
+			. '.div_border_none {' . "\n"
+			. '    border: none;' . "\n"
+			. '    padding: 1px 0 0 1px;' . "\n"
+			. '}' . "\n"
+			. '.div_border_none2 {' . "\n"
+			. '    border: none;' . "\n"
+			. '    padding: 0 1px 1px 0;' . "\n"
+			. '}' . "\n"
+			. '.div_border_b {' . "\n"
+			. '    border-top: none;' . "\n"
+			. '    border-bottom: solid 1px #000000;' . "\n"
+			. '    border-right: solid 1px #ffffff;' . "\n"
+			. '    border-left: none;' . "\n"
+			. '}' . "\n"
+			. '.div_border_b_win {' . "\n"
+			. '    border-top: none;' . "\n"
+			. '    border-bottom: solid '.$table_win_border_size.' #ff0000;' . "\n"
+			. '    border-right: solid 1px #ffffff;' . "\n"
+			. '    border-left: none;' . "\n"
+            . '    height: '.($table_height-1).'px;' . "\n"
+			. '}' . "\n"
+			. '.div_border_b_up {' . "\n"
+			. '    border-top: none;' . "\n"
+			. '    border-bottom: solid '.$table_win_border_size.' #ff0000;' . "\n"
+			. '    border-right: solid 1px #ffffff;' . "\n"
+			. '    border-left: none;' . "\n"
+            . '    height: '.($table_height-1).'px;' . "\n"
+			. '}' . "\n"
+			. '.div_border_b2 {' . "\n"
+			. '    border-top: none;' . "\n"
+			. '    border-bottom: solid 1px #000000;' . "\n"
+			. '    border-left: solid 1px #ffffff;' . "\n"
+			. '    border-right: none;' . "\n"
+			. '}' . "\n"
+			. '.div_border_b2_win {' . "\n"
+			. '    border-top: none;' . "\n"
+			. '    border-bottom: solid '.$table_win_border_size.' #ff0000;' . "\n"
+			. '    border-left: solid 1px #ffffff;' . "\n"
+			. '    border-right: none;' . "\n"
+            . '    height: '.($table_height-1).'px;' . "\n"
+			. '}' . "\n"
+			. '.div_border_b2_up {' . "\n"
+			. '    border-top: none;' . "\n"
+			. '    border-bottom: solid '.$table_win_border_size.' #ff0000;' . "\n"
+			. '    border-left: solid 1px #ffffff;' . "\n"
+			. '    border-right: none;' . "\n"
+            . '    height: '.($table_height-1).'px;' . "\n"
+			. '}' . "\n"
+			. '.div_border_br {' . "\n"
+			. '    border-top: none;' . "\n"
+			. '    border-bottom: solid 1px #000000;' . "\n"
+			. '    border-right: solid 1px #000000;' . "\n"
+			. '    border-left: none;' . "\n"
+			. '}' . "\n"
+			. '.div_border_br_win {' . "\n"
+			. '    border-top: none;' . "\n"
+			. '    border-bottom: solid '.$table_win_border_size.' #ff0000;' . "\n"
+			. '    border-right: solid '.$table_win_border_size.' #ff0000;' . "\n"
+			. '    border-left: none;' . "\n"
+            . '    height: '.($table_height-1).'px;' . "\n"
+            . '    width: '.($table_cell_width-1).'px;' . "\n"
+			. '}' . "\n"
+			. '.div_border_br_up {' . "\n"
+			. '    border-top: none;' . "\n"
+			. '    border-bottom: solid '.$table_win_border_size.' #ff0000;' . "\n"
+			. '    border-right: solid 1px #000000;' . "\n"
+			. '    border-left: none;' . "\n"
+            . '    height: '.($table_height-1).'px;' . "\n"
+			. '}' . "\n"
+			. '.div_border_br_final {' . "\n"
+			. '    border-top: none;' . "\n"
+			. '    border-bottom: solid '.$table_win_border_size.' #ff0000;' . "\n"
+			. '    border-right: solid '.$table_win_border_size.' #ff0000;' . "\n"
+            . '    height: '.($table_height-1).'px;' . "\n"
+            . '    width: '.($table_cell_width-1).'px;' . "\n"
+			. '    border-left: none;' . "\n"
+			. '}' . "\n"
+			. '.div_border_br_final2 {' . "\n"
+			. '    border-top: none;' . "\n"
+			. '    border-bottom: solid 1px #000000;' . "\n"
+			. '    border-right: solid '.$table_win_border_size.' #ff0000;' . "\n"
+            . '    width: '.($table_cell_width-1).'px;' . "\n"
+			. '    border-left: none;' . "\n"
+			. '}' . "\n"
+			. '.div_border_r {' . "\n"
+			. '    border-top: none;' . "\n"
+			. '    border-bottom: none;' . "\n"
+			. '    border-right: solid 1px #000000;' . "\n"
+			. '    border-left: none;' . "\n"
+			. '    padding: 0 0 1px 0;' . "\n"
+			. '}' . "\n"
+			. '.div_border_r_win {' . "\n"
+			. '    border-top: none;' . "\n"
+			. '    border-bottom: none;' . "\n"
+			. '    border-right: solid '.$table_win_border_size.' #ff0000;' . "\n"
+			. '    border-left: none;' . "\n"
+			. '    padding: 0 0 1px 0;' . "\n"
+            . '    width: '.($table_cell_width-1).'px;' . "\n"
+			. '}' . "\n"
+			. '.div_border_r_up {' . "\n"
+			. '    border-top: none;' . "\n"
+			. '    border-bottom: none;' . "\n"
+			. '    border-right: solid '.$table_win_border_size.' #ff0000;' . "\n"
+			. '    border-left: none;' . "\n"
+			. '    padding: 0 0 1px 0;' . "\n"
+            . '    width: '.($table_cell_width-1).'px;' . "\n"
+			. '}' . "\n"
+			. '.div_border_bl {' . "\n"
+			. '    border-top: none;' . "\n"
+			. '    border-bottom: solid 1px #000000;' . "\n"
+			. '    border-left: solid 1px #000000;' . "\n"
+			. '    border-right: none;' . "\n"
+			. '}' . "\n"
+			. '.div_border_bl_win {' . "\n"
+			. '    border-top: none;' . "\n"
+			. '    border-bottom: solid '.$table_win_border_size.' #ff0000;' . "\n"
+			. '    border-left: solid '.$table_win_border_size.' #ff0000;' . "\n"
+			. '    border-right: none;' . "\n"
+            . '    height: '.($table_height-1).'px;' . "\n"
+            . '    width: '.($table_cell_width-1).'px;' . "\n"
+			. '}' . "\n"
+			. '.div_border_bl_up {' . "\n"
+			. '    border-top: none;' . "\n"
+			. '    border-bottom: solid '.$table_win_border_size.' #ff0000;' . "\n"
+			. '    border-left: solid 1px #000000;' . "\n"
+			. '    border-right: none;' . "\n"
+            . '    height: '.($table_height-1).'px;' . "\n"
+			. '}' . "\n"
+			. '.div_border_l {' . "\n"
+			. '    border-top: none;' . "\n"
+			. '    border-bottom: none;' . "\n"
+			. '    border-left: solid 1px #000000;' . "\n"
+			. '    border-right: none;' . "\n"
+			. '    padding: 0 0 1px 0;' . "\n"
+			. '}' . "\n"
+			. '.div_border_l_win {' . "\n"
+			. '    border-top: none;' . "\n"
+			. '    border-bottom: none;' . "\n"
+			. '    border-left: solid '.$table_win_border_size.' #ff0000;' . "\n"
+			. '    border-right: none;' . "\n"
+			. '    padding: 0 0 1px 0;' . "\n"
+            . '    width: '.($table_cell_width-1).'px;' . "\n"
+			. '}' . "\n"
+			. '.div_border_l_up {' . "\n"
+			. '    border-top: none;' . "\n"
+			. '    border-bottom: none;' . "\n"
+			. '    border-left: solid 1px #000000;' . "\n"
+			. '    border-right: none;' . "\n"
+			. '    padding: 0 0 1px 0;' . "\n"
+			. '}' . "\n"
+			. '.tb_result_tournament_name {' . "\n"
+			. '    text-align: left;' . "\n"
+			. '    width: 80px;' . "\n"
+			. '}' . "\n"
+			. '.tb_result_tournament_name_pref {' . "\n"
+			. '    text-align: left;' . "\n"
+			. '    width: 60px;' . "\n"
+			. '    padding: 0 4px 0 4px;' . "\n"
+			. '}' . "\n"
+			. '.tb_result_tournament_name_num {' . "\n"
+			. '    text-align: right;' . "\n"
+			. '    width: 10px;' . "\n"
+			. '    padding: 0 4px 0 4px;' . "\n"
+			. '}' . "\n"
+			. '.tb_result_tournament_name_num2 {' . "\n"
+			. '    text-align: left;' . "\n"
+			. '    width: 10px;' . "\n"
+			. '    padding: 0 2px 0 8px;' . "\n"
+			. '}' . "\n"
+			. '.tb_result_tournament {' . "\n"
+			. '    text-align: right;' . "\n"
+			. '    width: 40px;' . "\n"
+			. '}' . "\n"
+			. '.clearfix:after {' . "\n"
+			. '  content: "";' . "\n"
+			. '  clear: both;' . "\n"
+			. '  display: block;' . "\n"
+			. '}' . "\n"
+			. '</style>' . "\n"
+			. '<H1 style="border-bottom: solid 1px #000000;" lang="ja">'.$mwstr.'トーナメント表</H1>' . "\n"
+			. '<h2 align="left" class="tx-h1"><a href="index_'.$mw.'.html">←戻る</a></h2>'."\n"
+			. '<div class="container">' . "\n"
+			. '  <div class="content">' . "\n";
+//print_r($tournament_data);
+		$tournament_name_width = 150;
+		$tournament_name_name_left = 0;
+		$tournament_name_pref_left = 80;
+		$tournament_name_num_left = 140;
+		$tournament_width = 40;
+		$tournament_height = 20;
+		$tournament_height2 = 11;
+		$match_no_top = 1;
+		for( $i1 = 1; $i1 < $tournament_data['match_level']; $i1++ ){ $match_no_top *= 2; }
+		$match_no = $match_no_top;
+		$match_line1 = array();
+		$match_line2 = array();
+		$one_match = array();
+		$team_pos = 0;
+		$team_num = count( $tournament_data['team'] );
+		$team_num2 = intval( $team_num / 2 );
+		$team_index = 1;
+		for( $tournament_team = 0; $tournament_team < $team_num; $tournament_team++ ){
+			if( $tournament_team == 0 || $tournament_team == $team_num2 ){
+				$team_pos = 0;
+			}
+			$name = '';
+			$pref = '';
+			$id = intval( $tournament_data['team'][$tournament_team]['id'] );
+			if( $id > 0 ){
+				foreach( $entry_list as $ev ){
+					if( $id == intval( $ev['id'] ) ){
+						if( $ev['school_name_ryaku'] != '' ){
+							$name = $ev['school_name_ryaku'];
+						} else {
+							$name = $ev['school_name'];
+						}
+						$pref = $ev['school_address_pref_name'];
+						break;
+					}
+				}
+			}
+			if( ( $tournament_team % 2 ) == 0 ){
+				$one_match['win1'] = $tournament_data['match'][$match_no-1]['win1'];
+				$one_match['hon1'] = $tournament_data['match'][$match_no-1]['hon1'];
+				$one_match['win2'] = $tournament_data['match'][$match_no-1]['win2'];
+				$one_match['hon2'] = $tournament_data['match'][$match_no-1]['hon2'];
+				$one_match['winner'] = $tournament_data['match'][$match_no-1]['winner'];
+				$one_match['fusen'] = $tournament_data['match'][$match_no-1]['fusen'];
+				$one_match['up1'] = 0;
+				$one_match['up2'] = 0;
+				$one_match['match_no'] = $tournament_data['match'][$match_no-1]['dantai_tournament_match_id'];
+				$one_match['place'] = $tournament_data['match'][$match_no-1]['place'];
+				$one_match['place_match_no'] = $tournament_data['match'][$match_no-1]['place_match_no'];
+				$one_match['team1'] = array(
+					'pos' => $team_pos * 4 + 1, 'name' => $name, 'pref' => $pref, 'index' => $team_index
+				);
+				$team_pos++;
+				$match_no++;
+				$team_index++;
+			} else {
+				if( $one_match['place'] !== 'no_match' ){
+					$one_match['team2'] = array(
+						'pos' => $team_pos * 4 + 1, 'name' => $name, 'pref' => $pref, 'index' => $team_index
+					);
+					$team_pos++;
+					$team_index++;
+				}
+				if( $tournament_team < $team_num2 ){
+					$match_line1[] = $one_match;
+				} else {
+					$match_line2[] = $one_match;
+				}
+				$one_match = array();
+			}
+		}
+		$match_no_top /= 2;
+
+		$match_tbl = array( array(), array() );
+		$match_tbl[0][] = $match_line1;
+		$match_tbl[1][] = $match_line2;
+		for( $i1 = 1; $i1 < $tournament_data['match_level']-1; $i1++ ){
+			$match_no = $match_no_top;
+			for( $line = 0; $line < 2; $line++ ){
+				$match_line = array();
+				$one_match = array();
+				for( $i2 = 0; $i2 < count( $match_tbl[$line][$i1-1] ); $i2++ ){
+					if( $match_tbl[$line][$i1-1][$i2]['place'] === 'no_match' ){
+						$pos = $match_tbl[$line][$i1-1][$i2]['team1']['pos'];
+					} else {
+						$pos = intval( ( $match_tbl[$line][$i1-1][$i2]['team1']['pos'] + $match_tbl[$line][$i1-1][$i2]['team2']['pos'] ) / 2 );
+					}
+					if( ( $i2 % 2 ) == 0 ){
+						$one_match['up1'] = 0;
+						$one_match['up2'] = 0;
+					//	$one_match['match_no'] = $match_no;
+					//	$one_match['match_no'] = $tournament_data['match'][$match_no-1]['dantai_tournament_match_id'];
+						$one_match['match_no'] = $tournament_data['match'][$match_no-1]['match'];
+						$one_match['win1'] = $tournament_data['match'][$match_no-1]['win1'];
+						$one_match['hon1'] = $tournament_data['match'][$match_no-1]['hon1'];
+						$one_match['win2'] = $tournament_data['match'][$match_no-1]['win2'];
+						$one_match['hon2'] = $tournament_data['match'][$match_no-1]['hon2'];
+						$one_match['winner'] = $tournament_data['match'][$match_no-1]['winner'];
+						$one_match['fusen'] = $tournament_data['match'][$match_no-1]['fusen'];
+						$one_match['place'] = $tournament_data['match'][$match_no-1]['place'];
+						$one_match['place_match_no'] = $tournament_data['match'][$match_no-1]['place_match_no'];
+						$one_match['team1']['pos'] = $pos;
+						$match_no++;
+					} else {
+						$one_match['team2']['pos'] = $pos;
+						if(
+							$match_tbl[$line][$i1-1][$i2-1]['place'] === 'no_match'
+							&& $match_tbl[$line][$i1-1][$i2]['place'] === 'no_match'
+						){
+							if( $one_match['winner'] == 1 ){
+								$match_tbl[$line][$i1-1][$i2-1]['up1'] = 1;
+							} else if( $one_match['winner'] == 2 ){
+								$match_tbl[$line][$i1-1][$i2]['up1'] = 1;
+							}
+						} else if(
+							$match_tbl[$line][$i1-1][$i2-1]['place'] !== 'no_match'
+							&& $match_tbl[$line][$i1-1][$i2]['place'] === 'no_match'
+						){
+							if( $match_tbl[$line][$i1-1][$i2-1]['winner'] != 0 ){
+								$one_match['up1'] = 1;
+								$one_match['up2'] = 1;
+								$match_tbl[$line][$i1-1][$i2]['up1'] = 1;
+							}
+						} else if(
+							$match_tbl[$line][$i1-1][$i2-1]['place'] === 'no_match'
+							&& $match_tbl[$line][$i1-1][$i2]['place'] !== 'no_match'
+						){
+							if( $match_tbl[$line][$i1-1][$i2]['winner'] != 0 ){
+								$one_match['up2'] = 1;
+								$one_match['up1'] = 1;
+								$match_tbl[$line][$i1-1][$i2-1]['up1'] = 1;
+							}
+						} else if(
+							$match_tbl[$line][$i1-1][$i2-1]['place'] !== 'no_match'
+							&& $match_tbl[$line][$i1-1][$i2]['place'] !== 'no_match'
+						){
+							if( $match_tbl[$line][$i1-1][$i2-1]['winner'] != 0 ){
+								$one_match['up1'] = 1;
+							}
+							if( $match_tbl[$line][$i1-1][$i2]['winner'] != 0 ){
+								$one_match['up2'] = 1;
+							}
+						}
+						$match_line[] = $one_match;
+						$one_match = array();
+					}
+				}
+				$match_tbl[$line][] = $match_line;
+			}
+			$match_no_top /= 2;
+		}
+//print_r($match_tbl);
+
+		$trpos = array();
+		$trofs = array();
+		$trspan = array();
+		$trmatch = array();
+		$trpos2 = array();
+		$trofs2 = array();
+		$trspan2 = array();
+		$trmatch2 = array();
+		for( $level = 0; $level < $tournament_data['match_level']-1; $level++ ){
+			$trpos[] = 0;
+			$trofs[] = 0;
+			$trspan[] = 0;
+			$trmatch[] = 0;
+			$trpos2[] = 0;
+			$trofs2[] = 0;
+			$trspan2[] = 0;
+			$trmatch2[] = 0;
+		}
+		$namespan = 0;
+		$namespan2 = 0;
+		$line = 0;
+		$name_index = 1;
+		$line2 = $team_index;
+		$pdf .=  '    <table style="border-collapse: separate; border-spacing: 0;">' . "\n";
+		for(;;){
+			$pdf .= '      <tr>' . "\n";
+			$allend = 1;
+			for( $level = 0; $level < $tournament_data['match_level']-1; $level++ ){
+				if( $trpos[$level] >= count( $match_tbl[0][$level] ) ){
+					if( $level == 0 ){
+						if( $namespan > 0 ){
+							$namespan--;
+						} else {
+							$pdf .= '<td height="'.$table_height.'" class="div_result_tournament_name_name" lang="ja"></td>' . "\n";
+							$pdf .= '<td height="'.$table_height.'" class="div_result_tournament_name_pref" lang="ja"></td>' . "\n";
+							$pdf .= '<td height="'.$table_height.'" class="div_result_tournament_name_num" lang="ja"></td>' . "\n";
+						}
+					}
+					if( $trspan[$level] > 0 ){
+						$trspan[$level]--;
+					} else {
+						$pdf .= '<td height="'.$table_height.'" class="div_border_none div_result_one_tournament"></td>';
+					}
+					continue;
+				}
+				$cell_pos = '';
+				$one_match_tbl = $match_tbl[0][$level][$trpos[$level]];
+				if( $trofs[$level] == 0 && $line == $one_match_tbl['team1']['pos'] ){
+					if( $level == 0 ){
+						$pdf .= '<td class="div_result_tournament_name_name" rowspan="'.$table_name_rowspan.'" lang="ja">'.$one_match_tbl['team1']['name'].'</td>' . "\n";
+						$pdf .= '<td class="div_result_tournament_name_pref" rowspan="'.$table_name_rowspan.'" lang="ja">('.$one_match_tbl['team1']['pref'].')</td>' . "\n";
+						$pdf .= '<td class="div_result_tournament_name_num" rowspan="'.$table_name_rowspan.'" lang="ja">'.$one_match_tbl['team1']['index'].'</td>' . "\n";
+						$namespan = $table_name_rowspan - 1;
+						$name_index++;
+					}
+					$pdf .= '<td height="'.$table_height.'" class="div_border_b';
+					if( $one_match_tbl['winner'] == 1 ){
+						$pdf .= '_win';
+					} else if( $one_match_tbl['up1'] == 1 ){
+						$pdf .= '_up';
+					}
+					$pdf .= ' div_result_one_tournament">';
+					if( $one_match_tbl['fusen'] == 1 && $one_match_tbl['winner'] == 1 ){
+						$pdf .= '不戦勝' . "\n";
+					}
+					$pdf .= '</td>' . "\n";
+					if( $one_match_tbl['place'] === 'no_match' ){
+						$trpos[$level]++;
+						$trofs[$level] = 0;
+					} else {
+						$trofs[$level] = 1;
+						$trmatch[$level] = intval( ( $one_match_tbl['team1']['pos'] + $one_match_tbl['team2']['pos'] ) / 2 );
+					}
+				} else if( $trofs[$level] == 1 ){
+					if( $line == $one_match_tbl['team2']['pos'] ){
+						if( $level == 0 ){
+							$pdf .= '<td class="div_result_tournament_name_name" rowspan="'.$table_name_rowspan.'" lang="ja">'.$one_match_tbl['team2']['name'].'</td>' . "\n";
+							$pdf .= '<td class="div_result_tournament_name_pref" rowspan="'.$table_name_rowspan.'" lang="ja">('.$one_match_tbl['team2']['pref'].')</td>' . "\n";
+							$pdf .= '<td class="div_result_tournament_name_num" rowspan="'.$table_name_rowspan.'" lang="ja">'.$one_match_tbl['team2']['index'].'</td>' . "\n";
+							$namespan = $table_name_rowspan - 1;
+							$name_index++;
+						}
+						$pdf .= '<td height="'.$table_height.'" class="div_border_br';
+						if( $one_match_tbl['winner'] == 2 ){
+							$pdf .= '_win';
+						} else if( $one_match_tbl['up2'] == 1 ){
+							$pdf .= '_up';
+						}
+						$pdf .= ' div_result_one_tournament">';
+						if( $one_match_tbl['fusen'] == 1 && $one_match_tbl['winner'] == 2 ){
+							$pdf .= '不戦勝' . "\n";
+						}
+						$pdf .= '</td>' . "\n";
+						$trpos[$level]++;
+						$trofs[$level] = 0;
+					} else {
+						if( $level == 0 ){
+							if( $namespan > 0 ){
+								$namespan--;
+							} else {
+								$pdf .= '<td height="'.$table_height.'" class="div_result_tournament_name_name" lang="ja"></td>' . "\n";
+								$pdf .= '<td height="'.$table_height.'" class="div_result_tournament_name_pref" lang="ja"></td>' . "\n";
+								$pdf .= '<td height="'.$table_height.'" class="div_result_tournament_name_num" lang="ja"></td>' . "\n";
+							}
+						}
+						if( $trspan[$level] > 0 ){
+							$trspan[$level]--;
+						} else {
+							$win = '';
+							if( $level == $tournament_data['match_level']-2 ){
+								if( ( $line <= $line2 && $one_match_tbl['winner'] == 1 )
+									|| ( $line > $line2 && $one_match_tbl['winner'] == 2 )
+								){
+									$win = '_win';
+								}
+							} else {
+								if( ( $line <= $trmatch[$level] && $one_match_tbl['winner'] == 1 )
+									|| ( $line > $trmatch[$level] && $one_match_tbl['winner'] == 2 )
+								){
+									$win = '_win';
+								}
+							}
+							$pdf .= '<td height="'.$table_height.'" class="div_border_r'.$win.' div_result_one_tournament">';
+							if( $line == $trmatch[$level] && $one_match_tbl['fusen'] == 0 && $one_match_tbl['winner'] != 0 ){
+								$pdf .= $one_match_tbl['win1'] . ' - ' . $one_match_tbl['win2'] . '　';
+								//$pdf .= '<a href_="'.sprintf('%03d',$one_match_tbl['match_no']).'.html">' . $one_match_tbl['win1'] . ' - ' . $one_match_tbl['win2'] . '</a>　';
+							}
+							$pdf .= '</td>' . "\n";
+						}
+					}
+				} else {
+					if( $level == 0 ){
+						if( $namespan > 0 ){
+							$namespan--;
+						} else {
+							$pdf .= '<td height="'.$table_height.'" class="div_result_tournament_name_name" lang="ja"></td>' . "\n";
+							$pdf .= '<td height="'.$table_height.'" class="div_result_tournament_name_pref" lang="ja"></td>' . "\n";
+							$pdf .= '<td height="'.$table_height.'" class="div_result_tournament_name_num" lang="ja"></td>' . "\n";
+						}
+					}
+					if( $trspan[$level] > 0 ){
+						$trspan[$level]--;
+					} else {
+						$pdf .= '<td height="'.$table_height.'" class="div_border_none div_result_one_tournament"></td>';
+					}
+				}
+				$allend = 0;
+			}
+			if( $line == $line2-1 ){
+				$win = '';
+				if( $tournament_data['match'][0]['winner'] > 0 ){
+					$win = '_win';
+				}
+				$pdf .= '<td height="'.$table_height.'" class="div_border_r'.$win.' div_result_one_tournament"></td>';
+				$pdf .= '<td height="'.$table_height.'" class="div_border_none div_result_one_tournament"></td>';
+			} else if( $line == $line2 ){
+				$win = '';
+				if( $tournament_data['match'][0]['winner'] == 1 ){
+					$win = '_final';
+				} else if( $tournament_data['match'][0]['winner'] == 2 ){
+					$win = '_final2';
+				}
+				$pdf .= '<td height="'.$table_height.'" class="div_border_br'.$win.' div_result_one_tournament"></td>';
+				$win = '';
+				if( $tournament_data['match'][0]['winner'] == 2 ){
+					$win = '_win';
+				}
+				$pdf .= '<td height="'.$table_height.'" class="div_border_b'.$win.' div_result_one_tournament"></td>';
+			} else if( $line == $line2 + 2 ){
+				if( $tournament_data['match'][0]['winner'] > 0 ){
+					$pdf .= '<td height="'.$table_height.'" class="div_border_none div_result_one_tournament" style="text-align: right;">'.$tournament_data['match'][0]['win1'].' -'.'</td>';
+					$pdf .= '<td height="'.$table_height.'" class="div_border_none div_result_one_tournament" style="text-align: left;"> '.$tournament_data['match'][0]['win2'].'</td>';
+					//$pdf .= '<td height="'.$table_height.'" class="div_border_none div_result_one_tournament" style="text-align: right;"><a href="'.sprintf('%03d',$one_match_tbl['match_no']-1).'.html">'.$tournament_data['match'][0]['win1'].' -'.'</a></td>';
+					//$pdf .= '<td height="'.$table_height.'" class="div_border_none div_result_one_tournament" style="text-align: left;"><a href="'.sprintf('%03d',$one_match_tbl['match_no']-1).'.html"> '.$tournament_data['match'][0]['win2'].'</a></td>';
+				} else {
+					$pdf .= '<td height="'.$table_height.'" class="div_border_none div_result_one_tournament"></td>';
+					$pdf .= '<td height="'.$table_height.'" class="div_border_none div_result_one_tournament"></td>';
+				}
+			} else {
+				$pdf .= '<td height="'.$table_height.'" class="div_border_none div_result_one_tournament"></td>';
+				$pdf .= '<td height="'.$table_height.'" class="div_border_none div_result_one_tournament"></td>';
+			}
+			for( $level = $tournament_data['match_level']-2; $level >= 0; $level-- ){
+				if( $trpos2[$level] >= count( $match_tbl[1][$level] ) ){
+					if( $trspan2[$level] > 0 ){
+						$trspan2[$level]--;
+					} else {
+						$pdf .= '<td height="'.$table_height.'" class="div_border_none2 div_result_one_tournament"></td>';
+					}
+					if( $level == 0 ){
+						if( $namespan2 > 0 ){
+							$namespan2--;
+						} else {
+							$pdf .= '<td height="'.$table_height.'" class="div_result_tournament_name_num" lang="ja"></td>' . "\n";
+							$pdf .= '<td height="'.$table_height.'" class="div_result_tournament_name_name" lang="ja"></td>' . "\n";
+							$pdf .= '<td height="'.$table_height.'" class="div_result_tournament_name_pref" lang="ja"></td>' . "\n";
+						}
+					}
+					continue;
+				}
+				$cell_pos = '';
+				$one_match_tbl = $match_tbl[1][$level][$trpos2[$level]];
+				if( $trofs2[$level] == 0 && $line == $one_match_tbl['team1']['pos'] ){
+					$win = '';
+					if( $one_match_tbl['winner'] == 1 ){
+						$win = '_win';
+					} else if( $one_match_tbl['up1'] == 1 ){
+						$win = '_up';
+					}
+					$pdf .= '<td height="'.$table_height.'" class="div_border_b'.$win.' div_result_one_tournament">';
+					if( $one_match_tbl['fusen'] == 1 && $one_match_tbl['winner'] == 1 ){
+						$pdf .= '不戦勝' . "\n";
+					}
+					$pdf .= '</td>' . "\n";
+					if( $level == 0 ){
+						$pdf .= '<td class="div_result_tournament_name_num" rowspan="'.$table_name_rowspan.'" lang="ja">'.$one_match_tbl['team1']['index'].'</td>' . "\n";
+						$pdf .= '<td class="div_result_tournament_name_name" rowspan="'.$table_name_rowspan.'" lang="ja">'.$one_match_tbl['team1']['name'].'</td>' . "\n";
+						$pdf .= '<td class="div_result_tournament_name_pref" rowspan="'.$table_name_rowspan.'" lang="ja">('.$one_match_tbl['team1']['pref'].')</td>' . "\n";
+						$namespan2 = $table_name_rowspan - 1;
+						$name_index++;
+					}
+					if( $one_match_tbl['place'] === 'no_match' ){
+						$trpos2[$level]++;
+						$trofs2[$level] = 0;
+					} else {
+						$trofs2[$level] = 1;
+						$trmatch2[$level] = intval( ( $one_match_tbl['team1']['pos'] + $one_match_tbl['team2']['pos'] ) / 2 );
+					}
+				} else if( $trofs2[$level] == 1 ){
+					if( $line == $one_match_tbl['team2']['pos'] ){
+						$win = '';
+						if( $one_match_tbl['winner'] == 2 ){
+							$win = '_win';
+						} else if( $one_match_tbl['up2'] == 1 ){
+							$win = '_up';
+						}
+						$pdf .= '<td height="'.$table_height.'" class="div_border_bl'.$win.' div_result_one_tournament">';
+						if( $one_match_tbl['fusen'] == 1 && $one_match_tbl['winner'] == 2 ){
+							$pdf .= '不戦勝' . "\n";
+						}
+						$pdf .= '</td>' . "\n";
+						if( $level == 0 ){
+							$pdf .= '<td class="div_result_tournament_name_num" rowspan="'.$table_name_rowspan.'" lang="ja">'.$one_match_tbl['team2']['index'].'</td>' . "\n";
+							$pdf .= '<td class="div_result_tournament_name_name" rowspan="'.$table_name_rowspan.'" lang="ja">'.$one_match_tbl['team2']['name'].'</td>' . "\n";
+							$pdf .= '<td class="div_result_tournament_name_pref" rowspan="'.$table_name_rowspan.'" lang="ja">('.$one_match_tbl['team2']['pref'].')</td>' . "\n";
+							$namespan2 = $table_name_rowspan - 1;
+							$name_index++;
+						}
+						$trpos2[$level]++;
+						$trofs2[$level] = 0;
+					} else {
+						if( $trspan2[$level] > 0 ){
+							$trspan2[$level]--;
+						} else {
+							$win = '';
+							if( $level == $tournament_data['match_level']-2 ){
+								if( ( $line <= $line2 && $one_match_tbl['winner'] == 1 )
+									|| ( $line > $line2 && $one_match_tbl['winner'] == 2 )
+								){
+									$win = '_win';
+								}
+							} else {
+								if( ( $line <= $trmatch2[$level] && $one_match_tbl['winner'] == 1 )
+									|| ( $line > $trmatch2[$level] && $one_match_tbl['winner'] == 2 )
+								){
+									$win = '_win';
+								}
+							}
+							$pdf .= '<td height="'.$table_height.'" class="div_border_l'.$win.' div_result_one_tournament2">';
+							if( $line == $trmatch2[$level] && $one_match_tbl['fusen'] == 0 && $one_match_tbl['winner'] != 0 ){
+								$pdf .= '　' . $one_match_tbl['win1'] . ' - ' . $one_match_tbl['win2'];
+								//$pdf .= '　<a href_="'.sprintf('%03d',$one_match_tbl['match_no']).'.html">' . $one_match_tbl['win1'] . ' - ' . $one_match_tbl['win2'] . '</a>';
+							}
+							$pdf .= '</td>' . "\n";
+						}
+						if( $level == 0 ){
+							if( $namespan2 > 0 ){
+								$namespan2--;
+							} else {
+								$pdf .= '<td height="'.$table_height.'" class="div_result_tournament_name_num" lang="ja"></td>' . "\n";
+								$pdf .= '<td height="'.$table_height.'" class="div_result_tournament_name_name" lang="ja"></td>' . "\n";
+								$pdf .= '<td height="'.$table_height.'" class="div_result_tournament_name_pref" lang="ja"></td>' . "\n";
+							}
+						}
+					}
+				} else {
+					if( $trspan2[$level] > 0 ){
+						$trspan2[$level]--;
+					} else {
+						$pdf .= '<td height="'.$table_height.'" class="div_border_none2 div_result_one_tournament"></td>';
+					}
+					if( $level == 0 ){
+						if( $namespan2 > 0 ){
+							$namespan2--;
+						} else {
+							$pdf .= '<td height="'.$table_height.'" class="div_result_tournament_name_num" lang="ja"></td>' . "\n";
+							$pdf .= '<td height="'.$table_height.'" class="div_result_tournament_name_name" lang="ja"></td>' . "\n";
+							$pdf .= '<td height="'.$table_height.'" class="div_result_tournament_name_pref" lang="ja"></td>' . "\n";
+						}
+					}
+				}
+				$allend = 0;
+			}
+			if( $allend == 1 ){ break; }
+			$line++;
+			$pdf .= "\n".'      </tr>' . "\n";
+if( $line == 300 ){ break; }
+		}
+
+		$pdf .= '    </div>' . "\n";
+		$pdf .= '    </table>' . "\n";
+		$pdf .= '  <br /><br /><br /><br /><br /><br />' . "\n";
+		$pdf .= $objPage->get_google_analytics_script();
+		$pdf .=  '</body>' . "\n";
+		$pdf .=  '</html>' . "\n";
+
+//echo $pdf;
+//exit;
+        $file = 'dt_' . $series_info['result_prefix'] . $mw . $tindex;
+        $path = $series_info['result_path'] . '/' . $file . '.html';
+		$fp = fopen( $path, 'w' );
+		fwrite( $fp, $pdf );
+		fclose( $fp );
+		$data = [
+			'mode' => 2,
+			'navi' => $series_info['navi_id'],
+			'place' => $file,
+			'file' => $path,
+			'series' => $series_info['result_path_prefix'],
+		];
+		$objPage->update_realtime_queue( $data );
+
+        $tindex++;
+        }
+	//	return $pdf;
+	}
+
+	function output_tournament_58_for_HTML( $series_info, $tournament_data, $entry_list )
+	{
+        $objPage = new form_page();
+		__output_tournament_58_59_for_HTML( $objPage, $series_info, $tournament_data, $entry_list, 'm' );
+	}
+
+	function output_tournament_59_for_HTML( $series_info, $tournament_data, $entry_list )
+	{
+        $objPage = new form_page();
+		__output_tournament_58_59_for_HTML( $objPage, $series_info, $tournament_data, $entry_list, 'w' );
+	}
+
+	//---------------------------------------------------------------
+	//
+	//---------------------------------------------------------------
+
+	function __output_entry_data_list_all_1_excel58_59( $sheet, $series, $mw, $start_pos, $series_name, $kaisai_rev )
+	{
+		$c = new common();
+
+		$dbs = db_connect( DATABASE_HOST, DATABASE_USER, DATABASE_PASSWORD, DATABASE_NAME );
+		$sql = 'select `entry_info`.* from `entry_info`'
+			. ' where `del`=0 and `series`=' . $series . ' and `year`=' . $_SESSION['auth']['year']
+			. ' order by `disp_order` asc';
+		$list = db_query_list( $dbs, $sql );
+
+		$preftbl = $c->get_pref_array();
+		$orgtbl = $c->get_org_array();
+		$shokumeitbl = $c->get_shokumei_array();
+		$gradetbl = $c->get_grade_junior_array();
+		$kaisai = 0;
+		foreach( $list as $lv ){
+			$id = intval( $lv['id'] );
+			if( $id == 0 ){ continue; }
+			$sql = 'select * from `entry_field` where `info`='. $id . ' and `year`='.$_SESSION['auth']['year'];
+			$flist = db_query_list( $dbs, $sql );
+			if( count( $flist ) == 0 ){ continue; }
+			$fields = array();
+			foreach( $flist as $fv ){
+				$fields[$fv['field']] = $fv['data'];
+			}
+			if( get_field_string_number( $fields, 'join', 0 ) == 0 ){ continue; }
+			$pref = intval($fields['school_address_pref']);
+			if( $pref == 0 ){ continue; }
+			$rank = get_field_string_number( $fields, 'yosen_rank', 0 );
+			if( $rank == 0 ){ continue; }
+			$pos = __get_pref_order_58_59( $pref, 0 );
+			if( $pos == 0 ){ continue; }
+			$pos = $start_pos + ( $pos - 1 ) * 6 + $rank - 1;
+			$sheet->setCellValueByColumnAndRow( 0 , $pos, $id );
+			$col = 1;
+			$sheet->setCellValueByColumnAndRow( $col++, $pos, $series_name );
+			$sheet->setCellValueByColumnAndRow( $col++, $pos, $c->get_pref_name( $preftbl, intval($fields['school_address_pref']) ) );
+			$sheet->setCellValueByColumnAndRow( $col++, $pos, $rank );
+			$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['school_name'] );
+			$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['school_name_kana'] );
+			$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['school_name_ryaku'] );
+			$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['school_email'] );
+
+			$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['insotu1_sei'].' '.$fields['insotu1_mei'] );
+			if( $fields['insotu1_add'] == '1' ){
+				$sheet->setCellValueByColumnAndRow( $col, $pos, 'あり' );
+			}
+			$col++;
+			$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['insotu1_kana_sei'].' '.$fields['insotu1_kana_mei'] );
+			$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['insotu1_keitai_mobile'] );
+			$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['insotu1_keitai_tel'] );
+			$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['insotu1_college'] );
+			$sheet->setCellValueByColumnAndRow( $col++, $pos, $c->get_pref_name( $preftbl, intval($fields['insotu1_org_pref']) ) );
+			$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['insotu2_sei'].' '.$fields['insotu2_mei'] );
+			if( $fields['insotu2_add'] == '1' ){
+				$sheet->setCellValueByColumnAndRow( $col, $pos, 'あり' );
+			}
+			$col++;
+			$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['insotu2_kana_sei'].' '.$fields['insotu2_kana_mei'] );
+			$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['reserve_catalog'] );
+
+			for( $player = 1; $player <= 7; $player++ ){
+				$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['player'.$player.'_sei'].' '.$fields['player'.$player.'_mei'] );
+				if( $fields['player'.$player.'_add'] == '1' ){
+					$sheet->setCellValueByColumnAndRow( $col, $pos, 'あり' );
+				}
+				$col++;
+				$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['player'.$player.'_disp'] );
+				$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['player'.$player.'_kana_sei'].' '.$fields['player'.$player.'_kana_mei'] );
+				$sheet->setCellValueByColumnAndRow( $col++, $pos, $c->get_grade_junior_name( $gradetbl, intval($fields['player'.$player.'_gakunen_dan_gakunen']) ) );
+				$dan = $fields['player'.$player.'_gakunen_dan_dan'];
+				$sheet->setCellValueByColumnAndRow( $col++, $pos, ( $dan != '0' ? $dan : '' ) );
+			}
+			$pos++;
+		}
+		db_close( $dbs );
+		return $pos;
+	}
+
+	function output_entry_data_list_all_1_excel58( $sheet )
+	{
+		__output_entry_data_list_all_1_excel58_59( $sheet, 58, 'm', 4, '団体戦男子', 1 );
+		__output_entry_data_list_all_1_excel58_59( $sheet, 59, 'w', 4+48, '団体戦女子', 1 );
+		return false;
+	}
+
+	function output_entry_data_list_all_1_excel59( $sheet )
+	{
+		__output_entry_data_list_all_1_excel58_59( $sheet, 58, 'm', 4, '団体戦男子', 1 );
+		__output_entry_data_list_all_1_excel58_59( $sheet, 59, 'w', 4+48, '団体戦女子', 1 );
+		return false;
+	}
+
+	//--------------------------------------------------------------
+
+	function __get_entry_data_list2_58_59( $series )
+	{
+		$dbs = db_connect( DATABASE_HOST, DATABASE_USER, DATABASE_PASSWORD, DATABASE_NAME );
+		$sql = 'select * from `entry_info`'
+			.' where `series`='.$series.' and `year`='.$_SESSION['auth']['year']
+			.' order by `disp_order` asc';
+		$list = db_query_list( $dbs, $sql );
+		$sql = 'select * from `entry_field` where `field` in (\'school_name_ryaku\',\'join\') and `year`='.$_SESSION['auth']['year'];
+		$field_list = db_query_list( $dbs, $sql );
+
+		$ret1 = array();
+		$ret2 = array();
+		foreach( $list as $lv ){
+			$id = intval( $lv['id'] );
+			$lv['join'] = 0;
+			$lv['school_name'] = '';
+			foreach( $field_list as $fv ){
+				$info = intval( $fv['info'] );
+				if( $id == $info ){
+					if( $fv['field'] == 'school_name_ryaku' ){
+						$lv['school_name'] = $fv['data'];
+					} else if( $fv['field'] == 'join' ){
+						$lv['join'] = intval( $fv['data'] );
+					}
+				}
+			}
+			if( $lv['join'] == 1 ){
+				$ret1[] = $lv;
+			} else {
+				$ret2[] = $lv;
+			}
+		}
+		db_close( $dbs );
+
+		return array_merge( $ret1, $ret2 );
+	}
+
+	function get_entry_data_list2_58()
+	{
+		return __get_entry_data_list2_58_59( 58 );
+	}
+
+	function get_entry_data_list2_59()
+	{
+		return __get_entry_data_list2_58_59( 59 );
+	}
+
+	//--------------------------------------------------------------
+
+	function __get_entry_data_for_draw_csv_58_59( $list, $series )
+	{
+		$c = new common();
+
+		$dbs = db_connect( DATABASE_HOST, DATABASE_USER, DATABASE_PASSWORD, DATABASE_NAME );
+		$sql = 'select * from `entry_field` where `field` in (\'school_address_pref\',\'school_name_ryaku\') and `year`='.$_SESSION['auth']['year'];
+		$field_list = db_query_list( $dbs, $sql );
+		db_close( $dbs );
+
+		$kaisai_num = 0;
+		$data = array();
+		foreach( $list as $lv ){
+			if( $lv['join'] == 0 ){ continue; }
+			$id = intval( $lv['id'] );
+			foreach( $field_list as $fv ){
+				$info = intval( $fv['info'] );
+				if( $id == $info ){
+					if( $fv['field'] == 'school_address_pref' ){
+						$lv['pref'] = intval( $fv['data'] );
+						$lv['pref_name'] = $c->get_pref_name( $tbl, $lv['pref'] );
+						$lv['area'] = $c->get_pref_area( $lv['pref'] );
+					} else if( $fv['field'] == 'school_name_ryaku' ){
+						$lv['school_name_ryaku'] = $fv['data'];
+					}
+				}
+			}
+			if( $lv['pref'] == $c->get_kaisai_pref() && $kaisai_num == 0 ){
+				$lv['rank'] = 2;
+				$data[0] = $lv;
+				$kaisai_num = 1;
+			} else {
+				$lv['rank'] = 1;
+				$data[$lv['pref']] = $lv;
+			}
+		}
+
+		$ret = "学校,都道府県,順位,地域,県番号,,\n";
+		for( $i1 = 0; $i1 <= 47; $i1++ ){
+			$ret .= ( $data[$i1]['school_name_ryaku'] . ','
+				. $data[$i1]['pref_name'] . ','
+				. $data[$i1]['rank'] . ','
+				. $data[$i1]['area'] . ','
+				. $data[$i1]['pref'] . ','
+				. $data[$i1]['id'] . ",\n" );
+		}
+		return $ret;
+	}
+
+	function get_entry_data_for_draw_csv_58( $list )
+	{
+		return array(
+			'csv' => __get_entry_data_for_draw_csv_58_59( $list, 16 ),
+			'file' => 'dantai_m.csv'
+		);
+	}
+
+	function get_entry_data_for_draw_csv_59( $list )
+	{
+		return array(
+			'csv' => __get_entry_data_for_draw_csv_58_59( $list, 17 ),
+			'file' => 'dantai_w.csv'
+		);
+	}
+
+	//--------------------------------------------------------------
+
+	//--------------------------------------------------------------
+
+	function __output_realtime_html_for_one_board_58_59( $place, $place_match_no )
+	{
+		global $navi_info;
+
+		$objPage = new form_page();
+		$hon1 = array( 1=>0, 2=>0, 3=>0, 4=>0, 5=>0 );
+		$hon2 = array( 1=>0, 2=>0, 3=>0, 4=>0, 5=>0 );
+		$data = array( 'matches' => array(1=>array(), 2=>array(), 3=>array(), 4=>array(), 5=>array()) );
+		if( $place_match_no > 2 && $navi_info[$place][$place_match_no-2]['series'] >= 9 ){
+			$data_prev2 = $objPage->get_kojin_tournament_one_result( $navi_info[$place][$place_match_no-2]['series'], $navi_info[$place][$place_match_no-2]['series_mw'], $navi_info[$place][$place_match_no-2]['match'] );
+			$data['matches'][1] = $data_prev2['matches'];
+			for( $waza = 1; $waza <= 3; $waza++ ){
+				if( $data_prev2['matches']['waza1_'.$waza] != 0 ){
+					$hon1[1]++;
+				}
+				if( $data_prev2['matches']['waza2_'.$waza] != 0 ){
+					$hon2[1]++;
+				}
+			}
+		} else {
+			$data_prev2 = array();
+		}
+		if( $place_match_no > 1 && $navi_info[$place][$place_match_no-1]['series'] >= 9 ){
+			$data_prev = $objPage->get_kojin_tournament_one_result( $navi_info[$place][$place_match_no-1]['series'], $navi_info[$place][$place_match_no-1]['series_mw'], $navi_info[$place][$place_match_no-1]['match'] );
+			$data['matches'][2] = $data_prev['matches'];
+			for( $waza = 1; $waza <= 3; $waza++ ){
+				if( $data_prev['matches']['waza1_'.$waza] != 0 ){
+					$hon1[2]++;
+				}
+				if( $data_prev['matches']['waza2_'.$waza] != 0 ){
+					$hon2[2]++;
+				}
+			}
+		} else {
+			$data_prev = array();
+		}
+
+		$data_now = $objPage->get_kojin_tournament_one_result( $navi_info[$place][$place_match_no]['series'], $navi_info[$place][$place_match_no]['series_mw'], $navi_info[$place][$place_match_no]['match'] );
+		$data['matches'][3] = $data_now['matches'];
+		for( $waza = 1; $waza <= 3; $waza++ ){
+			if( $data_now['matches']['waza1_'.$waza] != 0 ){
+				$hon1[3]++;
+			}
+			if( $data_now['matches']['waza2_'.$waza] != 0 ){
+				$hon2[3]++;
+			}
+		}
+		if( $place_match_no < count($navi_info[$place]) && $navi_info[$place][$place_match_no+1]['series'] >= 9 ){
+			$data_next = $objPage->get_kojin_tournament_one_result( $navi_info[$place][$place_match_no+1]['series'], $navi_info[$place][$place_match_no+1]['series_mw'], $navi_info[$place][$place_match_no+1]['match'] );
+			$data['matches'][4] = $data_next['matches'];
+			for( $waza = 1; $waza <= 3; $waza++ ){
+				if( $data_next['matches']['waza1_'.$waza] != 0 ){
+					$hon1[4]++;
+				}
+				if( $data_next['matches']['waza2_'.$waza] != 0 ){
+					$hon2[4]++;
+				}
+			}
+		} else {
+			$data_next = array();
+		}
+
+		$html = '';
+		$html .= '    <div align="center" class="tb_score_in">'."\n";
+		$html .= '      <div class="tb_score_title">'.$navi_info[$place][$place_match_no]['place_name'].'</div>'."\n";
+		$html .= '      <div class="clearfloat"></div>'."\n";
+		for( $i1 = 1; $i1 <= 4; $i1++ ){
+            $hon_num = 0;
+			for( $i2 = 3; $i2 >= 1; $i2-- ){
+				if( $data['matches'][$i1]['waza1_'.$i2] != 0 || $data['matches'][$i1]['waza2_'.$i2] != 0 ){
+                    $hon_num = $i2;
+                    break;
+                }
+            }
+			if(
+				$hon_num == 3 && (
+					( $data['matches'][$i1]['waza1_2'] != 0 && $data['matches'][$i1]['waza1_3'] != 0 )
+					|| ( $data['matches'][$i1]['waza2_2'] != 0 && $data['matches'][$i1]['waza2_3'] != 0 )
+				)
+			){
+				$hon_num = 4;
+			}
+
+			$html .= '      <div class="tb_frame">'."\n";
+			$html .= '        <div class="tb_frame_title tb_frame_bbottom">';
+			if( $i1 == 1 ){
+				$html .= '前々試合';
+			} else if( $i1 == 2 ){
+				$html .= '前試合';
+			} else if( $i1 == 3 ){
+			} else if( $i1 == 4 ){
+				$html .= '次試合';
+			}
+			$html .= '</div>'."\n";
+			$html .= '        <div class="tb_frame_content';
+			$html .= '" id="player1_'.$i1.'">';
+			if( $i1 == 1 ){
+				$html .= string_insert_br( base64_decode($data_prev2['players'][1]['name_str2']) );
+			} else if( $i1 == 2 ){
+				$html .= string_insert_br( base64_decode($data_prev['players'][1]['name_str2']) );
+			} else if( $i1 == 3 ){
+				$html .= string_insert_br( base64_decode($data_now['players'][1]['name_str2']) );
+			} else if( $i1 == 4 ){
+				$html .= string_insert_br( base64_decode($data_next['players'][1]['name_str2']) );
+			}
+			if( $data['matches'][$i1]['end_match'] == 1 ){
+				if( ( $hon1[$i1] == 1 && $hon2[$i1] == 0 ) || ( $hon1[$i1] == 0 && $hon2[$i1] == 1 ) ){
+					if( $data['matches'][$i1]['extra'] != 1 ){
+						$html .= '<div class="tb_frame_ippon">一本勝</div>';
+					}
+				} else if( $hon1[$i1] == $hon2[$i1] ){
+					$html .= '<div class="tb_frame_draw">×</div>';
+				}
+			}
+			$html .= '</div>'."\n";
+			$html .= '        <div class="tb_frame_waza tb_frame_btop">'."\n";
+			for( $i2 = 1; $i2 <= 3; $i2++ ){
+				if( $data['matches'][$i1]['waza1_'.$i2] == 5 ){
+					$html .= '          <div class="tb_frame_waza2">○</div>';
+				} else if( $data['matches'][$i1]['waza1_'.$i2] != 0 ){
+					$html .= '          <div class="tb_frame_waza'.$hon_num.'_'.$i2.'">';
+					//if($data['matches'][$i1]['waza1_'.$i2]==0){ $html .= '&nbsp;'; }
+					if($data['matches'][$i1]['waza1_'.$i2]==1){ $html .= 'メ'; }
+					if($data['matches'][$i1]['waza1_'.$i2]==2){ $html .= 'ド'; }
+					if($data['matches'][$i1]['waza1_'.$i2]==3){ $html .= 'コ'; }
+					if($data['matches'][$i1]['waza1_'.$i2]==4){ $html .= '反'; }
+					//if($data['matches'][$i1]['waza1_'.$i2]==5){ $html .= '○'; }
+					if($data['matches'][$i1]['waza1_'.$i2]==6){ $html .= 'ツ'; }
+	 				$html .= '</div>'."\n";
+				}
+			}
+			$html .= '        </div>'."\n";
+			$html .= '        <div class="tb_frame_faul">'."\n";
+			//if($data['matches'][$i1]['faul1_1']==2){ echo '指'; }
+			if($data['matches'][$i1]['faul1_2']==1){ $html .= '▲'; }
+			if($data['matches'][$i1]['extra']==1){
+				$html .= '          <div class="tb_frame_faul_extra" id="extra_match<?php echo $i1; ?>">延長</div>'."\n";
+			}
+			$html .= '        </div>'."\n";
+			$html .= '      </div>'."\n";
+		}
+		$html .= '      <div class="clearfloat"></div>'."\n";
+
+		for( $i1 = 1; $i1 <= 4; $i1++ ){
+            $hon_num = 0;
+			for( $i2 = 3; $i2 >= 1; $i2-- ){
+				if( $data['matches'][$i1]['waza1_'.$i2] != 0 || $data['matches'][$i1]['waza2_'.$i2] != 0 ){
+                    $hon_num = $i2;
+                    break;
+                }
+            }
+			if(
+				$hon_num == 3 && (
+					( $data['matches'][$i1]['waza1_2'] != 0 && $data['matches'][$i1]['waza1_3'] != 0 )
+					|| ( $data['matches'][$i1]['waza2_2'] != 0 && $data['matches'][$i1]['waza2_3'] != 0 )
+				)
+			){
+				$hon_num = 4;
+			}
+
+			$html .= '      <div class="tb_frame">'."\n";
+			$html .= '        <div class="tb_frame_faul">';
+			//if($data['matches'][$i1]['faul2_1']==2){ echo '指'; }
+			if($data['matches'][$i1]['faul2_2']==1){ $html .= '▲'; }
+			$html .= '        </div>'."\n";
+			$html .= '        <div class="tb_frame_waza tb_frame_bbottom">'."\n";
+			for( $i2 = 1; $i2 <= 3; $i2++ ){
+				if( $data['matches'][$i1]['waza2_'.$i2] == 5 ){
+					$html .= '          <div class="tb_frame_waza2">○</div>';
+				} else if( $data['matches'][$i1]['waza2_'.$i2] != 0 ){
+					$html .= '          <div class="tb_frame_waza'.$hon_num.'_'.$i2.'">';
+					//if($data['matches'][$i1]['waza1_'.$i2]==0){ $html .= '&nbsp;'; }
+					if($data['matches'][$i1]['waza2_'.$i2]==1){ $html .= 'メ'; }
+					if($data['matches'][$i1]['waza2_'.$i2]==2){ $html .= 'ド'; }
+					if($data['matches'][$i1]['waza2_'.$i2]==3){ $html .= 'コ'; }
+					if($data['matches'][$i1]['waza2_'.$i2]==4){ $html .= '反'; }
+					//if($data['matches'][$i1]['waza1_'.$i2]==5){ $html .= '○'; }
+					if($data['matches'][$i1]['waza2_'.$i2]==6){ $html .= 'ツ'; }
+	 				$html .= '</div>'."\n";
+				}
+/*
+				if($data['matches'][$i1]['waza2_'.$i2]==5){
+					$html .= '          <div class="tb_frame_waza2">';
+				} else {
+					$html .= '          <div class="tb_frame_waza1">';
+				}
+				if($data['matches'][$i1]['waza2_'.$i2]==0){ $html .= '&nbsp;'; }
+				if($data['matches'][$i1]['waza2_'.$i2]==1){ $html .= 'メ'; }
+				if($data['matches'][$i1]['waza2_'.$i2]==2){ $html .= 'ド'; }
+				if($data['matches'][$i1]['waza2_'.$i2]==3){ $html .= 'コ'; }
+				if($data['matches'][$i1]['waza2_'.$i2]==4){ $html .= '反'; }
+				if($data['matches'][$i1]['waza2_'.$i2]==5){ $html .= '○'; }
+				if($data['matches'][$i1]['waza2_'.$i2]==6){ $html .= 'ツ'; }
+	 			$html .= '</div>'."\n";
+*/
+			}
+			$html .= '        </div>'."\n";
+			$html .= '        <div class="tb_frame_content';
+			$html .= '" id="player2_'.$i1.'">';
+			if( $i1 == 1 ){
+				$html .= string_insert_br( base64_decode($data_prev2['players'][2]['name_str2']) );
+			} else if( $i1 == 2 ){
+				$html .= string_insert_br( base64_decode($data_prev['players'][2]['name_str2']) );
+			} else if( $i1 == 3 ){
+				$html .= string_insert_br( base64_decode($data_now['players'][2]['name_str2']) );
+			} else if( $i1 == 4 ){
+				$html .= string_insert_br( base64_decode($data_next['players'][2]['name_str2']) );
+			}
+			$html .= '</div>'."\n";
+			$html .= '      </div>'."\n";
+		}
+		$html .= '      <div class="clearfloat"></div>'."\n";
+		$html .= '    </div>'."\n";
+		$html .= '  </div>'."\n";
+/*
+		$url = 'http://49.212.133.48:3000/';
+		$data = array(
+    		'pos' => $place,
+    		'value' => $html,
+		);
+		$data = http_build_query($data, "", "&");
+		$options = array('http' => array(
+		    'method' => 'POST',
+    		'content' => $data,
+		));
+		$options = stream_context_create($options);
+		$contents = file_get_contents($url, false, $options);
+*/
+		return $html;
+	}
+
+	function output_realtime_html_for_one_board_58( $place, $place_match_no )
+	{
+		//return __output_realtime_html_for_one_board_58_59( $place, $place_match_no );
+		return '';
+	}
+
+	function output_realtime_html_for_one_board_59( $place, $place_match_no )
+	{
+		//return __output_realtime_html_for_one_board_58_59( $place, $place_match_no );
+		return '';
+	}
+
+	//--------------------------------------------------------------
+
+?>

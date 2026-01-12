@@ -1,0 +1,65 @@
+<style>
+{assign var="font-size" value="9"}
+{assign var="font-hight" value="12"}
+{assign var="font_line_height" value="21.2"}
+{assign var="font_line_height2" value="22"}
+{assign var="one-hight" value="108"}
+{literal}
+html,body { font-family: ipa; font-size: 11pt; }
+p { text-align: center; margin: 0pt; padding:2pt; }
+p.pref { text-align: justify; margin: 0pt; padding:3pt; word-wrap: break-word; }
+p.pk { text-align: justify; margin: 0pt; padding:5pt; }
+p.ps { text-align: center; margin: 0pt; padding:2pt; }
+p.ps2 { text-align: center; margin: 0pt; padding:3pt 2pt 3pt 2pt; font-size: 9pt; }
+p.ps3 { text-align: center; margin: 0pt; padding:3.5pt 2pt 3.5pt 2pt; font-size: 8pt; }
+p.ps4 { text-align: center; margin: 0pt; padding:5pt 2pt 5pt 2pt; font-size: 6.5pt; }
+p.ps5 { text-align: center; margin: 0pt; padding:6pt 2pt 6pt 2pt; font-size: 6pt; }
+span { padding-left: 12pt; }
+td { text-align: justify; }
+
+.border_bt { border-top: none; border-right: none; border-bottom: solid 1pt cmyk(0,0,0,100); border-left: none; }
+.border_r { border-top: none; border-right: solid 1pt cmyk(0,0,0,100); border-bottom: none; border-left: none; }
+.border_none { border: none; }
+.border_all { border: solid 2pt cmyk(0,0,0,100); }
+.cell_div_ { display: inline; text-align: justify; margin: 0pt; padding:2pt; }
+.cell_div20_ { display: inline; text-align: justify; margin: 0pt; padding:2pt; width: 20px; }
+.cell_div30_ { display: inline; text-align: justify; margin: 0pt; padding:2pt; width: 26px; }
+.cell_div_grade_ { display: inline; text-align: justify; margin: 0pt; padding-left: 24pt;width: 26px; }
+.cell_div { text-align: justify; margin: 0pt; padding:2pt; float: left; }
+.cell_div20 { text-align: justify; margin: 0pt; padding:2pt; float: left; width: 20px; }
+.cell_div30 { text-align: justify; margin: 0pt; padding:2pt; float: left; width: 26px; }
+.cell_div_grade { text-align: justify; margin: 0pt; padding-left: 24pt; overflow:hidden; }
+.smallfont { font-size: 6pt; }
+.smallfont2 { font-size: 5pt; }
+.member { height: 20pt; text-align: justify; margin: 0pt; padding:2pt; }
+
+{/literal}
+</style>
+
+  <div style="width: 310pt; height: 30pt; padding: 0pt; margin: auto; border: none; font-size: 22pt;">女子個人戦出場選手</div>
+{section name=datalist loop=$list}
+  <div style="width: 620pt; height: 220pt; padding: 2pt; margin: 0px; border: none; float: left;">
+    <div class="border_none" style="width: 36pt; height: 210pt; float: left; font-size: 22pt;">
+      <p lang="ja" class="pref">{$list[datalist].pref_name}</p>
+    </div>
+{section name=rank_index start=1 loop=5 step=1}
+    <div class="border_none" style="width: 130pt; height: 210pt; float: left;">
+      <div class="border_none" style="width: 110pt; height: 120pt; ">
+        <img src="upload/pdf/{$list[datalist].rank[$smarty.section.rank_index.index].photo|escape}_01.jpg" style="width: {$list[datalist].rank[$smarty.section.rank_index.index].photo_width}pt; height: {$list[datalist].rank[$smarty.section.rank_index.index].photo_height}pt; padding: 0 {$list[datalist].rank[$smarty.section.rank_index.index].photo_margin_x}px;">
+      </div>
+      <div class="border_bt" style="width: 110pt; height: 18pt; ">
+        <p lang="ja">{$list[datalist].rank[$smarty.section.rank_index.index].player_sei|escape}&nbsp;{$list[datalist].rank[$smarty.section.rank_index.index].player_mei|escape}&nbsp;選手</p>
+      </div>
+      <div class="border_bt" style="width: 110pt; height: 18pt; ">
+        <p lang="ja" class="ps{if $list[datalist].rank[$smarty.section.rank_index.index].school_name|mb_strlen:'UTF-8' >=16}5{elseif $list[datalist].rank[$smarty.section.rank_index.index].school_name|mb_strlen:'UTF-8' >=15}4{elseif $list[datalist].rank[$smarty.section.rank_index.index].school_name|mb_strlen:'UTF-8' >=12}3{elseif $list[datalist].rank[$smarty.section.rank_index.index].school_name|mb_strlen:'UTF-8' >=10}2{/if}">{$list[datalist].rank[$smarty.section.rank_index.index].school_name|escape}</p>
+      </div>
+      <div class="border_bt" style="width: 110pt; height: 18pt; ">
+        <p lang="ja">{$list[datalist].rank[$smarty.section.rank_index.index].player_gakunen|escape}&nbsp;{$list[datalist].rank[$smarty.section.rank_index.index].player_dan|escape}</p>
+      </div>
+      <div class="border_bt" style="width: 110pt; height: 18pt; ">
+        <p lang="ja">{$list[datalist].rank[$smarty.section.rank_index.index].insotu1_sei|escape}&nbsp;{$list[datalist].rank[$smarty.section.rank_index.index].insotu1_mei|escape}&nbsp;監督</p>
+      </div>
+    </div>
+{/section}
+  </div>
+{/section}

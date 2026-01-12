@@ -1,0 +1,91 @@
+{$htmlheader|default:''}
+    <h2>審判登録
+      <div style="float: right;">
+{if $seriesinfo.input_entry_csv == 1}
+{if $smarty.session.auth.locked == 0}
+      <form action="referee.php?s={$smarty.session.auth.series}&mw={$mw}" method="post" enctype="multipart/form-data">
+        <input name="csv_file" type="file" value="" />
+        <input type="hidden" name="mode" value="loadcsv" />
+        <input type="submit" name="submit" value="csvデータ読み込み" />
+      </form>
+{else}
+        <input name="csv_file" type="file" value="" />
+        <input type="button" name="submit" value="csvデータ読み込み" />
+{/if}
+{/if}
+      </div>
+    </h2>
+    <form action="referee.php?s={$smarty.session.auth.series}&mw={$mw}" method="post">
+      <input type="hidden" name="mode" value="new" />
+      <input type="submit" name="submit" value="新規登録" />
+    </form>
+    <table id="ex_t" border="0" cellspacing="1" cellpadding="0">
+      <tr>
+        <td class="td_right2">ID</td>
+        <td class="td_right">名前</td>
+{if $smarty.session.auth.level == 2}
+        <td class="td_right2">編集</td>
+        <td class="td_right2">削除</td>
+{/if}
+{if $smarty.session.auth.level == 1}
+        <td class="td_right2">表示</td>
+{/if}
+      </tr>
+{section name=datalist loop=$list}
+      <tr>
+        <td class="td_right2" {if $list[datalist].del=='1'}bgcolor="#ffbbbb"{/if}>{$list[datalist].id}</td>
+        <td class="td_right" {if $list[datalist].del=='1'}bgcolor="#ffbbbb"{/if}>{$list[datalist].sei|escape}&nbsp;{$list[datalist].mei|escape}</td>
+
+{if $smarty.session.auth.level == 1}
+        <td class="td_right2" {if $list[datalist].del=='1'}bgcolor="#ffbbbb"{/if}>
+          <form action="referee.php?s={$smarty.session.auth.series}{if $filter != ''}&f={$filter}{/if}" method="post">
+          <form action="referee.php" method="post">
+            <input type="hidden" name="id" value="{$list[datalist].id}">
+            <input type="hidden" name="mode" value="display">
+            <input type="submit" name="edit" value="内容表示">
+          </form>
+        </td>
+{/if}
+{if $smarty.session.auth.level == 2}
+        <td class="td_right2" {if $list[datalist].del=='1'}bgcolor="#ffbbbb"{/if}>
+          <form action="referee.php?s={$smarty.session.auth.series}{if $filter != ''}&f={$filter}{/if}" method="post">
+            <input type="hidden" name="id" value="{$list[datalist].id}">
+            <input type="hidden" name="mode" value="edit">
+            <input type="submit" name="edit" value="編集">
+          </form>
+        </td>
+ {if $list[datalist].del=='1'}
+        <td class="td_right2" bgcolor="#ffbbbb">
+  {if $smarty.session.auth.locked == 0}
+          <form action="referee.php?s={$smarty.session.auth.series}{if $filter != ''}&f={$filter}{/if}" method="post">
+            削除済み
+            <input type="hidden" name="id" value="{$list[datalist].id}">
+            <input type="hidden" name="mode" value="undelete">
+            <input type="submit" name="submit" value="削除取り消し">
+          </form>
+  {else}
+            <input type="button" name="submit" value="削除取り消し">
+  {/if}
+        </td>
+ {else}
+        <td class="td_right">
+  {if $smarty.session.auth.locked == 0}
+          <form action="referee.php?s={$smarty.session.auth.series}{if $filter != ''}&f={$filter}{/if}" method="post">
+            <input type="hidden" name="id" value="{$list[datalist].id}">
+            <input type="hidden" name="mode" value="delete">
+            <input type="submit" name="submit" value="削除">
+          </form>
+  {else}
+            <input type="button" name="submit" value="削除">
+  {/if}
+        </td>
+ {/if}
+{/if}
+      </tr>
+{/section}
+
+    </table>
+    <br />
+    <br />
+    <br />
+{$htmlfooter|default:''}

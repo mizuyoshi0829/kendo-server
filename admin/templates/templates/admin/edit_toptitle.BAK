@@ -1,0 +1,21 @@
+{$htmlheader|smarty:nodefaults}
+    <h2>見出しを編集します</h2>
+    <br />
+    <form action="info.php" method="post" enctype="multipart/form-data">
+      <input type="hidden" name="mode" value="confirm_title">
+      <table id="ex_t" border="0" cellspacing="1" cellpadding="0">
+        <tr>
+          <td class="td_left3">タイトル</td>
+          <td class="td_right"><input type="text" name="title" size="120" maxlength="128" value="{$smarty.session.title}"></td>
+        </tr>
+      </table>
+      <br />
+      <br />
+      <br />
+      <input type="submit" name="cancel" value="中止">
+      <input type="submit" name="exec" value="実行">
+    </form>
+    <br />
+    <br />
+    <br />
+{$htmlfooter|smarty:nodefaults}

@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport"
+content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link media="only screen and (max-device-width:480px)"
+href="css/mobile.css" type="text/css" rel="stylesheet" />
+<link media="screen and (min-device-width:481px)" href="css/style.css"
+type="text/css" rel="stylesheet" />
+<!--[if IE]>
+<link href="design.css" type="text/css" rel="stylesheet" />
+<![endif]-->
+
+<meta charset="UTF-8">
+<title>入力フォーム</title>
+</head>
+
+<body>
+<div id="main">
+  <form id="form" name="form1" method="post" action="">
+    <input name="mode" type="hidden" value="exec" />
+    <div class="titlename">
+      <h1>入力フォーム</h1>
+    </div>
+    <div class="discription">以下の内容で応募します。</div>
+    <div class="f_box">
+{foreach from=$fields_info item=info}
+{if $info.kind != '' && $info.kind != 'email2'}
+{if $info.kind == 'title2'}
+    <div class="titlename2"><h2>{$info.name}</h2></div>
+{elseif $info.kind == 'title1'}
+{elseif $info.kind == 'data_title'}
+{elseif $info.kind == 'dantai_title1'}
+{elseif $info.kind == 'dantai_title2'}
+{elseif $info.kind == 'discription'}
+{elseif $info.kind == 'f_box'}
+{elseif $info.kind == 'f_box_end'}
+{else}
+      <div class="midasi">{$info.name}</div>
+{/if}
+{assign var="edit_field" value=$info.field}
+{if $info.kind == 'text'}
+      <div class="tw{$info.text_width}">{$smarty.session.p.$edit_field|escape}</div>
+{elseif $info.kind == 'textarea'}
+      <div class="tw{$info.text_width}">{$smarty.session.p.$edit_field|escape|nl2br}</div>
+{elseif $info.kind == 'check' || $info.kind == 'check_one' || $info.kind == 'select' || $info.kind == 'pref_select' || $info.kind == 'radio'}
+{assign var="field_name" value="`$info.field`_name"}
+      <div class="f_radio">{$smarty.session.p.$field_name|escape}</div>
+{elseif $info.kind == 'zip'}
+{assign var="edit_field2" value="`$info.field`2"}
+            <input id="{$ref_field}" type="text" name="{$ref_field}" value="{$smarty.session.p.$ref_field}" class="text zip">
+            -<input id="{$ref_field2}" type="text" name="{$ref_field2}" value="{$smarty.session.p.$ref_field2}" class="text zip">
+            <input id="{$info.field}_input" type="button" name="{$info.field}_input" value="住所自動入力" class="" onClick="zip_search();">
+{elseif $info.kind == 'tel'}
+{assign var="ref_field2" value="ref_`$info.field`2"}
+            +81(0)<input id="kanri_eng" type="text" name="{$ref_field}" value="{$smarty.session.p.$ref_field}" class="text">
+
+{elseif $info.kind == 'photo'}
+      <div class="tw{$info.text_width}">
+{if isset($smarty.session.p.$edit_field) && $smarty.session.p.$edit_field != ''}
+            <div style="margin: 5px;">
+                <img id="{$edit_field}" src="../admin/upload/{$smarty.session.p.$edit_field}_01.jpg" width="240">
+            </div>
+{/if}
+      </div>
+{elseif $info.kind == 'name' || $info.kind == 'name_kana'}
+{assign var="edit_field_sei" value="`$edit_field`_sei"}
+{assign var="edit_field_mei" value="`$edit_field`_mei"}
+      <div class="tw{$info.text_width}">
+        {$smarty.session.p.$edit_field_sei}&nbsp;{$smarty.session.p.$edit_field_mei}
+      </div>
+{elseif $info.kind == 'name3'}
+{assign var="edit_field_sei" value="`$edit_field`_sei"}
+{assign var="edit_field_mei" value="`$edit_field`_mei"}
+{assign var="edit_field_add" value="`$edit_field`_add"}
+      <div class="tw{$info.text_width}">
+        {$smarty.session.p.$edit_field_sei}&nbsp;{$smarty.session.p.$edit_field_mei}&nbsp;({$smarty.session.p.$edit_field_add})
+      </div>
+{elseif $info.kind == 'name4'}
+{assign var="edit_field_sei" value="`$edit_field`_sei"}
+{assign var="edit_field_mei" value="`$edit_field`_mei"}
+{assign var="edit_field_add" value="`$edit_field`_add"}
+{assign var="edit_field_disp" value="`$edit_field`_disp"}
+      <div class="tw{$info.text_width}">
+        {$smarty.session.p.$edit_field_sei}&nbsp;{$smarty.session.p.$edit_field_mei}&nbsp;({$smarty.session.p.$edit_field_add}){$smarty.session.p.$edit_field_disp}
+      </div>
+{elseif $info.kind == 'name5'}
+{assign var="edit_field_sei" value="`$edit_field`_sei"}
+{assign var="edit_field_mei" value="`$edit_field`_mei"}
+{assign var="edit_field_add" value="`$edit_field`_add"}
+      <div class="tw{$info.text_width}">
+        {$smarty.session.p.$edit_field_sei}&nbsp;{$smarty.session.p.$edit_field_mei}{if $smarty.session.p.$edit_field_add==1}&nbsp;(異体字あり){/if}
+      </div>
+{elseif $info.kind == 'name6'}
+{assign var="edit_field_sei" value="`$edit_field`_sei"}
+{assign var="edit_field_mei" value="`$edit_field`_mei"}
+{assign var="edit_field_add" value="`$edit_field`_add"}
+{assign var="edit_field_disp" value="`$edit_field`_disp"}
+      <div class="tw{$info.text_width}">
+        {$smarty.session.p.$edit_field_sei}&nbsp;{$smarty.session.p.$edit_field_mei}{if $smarty.session.p.$edit_field_add==1}&nbsp;(異体字あり){/if}
+      </div>
+{elseif $info.kind == 'tel_fax'}
+{assign var="edit_field_tel" value="`$edit_field`_tel"}
+{assign var="edit_field_fax" value="`$edit_field`_fax"}
+      <div class="tw{$info.text_width}">
+        {$smarty.session.p.$edit_field_tel}／{$smarty.session.p.$edit_field_fax}
+      </div>
+{elseif $info.kind == 'mobile_tel'}
+{assign var="edit_field_mobile" value="`$edit_field`_mobile"}
+{assign var="edit_field_tel" value="`$edit_field`_tel"}
+      <div class="tw{$info.text_width}">
+        {$smarty.session.p.$edit_field_mobile}／{$smarty.session.p.$edit_field_tel}
+      </div>
+{elseif $info.kind == 'school_org'}
+{assign var="edit_field_school_name" value="`$edit_field`_school_name"}
+{assign var="edit_field_name" value="`$edit_field`_name"}
+      <div class="tw{$info.text_width}">
+        {$smarty.session.p.$edit_field_school_name}{$smarty.session.p.$edit_field_name}
+      </div>
+{elseif $info.kind == 'school_name'}
+{assign var="edit_field_school_org" value="`$edit_field`_org"}
+      <div class="tw{$info.text_width}">
+        {$smarty.session.p.$edit_field_school_org}立&nbsp;{$smarty.session.p.$edit_field}
+      </div>
+{elseif $info.kind == 'school_name_kana'}
+      <div class="tw{$info.text_width}">
+        {$smarty.session.p.$edit_field}
+      </div>
+{elseif $info.kind == 'address'}
+{assign var="edit_field_zip1" value="`$edit_field`_zip1"}
+{assign var="edit_field_zip2" value="`$edit_field`_zip2"}
+{assign var="edit_field_pref_name" value="`$edit_field`_pref_name"}
+      <div class="tw8">
+        {$smarty.session.p.$edit_field_zip1}-{$smarty.session.p.$edit_field_zip2}&nbsp;{$smarty.session.p.$edit_field_pref_name}{$smarty.session.p.$edit_field}
+      </div>
+{elseif $info.kind == 'address_pref'}
+{assign var="edit_field_name" value="`$edit_field`_name"}
+      <div class="tw8">
+        {$smarty.session.p.$edit_field_name}
+      </div>
+{elseif $info.kind == 'grade_j'}
+{assign var="edit_field_name" value="`$edit_field`_name"}
+      <div class="tw{$info.text_width}">
+        {$smarty.session.p.$edit_field_name}
+      </div>
+{elseif $info.kind == 'email'}
+      <div class="tw{$info.text_width}">
+        {$smarty.session.p.$edit_field}
+      </div>
+{elseif $info.kind == 'gakunen_dan_j'}
+{assign var="gakuen_name" value="`$edit_field`_gakunen_name"}
+{assign var="dan_name" value="`$edit_field`_dan"}
+      <div class="f_radio">{$smarty.session.p.$gakuen_name|escape}／{$smarty.session.p.$dan_name|escape}</div>
+{elseif $info.kind == 'hidden'}
+{elseif $info.kind == 'include'}
+{assign var="include_file" value="reg/mconfirm_`$smarty.session.auth.series`_`$info.select_info`.html"}
+{include file="$include_file"}
+{/if}
+{/if}
+{/foreach}
+      <div class="clear_fix"></div>
+    </div>
+    <div class="clear_fix"></div>
+    <div class="button">
+      <input name="exec" type="submit" value="応募">
+      <input name="reinput" type="submit" value="再入力">
+    </div>
+  </form>
+</div>
+<footer>
+  <div class="jump"><a href="#main">このページのトップへ</a>
+    <div class="clear_fix"></div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,7 @@
+      <div class="tw180i">
+<input type="checkbox" name="shumoku_dantai_w_taikai" value="1" {if $smarty.session.p.shumoku_dantai_w_taikai=='1'}checked="checked" {/if}/>大会参加&nbsp;
+<input type="checkbox" name="shumoku_dantai_w_rensei_am" value="1" {if $smarty.session.p.shumoku_dantai_w_rensei_am=='1'}checked="checked" {/if}/>錬成会 午前参加&nbsp;
+<input type="checkbox" name="shumoku_dantai_w_rensei_pm" value="1" {if $smarty.session.p.shumoku_dantai_w_rensei_pm=='1'}checked="checked" {/if}/>錬成会 午後参加&nbsp;
+<input type="checkbox" name="shumoku_dantai_w_opening" value="1" {if $smarty.session.p.shumoku_dantai_w_opening=='1'}checked="checked" {/if}/>開会式参加&nbsp;
+<input type="checkbox" name="shumoku_dantai_w_konshin" value="1" {if $smarty.session.p.shumoku_dantai_w_konshin=='1'}checked="checked" {/if}/>懇親会参加する(<input id="shumoku_dantai_w_text" type="text" name="shumoku_dantai_w_text" value="{$smarty.session.p.shumoku_dantai_w_text}" class="text" size="6">名)
+      </div>

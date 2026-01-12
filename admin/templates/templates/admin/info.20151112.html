@@ -1,0 +1,223 @@
+{$htmlheader|smarty:nodefaults}
+    <h2>{$category_name}登録情報一覧</h2>
+    <form action="info.php?s={$smarty.session.auth.series}&f=entry" method="post">
+      <input type="hidden" name="mode" value="" />
+      <input type="submit" name="submit" value="参加校だけ表示" />
+    </form>
+{if $smarty.session.auth.series == 2}
+    <form action="info.php?s={$smarty.session.auth.series}&f=entry_m" method="post">
+      <input type="hidden" name="mode" value="" />
+      <input type="submit" name="submit" value="男子参加校だけ表示" />
+    </form>
+    <form action="info.php?s={$smarty.session.auth.series}&f=entry_w" method="post">
+      <input type="hidden" name="mode" value="" />
+      <input type="submit" name="submit" value="女子参加校だけ表示" />
+    </form>
+{/if}
+{*
+    <form action="info.php" method="post">
+      <input type="hidden" name="mode" value="new" />
+      <input type="hidden" name="category" value="{$smarty.session.auth.series}" />
+      <input type="submit" name="submit" value="新規登録" />
+    </form>
+*}
+    <form action="info.php?s={$smarty.session.auth.series}{if $filter != ''}&f={$filter}{/if}" method="post">
+      <input type="hidden" name="mode" value="output" />
+      <input type="submit" name="submit" value="ファイル出力" />
+    </form>
+    <form action="info.php?s={$smarty.session.auth.series}{if $filter != ''}&f={$filter}{/if}" method="post">
+      <input type="hidden" name="mode" value="outputall" />
+      <input type="submit" name="submit" value="全項目ファイル出力" />
+    </form>
+    <form action="info.php?s={$smarty.session.auth.series}{if $filter != ''}&f={$filter}{/if}" method="post">
+      <input type="hidden" name="mode" value="output_pdf" />
+      <input type="submit" name="submit" value="PDF出力" />
+    </form>
+    <table id="ex_t" border="0" cellspacing="1" cellpadding="0">
+      <tr>
+        <td class="td_left">&nbsp;</td>
+        <td class="td_right2">ID</td>
+        <td class="td_right">名前</td>
+{if $smarty.session.auth.series == 2}
+        <td class="td_right" colspan="2">参加</td>
+{/if}
+{if $smarty.session.auth.series == 3}
+        <td class="td_right2">参加</td>
+{/if}
+{if $smarty.session.auth.level == 2}
+        <td class="td_right" colspan="2">並び替え</td>
+        <td class="td_right2">編集</td>
+        <td class="td_right2">削除</td>
+{/if}
+{if $smarty.session.auth.level == 1}
+        <td class="td_right2">表示</td>
+{/if}
+      </tr>
+{assign var="prev_list_index" value=0}
+{assign var="list_index" value=1}
+{assign var="list_prev_id" value=0}
+{section name=datalist loop=$list}
+{if $filter == '' || ($filter == 'entry' && $list[datalist].join=='1') || ($filter == 'entry_m' && $list[datalist].join_m=='1') || ($filter == 'entry_w' && $list[datalist].join_w=='1') }
+
+{if $smarty.session.auth.level == 2}
+{if $list_index > 1}
+
+        <td class="td_right2">
+          <form action="info.php?s={$smarty.session.auth.series}{if $filter != ''}&f={$filter}{/if}" method="post">
+            <input type="hidden" name="mode" value="exchange" />
+            <input type="hidden" name="id" value="{$list_prev_id}" />
+            <input type="hidden" name="id2" value="{$list[datalist].id}" />
+            <input type="submit" name="submit" value="↓" />
+          </form>
+        </td>
+        <td class="td_right2">
+          <form action="info.php?s={$smarty.session.auth.series}{if $filter != ''}&f={$filter}{/if}" method="post">
+            <input type="hidden" name="id" value="{$list_prev_id}">
+            <input type="hidden" name="mode" value="edit">
+            <input type="submit" name="edit" value="編集">
+          </form>
+        </td>
+{if $list[$prev_list_index].del=='1'}
+        <td class="td_right2" bgcolor="#ffbbbb">
+          <form action="info.php?s={$smarty.session.auth.series}{if $filter != ''}&f={$filter}{/if}" method="post">
+            削除済み
+            <input type="hidden" name="id" value="{$list_prev_id}">
+            <input type="hidden" name="mode" value="undelete">
+            <input type="submit" name="submit" value="削除取り消し">
+          </form>
+        </td>
+{else}
+        <td class="td_right">
+          <form action="info.php?s={$smarty.session.auth.series}{if $filter != ''}&f={$filter}{/if}" method="post">
+          <form action="info.php" method="post">
+            <input type="hidden" name="id" value="{$list_prev_id}">
+            <input type="hidden" name="mode" value="delete">
+            <input type="submit" name="submit" value="削除">
+          </form>
+        </td>
+{/if}
+      </tr>
+{/if}
+
+{/if}
+
+      <tr>
+        <td class="td_left" {if $list[datalist].del=='1'}bgcolor="#ffbbbb"{/if}>{$list_index}</td>
+        <td class="td_right2" {if $list[datalist].del=='1'}bgcolor="#ffbbbb"{/if}>{$list[datalist].id}</td>
+        <td class="td_right" {if $list[datalist].del=='1'}bgcolor="#ffbbbb"{/if}>{if $list[datalist].school_name_ryaku!=''}{$list[datalist].school_name_ryaku|escape}{else}{$list[datalist].school_name|escape}{/if}</td>
+{if $smarty.session.auth.series == 2}
+        <td class="td_right2">{if $list[datalist].join_m=='1'}男子{else}&nbsp;{/if}</td>
+        <td class="td_right2">{if $list[datalist].join_w=='1'}女子{else}&nbsp;{/if}</td>
+{/if}
+{if $smarty.session.auth.series == 3}
+        <td class="td_right2">{if $list[datalist].join=='1'}参加{else}&nbsp;{/if}</td>
+{/if}
+{if $smarty.session.auth.level == 2}
+        <td class="td_right2">
+{if $list_index > 1}
+          <form action="info.php?s={$smarty.session.auth.series}{if $filter != ''}&f={$filter}{/if}" method="post">
+            <input type="hidden" name="mode" value="exchange" />
+            <input type="hidden" name="id" value="{$list[datalist].id}" />
+            <input type="hidden" name="id2" value="{$list_prev_id}" />
+            <input type="submit" name="submit" value="↑" />
+          </form>
+{/if}
+        </td>
+
+{*
+        <td class="td_right2">
+{if !$smarty.section.datalist.last}
+          <form action="info.php" method="post">
+            <input type="hidden" name="mode" value="exchange" />
+            <input type="hidden" name="id" value="{$list[datalist].id}" />
+            <input type="hidden" name="id2" value="{$list[datalist.index_next].id}" />
+            <input type="submit" name="submit" value="↓" />
+          </form>
+{/if}
+        </td>
+        <td class="td_right2">
+          <form action="info.php" method="post">
+            <input type="hidden" name="id" value="{$list[datalist].id}">
+            <input type="hidden" name="mode" value="edit">
+            <input type="submit" name="edit" value="編集">
+          </form>
+        </td>
+{if $list[datalist].del=='1'}
+        <td class="td_right2" bgcolor="#ffbbbb">
+          <form action="info.php" method="post">
+            削除済み
+            <input type="hidden" name="id" value="{$list[datalist].id}">
+            <input type="hidden" name="mode" value="undelete">
+            <input type="submit" name="submit" value="削除取り消し">
+          </form>
+        </td>
+{else}
+        <td class="td_right">
+          <form action="info.php" method="post">
+            <input type="hidden" name="id" value="{$list[datalist].id}">
+            <input type="hidden" name="mode" value="delete">
+            <input type="submit" name="submit" value="削除">
+          </form>
+        </td>
+{/if}
+
+*}
+
+{/if}
+
+{if $smarty.session.auth.level == 1}
+        <td class="td_right2">
+          <form action="info.php?s={$smarty.session.auth.series}{if $filter != ''}&f={$filter}{/if}" method="post">
+          <form action="info.php" method="post">
+            <input type="hidden" name="id" value="{$list[datalist].id}">
+            <input type="hidden" name="mode" value="display">
+            <input type="submit" name="edit" value="内容表示">
+          </form>
+        </td>
+      </tr>
+{/if}
+
+{assign var="prev_list_index" value=$list_index-1}
+{assign var="list_index" value=$list_index+1}
+{assign var="list_prev_id" value=$list[datalist].id}
+{/if}
+{/section}
+
+{if $smarty.session.auth.level == 2}
+{if $list_index > 1}
+        <td class="td_right2">
+        </td>
+        <td class="td_right2">
+          <form action="info.php?s={$smarty.session.auth.series}{if $filter != ''}&f={$filter}{/if}" method="post">
+            <input type="hidden" name="id" value="{$list_prev_id}">
+            <input type="hidden" name="mode" value="edit">
+            <input type="submit" name="edit" value="編集">
+          </form>
+        </td>
+{if $list[$prev_list_index].del=='1'}
+        <td class="td_right2" bgcolor="#ffbbbb">
+          <form action="info.php?s={$smarty.session.auth.series}{if $filter != ''}&f={$filter}{/if}" method="post">
+            削除済み
+            <input type="hidden" name="id" value="{$list_prev_id}">
+            <input type="hidden" name="mode" value="undelete">
+            <input type="submit" name="submit" value="削除取り消し">
+          </form>
+        </td>
+{else}
+        <td class="td_right">
+          <form action="info.php?s={$smarty.session.auth.series}{if $filter != ''}&f={$filter}{/if}" method="post">
+            <input type="hidden" name="id" value="{$list_prev_id}">
+            <input type="hidden" name="mode" value="delete">
+            <input type="submit" name="submit" value="削除">
+          </form>
+        </td>
+{/if}
+{/if}
+      </tr>
+{/if}
+
+    </table>
+    <br />
+    <br />
+    <br />
+{$htmlfooter|smarty:nodefaults}

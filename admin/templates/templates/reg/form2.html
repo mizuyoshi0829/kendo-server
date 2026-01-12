@@ -1,0 +1,188 @@
+{$htmlheader|smarty:nodefaults}
+    <h2>{$category_name}の部申し込みフォーム（様式２）</h2>
+    <p class="style6">※青色文字の内容はパンフレットに掲載されます</p>
+    <form id="form1" name="form1" method="post" action="">
+      <input name="mode" type="hidden" value="confirm" />
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr><td>部門</td><td>{$category_name}の部</td></tr>
+        <tr>
+          <td>都道府県</td>
+          <td><select name="pref" id="pref" tabindex="1">
+            <option>選んで下さい</option>
+{foreach name=pref from=$prefTbl item=plv}
+            <option value="{$smarty.foreach.pref.iteration}" {if $smarty.foreach.pref.iteration == $smarty.session.p.pref}selected="selected" {/if}>{$plv}</option>
+{/foreach}
+          </select></td>
+        </tr>
+        <tr>
+          <td>団体名</td>
+          <td><label class="formtxt">
+            <input name="name" type="text" id="name" value="{$smarty.session.p.name|escape}" tabindex="2" size="30" />
+          <span class="style4">※様式１と同一名称でお願いします</span></label></td>
+        </tr>
+        <tr>
+          <td>住所</td>
+          <td><label id="formtxt">
+            <input name="address" type="text" id="address" value="{$smarty.session.p.address|escape}" tabindex="3" size="40" />
+          <span class="style4">※県名からお願いします</span></label></td>
+        </tr>
+        <tr>
+          <td>電話番号</td>
+          <td><input name="tel" type="text" id="tel" value="{$smarty.session.p.tel|escape}" tabindex="4" size="13" maxlength="13" />
+            <span class="style4">※半角英数で-を入れて下さい</span></td>
+        </tr>
+        <tr>
+          <td>監督名</td>
+          <td><input name="manager" type="text" id="manager" value="{$smarty.session.p.manager|escape}" tabindex="5" size="16" maxlength="14" /></td>
+        </tr>
+        <tr>
+          <td class="style2">協力審判員</td>
+          <td><input type="text" name="referee" value="{$smarty.session.p.referee|escape}" id="referee" tabindex="6"/>
+          <span class="style4">※ご県外の先生方のご協力をお願いします</span></td>
+        </tr>
+        <tr>
+          <td class="style2">段位</td>
+          <td><input name="rank" type="text" id="rank" value="{$smarty.session.p.rank|escape}" tabindex="7" size="4" maxlength="4" /></td>
+        </tr>
+{if $smarty.session.p.category < 3}
+        <tr>
+          <td class="style2">審判希望部門</td>
+          <td>
+            <input type="checkbox" name="refereeing_category" id="refereeing_category" value="1" tabindex="8" {if $smarty.session.p.refereeing_category==1}checked="checked" {/if}/>
+            <span class="style2">中学男子</span>
+            &nbsp;<input type="checkbox" name="refereeing_category" id="refereeing_category" value="2" tabindex="9" {if $smarty.session.p.refereeing_category==2}checked="checked" {/if}/>
+            <span class="style2">中学女子</span></td>
+        </tr>
+{/if}
+        <tr>
+          <td>主将</td>
+          <td><input name="captain" type="text" id="captain" value="{$smarty.session.p.captain|escape}" tabindex="11" size="16" maxlength="14" /></td>
+        </tr>
+        
+        <tr>
+{if $smarty.session.p.category==3}
+          <td>先鋒氏名</td>
+{else}
+          <td>選手氏名1</td>
+{/if}
+          <td><input name="player1" type="text" id="player1" value="{$smarty.session.p.player1|escape}" tabindex="12" size="16" maxlength="14" /></td>
+        </tr>
+        <tr>
+          <td>学年</td>
+          <td><input name="player1_grade" type="text" id="player1_grade" value="{$smarty.session.p.player1_grade|escape}" tabindex="13" size="2" maxlength="1" />
+          年<span class="style4">&nbsp;※平成25年度の学年を半角でお願いします</span></td>
+        </tr>
+        <tr>
+{if $smarty.session.p.category==3}
+          <td>次鋒氏名</td>
+{else}
+          <td>選手氏名2</td>
+{/if}
+          <td><input name="player2" type="text" id="player2" value="{$smarty.session.p.player2|escape}" tabindex="14" size="16" maxlength="14" /></td>
+        </tr>
+        <tr>
+          <td>学年</td>
+          <td><input name="player2_grade" type="text" id="player2_grade" value="{$smarty.session.p.player2_grade|escape}" tabindex="15" size="2" maxlength="1" />
+            年</td>
+        </tr>
+        <tr>
+{if $smarty.session.p.category==3}
+          <td>中堅氏名</td>
+{else}
+          <td>選手氏名3</td>
+{/if}
+          <td><input name="player3" type="text" id="player3" value="{$smarty.session.p.player3|escape}" tabindex="16" size="16" maxlength="14" /></td>
+        </tr>
+        <tr>
+          <td>学年</td>
+          <td><input name="player3_grade" type="text" id="player3_grade" value="{$smarty.session.p.player3_grade|escape}" tabindex="17" size="2" maxlength="1" />
+          年</td>
+        </tr>
+        <tr>
+{if $smarty.session.p.category==3}
+          <td>副将氏名</td>
+{else}
+          <td>選手氏名4</td>
+{/if}
+          <td><input name="player4" type="text" id="player4" value="{$smarty.session.p.player4|escape}" tabindex="18" size="16" maxlength="14" /></td>
+        </tr>
+        <tr>
+          <td>学年</td>
+          <td><input name="player4_grade" type="text" id="player4_grade" value="{$smarty.session.p.player4_grade|escape}" tabindex="19" size="2" maxlength="1" />
+          年</td>
+        </tr>
+        <tr>
+{if $smarty.session.p.category==3}
+          <td>大将氏名</td>
+{else}
+          <td>選手氏名5</td>
+{/if}
+          <td><input name="player5" type="text" id="player5" value="{$smarty.session.p.player5|escape}" tabindex="20" size="16" maxlength="14" /></td>
+        </tr>
+        <tr>
+          <td>学年</td>
+          <td><input name="player5_grade" type="text" id="player5_grade" value="{$smarty.session.p.player5_grade|escape}" tabindex="21" size="2" maxlength="1" />
+          年</td>
+        </tr>
+        <tr>
+          <td colspan="2" class="style4">※補欠は設けませんが、けが等による補充は認めます</td>
+        </tr>
+        <tr>
+          <td>チーム紹介</td>
+          <td><textarea name="introduction" cols="64" rows="4" id="introduction" tabindex="22" >{$smarty.session.p.introduction|escape}</textarea></td>
+        </tr>
+        <tr>
+          <td>主な戦績</td>
+          <td><textarea name="main_results" cols="54" rows="4" id="main_results" tabindex="23">{$smarty.session.p.main_results|escape}</textarea></td>
+        </tr>
+        <tr>
+          <td colspan="2" class="style2">交通手段について</td>
+        </tr>
+        <tr>
+          <td class="style2">交通手段</td>
+          <td><select name="transport" id="transport" tabindex="28">
+            <option selected="selected">選んで下さい</option>
+{foreach name=transport from=$transportTBl item=tlv}
+            <option value="{$smarty.foreach.transport.iteration}" {if $smarty.foreach.transport.iteration == $smarty.session.p.transport}selected="selected" {/if}>{$tlv}</option>
+{/foreach}
+          </select>&nbsp;
+          <input name="transport_num" type="text" id="transport_num" value="{$smarty.session.p.transport_num|escape}" tabindex="29" size="2" maxlength="2" />
+          <span class="style2">台</span>&nbsp;<span class="style2">その他</span>
+          <input type="text" name="transport_other" id="transport_other" value="{$smarty.session.p.transport_other|escape}" tabindex="30" /></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td class="style4">※駐車場手配のため正確にお願いします</td>
+        </tr>
+        <tr>
+          <td class="style2">お弁当</td>
+          <td class="style2">18日（土）
+            <input name="lunch1" type="text" id="lunch1" value="{$smarty.session.p.lunch1|escape}" size="2" maxlength="2" />
+          個&nbsp;&nbsp;&nbsp;19日（日）
+          <input name="lunch2" type="text" id="lunch2" value="{$smarty.session.p.lunch2|escape}" size="2" maxlength="2" />
+個<span class="style4">※県外の場合のみ記入（本部手配数）</span></td>
+        </tr>
+        <tr>
+          <td colspan="2" class="style4">※県外の先生（監督・審判）のお弁当は本部で準備します。その他は近ツリ手配となります。</td>
+        </tr>
+        <tr>
+          <td class="style2">連絡欄</td>
+          <td><input name="comment" type="text" id="comment" value="{$smarty.session.p.comment|escape}" tabindex="31" size="70" maxlength="70" /></td>
+        </tr>
+        <tr>
+          <td class="style2">宿泊</td>
+          <td><select name="stay" id="stay" tabindex="32">
+            <option selected="selected">選んで下さい</option>
+{foreach name=stay from=$stayTbl item=slv}
+            <option value="{$smarty.foreach.stay.iteration}" {if $smarty.foreach.stay.iteration == $smarty.session.p.stay}selected="selected" {/if}>{$slv}</option>
+{/foreach}
+          </select></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td><input type="submit" tabindex="33" value="送信する" />
+            <span class="style4">※申し込みを受けましたら確認メールを返信いたします。</span></td>
+        </tr>
+      </table><br>
+    </form>
+{$htmlfooter|smarty:nodefaults}

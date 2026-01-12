@@ -1,0 +1,147 @@
+{$htmlheader|default:''}
+    <h2>個人({if $series_mw =='m'}男子{/if}{if $series_mw =='w'}女子{/if})トーナメント
+      <div style="float: right;">
+      <form action="kojin_tournament.php?s={$series}&mw={$series_mw}" method="post" enctype="multipart/form-data">
+        <input name="csv_file" type="file" value="" />
+        <input type="hidden" name="mode" value="loadcsv" />
+        <input type="submit" name="submit" value="csvデータ読み込み" />
+      </form></div>
+    </h2>
+{**}
+{if $seriesinfo.enable_clear == 1 && $seriesinfo.enable_clear_kt == 1}
+    <form action="kojin_tournament.php?s={$series}&mw={$series_mw}" method="post">
+      <input type="hidden" name="mode" value="clear" />
+      <input type="submit" name="submit" value="試合データクリア" />
+    </form>
+{/if}
+{**}
+    <form action="kojin_tournament.php?s={$series}&mw={$series_mw}" method="post">
+      <input type="hidden" name="mode" value="output_excel_result" />
+      <input type="submit" name="submit" value="トーナメント結果excel出力" />
+    </form>
+<!--
+    <form action="kojin_tournament.php?s={$series}&mw={$series_mw}" method="post">
+      <input type="hidden" name="mode" value="output_excel_prize" />
+      <input type="submit" name="submit" value="表彰用テキスト出力" />
+    </form>
+-->
+<!--
+    <form action="kojin_tournament.php?s={$series}&mw={$series_mw}" method="post">
+      <input type="hidden" name="mode" value="output_excel_prize8" />
+      <input type="submit" name="submit" value="ベスト８テキスト出力" />
+    </form>
+-->
+{if $smarty.session.auth.locked == 0}
+    <form action="kojin_tournament.php?s={$series}&mw={$series_mw}" method="post">
+      <input type="hidden" name="mode" value="update" />
+      <input type="submit" name="submit" value="更新" />
+{else}
+      <input type="button" name="submit" value="更新" />
+{/if}
+<!--
+    <form action="info.php" method="post">
+      <input type="hidden" name="mode" value="output" />
+      <input type="hidden" name="category" value="{$category}" />
+      <input type="submit" name="submit" value="ファイル出力" />
+    </form>
+-->
+{section name=tournament_data loop=$tournament_list}
+    <table id="ex_t" border="0" cellspacing="1" cellpadding="0">
+{if $tournament_list[tournament_data].tournament_name != ''}
+      <tr>
+        <td class="td_right" colspan="3">{$tournament_list[tournament_data].tournament_name}</td>
+      </tr>
+{/if}
+      <tr>
+        <td class="td_right" colspan="2">氏名</td>
+        <td class="td_right" colspan="3">試合
+        </td>
+      </tr>
+{section name=tournament_player loop=$tournament_list[tournament_data].player}
+      <tr>
+        <td class="td_right" colspan="2">
+          {html_options name="entry_`$smarty.section.tournament_data.iteration`_`$smarty.section.tournament_player.iteration`" options=$tournament_list[tournament_data].players_for_smarty selected=$tournament_list[tournament_data].player[$smarty.section.tournament_player.index].player}
+{if $tournament_list[tournament_data].player[$smarty.section.tournament_player.index].relative > 0}
+  {if ( $smarty.section.tournament_player.index % 2 ) == 0}
+{assign var='relative_match_no' value=$tournament_list[tournament_data].match_array[tournament_player][0]-1}
+{$tournament_list[tournament_data].match[$relative_match_no].player1_name}
+  {else}
+{assign var='relative_index' value=$smarty.section.tournament_player.index-1}
+{assign var='relative_match_no' value=$tournament_list[tournament_data].match_array[$relative_index][0]-1}
+{$tournament_list[tournament_data].match[$relative_match_no].player2_name}
+  {/if}
+{/if}
+        </td>
+{section name=tournament_match_offset start=0 loop=$tournament_list[tournament_data].match_level step=1}
+{assign var='match_no' value=$tournament_list[tournament_data].match_array[tournament_player][tournament_match_offset]-1}
+{if $tournament_list[tournament_data].match_array[tournament_player][tournament_match_offset] > 0 }
+{if $tournament_list[tournament_data].match_array[tournament_player][tournament_match_offset] < 1000 }
+        <td class="td_right" rowspan="2">
+          【{$tournament_list[tournament_data].match_array[tournament_player][tournament_match_offset]}】{html_options name="place_`$smarty.section.tournament_data.iteration`_`$tournament_list[tournament_data].match_array[tournament_player][tournament_match_offset]`" options=$place_array selected=$tournament_list[tournament_data].match[$match_no].place}
+          {html_options name="place_match_`$smarty.section.tournament_data.iteration`_`$tournament_list[tournament_data].match_array[tournament_player][tournament_match_offset]`" options=$place_match_no_array selected=$tournament_list[tournament_data].match[$match_no].place_match_no}<br />
+          <a href="../input/kojin_result.php?a=1&p={$tournament_list[tournament_data].match[$match_no].place}&m={$tournament_list[tournament_data].match[$match_no].place_match_no}&lg=1&v={$seriesinfo.navi_id}">結果</a>
+        </td>
+{elseif $tournament_list[tournament_data].match_array[tournament_player][tournament_match_offset] >= 2000}
+{assign var='name_offset' value=$tournament_list[tournament_data].match_array[tournament_player][tournament_match_offset]%1000}
+{assign var='name_offset2' value=$name_offset-1}
+        <td class="td_right">{$tournament_list[tournament_data].match[$name_offset2].player2_name}</td>
+{elseif $tournament_list[tournament_data].match_array[tournament_player][tournament_match_offset] >= 1000}
+{assign var='name_offset' value=$tournament_list[tournament_data].match_array[tournament_player][tournament_match_offset]%1000}
+{assign var='name_offset2' value=$name_offset-1}
+        <td class="td_right">{$tournament_list[tournament_data].match[$name_offset2].player1_name}</td>
+{else}
+        <td class="td_right"></td>
+{/if}
+{elseif $tournament_list[tournament_data].match_array[tournament_player][tournament_match_offset] == 0}
+        <td class="td_right"></td>
+{/if}
+{/section}
+{/section}
+    </table>
+{if $tournament_list[tournament_data].extra_match_num > 0}
+    <table>
+{section name=tournament_extra_match start=0 loop=$tournament_list[tournament_data].extra_match_num step=1}
+{assign var='match_no' value=$tournament_list[tournament_data].match_num+$smarty.section.tournament_extra_match.index}
+{assign var='place_no' value=$tournament_list[tournament_data].match_num+$smarty.section.tournament_extra_match.index+1}
+      <tr>
+{if $tournament_list[tournament_data].extra_name_array[$smarty.section.tournament_extra_match.index] != ''}
+        <td class="td_right" colspan="3">{$tournament_list[tournament_data].extra_name_array[$smarty.section.tournament_extra_match.index]}</td>
+{else}
+        <td class="td_right" colspan="3">順位決定戦</td>
+{/if}
+      </tr>
+      <tr>
+        <td class="td_right">{$tournament_list[tournament_data].match[$match_no].player1_name}</td>
+        <td class="td_right" rowspan="2">
+          {html_options name="place_`$smarty.section.tournament_data.iteration`_`$place_no`" options=$place_array selected=$tournament_list[tournament_data].match[$match_no].place}
+          {html_options name="place_match_`$smarty.section.tournament_data.iteration`_`$place_no`" options=$place_match_no_array selected=$tournament_list[tournament_data].match[$match_no].place_match_no}<br />
+          <a href="../input/kojin_result.php?a=1&p={$tournament_list[tournament_data].match[$match_no].place}&m={$tournament_list[tournament_data].match[$match_no].place_match_no}&lg=1&v={$seriesinfo.navi_id}">結果</a>
+        </td>
+        <td class="td_right">
+            {if $tournament_list[tournament_data].match[$match_no].winner == 1}
+            {$tournament_list[tournament_data].match[$match_no].player1_name}
+            {/if}
+            {if $tournament_list[tournament_data].match[$match_no].winner == 2}
+            {$tournament_list[tournament_data].match[$match_no].player2_name}
+            {/if}
+        </td>
+      </tr>
+      <tr>
+        <td class="td_right">
+            {$tournament_list[tournament_data].match[$match_no].player2_name}
+        </td>
+        <td class="td_right"></td>
+      </tr>
+{assign var='match_no' value=$match_no+1}
+{assign var='place_no' value=$place_no+1}
+{/section}
+    </table>
+{/if}
+{/section}
+{if $smarty.session.auth.locked == 0}
+	</form>
+{/if}
+    <br />
+    <br />
+    <br />
+{$htmlfooter|default:''}

@@ -1,0 +1,6419 @@
+[2025/06/18 04:59:29]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 55492
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJHsZsAua8GYxwIBL8e2QAAAMo
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750222769.8602
+    [REQUEST_TIME] => 1750222769
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:00:57]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 58342
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJICUNSDx2tiYePnKlqZAAAAI8
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750222857.5004
+    [REQUEST_TIME] => 1750222857
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:01:16]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 50570
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJIHENSDx2tiYePnKlqZgAAAJQ
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750222876.1966
+    [REQUEST_TIME] => 1750222876
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:01:22]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 33976
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJIIpsAua8GYxwIBL8e2gAAAMg
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750222882.4451
+    [REQUEST_TIME] => 1750222882
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:01:34]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 44716
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJILpsAua8GYxwIBL8e2wAAAM0
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750222894.0948
+    [REQUEST_TIME] => 1750222894
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:01:43]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 52380
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJIN6V0kOAz6L1_xkkYhQAAAFM
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750222903.6998
+    [REQUEST_TIME] => 1750222903
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:01:52]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 49520
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJIQENSDx2tiYePnKlqbQAAAIY
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750222912.9423
+    [REQUEST_TIME] => 1750222912
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:02:02]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 47706
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJISpsAua8GYxwIBL8e3AAAAM8
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750222922.046
+    [REQUEST_TIME] => 1750222922
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:02:07]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 47718
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJIT5sAua8GYxwIBL8e3QAAANE
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750222927.4706
+    [REQUEST_TIME] => 1750222927
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:02:18]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 42294
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJIWqV0kOAz6L1_xkkYiAAAAFg
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750222938.9676
+    [REQUEST_TIME] => 1750222938
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:02:30]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 49608
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJIZkNSDx2tiYePnKlqcQAAAIo
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750222950.8732
+    [REQUEST_TIME] => 1750222950
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:02:41]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 32878
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJIcZsAua8GYxwIBL8e3gAAANQ
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750222961.6522
+    [REQUEST_TIME] => 1750222961
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:02:53]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 40450
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJIfZsAua8GYxwIBL8e3wAAANM
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750222973.9586
+    [REQUEST_TIME] => 1750222973
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:02:58]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 40466
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJIgkNSDx2tiYePnKlqdQAAAJc
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750222978.2283
+    [REQUEST_TIME] => 1750222978
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:06:06]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 52324
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJJPkNSDx2tiYePnKlqdwAAAIQ
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750223166.8533
+    [REQUEST_TIME] => 1750223166
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:06:10]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 52338
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJJQpsAua8GYxwIBL8e4AAAAME
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750223170.9866
+    [REQUEST_TIME] => 1750223170
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:07:53]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 59056
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJJqZsAua8GYxwIBL8e4QAAANc
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750223273.3315
+    [REQUEST_TIME] => 1750223273
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:07:56]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 59068
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJJrENSDx2tiYePnKlqhgAAAIA
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750223276.9979
+    [REQUEST_TIME] => 1750223276
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:08:00]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 59072
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJJsENSDx2tiYePnKlqhwAAAIM
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750223280.7405
+    [REQUEST_TIME] => 1750223280
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:08:04]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 41452
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJJtJsAua8GYxwIBL8e4gAAAMM
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750223284.2182
+    [REQUEST_TIME] => 1750223284
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:08:07]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 41466
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJJt5sAua8GYxwIBL8e4wAAAMU
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750223287.8692
+    [REQUEST_TIME] => 1750223287
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:08:11]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 41474
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJJu0NSDx2tiYePnKlqiAAAAIY
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750223291.1096
+    [REQUEST_TIME] => 1750223291
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:08:14]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 51052
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJJvqpj3WlelZrLou3bkwAAAAE
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750223294.0648
+    [REQUEST_TIME] => 1750223294
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:08:16]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 51054
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJJwJsAua8GYxwIBL8e5AAAAMY
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750223296.6159
+    [REQUEST_TIME] => 1750223296
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:08:19]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 51058
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJJw5sAua8GYxwIBL8e5QAAAMw
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750223299.205
+    [REQUEST_TIME] => 1750223299
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:08:21]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 51074
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJJxUNSDx2tiYePnKlqiQAAAIs
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750223301.8026
+    [REQUEST_TIME] => 1750223301
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:08:25]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 44112
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJJyUNSDx2tiYePnKlqigAAAIw
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750223305.3923
+    [REQUEST_TIME] => 1750223305
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:08:29]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 44122
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJJzZsAua8GYxwIBL8e5gAAAMk
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750223309.6141
+    [REQUEST_TIME] => 1750223309
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:08:34]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 40712
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJJ0psAua8GYxwIBL8e5wAAAM4
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750223314.6607
+    [REQUEST_TIME] => 1750223314
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:08:38]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 40726
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJJ1qpj3WlelZrLou3blAAAAAQ
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750223318.2577
+    [REQUEST_TIME] => 1750223318
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:08:41]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 40736
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJJ2UNSDx2tiYePnKlqiwAAAJA
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750223321.4742
+    [REQUEST_TIME] => 1750223321
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:09:30]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 43526
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJKCpsAua8GYxwIBL8e6AAAANA
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750223370.6058
+    [REQUEST_TIME] => 1750223370
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:09:45]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 50210
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJKGZsAua8GYxwIBL8e6QAAANI
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750223385.0925
+    [REQUEST_TIME] => 1750223385
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:10:00]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 45492
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJKKENSDx2tiYePnKlqjQAAAJE
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750223400.6889
+    [REQUEST_TIME] => 1750223400
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:10:03]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 36024
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJKK6V0kOAz6L1_xkkYrAAAAE8
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750223403.7563
+    [REQUEST_TIME] => 1750223403
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:10:13]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 50700
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJKNZsAua8GYxwIBL8e6gAAANU
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750223413.2701
+    [REQUEST_TIME] => 1750223413
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:10:32]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 55792
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJKSJsAua8GYxwIBL8e6wAAANM
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750223432.5341
+    [REQUEST_TIME] => 1750223432
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:10:38]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 55796
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJKTqV0kOAz6L1_xkkYrwAAAFc
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750223438.5739
+    [REQUEST_TIME] => 1750223438
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:12:16]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 55840
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJKsKpj3WlelZrLou3bmQAAAAk
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750223536.7826
+    [REQUEST_TIME] => 1750223536
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:12:17]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 55846
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJKsZsAua8GYxwIBL8e7AAAAME
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750223537.8328
+    [REQUEST_TIME] => 1750223537
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:52:55]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 36320
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJUN5sAua8GYxwIBL8e7QAAANc
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750225975.6693
+    [REQUEST_TIME] => 1750225975
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:52:58]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 36328
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJUOkNSDx2tiYePnKlqtAAAAI8
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750225978.1878
+    [REQUEST_TIME] => 1750225978
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:52:59]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 36338
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJUO0NSDx2tiYePnKlqtgAAAJU
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750225979.6303
+    [REQUEST_TIME] => 1750225979
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:53:00]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 36354
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJUPJsAua8GYxwIBL8e7gAAAMM
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750225980.5218
+    [REQUEST_TIME] => 1750225980
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:53:01]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 36364
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJUPZsAua8GYxwIBL8e7wAAAMU
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750225981.3325
+    [REQUEST_TIME] => 1750225981
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:53:02]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 44132
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJUPkNSDx2tiYePnKlqugAAAJc
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750225982.107
+    [REQUEST_TIME] => 1750225982
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:53:03]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 44146
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJUP0NSDx2tiYePnKlqvAAAAIU
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750225983.0137
+    [REQUEST_TIME] => 1750225983
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:53:03]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 44148
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJUP5sAua8GYxwIBL8e8AAAAMY
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750225983.7184
+    [REQUEST_TIME] => 1750225983
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:53:04]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 44150
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJUQJsAua8GYxwIBL8e8QAAAMo
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750225984.4025
+    [REQUEST_TIME] => 1750225984
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:53:07]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 44158
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJUQ0NSDx2tiYePnKlqwAAAAIY
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750225987.0995
+    [REQUEST_TIME] => 1750225987
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:53:07]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 44170
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJUQ0NSDx2tiYePnKlqwgAAAIg
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750225987.5859
+    [REQUEST_TIME] => 1750225987
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:53:08]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 44186
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJURJsAua8GYxwIBL8e8gAAAMs
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750225988.0056
+    [REQUEST_TIME] => 1750225988
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:53:08]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 44198
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJURJsAua8GYxwIBL8e8wAAAM0
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750225988.3496
+    [REQUEST_TIME] => 1750225988
+)
+
+files:Array
+(
+)
+
+[2025/06/18 05:53:08]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 44212
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJURENSDx2tiYePnKlqxgAAAI8
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750225988.7597
+    [REQUEST_TIME] => 1750225988
+)
+
+files:Array
+(
+)
+
+[2025/06/18 07:53:42]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 41478
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJwhqpj3WlelZrLou3bqAAAAA0
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750233222.8622
+    [REQUEST_TIME] => 1750233222
+)
+
+files:Array
+(
+)
+
+[2025/06/18 07:53:44]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 41488
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJwiJsAua8GYxwIBL8fCQAAAMk
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750233224.2167
+    [REQUEST_TIME] => 1750233224
+)
+
+files:Array
+(
+)
+
+[2025/06/18 07:53:45]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 41498
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJwiapj3WlelZrLou3bqQAAAA8
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750233225.4078
+    [REQUEST_TIME] => 1750233225
+)
+
+files:Array
+(
+)
+
+[2025/06/18 07:53:49]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 41500
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJwjZsAua8GYxwIBL8fCgAAAM4
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750233229.618
+    [REQUEST_TIME] => 1750233229
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:14:48]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 4
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=4&v=12
+    [QUERY_STRING] => n=1&p=4&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 42378
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ1eKpj3WlelZrLou3bqwAAABg
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750234488.2961
+    [REQUEST_TIME] => 1750234488
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:15:40]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 4
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=4&v=12
+    [QUERY_STRING] => n=1&p=4&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 37266
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ1rJsAua8GYxwIBL8fFwAAAMk
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750234540.3342
+    [REQUEST_TIME] => 1750234540
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:18:58]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 4
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=4&v=12
+    [QUERY_STRING] => n=1&p=4&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 57120
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ2cqpj3WlelZrLou3brAAAAAI
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750234738.7724
+    [REQUEST_TIME] => 1750234738
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:19:17]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 4
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=4&v=12
+    [QUERY_STRING] => n=1&p=4&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 44932
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ2hUNSDx2tiYePnKlq3gAAAIg
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750234757.4343
+    [REQUEST_TIME] => 1750234757
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:19:20]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 4
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=4&v=12
+    [QUERY_STRING] => n=1&p=4&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 44936
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ2iKpj3WlelZrLou3brQAAAAM
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750234760.4494
+    [REQUEST_TIME] => 1750234760
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:19:23]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 4
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=4&v=12
+    [QUERY_STRING] => n=1&p=4&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 50388
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ2i5sAua8GYxwIBL8fIAAAAMA
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750234763.7042
+    [REQUEST_TIME] => 1750234763
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:19:46]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 4
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=4&v=12
+    [QUERY_STRING] => n=1&p=4&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 47350
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ2oqpj3WlelZrLou3brgAAAAU
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750234786.176
+    [REQUEST_TIME] => 1750234786
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:23:39]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 4
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=4&v=12
+    [QUERY_STRING] => n=1&p=4&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 45272
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ3i5sAua8GYxwIBL8fIgAAAMQ
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750235019.8625
+    [REQUEST_TIME] => 1750235019
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:33:06]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 2
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=2&v=12
+    [QUERY_STRING] => n=1&p=2&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 39034
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ5wqpj3WlelZrLou3btgAAABQ
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750235586.7815
+    [REQUEST_TIME] => 1750235586
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:33:17]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 2
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=2&v=12
+    [QUERY_STRING] => n=1&p=2&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 40434
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ5zZsAua8GYxwIBL8fOAAAANc
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750235597.5617
+    [REQUEST_TIME] => 1750235597
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:33:20]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 2
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=2&v=12
+    [QUERY_STRING] => n=1&p=2&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 40442
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ50ENSDx2tiYePnKlq4AAAAJE
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750235600.4492
+    [REQUEST_TIME] => 1750235600
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:33:24]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 2
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=2&v=12
+    [QUERY_STRING] => n=1&p=2&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 39652
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ51JsAua8GYxwIBL8fOQAAAMI
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750235604.836
+    [REQUEST_TIME] => 1750235604
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:33:25]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 2
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=2&v=12
+    [QUERY_STRING] => n=1&p=2&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 39658
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ51aV0kOAz6L1_xkkY2gAAAEY
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750235605.3627
+    [REQUEST_TIME] => 1750235605
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:33:35]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 3
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=3&v=12
+    [QUERY_STRING] => n=1&p=3&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 37814
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ530NSDx2tiYePnKlq4QAAAIc
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750235615.2636
+    [REQUEST_TIME] => 1750235615
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:33:41]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 3
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=3&v=12
+    [QUERY_STRING] => n=1&p=3&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 37816
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ55apj3WlelZrLou3bvwAAAAo
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750235621.0669
+    [REQUEST_TIME] => 1750235621
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:35:05]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 3
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=3&v=12
+    [QUERY_STRING] => n=1&p=3&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 54082
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ6OaV0kOAz6L1_xkkY2wAAAEk
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750235705.4142
+    [REQUEST_TIME] => 1750235705
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:35:11]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 3
+    [m] => 193
+    [fd] => faul1_2
+    [va] => 1
+    [p] => 3
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=3&m=193&fd=faul1_2&va=1&p=3&v=12
+    [QUERY_STRING] => n=3&m=193&fd=faul1_2&va=1&p=3&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 63923
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.111
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=96c97d533f100397e1a7b7c2ce3c2827
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.128.126/input/kojin_result.php?a=0&m=1
+    [HTTP_X_REQUESTED_WITH] => XMLHttpRequest
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36
+    [HTTP_ACCEPT] => */*
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ6P5sAua8GYxwIBL8fQQAAANE
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750235711.5014
+    [REQUEST_TIME] => 1750235711
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:35:12]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 3
+    [m] => 193
+    [fd] => faul2_2
+    [va] => 1
+    [p] => 3
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=3&m=193&fd=faul2_2&va=1&p=3&v=12
+    [QUERY_STRING] => n=3&m=193&fd=faul2_2&va=1&p=3&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 63925
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.111
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=96c97d533f100397e1a7b7c2ce3c2827
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.128.126/input/kojin_result.php?a=0&m=1
+    [HTTP_X_REQUESTED_WITH] => XMLHttpRequest
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36
+    [HTTP_ACCEPT] => */*
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ6QKV0kOAz6L1_xkkY3AAAAEs
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750235712.7279
+    [REQUEST_TIME] => 1750235712
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:35:15]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 3
+    [m] => 193
+    [fd] => waza1_1
+    [va] => 1
+    [p] => 3
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=3&m=193&fd=waza1_1&va=1&p=3&v=12
+    [QUERY_STRING] => n=3&m=193&fd=waza1_1&va=1&p=3&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 63926
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.111
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=96c97d533f100397e1a7b7c2ce3c2827
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.128.126/input/kojin_result.php?a=0&m=1
+    [HTTP_X_REQUESTED_WITH] => XMLHttpRequest
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36
+    [HTTP_ACCEPT] => */*
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ6Q5sAua8GYxwIBL8fQgAAANQ
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750235715.3773
+    [REQUEST_TIME] => 1750235715
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:35:18]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 3
+    [m] => 193
+    [fd] => waza2_2
+    [va] => 1
+    [p] => 3
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=3&m=193&fd=waza2_2&va=1&p=3&v=12
+    [QUERY_STRING] => n=3&m=193&fd=waza2_2&va=1&p=3&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 63927
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.111
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=96c97d533f100397e1a7b7c2ce3c2827
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.128.126/input/kojin_result.php?a=0&m=1
+    [HTTP_X_REQUESTED_WITH] => XMLHttpRequest
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36
+    [HTTP_ACCEPT] => */*
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ6RqV0kOAz6L1_xkkY3QAAAEw
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750235718.4074
+    [REQUEST_TIME] => 1750235718
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:35:22]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 3
+    [m] => 193
+    [fd] => waza1_3
+    [va] => 2
+    [p] => 3
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=3&m=193&fd=waza1_3&va=2&p=3&v=12
+    [QUERY_STRING] => n=3&m=193&fd=waza1_3&va=2&p=3&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 63928
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.111
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=96c97d533f100397e1a7b7c2ce3c2827
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.128.126/input/kojin_result.php?a=0&m=1
+    [HTTP_X_REQUESTED_WITH] => XMLHttpRequest
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36
+    [HTTP_ACCEPT] => */*
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ6SpsAua8GYxwIBL8fQwAAANM
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750235722.5712
+    [REQUEST_TIME] => 1750235722
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:35:27]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 3
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=3&v=12
+    [QUERY_STRING] => n=1&p=3&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 47616
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ6T5sAua8GYxwIBL8fRAAAANY
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750235727.7629
+    [REQUEST_TIME] => 1750235727
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:35:30]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 3
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=3&v=12
+    [QUERY_STRING] => n=1&p=3&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 47620
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ6UkNSDx2tiYePnKlq4gAAAJQ
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750235730.2298
+    [REQUEST_TIME] => 1750235730
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:35:46]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 3
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=3&v=12
+    [QUERY_STRING] => n=1&p=3&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 44112
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ6YkNSDx2tiYePnKlq4wAAAJY
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750235746.532
+    [REQUEST_TIME] => 1750235746
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:35:50]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 3
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=3&v=12
+    [QUERY_STRING] => n=1&p=3&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 44128
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ6ZpsAua8GYxwIBL8fRwAAAMI
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750235750.0219
+    [REQUEST_TIME] => 1750235750
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:35:53]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 3
+    [m] => 198
+    [fd] => faul2_1
+    [va] => 2
+    [p] => 3
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=3&m=198&fd=faul2_1&va=2&p=3&v=12
+    [QUERY_STRING] => n=3&m=198&fd=faul2_1&va=2&p=3&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 63933
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.111
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=96c97d533f100397e1a7b7c2ce3c2827
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.128.126/input/kojin_result.php?a=0&m=2
+    [HTTP_X_REQUESTED_WITH] => XMLHttpRequest
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36
+    [HTTP_ACCEPT] => */*
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ6aZsAua8GYxwIBL8fSQAAAMU
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750235753.8809
+    [REQUEST_TIME] => 1750235753
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:35:55]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 3
+    [m] => 198
+    [fd] => faul2_2
+    [va] => 1
+    [p] => 3
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=3&m=198&fd=faul2_2&va=1&p=3&v=12
+    [QUERY_STRING] => n=3&m=198&fd=faul2_2&va=1&p=3&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 63934
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.111
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=96c97d533f100397e1a7b7c2ce3c2827
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.128.126/input/kojin_result.php?a=0&m=2
+    [HTTP_X_REQUESTED_WITH] => XMLHttpRequest
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36
+    [HTTP_ACCEPT] => */*
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ6a6pj3WlelZrLou3bwQAAAAk
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750235755.1795
+    [REQUEST_TIME] => 1750235755
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:35:56]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 3
+    [m] => 198
+    [fd] => waza2_1
+    [va] => 1
+    [p] => 3
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=3&m=198&fd=waza2_1&va=1&p=3&v=12
+    [QUERY_STRING] => n=3&m=198&fd=waza2_1&va=1&p=3&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 63935
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.111
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=96c97d533f100397e1a7b7c2ce3c2827
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.128.126/input/kojin_result.php?a=0&m=2
+    [HTTP_X_REQUESTED_WITH] => XMLHttpRequest
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36
+    [HTTP_ACCEPT] => */*
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ6bJsAua8GYxwIBL8fSgAAAMw
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750235756.7719
+    [REQUEST_TIME] => 1750235756
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:35:59]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 3
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=3&v=12
+    [QUERY_STRING] => n=1&p=3&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 58862
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ6b6pj3WlelZrLou3bxAAAABE
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750235759.758
+    [REQUEST_TIME] => 1750235759
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:36:02]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 3
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=3&v=12
+    [QUERY_STRING] => n=1&p=3&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 36154
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ6cqV0kOAz6L1_xkkY4gAAAFM
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750235762.6628
+    [REQUEST_TIME] => 1750235762
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:36:05]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 3
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=3&v=12
+    [QUERY_STRING] => n=1&p=3&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 36160
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ6dapj3WlelZrLou3byAAAABU
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750235765.0554
+    [REQUEST_TIME] => 1750235765
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:36:27]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 3
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=3&v=12
+    [QUERY_STRING] => n=1&p=3&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 46594
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ6i5sAua8GYxwIBL8fSwAAAMY
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750235787.6548
+    [REQUEST_TIME] => 1750235787
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:36:35]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 3
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=3&v=12
+    [QUERY_STRING] => n=1&p=3&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 48464
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ6k6pj3WlelZrLou3bygAAAAA
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750235795.3816
+    [REQUEST_TIME] => 1750235795
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:36:43]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 3
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=3&v=12
+    [QUERY_STRING] => n=1&p=3&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 50674
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ6m6pj3WlelZrLou3bzAAAAAM
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750235803.2842
+    [REQUEST_TIME] => 1750235803
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:36:50]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 2
+    [v] => 12
+    [p] => 3
+    [m] => 129
+    [mn] => 1
+    [fd] => faul1_2
+    [va] => 1
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=2&v=12&p=3&m=129&mn=1&fd=faul1_2&va=1
+    [QUERY_STRING] => n=2&v=12&p=3&m=129&mn=1&fd=faul1_2&va=1
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 63952
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.111
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=96c97d533f100397e1a7b7c2ce3c2827
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.128.126/input/dantai_result_input.php
+    [HTTP_X_REQUESTED_WITH] => XMLHttpRequest
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36
+    [HTTP_ACCEPT] => */*
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ6opsAua8GYxwIBL8fTQAAAM4
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750235810.9975
+    [REQUEST_TIME] => 1750235810
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:36:52]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 2
+    [v] => 12
+    [p] => 3
+    [m] => 129
+    [mn] => 1
+    [fd] => waza1_1
+    [va] => 1
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=2&v=12&p=3&m=129&mn=1&fd=waza1_1&va=1
+    [QUERY_STRING] => n=2&v=12&p=3&m=129&mn=1&fd=waza1_1&va=1
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 63952
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.111
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=96c97d533f100397e1a7b7c2ce3c2827
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.128.126/input/dantai_result_input.php
+    [HTTP_X_REQUESTED_WITH] => XMLHttpRequest
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36
+    [HTTP_ACCEPT] => */*
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ6pJsAua8GYxwIBL8fTgAAAM8
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750235812.7145
+    [REQUEST_TIME] => 1750235812
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:45:15]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 4
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=4&v=12
+    [QUERY_STRING] => n=1&p=4&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 60014
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ8m0NSDx2tiYePnKlq5gAAAII
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750236315.1576
+    [REQUEST_TIME] => 1750236315
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:45:19]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 3
+    [m] => 254
+    [fd] => faul1_2
+    [va] => 1
+    [p] => 4
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=3&m=254&fd=faul1_2&va=1&p=4&v=12
+    [QUERY_STRING] => n=3&m=254&fd=faul1_2&va=1&p=4&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 56850
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.105
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=7a6d6ab16217f28a589921393f8b1992
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.128.126/input/kojin_result.php?a=0&m=8
+    [HTTP_X_REQUESTED_WITH] => XMLHttpRequest
+    [HTTP_ACCEPT] => */*
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ8n6V0kOAz6L1_xkkY5gAAAEM
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750236319.0576
+    [REQUEST_TIME] => 1750236319
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:45:21]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 3
+    [m] => 254
+    [fd] => waza2_1
+    [va] => 1
+    [p] => 4
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=3&m=254&fd=waza2_1&va=1&p=4&v=12
+    [QUERY_STRING] => n=3&m=254&fd=waza2_1&va=1&p=4&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 56851
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.105
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=7a6d6ab16217f28a589921393f8b1992
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.128.126/input/kojin_result.php?a=0&m=8
+    [HTTP_X_REQUESTED_WITH] => XMLHttpRequest
+    [HTTP_ACCEPT] => */*
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ8oaV0kOAz6L1_xkkY5wAAAEQ
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750236321.0408
+    [REQUEST_TIME] => 1750236321
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:49:09]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 4
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=4&v=12
+    [QUERY_STRING] => n=1&p=4&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 43284
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ9hUNSDx2tiYePnKlq6AAAAIk
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750236549.1199
+    [REQUEST_TIME] => 1750236549
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:49:23]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 38904
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ9k6pj3WlelZrLou3b0wAAAA0
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750236563.5597
+    [REQUEST_TIME] => 1750236563
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:49:28]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 38912
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ9mKpj3WlelZrLou3b1AAAAA4
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750236568.8292
+    [REQUEST_TIME] => 1750236568
+)
+
+files:Array
+(
+)
+
+[2025/06/18 08:59:23]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 34776
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFJ_60NSDx2tiYePnKlq7AAAAI8
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750237163.9408
+    [REQUEST_TIME] => 1750237163
+)
+
+files:Array
+(
+)
+
+[2025/06/18 09:01:36]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 4
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=4&v=12
+    [QUERY_STRING] => n=1&p=4&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 58374
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFKAcKpj3WlelZrLou3b1wAAAAM
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750237296.6794
+    [REQUEST_TIME] => 1750237296
+)
+
+files:Array
+(
+)
+
+[2025/06/18 09:58:27]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=1&v=12
+    [QUERY_STRING] => n=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 42000
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFKNw6pj3WlelZrLou3b4QAAABQ
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750240707.5243
+    [REQUEST_TIME] => 1750240707
+)
+
+files:Array
+(
+)
+
+[2025/06/18 09:59:43]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 3
+    [m] => 129
+    [fd] => waza1_1
+    [va] => 2
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=3&m=129&fd=waza1_1&va=2&p=1&v=12
+    [QUERY_STRING] => n=3&m=129&fd=waza1_1&va=2&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 64834
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.127
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=e6bb9b683b0e654a352aa52a7612dce5; _ga=GA1.1.1448916311.1750240497; _gid=GA1.1.1625577782.1750240497; _gat=1; _ga_YS49JN1DL1=GS2.1.s1750240497$o1$g1$t1750240773$j60$l0$h0
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.128.126/input/kojin_result.php?m=1
+    [HTTP_X_REQUESTED_WITH] => XMLHttpRequest
+    [HTTP_ACCEPT] => */*
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFKOD0NSDx2tiYePnKlq-QAAAJE
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750240783.7965
+    [REQUEST_TIME] => 1750240783
+)
+
+files:Array
+(
+)
+
+[2025/06/18 10:00:47]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 3
+    [m] => 129
+    [fd] => waza1_1
+    [va] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=3&m=129&fd=waza1_1&va=1&p=1&v=12
+    [QUERY_STRING] => n=3&m=129&fd=waza1_1&va=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 65128
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.127
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=e6bb9b683b0e654a352aa52a7612dce5; _ga=GA1.1.1448916311.1750240497; _gid=GA1.1.1625577782.1750240497; _ga_YS49JN1DL1=GS2.1.s1750240497$o1$g1$t1750240773$j60$l0$h0
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.128.126/input/kojin_result.php?m=1
+    [HTTP_X_REQUESTED_WITH] => XMLHttpRequest
+    [HTTP_ACCEPT] => */*
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFKOT0NSDx2tiYePnKlq-gAAAI4
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750240847.7637
+    [REQUEST_TIME] => 1750240847
+)
+
+files:Array
+(
+)
+
+[2025/06/18 10:08:31]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 3
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=3&v=12
+    [QUERY_STRING] => n=1&p=3&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 49916
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFKQH6pj3WlelZrLou3b4gAAAA4
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750241311.869
+    [REQUEST_TIME] => 1750241311
+)
+
+files:Array
+(
+)
+
+[2025/06/18 10:08:34]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 3
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=3&v=12
+    [QUERY_STRING] => n=1&p=3&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 52206
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFKQIqV0kOAz6L1_xkkY8gAAAFg
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750241314.0805
+    [REQUEST_TIME] => 1750241314
+)
+
+files:Array
+(
+)
+
+[2025/06/18 10:08:35]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 3
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=3&v=12
+    [QUERY_STRING] => n=1&p=3&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 52222
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFKQI6pj3WlelZrLou3b4wAAABY
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750241315.6416
+    [REQUEST_TIME] => 1750241315
+)
+
+files:Array
+(
+)
+
+[2025/06/18 10:08:37]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 3
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=3&v=12
+    [QUERY_STRING] => n=1&p=3&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 52228
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFKQJZsAua8GYxwIBL8fWgAAANE
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750241317.2867
+    [REQUEST_TIME] => 1750241317
+)
+
+files:Array
+(
+)
+
+[2025/06/18 10:08:39]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 3
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=3&v=12
+    [QUERY_STRING] => n=1&p=3&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 52236
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFKQJ0NSDx2tiYePnKlq_wAAAIE
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750241319.2185
+    [REQUEST_TIME] => 1750241319
+)
+
+files:Array
+(
+)
+
+[2025/06/18 10:08:42]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 3
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=3&v=12
+    [QUERY_STRING] => n=1&p=3&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 49862
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFKQKkNSDx2tiYePnKlrAAAAAJg
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750241322.632
+    [REQUEST_TIME] => 1750241322
+)
+
+files:Array
+(
+)
+
+[2025/06/18 10:08:48]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 3
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=3&v=12
+    [QUERY_STRING] => n=1&p=3&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 49866
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFKQMJsAua8GYxwIBL8fWwAAANQ
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750241328.1465
+    [REQUEST_TIME] => 1750241328
+)
+
+files:Array
+(
+)
+
+[2025/06/18 10:13:33]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 3
+    [m] => 129
+    [fd] => waza1_1
+    [va] => 3
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=3&m=129&fd=waza1_1&va=3&p=1&v=12
+    [QUERY_STRING] => n=3&m=129&fd=waza1_1&va=3&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 51888
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.127
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=e6bb9b683b0e654a352aa52a7612dce5; _ga=GA1.1.1448916311.1750240497; _gid=GA1.1.1625577782.1750240497; _ga_YS49JN1DL1=GS2.1.s1750240497$o1$g1$t1750240773$j60$l0$h0
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.128.126/input/kojin_result.php?m=1
+    [HTTP_X_REQUESTED_WITH] => XMLHttpRequest
+    [HTTP_ACCEPT] => */*
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFKRTUNSDx2tiYePnKlrAgAAAIM
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750241613.0418
+    [REQUEST_TIME] => 1750241613
+)
+
+files:Array
+(
+)
+
+[2025/06/18 10:23:56]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 3
+    [m] => 129
+    [fd] => waza1_1
+    [va] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=3&m=129&fd=waza1_1&va=1&p=1&v=12
+    [QUERY_STRING] => n=3&m=129&fd=waza1_1&va=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 54449
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.127
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=e6bb9b683b0e654a352aa52a7612dce5; _ga=GA1.1.1448916311.1750240497; _gid=GA1.1.1625577782.1750240497; _ga_YS49JN1DL1=GS2.1.s1750240497$o1$g1$t1750242016$j60$l0$h0
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.128.126/input/kojin_result.php?m=1
+    [HTTP_X_REQUESTED_WITH] => XMLHttpRequest
+    [HTTP_ACCEPT] => */*
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFKTvJsAua8GYxwIBL8fawAAAMI
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750242236.7856
+    [REQUEST_TIME] => 1750242236
+)
+
+files:Array
+(
+)
+
+[2025/06/18 12:39:26]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 4
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=1&p=4&v=12
+    [QUERY_STRING] => n=1&p=4&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 33248
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.126
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFKzfqpj3WlelZrLou3b-wAAABI
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750250366.8543
+    [REQUEST_TIME] => 1750250366
+)
+
+files:Array
+(
+)
+
+[2025/06/18 13:26:36]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 3
+    [m] => 129
+    [fd] => waza1_1
+    [va] => 2
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=3&m=129&fd=waza1_1&va=2&p=1&v=12
+    [QUERY_STRING] => n=3&m=129&fd=waza1_1&va=2&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 50165
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.127
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=e6bb9b683b0e654a352aa52a7612dce5; _ga=GA1.1.1448916311.1750240497; _gid=GA1.1.1625577782.1750240497; _ga_YS49JN1DL1=GS2.1.s1750240497$o1$g1$t1750242540$j60$l0$h0
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.128.126/input/kojin_result.php?m=1
+    [HTTP_X_REQUESTED_WITH] => XMLHttpRequest
+    [HTTP_ACCEPT] => */*
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFK-jKpj3WlelZrLou3b_QAAABQ
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750253196.1646
+    [REQUEST_TIME] => 1750253196
+)
+
+files:Array
+(
+)
+
+[2025/06/18 13:34:02]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 3
+    [m] => 129
+    [fd] => waza1_1
+    [va] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=3&m=129&fd=waza1_1&va=1&p=1&v=12
+    [QUERY_STRING] => n=3&m=129&fd=waza1_1&va=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 52064
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.127
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=e6bb9b683b0e654a352aa52a7612dce5; _ga=GA1.1.1448916311.1750240497; _gid=GA1.1.1625577782.1750240497; _ga_YS49JN1DL1=GS2.1.s1750240497$o1$g1$t1750242540$j60$l0$h0
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.128.126/input/kojin_result.php?m=1
+    [HTTP_X_REQUESTED_WITH] => XMLHttpRequest
+    [HTTP_ACCEPT] => */*
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFLASZsAua8GYxwIBL8fcwAAANg
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750253641.9794
+    [REQUEST_TIME] => 1750253641
+)
+
+files:Array
+(
+)
+
+[2025/06/18 13:41:54]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 3
+    [m] => 129
+    [fd] => waza1_1
+    [va] => 3
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=3&m=129&fd=waza1_1&va=3&p=1&v=12
+    [QUERY_STRING] => n=3&m=129&fd=waza1_1&va=3&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 53999
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.127
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=e6bb9b683b0e654a352aa52a7612dce5; _ga=GA1.1.1448916311.1750240497; _gid=GA1.1.1625577782.1750240497; _ga_YS49JN1DL1=GS2.1.s1750240497$o1$g1$t1750242540$j60$l0$h0
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.128.126/input/kojin_result.php?m=1
+    [HTTP_X_REQUESTED_WITH] => XMLHttpRequest
+    [HTTP_ACCEPT] => */*
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFLCIpsAua8GYxwIBL8fdAAAAMA
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750254114.09
+    [REQUEST_TIME] => 1750254114
+)
+
+files:Array
+(
+)
+
+[2025/06/18 13:42:01]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 3
+    [m] => 129
+    [fd] => waza1_1
+    [va] => 2
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=3&m=129&fd=waza1_1&va=2&p=1&v=12
+    [QUERY_STRING] => n=3&m=129&fd=waza1_1&va=2&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 54031
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.127
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=e6bb9b683b0e654a352aa52a7612dce5; _ga=GA1.1.1448916311.1750240497; _gid=GA1.1.1625577782.1750240497; _ga_YS49JN1DL1=GS2.1.s1750240497$o1$g1$t1750242540$j60$l0$h0
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.128.126/input/kojin_result.php?m=1
+    [HTTP_X_REQUESTED_WITH] => XMLHttpRequest
+    [HTTP_ACCEPT] => */*
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFLCKapj3WlelZrLou3b_wAAABc
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750254121.3286
+    [REQUEST_TIME] => 1750254121
+)
+
+files:Array
+(
+)
+
+[2025/06/18 13:43:39]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 3
+    [m] => 129
+    [fd] => waza1_1
+    [va] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /result/resultapi.php
+    [REQUEST_URI] => /result/resultapi.php?n=3&m=129&fd=waza1_1&va=1&p=1&v=12
+    [QUERY_STRING] => n=3&m=129&fd=waza1_1&va=1&p=1&v=12
+    [REQUEST_METHOD] => GET
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 54438
+    [SCRIPT_FILENAME] => /var/www/html/result/resultapi.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/html
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/html
+    [REMOTE_ADDR] => 192.168.128.127
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.128.126
+    [SERVER_NAME] => 192.168.128.126
+    [SERVER_SOFTWARE] => Apache/2.4.63 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=e6bb9b683b0e654a352aa52a7612dce5; _ga=GA1.1.1448916311.1750240497; _gid=GA1.1.1625577782.1750240497; _ga_YS49JN1DL1=GS2.1.s1750240497$o1$g1$t1750242540$j60$l0$h0
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.128.126/input/kojin_result.php?m=1
+    [HTTP_X_REQUESTED_WITH] => XMLHttpRequest
+    [HTTP_ACCEPT] => */*
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_HOST] => 192.168.128.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => aFLCi5sAua8GYxwIBL8fdQAAAMI
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /result/resultapi.php
+    [REQUEST_TIME_FLOAT] => 1750254219.8115
+    [REQUEST_TIME] => 1750254219
+)
+
+files:Array
+(
+)
+
+[2025/06/18 13:52:51]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 3
+    [m] => 129
+    [fd] => waza1_1
+    [va] => 2
+    [p] => 1
+    [v] => 12
+)
+session:
+files:Array
+(
+)
+
+[2025/06/18 15:20:31]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 3
+    [m] => 129
+    [fd] => waza1_1
+    [va] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+files:Array
+(
+)
+
+[2025/06/18 15:29:09]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 4
+    [v] => 12
+)
+session:
+files:Array
+(
+)
+
+[2025/06/18 15:29:13]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 4
+    [v] => 12
+)
+session:
+files:Array
+(
+)
+
+[2025/06/18 15:30:03]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 4
+    [v] => 12
+)
+session:
+files:Array
+(
+)
+
+[2025/06/18 15:30:07]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 4
+    [v] => 12
+)
+session:
+files:Array
+(
+)
+
+[2025/06/18 15:30:18]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 4
+    [v] => 12
+)
+session:
+files:Array
+(
+)
+
+[2025/06/18 15:41:03]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 3
+    [m] => 129
+    [fd] => waza1_1
+    [va] => 3
+    [p] => 1
+    [v] => 12
+)
+session:
+files:Array
+(
+)
+
+[2025/06/18 15:43:45]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 3
+    [m] => 129
+    [fd] => waza1_1
+    [va] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+files:Array
+(
+)
+
+[2025/06/18 16:02:05]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+files:Array
+(
+)
+
+[2025/06/18 16:02:05]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+files:Array
+(
+)
+
+[2025/06/18 16:35:32]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 4
+    [v] => 12
+)
+session:
+files:Array
+(
+)
+
+[2025/06/18 16:35:40]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 4
+    [v] => 12
+)
+session:
+files:Array
+(
+)
+
+[2025/06/18 19:15:04]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+files:Array
+(
+)
+
+[2025/06/18 19:15:13]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+files:Array
+(
+)
+
+[2025/06/18 19:15:42]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+files:Array
+(
+)
+
+[2025/06/18 19:15:52]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+files:Array
+(
+)
+
+[2025/06/18 19:15:52]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+files:Array
+(
+)
+
+[2025/06/18 23:23:05]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+files:Array
+(
+)
+
+[2025/06/18 23:23:51]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+files:Array
+(
+)
+
+[2025/06/18 23:24:07]--------------------------------------------------
+post:Array
+(
+)
+get:Array
+(
+    [n] => 1
+    [p] => 1
+    [v] => 12
+)
+session:
+files:Array
+(
+)
+

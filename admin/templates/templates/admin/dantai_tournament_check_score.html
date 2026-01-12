@@ -1,0 +1,112 @@
+{$htmlheader|default:''}
+{if $series_mw =='m'}
+  {if $seriesinfo.dantai_m_name == ''}
+<h2>団体トーナメントスコアーチェック</h2>
+  {else}
+<h2>{$seriesinfo.dantai_m_name}トーナメントスコアーチェック</h2>
+  {/if}
+{/if}
+{if $series_mw =='w'}
+  {if $seriesinfo.dantai_w_name == ''}
+  <h2>団体(女子)トーナメントスコアーチェック</h2>
+  {else}
+  <h2>{$seriesinfo.dantai_w_name}トーナメントスコアーチェック</h2>
+  {/if}
+{/if}
+    </h2>
+{section name=tournament_data loop=$tournament_list}
+    <table id="ex_t" border="0" cellspacing="1" cellpadding="0">
+      <tr>
+        <td class="td_right" colspan="2">対戦チーム</td>
+        <td class="td_right" colspan="3">試合
+        </td>
+      </tr>
+{section name=tournament_team loop=$tournament_list[tournament_data].team}
+      <tr>
+        <td class="td_right" colspan="2">
+{if $tournament_list[tournament_data].team[$smarty.section.tournament_team.index].id != 0}
+          {$entry_list[$tournament_list[tournament_data].team[$smarty.section.tournament_team.index].id]}
+{else}
+          &nbsp;
+{/if}
+        </td>
+{section name=tournament_match_offset start=0 loop=$tournament_list[tournament_data].match_level step=1}
+{assign var='match_no' value=$tournament_list[tournament_data].match_array[tournament_team][tournament_match_offset]-1}
+{if $tournament_list[tournament_data].match_array[tournament_team][tournament_match_offset] > 0 }
+{if $tournament_list[tournament_data].match_array[tournament_team][tournament_match_offset] < 1000 }
+        <td class="td_right" rowspan="2">
+{if $tournament_list[tournament_data].match[$match_no].place != 'no_match'}
+{if $tournament_list[tournament_data].match[$match_no].place != '0'}
+          <form action="dantai_tournament_check_score.php?s={$seriesinfo.dantai_tournament_m}&mw=m" method="post">
+{if $tournament_list[tournament_data].match[$match_no].approval==1}
+            承認済み
+            <input type="hidden" name="id" value="{$tournament_list[tournament_data].match[$match_no].match}">
+            <input type="hidden" name="mode" value="unapproval">
+            <input type="submit" name="submit" value="承認取り消し">
+{else}
+            未承認
+            <input type="hidden" name="id" value="{$tournament_list[tournament_data].match[$match_no].match}">
+            <input type="hidden" name="mode" value="approval">
+            <input type="submit" name="submit" value="承認">
+{/if}
+          </form>
+          <a href="/result/{{$smarty.session.auth.result_path_prefix}}/pdf/match{$tournament_list[tournament_data].match[$match_no].match}.pdf" target="_blank">PDF</a>
+{/if}
+{/if}
+        </td>
+{elseif $tournament_list[tournament_data].match_array[tournament_team][tournament_match_offset] >= 2000}
+{assign var='name_offset' value=$tournament_list[tournament_data].match_array[tournament_team][tournament_match_offset]%1000}
+{assign var='name_offset2' value=$name_offset-1}
+        <td class="td_right">{$tournament_list[tournament_data].match[$name_offset2].team2_name}</td>
+{elseif $tournament_list[tournament_data].match_array[tournament_team][tournament_match_offset] >= 1000}
+{assign var='name_offset' value=$tournament_list[tournament_data].match_array[tournament_team][tournament_match_offset]%1000}
+{assign var='name_offset2' value=$name_offset-1}
+        <td class="td_right">{$tournament_list[tournament_data].match[$name_offset2].team1_name}</td>
+{else}
+        <td class="td_right"></td>
+{/if}
+{elseif $tournament_list[tournament_data].match_array[tournament_team][tournament_match_offset] == 0}
+        <td class="td_right"></td>
+{/if}
+{/section}
+{/section}
+    </table>
+{if $tournament_list[tournament_data].extra_match_num > 0}
+    <table>
+{section name=tournament_extra_match start=0 loop=$tournament_list[tournament_data].extra_match_num step=1}
+{assign var='match_no' value=$tournament_list[tournament_data].match_num+tournament_extra_match}
+{assign var='place_no' value=$tournament_list[tournament_data].match_num+tournament_extra_match+1}
+      <tr>
+        <td class="td_right" colspan="3">順位決定戦</td>
+      </tr>
+      <tr>
+        <td class="td_right">{$tournament_list[tournament_data].match[$match_no].team1_name}</td>
+        <td class="td_right" rowspan="2">
+          {html_options name="place_`$smarty.section.tournament_data.iteration`_`$place_no`" options=$place_array selected=$tournament_list[tournament_data].match[$match_no].place}
+          {html_options name="place_match_`$smarty.section.tournament_data.iteration`_`$place_no`" options=$place_match_no_array selected=$tournament_list[tournament_data].match[$match_no].place_match_no}<br />
+          <a href="../input/dantai_result.php?a=1&p={$tournament_list[tournament_data].match[$match_no].place}&m={$tournament_list[tournament_data].match[$match_no].place_match_no}&lg=1&v={$seriesinfo.navi_id}">結果</a>
+        </td>
+        <td class="td_right">
+{if $tournament_list[tournament_data].match[$match_no].winner == 1}
+            {$tournament_list[tournament_data].match[$match_no].team1_name}
+{/if}
+{if $tournament_list[tournament_data].match[$match_no].winner == 2}
+            {$tournament_list[tournament_data].match[$match_no].team2_name}
+{/if}
+        </td>
+      </tr>
+      <tr>
+        <td class="td_right">{$tournament_list[tournament_data].match[$match_no].team2_name}</td>
+        <td class="td_right"></td>
+      </tr>
+{/section}
+    </table>
+{/if}
+{/section}
+{if $smarty.session.auth.locked == 0}
+    </form>
+{/if}
+    <br />
+    <br />
+    <br />
+{$htmlfooter|default:''}

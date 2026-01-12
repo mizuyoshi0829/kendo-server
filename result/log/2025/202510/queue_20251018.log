@@ -1,0 +1,4 @@
+[2025/10/18 23:53:10] cli
+[2025/10/18 23:53:10] SELECT * FROM `pdf_queue` WHERE `deleted_at` is null ORDER BY `id` ASC
+[2025/10/18 23:53:10] queue (1)
+[2025/10/18 23:53:10]    queue (9:1:11)

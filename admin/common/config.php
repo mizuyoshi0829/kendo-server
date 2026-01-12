@@ -1,0 +1,76 @@
+<?php
+
+define( '__ROOT_IP__', '192.168.1.126');
+//define( '__ROOT_IP__', 'localhost');
+//define( '__ROOT_IP__', '192.168.1.50');
+
+//define( '__HTTP_BASE__', 'http://localhost/kendo/reg/');
+//define( 'DATABASE_HOST', 'localhost' );
+
+//define( '__HTTP_BASE__', 'https://www.i-kendo.net/kendo/');
+//define( '__HTTP_BASE2__', 'https://www.i-kendo.net/kendo/admin/');
+define( '__HTTP_BASE__', 'http://'.__ROOT_IP__.'/');
+define( '__HTTP_BASE_SSL__', 'https://'.__ROOT_IP__.'/');
+define( '__HTTP_BASE2__', 'http://'.__ROOT_IP__.'/admin/');
+//define( '__HTTP_BASE__', 'http://localhost/');
+//define( '__HTTP_BASE_SSL__', 'https://localhost/');
+//define( '__HTTP_BASE2__', 'http://localhost/admin/');
+//define( 'DATABASE_HOST', 'mysql487.db.sakura.ne.jp' );
+//define( 'DATABASE_NAME', 'kendo-n_kendo-n' );
+//define( 'DATABASE_USER', 'kendo-n' );
+//define( 'DATABASE_PASSWORD', '95x9are5ze' );
+define( 'DATABASE_HOST', '127.0.0.1' );
+define( 'DATABASE_NAME', 'keioffice_kendo' );
+define( 'DATABASE_USER', 'keioffice_kendo' );
+define( 'DATABASE_PASSWORD', 'hprzjntc' );
+
+//define( 'ADMIN_PASSWORD', '18x3jph4fi' );
+define( '__ADMIN_PASSWORD2__', 'kendonagano' );
+define( '__ADMIN_PASSWORD__', 'tCTWlKr3CZ' );
+define( '__ADMIN_PASSWORD_2_1__', 'ZLi6AnV7H4' );
+define( '__ADMIN_PASSWORD_2_2__', 'Gx8DWWqidk' );
+define( '__ADMIN_PASSWORD_11__', 'k4RzF5qPVE' );
+define( '__ADMIN_PASSWORD_12__', 'ZkWknTT5A7' );
+define( '__ADMIN_PASSWORD_16__', 'gqAB4sHppG' );
+
+$input_passtbl = array(
+	array( 'series' => 0, 'place' => 1, 'pass' => '11', 'top'=>303 ),
+	array( 'series' => 0, 'place' => 2, 'pass' => '22', 'top'=>309 ),
+	array( 'series' => 0, 'place' => 3, 'pass' => '33', 'top'=>315 ),
+	array( 'series' => 0, 'place' => 4, 'pass' => '44', 'top'=>321 ),
+	array( 'series' => 0, 'place' => 5, 'pass' => '55', 'top'=>327 ),
+	array( 'series' => 0, 'place' => 6, 'pass' => '66', 'top'=>333 ),
+	array( 'series' => 0, 'place' => 7, 'pass' => '77', 'top'=>339 ),
+	array( 'series' => 0, 'place' => 8, 'pass' => '88', 'top'=>345 ),
+	array( 'series' => 16, 'place' => 1, 'pass' => '1111', 'top'=>303 ),
+	array( 'series' => 16, 'place' => 2, 'pass' => '2222', 'top'=>309 ),
+	array( 'series' => 16, 'place' => 3, 'pass' => '3333', 'top'=>303 ),
+	array( 'series' => 16, 'place' => 4, 'pass' => '4444', 'top'=>309 )
+);
+
+
+$__ADMIN_INFO__ = array(
+);
+
+define( '__PLAYER_NAME__', 1000 );
+
+define( '__REG_SERIES__', 2 );
+define( '__REG_SERIES_YEAR__', 2016 );
+define( '__REG_KAISAI_PREF__', 20 );
+
+define( '__MAXIMAGE__', 2 );
+define( '__THUMB1_WIDTH__', 1024 );
+define( '__THUMB2_WIDTH__', 256 );
+define( '__UPLOAD_PATH__', dirname(dirname(__FILE__)).'/upload/' );
+define( '__UPLOAD_ORG_PATH__', dirname(dirname(__FILE__)).'/upload/org/' );
+define( '__UPLOAD_RESULT_PATH__', dirname(dirname(dirname(dirname(__FILE__)))).'/kendo/result/allnaganoJunior' );
+define( '__UPLOAD_URL__', __HTTP_BASE__.'admin/upload/' );
+define( '__RESULT_PATH_BASE__', dirname(dirname(dirname(__FILE__))).'/result/' );
+
+define( '__SMARTY_PATH__', dirname(dirname(__FILE__)).'/Smarty3' );
+define( '__TEMPLATE_PATH__', dirname(dirname(__FILE__)).'/templates' );
+
+/********************************************************************/
+
+/********************************************************************/
+?>

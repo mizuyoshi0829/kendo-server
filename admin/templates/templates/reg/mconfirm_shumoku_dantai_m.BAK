@@ -1,0 +1,7 @@
+      <div class="tw180i">
+{if $smarty.session.p.shumoku_dantai_m_taikai=='1'}大会参加&nbsp;{/if}
+{if $smarty.session.p.shumoku_dantai_m_rensei_am=='1'}錬成会 午前参加&nbsp;{/if}
+{if $smarty.session.p.shumoku_dantai_m_rensei_pm=='1'}錬成会 午後参加&nbsp;{/if}
+{if $smarty.session.p.shumoku_dantai_m_opening=='1'}開会式参加&nbsp;{/if}
+{if $smarty.session.p.shumoku_dantai_m_konshin=='1'}懇親会参加する({$smarty.session.p.shumoku_dantai_m_text}名){/if}
+      </div>

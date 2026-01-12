@@ -1,0 +1,229 @@
+{$htmlheader|smarty:nodefaults}
+    <h2>データ一覧</h2>
+{*
+    <table border="0" cellspacing="1" cellpadding="0">
+      <tr>
+        <td class="td_left3">重複チェック</td>
+{foreach from=$month_tbl item=mt}
+        <td class="td_right">
+          <form action="index.php" method="post">
+            <input type="hidden" name="mode" value="check" />
+            <input type="hidden" name="month" value="{$mt.id}" />
+            <input type="submit" name="submit" value="{$mt.name}" />
+          </form>
+        </td>
+{/foreach}
+      </tr>
+      <tr>
+        <td class="td_left3">CSV出力</td>
+{foreach from=$month_tbl item=mt}
+        <td class="td_right">
+          <form action="index.php" method="post">
+            <input type="hidden" name="mode" value="csv" />
+            <input type="hidden" name="month" value="{$mt.id}" />
+            <input type="submit" name="submit" value="{$mt.name}" />
+          </form>
+        </td>
+{/foreach}
+      </tr>
+      <tr>
+        <td class="td_left3">返信メール</td>
+{foreach from=$month_tbl item=mt}
+        <td class="td_right">
+          <form action="index.php" method="post">
+            <input type="hidden" name="mode" value="mail" />
+            <input type="hidden" name="month" value="{$mt.id}" />
+            <input type="submit" name="submit" value="{$mt.name}" />
+          </form>
+        </td>
+{/foreach}
+      </tr>
+      <tr>
+        <td class="td_left3">抽選</td>
+{foreach from=$month_tbl item=mt}
+        <td class="td_right">
+          <form action="index.php" method="post">
+            <input type="hidden" name="mode" value="election" />
+            <input type="hidden" name="month" value="{$mt.id}" />
+            <input type="submit" name="submit" value="{$mt.name}" />
+          </form>
+        </td>
+{/foreach}
+      </tr>
+      <tr>
+        <td class="td_left3">当選メール</td>
+{foreach from=$month_tbl item=mt}
+        <td class="td_right">
+          <form action="index.php" method="post">
+            <input type="hidden" name="mode" value="winmail" />
+            <input type="hidden" name="month" value="{$mt.id}" />
+            <input type="submit" name="submit" value="{$mt.name}" />
+          </form>
+        </td>
+{/foreach}
+      </tr>
+      <tr>
+        <td class="td_left3">当選メールを送る</td>
+{foreach from=$month_tbl item=mt}
+        <td class="td_right">
+          <form action="index.php" method="post">
+            <input type="hidden" name="mode" value="send_winmail" />
+            <input type="hidden" name="month" value="{$mt.id}" />
+            <input type="submit" name="confirm" value="{$mt.name}" />
+          </form>
+        </td>
+{/foreach}
+      </tr>
+      <tr>
+        <td class="td_left3">落選メール</td>
+{foreach from=$month_tbl item=mt}
+        <td class="td_right">
+          <form action="index.php" method="post">
+            <input type="hidden" name="mode" value="losemail" />
+            <input type="hidden" name="month" value="{$mt.id}" />
+            <input type="submit" name="submit" value="{$mt.name}" />
+          </form>
+        </td>
+{/foreach}
+      </tr>
+      <tr>
+        <td class="td_left3">落選メールを送る</td>
+{foreach from=$month_tbl item=mt}
+        <td class="td_right">
+          <form action="index.php" method="post">
+            <input type="hidden" name="mode" value="send_losemail" />
+            <input type="hidden" name="month" value="{$mt.id}" />
+            <input type="submit" name="confirm" value="{$mt.name}" />
+          </form>
+        </td>
+{/foreach}
+      </tr>
+      <tr>
+        <td class="td_left3">一斉メールを送る</td>
+        <td class="td_right">
+          <form action="index.php" method="post">
+            <input type="hidden" name="mode" value="allmail" />
+            <input type="submit" name="confirm" value="編集" />
+          </form>
+        </td>
+        <td class="td_right">
+          <form action="index.php" method="post">
+            <input type="hidden" name="mode" value="send_allmail" />
+            <input type="submit" name="confirm" value="送信" />
+          </form>
+        </td>
+      </tr>
+    </table>
+*}
+{*
+    <form action="index.php" method="post">
+      <input type="hidden" name="mode" value="" />
+      <table border="0" cellspacing="1" cellpadding="0">
+        <tr>
+          <td class="td_right" colspan="2">
+            表示オプション
+            <input type="submit" name="submit" value="再表示" />
+          </td>
+        </tr>
+        <tr>
+          <td class="td_left3"> 表示期間</td>
+          <td class="td_right">
+            <select name="disp_month">
+              <option value="">全データ</option>
+{foreach from=$month_tbl item=mt}
+              <option value="{$mt.id}"{if $disp_month == $mt.id} selected{/if}>{$mt.name}</option>
+{/foreach}
+          </td>
+        </tr>
+        <tr>
+          <td class="td_left3"> 表示データ</td>
+          <td class="td_right">
+            <select name="disp_data">
+              <option value="all">全データ</option>
+              <option value="add"{if $disp_data == 'add'} selected{/if}>重複データ</option>
+              <option value="win"{if $disp_data == 'win'} selected{/if}>当選データ</option>
+              <option value="lose"{if $disp_data == 'lose'} selected{/if}>落選データ</option>
+          </td>
+        </tr>
+        <tr>
+          <td class="td_left3"> 表示順序</td>
+          <td class="td_right">
+            <select name="disp_sort">
+              <option value="no">データ番号</option>
+              <option value="mail"{if $disp_sort == 'mail'} selected{/if}>メルアド</option>
+          </td>
+        </tr>
+      </table>
+    </form>
+*}
+    <table id="ex_t" border="0" cellspacing="1" cellpadding="0">
+      <tr>
+        <td class="td_right">&nbsp;</td>
+        <td class="td_left">データ番号</td>
+        <td class="td_right">入力年月日</td>
+        <td class="td_right">メールアドレス</td>
+        <td class="td_right">&nbsp;</td>
+        <td class="td_right">&nbsp;</td>
+      </tr>
+{foreach from=$list item=lv name=datalist}
+      <tr>
+        <td class="td_left" {if $lv.del=='1'}bgcolor="#ffbbbb"{/if}>{$smarty.foreach.datalist.iteration}</td>
+        <td class="td_left" {if $lv.del=='1'}bgcolor="#ffbbbb"{/if}>{$lv.id}</td>
+        <td class="td_right" {if $lv.del=='1'}bgcolor="#ffbbbb"{/if}>{$lv.create_date}</td>
+        <td class="td_right" {if $lv.del=='1'}bgcolor="#ffbbbb"{/if}>
+          {foreach from=$lv.q item=lqv}{if $lqv.q == 'mail'}{$lqv.a|mb_convert_kana:'a'}{/if}{/foreach}
+        </td>
+{*
+        <td class="td_right">
+          <form action="index.php" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="id" value="{$fields[i1].id}">
+            <input type="submit" name="edit" value="編集">
+          </form>
+        </td>
+*}
+{if $lv.del=='1'}
+        <td class="td_right" bgcolor="#ffbbbb">
+          <form action="index.php" method="post">
+            削除済み
+            <input type="hidden" name="id" value="{$lv.id}">
+            <input type="hidden" name="mode" value="undelete">
+            <input type="submit" name="submit" value="削除取り消し">
+          </form>
+        </td>
+{else}
+        <td class="td_right">
+          <form action="index.php" method="post">
+            <input type="hidden" name="id" value="{$lv.id}">
+            <input type="hidden" name="mode" value="delete">
+            <input type="submit" name="submit" value="削除">
+          </form>
+        </td>
+{/if}
+{*
+{if $lv.win=='1'}
+        <td class="td_right" bgcolor="#ff8080">
+          <form action="index.php" method="post">
+            当選
+            <input type="hidden" name="id" value="{$fields[i1].id}">
+            <input type="hidden" name="mode" value="unset_win">
+            <input type="submit" name="submit" value="当選取り消し">
+          </form>
+        </td>
+{else}
+        <td class="td_right">
+          <form action="index.php" method="post">
+            落選
+            <input type="hidden" name="id" value="{$fields[i1].id}">
+            <input type="hidden" name="mode" value="set_win">
+            <input type="submit" name="submit" value="当選に変更">
+          </form>
+        </td>
+{/if}
+*}
+      </tr>
+{/foreach}
+    </table>
+    <br />
+    <br />
+    <br />
+{$htmlfooter|smarty:nodefaults}

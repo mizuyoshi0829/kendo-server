@@ -1,0 +1,12 @@
+      <div class="tw100i">
+<input type="radio" name="traffic" value="mycar" {if $smarty.session.p.traffic=='mycar'}checked="checked" {/if}/>自家用車(<input id="traffic_mycar" type="text" name="traffic_mycar" value="{$smarty.session.p.traffic_mycar}" class="textw4">台)<br />
+<input type="radio" name="traffic" value="bus_l" {if $smarty.session.p.traffic=='bus_l'}checked="checked" {/if}/>バス運転手あり（大）<br />
+<input type="radio" name="traffic" value="bus_m" {if $smarty.session.p.traffic=='bus_m'}checked="checked" {/if}/>バス運転手あり（中）<br />
+<input type="radio" name="traffic" value="bus_s" {if $smarty.session.p.traffic=='bus_s'}checked="checked" {/if}/>バス運転手あり（マイクロ）<br />
+<input type="radio" name="traffic" value="bus_non_l" {if $smarty.session.p.traffic=='bus_non_l'}checked="checked" {/if}/>バス運転手なし（大）<br />
+<input type="radio" name="traffic" value="bus_non_m" {if $smarty.session.p.traffic=='bus_non_m'}checked="checked" {/if}/>バス運転手なし（中）<br />
+<input type="radio" name="traffic" value="bus_non_s" {if $smarty.session.p.traffic=='bus_non_s'}checked="checked" {/if}/>バス運転手なし（マイクロ）<br />
+<input type="radio" name="traffic" value="share" {if $smarty.session.p.traffic=='share'}checked="checked" {/if}/>他のチームに便乗(<input id="traffic_share" type="text" name="traffic_share" value="{$smarty.session.p.traffic_share}" class="text">)<br />
+<input type="radio" name="traffic" value="train" {if $smarty.session.p.traffic=='train'}checked="checked" {/if}/>電車<br />
+<input type="radio" name="traffic" value="other" {if $smarty.session.p.traffic=='other'}checked="checked" {/if}/>他(<input id="traffic_other" type="text" name="traffic_other" value="{$smarty.session.p.traffic_other}" class="text">)<br />
+        </div>
