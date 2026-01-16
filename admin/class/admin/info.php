@@ -148,7 +148,6 @@ class form_page_admin_info extends form_page
             require_once dirname(dirname(__FILE__)) . '/page_dantai_tournament.php';
             $inc = dirname(__FILE__) . '/reg_s' . $_SESSION['auth']['series_info_id'] . 'd.php';
         }
-        echo $inc;
         if( file_exists( $inc ) ){
             require_once $inc;
         }
