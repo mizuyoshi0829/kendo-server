@@ -770,9 +770,9 @@
 				$html .= ( '(' . $gtbl[$league_data] . '-' . $gtbl[$league_data+$html_step-1] . ')' );
 				$html .= '</h2>'."\n";
 			}
-			$match_tbl = $league_param['chart_tbl'];
-			$match_team_tbl = $league_param['chart_team_tbl'];
-			$team_num = intval( $league_list[$league_data]['team_num'] );
+			//$match_tbl = $league_param['chart_tbl'];
+			//$match_team_tbl = $league_param['chart_team_tbl'];
+			//$team_num = intval( $league_list[$league_data]['team_num'] );
 			//print_r($match_tbl);
 			$html .= '    <table class="match_t" border="0" cellspacing="0" cellpadding="2">'."\n";
 			$html .= '      <tr>'."\n";
