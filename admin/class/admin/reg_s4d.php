@@ -2631,7 +2631,7 @@
 		$header .= '<head>'."\n";
 		$header .= '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />'."\n";
 		$header .= '<title>'.$mvstr.'団体決勝トーナメント結果</title>'."\n";
-		$header .= '<link href="../common/preleague_m.css" rel="stylesheet" type="text/css" />'."\n";
+		$header .= '<link href="../../common/preleague_m.css" rel="stylesheet" type="text/css" />'."\n";
 		$header .= '</head>'."\n";
 		$header .= '<body>'."\n";
 		//$header .= '<!--'."\n";
