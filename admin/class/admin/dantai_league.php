@@ -262,7 +262,11 @@ $headers = [
     'Content-Type: application/json',
     'Accept-Charset: UTF-8',
 ];
-$base_url = 'https://www.i-kendo.net/kendo/result/resultexcelapi.php';
+if( $series_info['navi_id'] == 1004 ){
+	$base_url = 'https://www.i-kendo.net/zenchu/result/resultexcelapi.php';
+} else {
+	$base_url = 'https://www.i-kendo.net/kendo/result/resultexcelapi.php';
+}
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $base_url);
 curl_setopt($ch, CURLOPT_POST, TRUE);
@@ -304,7 +308,11 @@ $headers = [
     'Content-Type: application/json',
     'Accept-Charset: UTF-8',
 ];
-$base_url = 'https://www.i-kendo.net/kendo/result/resultexcelapi.php';
+if( $series_info['navi_id'] == 1004 ){
+	$base_url = 'https://www.i-kendo.net/zenchu/result/resultexcelapi.php';
+} else {
+	$base_url = 'https://www.i-kendo.net/kendo/result/resultexcelapi.php';
+}
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $base_url);
 curl_setopt($ch, CURLOPT_POST, TRUE);
