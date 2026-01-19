@@ -1,7 +1,11 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'ipamjm';
+  src: url(/common/ipamjm.ttf) format("truetype");
+}
+
 body {
-	font: 100%/1.4 "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
-/*	background-color: #000000;*/
+	font: 100%/1.4 ipamjm,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
 	background-color: #ffffff;
 	margin: 0;
 	padding: 0;
@@ -524,4 +528,8 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 	height: 100%;
 	background: #FFFFFF;
 	border: 1px solid #000000;
+}
+
+.hide_referee {
+    display: none;
 }

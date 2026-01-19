@@ -2,7 +2,7 @@
 	require_once dirname(dirname(__FILE__)).'/admin/common/common.php';
 	require_once dirname(dirname(__FILE__)).'/admin/common/config.php';
 	require_once dirname(dirname(__FILE__)).'/admin/class/page.php';
-    define( '__NAVI_ID__', 16 );
+    define( '__NAVI_ID__', 1004 );
 
     session_start();
     $_SESSION['auth_input'] = array( 'login' => 0 );
