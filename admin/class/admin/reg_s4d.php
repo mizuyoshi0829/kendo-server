@@ -732,7 +732,7 @@
 		$header .= '<head>'."\n";
 		$header .= '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />'."\n";
 		$header .= '<title>'.$mvstr.'団体リーグ表</title>'."\n";
-		$header .= '<link href="../../common/preleague_s.css" rel="stylesheet" type="text/css" />'."\n";
+		$header .= '<link href="../../common/result_preleague_s.css" rel="stylesheet" type="text/css" />'."\n";
 		$header .= '</head>'."\n";
 		$header .= '<body>'."\n";
 		//$header .= '<!--'."\n";
@@ -741,6 +741,9 @@
 		//$header .= '-->'."\n";
 		$header .= '<div class="container">'."\n";
 		$header .= '  <div class="content">'."\n";
+		$header .= '    <h2 align="left" class="tx-h1"><a href="index_'.$mv.'.html">←戻る</a></h2>'."\n";
+		$header .= '    <br />'."\n";
+		$header .= '    <br />'."\n";
 
 		$footer = '     <h2 align="left" class="tx-h1"><a href="index_'.$mv.'.html">←戻る</a></h2>'."\n";
 		$footer .= '    <br />'."\n";
@@ -1110,15 +1113,18 @@
 		$header .= '<head>'."\n";
 		$header .= '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />'."\n";
 		$header .= '<title>'.$mvstr.'団体リーグ結果</title>'."\n";
-		$header .= '<link href="../../common/preleague_m.css" rel="stylesheet" type="text/css" />'."\n";
+		$header .= '<link href="../../common/result_preleague_m.css" rel="stylesheet" type="text/css" />'."\n";
 		$header .= '</head>'."\n";
 		$header .= '<body>'."\n";
 		$header .= '<!--'."\n";
-		$header .= print_r($league_list,true) . "\n";
-		$header .= print_r($entry_list,true) . "\n";
+		//$header .= print_r($league_list,true) . "\n";
+		//$header .= print_r($entry_list,true) . "\n";
 		$header .= '-->'."\n";
 		$header .= '<div class="container">'."\n";
 		$header .= '  <div class="content">'."\n";
+		$header .= '    <h2 align="left" class="tx-h1"><a href="index_'.$mv.'.html">←戻る</a></h2>'."\n";
+		$header .= '    <br />'."\n";
+		$header .= '    <br />'."\n";
 
 		$footer = '     <h2 align="left" class="tx-h1"><a href="index_'.$mv.'.html">←戻る</a></h2>'."\n";
 		$footer .= '    <br />'."\n";
@@ -2631,7 +2637,7 @@
 		$header .= '<head>'."\n";
 		$header .= '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />'."\n";
 		$header .= '<title>'.$mvstr.'団体決勝トーナメント結果</title>'."\n";
-		$header .= '<link href="../../common/preleague_m.css" rel="stylesheet" type="text/css" />'."\n";
+		$header .= '<link href="../../common/result_preleague_m.css" rel="stylesheet" type="text/css" />'."\n";
 		$header .= '</head>'."\n";
 		$header .= '<body>'."\n";
 		//$header .= '<!--'."\n";
@@ -2640,8 +2646,11 @@
 		//$header .= '-->'."\n";
 		$header .= '<div class="container">'."\n";
 		$header .= '  <div class="content">'."\n";
+		$header .= '    <h2 align="left" class="tx-h1"><a href="index_'.$mv.'.html">←戻る</a></h2>'."\n";
+		$header .= '    <br />'."\n";
+		$header .= '    <br />'."\n";
 
-		$footer = '     <h2 align="left" class="tx-h1"><a href="index_'.$mv.'.html">←戻る</a></h2>'."\n";
+		$footer = '    <h2 align="left" class="tx-h1"><a href="index_'.$mv.'.html">←戻る</a></h2>'."\n";
 		$footer .= '    <br />'."\n";
 		$footer .= '    <br />'."\n";
 		$footer .= '    </div>'."\n";
@@ -4198,7 +4207,7 @@ if( $line == 300 ){ break; }
 		$header .= '<head>'."\n";
 		$header .= '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />'."\n";
 		$header .= '<title>'.$mwstr.'団体グループトーナメント結果</title>'."\n";
-		$header .= '<link href="../common/preleague_m.css" rel="stylesheet" type="text/css" />'."\n";
+		$header .= '<link href="../../common/result_preleague_m.css" rel="stylesheet" type="text/css" />'."\n";
 		$header .= '</head>'."\n";
 		$header .= '<body>'."\n";
 		//$header .= '<!--'."\n";
@@ -4207,8 +4216,11 @@ if( $line == 300 ){ break; }
 		//$header .= '-->'."\n";
 		$header .= '<div class="container">'."\n";
 		$header .= '  <div class="content">'."\n";
+		$header .= '    <h2 align="left" class="tx-h1"><a href="index_'.$mw.'.html">←戻る</a></h2>'."\n";
+		$header .= '    <br />'."\n";
+		$header .= '    <br />'."\n";
 
-		$footer = '     <h2 align="left" class="tx-h1"><a href="index_'.$mw.'.html">←戻る</a></h2>'."\n";
+		$footer =  '    <h2 align="left" class="tx-h1"><a href="index_'.$mw.'.html">←戻る</a></h2>'."\n";
 		$footer .= '    <br />'."\n";
 		$footer .= '    <br />'."\n";
 		$footer .= '    </div>'."\n";
