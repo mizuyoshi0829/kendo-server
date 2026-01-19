@@ -6265,7 +6265,7 @@ echo $sql,"<br />\n";
 				. ' set `point`='.$team_list[$i1]['point'].','
 					. '`win`='.$team_list[$i1]['win'].','
 					. '`standing`='.$team_list[$i1]['standing'].','
-					. '`advanced`='.$team_list[$i1][
+					. '`advanced`='.$team_list[$i1]['advanced'].','
 					. '`hon`='.$team_list[$i1]['hon']
 					. ' where `id`='.$team_list[$i1]['id'];
 //echo $sql,"<br />\n";
