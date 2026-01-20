@@ -684,6 +684,37 @@ exit;
 		db_close( $dbs );
     }
 
+	function get_dantai_league_advanced_team( $series, $mw, $post )
+	{
+		$dbs = db_connect( DATABASE_HOST, DATABASE_USER, DATABASE_PASSWORD, DATABASE_NAME );
+		$sql = 'select * from `dantai_tournament` where `del`=0 and `series`='.$series;
+        if( $mw != '' ){ $sql .= " and `series_mw`='".$mw."'"; }
+        $sql .= ' and `year`='.$_SESSION['auth']['year'].' order by `id` asc';
+		$tlist = db_query_list( $dbs, $sql );
+        $part_tbl = [];
+		foreach( $tlist as $tdata ){
+			for( $i1 = 1; $i1 <= intval( $tdata['team_num'] ); $i1++ ){
+	            $part_tbl[$i1] = intval( $tdata['no'] );
+			}
+        }
+
+		$sql = 'select * from `dantai_league` where `del`=0 and `series`='.$series;
+        if( $mw != '' ){ $sql .= " and `series_mw`='".$mw."'"; }
+        $sql .= ' and `year`='.$_SESSION['auth']['year'].' order by `id` asc';
+		$list = db_query_list( $dbs, $sql );
+		foreach( $list as $lv ){
+			$sql = 'select * from `dantai_league_team` where `del`=0 and `league`='.$lv['id'].' and `advanced`=1 order by `id` asc';
+			$team_list = db_query_list( $dbs, $sql );
+			foreach( $team_list as $tlv ){
+				if( $tlv['advanced'] == 1 ){
+					$post['entry_'.$part_tbl[$lv['no']].'_'.$lv['no']] = $tlv['id'];
+					break;
+				}
+			}		
+		}
+		return $post;
+    }
+
 	function clear_dantai_tournament_match_info( $series )
 	{
 //return;

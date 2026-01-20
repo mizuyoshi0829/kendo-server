@@ -113,12 +113,16 @@ class form_page_admin_dantai_tournament extends form_page
 					return;
 				}
 			}
-		} else if( $mode == 'update' || $mode == 'loadcsv' ){
+        } else if( $mode == 'update' || $mode == 'loadcsv' || $mode == 'get_league_advanced' ){
 		    if( $mode == 'update' ){
     			$this->update_dantai_tournament_data( $series, $series_mw, $series_info['navi_id'], $_POST );
 	    	} else if( $mode == 'loadcsv' ){
     			$post = $objTournament->load_dantai_tournament_csvdata( $series, $series_mw, $_FILES["csv_file"]["tmp_name"] );
     			$this->update_dantai_tournament_data( $series, $series_mw, $series_info['navi_id'], $post );
+	    	} else if( $mode == 'get_league_advanced' ){
+    			$post = $objTournament->get_dantai_league_advanced_team( $series, $series_mw, $_POST );
+				print_r( $post );
+    			//$this->update_dantai_tournament_data( $series, $series_mw, $series_info['navi_id'], $post );
             }
 			$this->update_series_place_navi_data( $series_info['navi_id'] );
 			//$this->save_tournament_place_navi_data_tbl_file( 20, 21, 20, 21, 22, 23, 4 );

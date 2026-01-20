@@ -1346,7 +1346,7 @@ echo $sql,"<br />\n";
 			. '`winner`='.$list['winner'].','
 			. '`exist_match6`='.get_field_string_number( $list, 'exist_match6', 0 )
 			. ' where `id`='.$id;
-echo $sql,"<br />\n";
+//echo $sql,"<br />\n";
 		db_query( $dbs, $sql );
 
 		$sql = 'select * from `dantai_league_team` where `del`=0 and `league`='.$league.' order by `id` asc';
