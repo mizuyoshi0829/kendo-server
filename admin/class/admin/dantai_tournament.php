@@ -120,8 +120,7 @@ class form_page_admin_dantai_tournament extends form_page
 				}
 				if( isset( $_POST['get_league_advanced'] ) ){
 	    			$post = $objTournament->get_dantai_league_advanced_team( $series, $series_mw, $_POST );
-					print_r( $post );
-    				//$this->update_dantai_tournament_data( $series, $series_mw, $series_info['navi_id'], $post );
+    				$this->update_dantai_tournament_data( $series, $series_mw, $series_info['navi_id'], $post );
 				}
 	    	} else if( $mode == 'loadcsv' ){
     			$post = $objTournament->load_dantai_tournament_csvdata( $series, $series_mw, $_FILES["csv_file"]["tmp_name"] );

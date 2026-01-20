@@ -686,7 +686,6 @@ exit;
 
 	function get_dantai_league_advanced_team( $series, $mw, $post )
 	{
-		print_r( $post );
 		$dbs = db_connect( DATABASE_HOST, DATABASE_USER, DATABASE_PASSWORD, DATABASE_NAME );
 		$sql = 'select * from `dantai_tournament` where `del`=0 and `series`='.$series;
         if( $mw != '' ){ $sql .= " and `series_mw`='".$mw."'"; }
