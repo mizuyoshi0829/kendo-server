@@ -706,7 +706,7 @@ exit;
 			$sql = 'select * from `dantai_league_team` where `del`=0 and `league`='.$lv['id'].' and `advanced`=1 order by `id` asc';
 			$team_list = db_query_list( $dbs, $sql );
 			if( count($team_list) > 0 ){
-				$post['entry_'.$part_tbl[$lv['no']].'_'.$lv['no']] = $team_list[0]['id'];
+				$post['entry_'.$part_tbl[$lv['no']].'_'.$lv['no']] = $team_list[0]['team'];
 			}		
 		}
 		print_r($post);
