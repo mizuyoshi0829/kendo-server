@@ -1,11 +1,11 @@
 <?php
 	//require_once dirname(__FILE__).DIRECTORY_SEPARATOR.'reg_3.php';
-	require_once dirname(__FILE__).DIRECTORY_SEPARATOR.'reg_4.php';
-	require_once dirname(__FILE__).DIRECTORY_SEPARATOR.'reg_5.php';
-	require_once dirname(__FILE__).DIRECTORY_SEPARATOR.'reg_6.php';
+	//require_once dirname(__FILE__).DIRECTORY_SEPARATOR.'reg_4.php';
+	//require_once dirname(__FILE__).DIRECTORY_SEPARATOR.'reg_5.php';
+	//require_once dirname(__FILE__).DIRECTORY_SEPARATOR.'reg_6.php';
 //	require_once dirname(__FILE__).DIRECTORY_SEPARATOR.'reg_7_8.php';
 //	require_once dirname(__FILE__).DIRECTORY_SEPARATOR.'reg_9_10.php';
-	require_once dirname(__FILE__).DIRECTORY_SEPARATOR.'reg_12_13.php';
+	//require_once dirname(__FILE__).DIRECTORY_SEPARATOR.'reg_12_13.php';
 	require_once dirname(dirname(__FILE__)).DIRECTORY_SEPARATOR.'page.php';
     require_once dirname(dirname(__FILE__)) . '/page_dantai_entry.php';
     require_once dirname(dirname(__FILE__)) . '/page_dantai_match.php';

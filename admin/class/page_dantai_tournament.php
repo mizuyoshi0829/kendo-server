@@ -709,7 +709,6 @@ exit;
 				$post['entry_'.$part_tbl[$lv['no']].'_'.$lv['no']] = $team_list[0]['team'];
 			}		
 		}
-		print_r($post);
 		return $post;
     }
 
