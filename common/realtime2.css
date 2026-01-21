@@ -400,7 +400,7 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 	border: 1px solid #000000;
 	width: 24px;
 	position:absolute;
-	top: 12%;
+	top: 78px;
 	left: 60%;
 	font-size: 18px;
     z-index: 10;
