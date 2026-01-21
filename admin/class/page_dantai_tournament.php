@@ -703,7 +703,7 @@ exit;
         $sql .= ' and `year`='.$_SESSION['auth']['year'].' order by `id` asc';
 		$list = db_query_list( $dbs, $sql );
 		foreach( $list as $lv ){
-			$sql = 'select * from `dantai_league_team` where `del`=0 and `league`='.$lv['id'].' and `advanced`=1 order by `id` asc';
+			$sql = 'select * from `dantai_league_team` where `del`=0 and `league`='.$lv['id'].' and `real_advanced`=1 order by `id` asc';
 			$team_list = db_query_list( $dbs, $sql );
 			if( count($team_list) > 0 ){
 				$post['entry_'.$part_tbl[$lv['no']].'_'.$lv['no']] = $team_list[0]['team'];

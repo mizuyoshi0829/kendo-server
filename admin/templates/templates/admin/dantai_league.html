@@ -28,7 +28,7 @@
     </h2>
 {**}
 {if $seriesinfo.enable_clear == 1 && $seriesinfo.enable_clear_dl == 1}
-    <form action="dantai_league_.php?s={$series}&mw={$mw}" method="post" onsubmit="return confirm('試合データをクリアしてもよろしいですか？')">
+    <form action="dantai_league.php?s={$series}&mw={$mw}" method="post" onsubmit="return confirm('試合データをクリアしてもよろしいですか？')">
       <input type="hidden" name="mode" value="clear" />
 {*      <input type="hidden" name="category" value="{$category}" /> *}
       <input type="submit" name="submit" value="試合データクリア" />
