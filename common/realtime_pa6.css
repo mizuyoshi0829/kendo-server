@@ -533,3 +533,24 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 .hide_referee {
     display: none;
 }
+.tb_frame_supporter1 {
+	text-align: left;
+	border: none; /*1px solid #000000;*/
+	height: 30px;
+	position:absolute;
+	font-size: 16px;
+	top: 66px;
+	left: -8px;
+    color: #ff0000;
+}
+.tb_frame_supporter2 {
+	text-align: left;
+	border: none; /*1px solid #000000;*/
+	height: 30px;
+	position:absolute;
+	font-size: 16px;
+	top: 76px;
+	left: -8px;
+    color: #ff0000;
+}
+

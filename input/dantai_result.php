@@ -197,7 +197,7 @@
         $player_change_name = get_field_string( $_POST, 'player_change_name' );
         $on = get_field_string_number( $_POST, 'player'.$team.'_supporter_'.$player_index, 0 );
         if( $team != 0 && $player_index != 0 ){
-            $objMatch->set_dantai_player( $navi_id, $match, $team, $player, null, null, $on, $league );
+            $objMatch->set_dantai_player( $navi_id, $match, $team, $player_index, null, null, $on, $league );
             //$objMatch->set_dantai_player_supporter( $navi_id, $match, $team, $player_index, $player, $player_change_name, $on, $league );
         }
     } else if( $mode == 'exchane_flag' ){
@@ -350,9 +350,9 @@
             $result2str = '不戦勝';
         }
         if( $update_db ){
-            $hon1 = array(0,0,0,0,0,0);
-            $hon2 = array(0,0,0,0,0,0);
-            $win = array(0,0,0,0,0,0);
+            $hon1 = array(0,0,0,0,0,0,0);
+            $hon2 = array(0,0,0,0,0,0,0);
+            $win = array(0,0,0,0,0,0,0);
             $list = array(
                 'p' => $data['matches'],
                 'hon1' => $hon1,
@@ -364,6 +364,7 @@
                 'hon2sum' => 0,
                 'winner' => $data['winner']
             );
+//print_r($list);
             if( $league > 0 ){
                 $objLeague->update_dantai_league_one_result( $series, $league, $match, $list, $advance_num );
             } else if( $tournament > 0 ){
