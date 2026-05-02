@@ -579,7 +579,10 @@ print_r($list);
 						}
 						$lv['match'][$no-1]['matches'][$i1] = $one_match;
 					}
-					if( $lv['match'][$no-1]['end_match'] == 5 ){
+					if(
+						$lv['match'][$no-1]['fusen'] != 0
+						|| $lv['match'][$no-1]['end_match'] == 5
+					){
 						$lv['end_match']++;
 					}
 				}
@@ -1370,6 +1373,13 @@ echo $sql,"<br />\n";
 			$sql = 'select * from `dantai_match` where `id`='.$match_id;
 			$dantai_match = db_query_list( $dbs, $sql );
 			if( count($dantai_match) == 0 ){ continue; }
+
+			$fusen = get_field_string_number( $dantai_match[0], 'fusen', 0 );
+			if( $fusen != 0 ){
+				$exist_end = 1;
+				continue;
+			}
+
 
 			$endnum = 0;
 			for( $i1 = 1; $i1 <= 6; $i1++ ){

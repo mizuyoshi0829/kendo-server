@@ -10387,7 +10387,7 @@ echo $match.':'.date("H:i:s"),"\n";
 			}
 		}
 		$html .= '    <td rowspan="2" class="tbname01">';
-		if( $end_match == 5 ){
+		if( $end_match == 5 || $data['fusen'] == 1 ){
 			$html .= '      <div class="tb_frame_result_content">'."\n";
 			if( $data['winner'] == 1 ){
 				$html .= '        <span class="result-circle"></span>'."\n";
@@ -10396,14 +10396,24 @@ echo $match.':'.date("H:i:s"),"\n";
 			} else {
 				$html .= '        <span class="result-square"></span>'."\n";
 			}
-			$html .= '        <div class="tb_frame_result_hon">'.$data['hon1'].'</div>'."\n";
-			$html .= '        <div class="tb_frame_result_win">'.$data['win1'].'</div>'."\n";
+	    		if( $data['fusen'] == 0 ){
+				$html .= '        <div class="tb_frame_result_hon">'.$data['hon1'].'</div>'."\n";
+				$html .= '        <div class="tb_frame_result_win">'.$data['win1'].'</div>'."\n";
+			}
 			$html .= '      </div>'."\n";
 		} else {
 			$html .= '&nbsp;';
 		}
 		$html .= '    </td>'."\n";
 		$html .= '    <td colspan="3" class="tbname01">'."\n";
+	    	if( $data['fusen'] == 1 ){
+        		if( $data['winner'] == 1 ){
+                		$html .= '不戦勝';
+		        } else {
+                		$html .= '';
+            		}
+		} else {
+
 		if( $team1_index == -1 || $data['matches'][6]['player1'] == 0 ){
 			$html .= '&nbsp;';
 		} else if( $data['matches'][6]['player1'] == 8 ){
@@ -10434,6 +10444,8 @@ echo $match.':'.date("H:i:s"),"\n";
 			} else {
 				$html .= $entry_list[$team1_index][$f.'_sei'];
 			}
+		}
+
 		}
 		$html .= '    </td>'."\n";
 		$html .= '  </tr>'."\n";
@@ -10548,7 +10560,7 @@ echo $match.':'.date("H:i:s"),"\n";
 			}
 		}
 		$html .= '    <td rowspan="2" class="tbname01">';
-		if( $end_match == 5 ){
+		if( $end_match == 5 || $data['fusen'] == 1 ){
 			$html .= '      <div class="tb_frame_result_content">'."\n";
 			if( $data['winner'] == 2 ){
 				$html .= '        <span class="result-circle"></span>'."\n";
@@ -10557,8 +10569,10 @@ echo $match.':'.date("H:i:s"),"\n";
 			} else {
 				$html .= '        <span class="result-square"></span>'."\n";
 			}
-			$html .= '        <div class="tb_frame_result_hon">'.$data['hon2'].'</div>'."\n";
-			$html .= '        <div class="tb_frame_result_win">'.$data['win2'].'</div>'."\n";
+			if( $data['fusen'] == 0 ){
+				$html .= '        <div class="tb_frame_result_hon">'.$data['hon2'].'</div>'."\n";
+				$html .= '        <div class="tb_frame_result_win">'.$data['win2'].'</div>'."\n";
+			}
 			$html .= '      </div>'."\n";
 		} else {
 			$html .= '&nbsp;';
@@ -10621,6 +10635,14 @@ echo $match.':'.date("H:i:s"),"\n";
 		}
 		//$html .= '    <td rowspan="2" class="tbname01">'.$hon1sum.'<br />'.$win1sum.'</td>'."\n";
 		$html .= '    <td colspan="3" class="tbname01">'."\n";
+	    	if( $data['fusen'] == 1 ){
+        	    if( $data['winner'] == 2 ){
+                	$player = '不戦勝';
+	            } else {
+        	        $player = '';
+            	    }
+  		} else {
+
 		if( $team2_index == -1 || $data['matches'][6]['player2'] == 0 ){
 			$html .= '&nbsp;';
 		} else if( $data['matches'][6]['player2'] == 8 ){
@@ -10651,6 +10673,8 @@ echo $match.':'.date("H:i:s"),"\n";
 			} else {
 				$html .= $entry_list[$team2_index][$f.'_sei'];
 			}
+		}
+
 		}
 		$html .= '    </td>'."\n";
 		$html .= '  </tr>'."\n";
