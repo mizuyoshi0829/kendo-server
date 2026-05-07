@@ -5166,7 +5166,7 @@ print_r( $match_id_list );
             $lv['result_prefix'] = $series_info['result_prefix'];
             $lv['split_tournament_match_output'] = $series_info['split_tournament_match_output'];
 			$this->update_place_navi_data( $lv, $navi_id, $dbs );
-print_r($lv);echo "<br />\n";
+//print_r($lv);echo "<br />\n";
 		}
 	}
 
