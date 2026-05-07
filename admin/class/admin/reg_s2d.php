@@ -182,6 +182,7 @@
 		}
 
 		db_close( $dbs );
+print_r($ret);
 		return $ret;
 	}
 
