@@ -131,17 +131,23 @@
 			.' order by `disp_order` asc';
 		$list = db_query_list( $dbs, $sql );
 
+        $shumoku = [];
+        if( $mw == '' || $mw == 'm' ){
+            $shumoku[] = '\'shumoku_dantai_m_taikai\'';
+			$shumoku[] = '\'shumoku_dantai_m_rensei_am\'';
+			$shumoku[] = '\'shumoku_dantai_m_rensei_pm\'';
+			$shumoku[] = '\'shumoku_dantai_m_opening\'';
+			$shumoku[] = '\'shumoku_dantai_m_konshin\'';
+        }
+        if( $mw == '' || $mw == 'w' ){
+            $shumoku[] = '\'shumoku_dantai_w_taikai\'';
+            $shumoku[] = '\'shumoku_dantai_w_rensei_am\'';
+            $shumoku[] = '\'shumoku_dantai_w_rensei_pm\'';
+            $shumoku[] = '\'shumoku_dantai_w_opening\'';
+            $shumoku[] = '\'shumoku_dantai_w_konshin\'';
+        }
 		$sql = 'select * from `entry_field` where `field`'
-			. ' in (\'shumoku_dantai_m_taikai\','
-			. '\'shumoku_dantai_m_rensei_am\','
-			. '\'shumoku_dantai_m_rensei_pm\','
-			. '\'shumoku_dantai_m_opening\','
-			. '\'shumoku_dantai_m_konshin\','
-			. '\'shumoku_dantai_w_taikai\','
-			. '\'shumoku_dantai_w_rensei_am\','
-			. '\'shumoku_dantai_w_rensei_pm\','
-			. '\'shumoku_dantai_w_opening\','
-			. '\'shumoku_dantai_w_konshin\')'
+			. ' in (' . implode(',', $shumoku ) . ')'
             . ' and `year`='.$_SESSION['auth']['year'];
 		$field_list = db_query_list( $dbs, $sql );
 		foreach( $list as &$lv ){
@@ -154,7 +160,14 @@
 				if( $id == $info ){
 					if( intval( $fv['data'] ) == 1 ){
 						$lv['join'] = 1;
-						break;
+                        if( substr( $fv['field'], 15, 1 ) == 'm' ){
+							$lv['join_m'] = 1;
+						} else {
+							$lv['join_w'] = 1;
+						}
+						if( $lv['join_m'] == 1 && $lv['join_w'] == 1 ){
+							break;
+						}
 					}
 				}
 			}
