@@ -150,7 +150,8 @@
 			. ' in (' . implode(',', $shumoku ) . ')'
             . ' and `year`='.$_SESSION['auth']['year'];
 		$field_list = db_query_list( $dbs, $sql );
-		foreach( $list as &$lv ){
+        $ret = [];
+		foreach( $list as $lv ){
 			$id = intval( $lv['id'] );
 			$lv['join'] = 0;
 			$lv['join_m'] = 0;
@@ -171,10 +172,17 @@
 					}
 				}
 			}
+            if( $mw == 'm' && $lv['join_m'] == 0 ){
+                continue;
+            }
+            if( $mw == 'w' && $lv['join_w'] == 0 ){
+                continue;
+            }
+            $ret[] = $lv;
 		}
 
 		db_close( $dbs );
-		return $list;
+		return $ret;
 	}
 
 	function get_entry_data_3_list_for_PDF( $pref_array, $grade_elementary_array )

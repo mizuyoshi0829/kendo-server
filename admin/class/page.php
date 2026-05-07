@@ -3527,7 +3527,7 @@ echo "-->\n";
 		return $data;
 	}
 
-	function get_entry_array_for_smarty( $series, $mw )
+	function get_entry_array_for_smarty( $series, $mw='' )
 	{
 		$dbs = db_connect( DATABASE_HOST, DATABASE_USER, DATABASE_PASSWORD, DATABASE_NAME );
 		$sql = 'select * from `entry_info` where `del`=0 and `series`='.$series.' order by `disp_order` asc';
