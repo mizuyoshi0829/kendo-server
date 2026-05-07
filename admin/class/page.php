@@ -5142,8 +5142,8 @@ print_r( $match_id_list );
 			. ' order by `dantai_match`.`place_match_no` asc';
 		$list = db_query_list( $dbs, $sql );
         $match_num = $series_info['series_info_id'];
-//echo $sql;
-//print_r($list);echo "<br />\n";
+echo $sql;
+print_r($list);echo "<br />\n";
 		foreach( $list as $lv ){
 			$match_num = $lv['match_num'] + $lv['extra_match_num'];
             //if( $match_num < $lv['place_match_no'] ){ continue; }
