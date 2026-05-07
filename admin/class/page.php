@@ -3535,7 +3535,7 @@ echo "-->\n";
 		//$list = db_query_list( $dbs, $sql );
 
         $func = 'get_entry_data_list2_' . $series;
-        $list = $func();
+        $list = $func($mw);
 
 //echo $sql;
 //print_r($list );

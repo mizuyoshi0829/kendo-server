@@ -121,7 +121,7 @@
 		return false;
 	}
 
-	function get_entry_data_list2_3()
+	function get_entry_data_list2_3( $mw )
 	{
 		$dbs = db_connect( DATABASE_HOST, DATABASE_USER, DATABASE_PASSWORD, DATABASE_NAME );
 		$sql = 'select `entry_info`.*,`entry_field`.`data` as `school_name` from `entry_info`'
@@ -131,7 +131,18 @@
 			.' order by `disp_order` asc';
 		$list = db_query_list( $dbs, $sql );
 
-		$sql = 'select * from `entry_field` where `field` in (\'shumoku_dantai_taikai\',\'shumoku_dantai_rensei_am\',\'shumoku_dantai_rensei_pm\',\'shumoku_dantai_opening\',\'shumoku_dantai_konshin\') and `year`='.$_SESSION['auth']['year'];
+		$sql = 'select * from `entry_field` where `field`'
+			. ' in (\'shumoku_dantai_m_taikai\','
+			. '\'shumoku_dantai_m_rensei_am\','
+			. '\'shumoku_dantai_m_rensei_pm\','
+			. '\'shumoku_dantai_m_opening\','
+			. '\'shumoku_dantai_m_konshin\','
+			. '\'shumoku_dantai_w_taikai\','
+			. '\'shumoku_dantai_w_rensei_am\','
+			. '\'shumoku_dantai_w_rensei_pm\','
+			. '\'shumoku_dantai_w_opening\','
+			. '\'shumoku_dantai_w_konshin\')'
+            . ' and `year`='.$_SESSION['auth']['year'];
 		$field_list = db_query_list( $dbs, $sql );
 		foreach( $list as &$lv ){
 			$id = intval( $lv['id'] );

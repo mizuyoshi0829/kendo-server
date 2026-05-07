@@ -301,7 +301,7 @@ class form_page_admin_info extends form_page
         }
         //$this->smarty_assign['list'] = $this->get_entry_data_list2( $series );
         $func = 'get_entry_data_list2_' . $series;
-        $infolist = $func();
+        $infolist = $func('');
         $this->smarty_assign['list'] = $infolist;
         $this->smarty_assign['seriesinfo'] = $serieslist;
         $this->smarty_assign['admin_title'] = $serieslist['name'];
