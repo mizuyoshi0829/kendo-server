@@ -131,21 +131,13 @@
 			.' order by `disp_order` asc';
 		$list = db_query_list( $dbs, $sql );
 
-        $shumoku = [];
-        if( $mw == '' || $mw == 'm' ){
-            $shumoku[] = '\'shumoku_dantai_m_taikai\'';
-			$shumoku[] = '\'shumoku_dantai_m_rensei_am\'';
-			$shumoku[] = '\'shumoku_dantai_m_rensei_pm\'';
-			$shumoku[] = '\'shumoku_dantai_m_opening\'';
-			$shumoku[] = '\'shumoku_dantai_m_konshin\'';
-        }
-        if( $mw == '' || $mw == 'w' ){
-            $shumoku[] = '\'shumoku_dantai_w_taikai\'';
-            $shumoku[] = '\'shumoku_dantai_w_rensei_am\'';
-            $shumoku[] = '\'shumoku_dantai_w_rensei_pm\'';
-            $shumoku[] = '\'shumoku_dantai_w_opening\'';
-            $shumoku[] = '\'shumoku_dantai_w_konshin\'';
-        }
+        $shumoku = [
+	        '\'shumoku_dantai_taikai\'',
+			'\'shumoku_dantai_rensei_am\'',
+			'\'shumoku_dantai_rensei_pm\'',
+			'\'shumoku_dantai_opening\'',
+			'\'shumoku_dantai_konshin\'',
+		];
 		$sql = 'select * from `entry_field` where `field`'
 			. ' in (' . implode(',', $shumoku ) . ')'
             . ' and `year`='.$_SESSION['auth']['year'];
@@ -154,35 +146,20 @@
 		foreach( $list as $lv ){
 			$id = intval( $lv['id'] );
 			$lv['join'] = 0;
-			$lv['join_m'] = 0;
-			$lv['join_w'] = 0;
 			foreach( $field_list as $fv ){
 				$info = intval( $fv['info'] );
 				if( $id == $info ){
 					if( intval( $fv['data'] ) == 1 ){
 						$lv['join'] = 1;
-                        if( substr( $fv['field'], 15, 1 ) == 'm' ){
-							$lv['join_m'] = 1;
-						} else {
-							$lv['join_w'] = 1;
-						}
-						if( $lv['join_m'] == 1 && $lv['join_w'] == 1 ){
-							break;
-						}
+						break;
 					}
 				}
 			}
-            if( $mw == 'm' && $lv['join_m'] == 0 ){
-                continue;
-            }
-            if( $mw == 'w' && $lv['join_w'] == 0 ){
-                continue;
-            }
             $ret[] = $lv;
 		}
 
 		db_close( $dbs );
-print_r($ret);
+//print_r($ret);
 		return $ret;
 	}
 
