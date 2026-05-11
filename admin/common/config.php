@@ -1,8 +1,8 @@
 <?php
 
-define( '__ROOT_IP__', '192.168.1.126');
+//define( '__ROOT_IP__', '192.168.1.126');
 //define( '__ROOT_IP__', 'localhost');
-//define( '__ROOT_IP__', '192.168.1.50');
+define( '__ROOT_IP__', '192.168.1.50');
 
 //define( '__HTTP_BASE__', 'http://localhost/kendo/reg/');
 //define( 'DATABASE_HOST', 'localhost' );

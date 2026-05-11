@@ -1,3 +1,5 @@
 /admin/templates/templates_c
 /admin/log
 /result
+/admin/common/config.php
+/realtime/config.js
