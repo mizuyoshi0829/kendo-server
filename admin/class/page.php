@@ -5235,7 +5235,7 @@ print_r( $match_id_list );
 			. ' inner join `navi_series` on `navi_series`.`series`=`series`.`id`'
 			. ' where `navi_series`.`navi_id`='.$navi_id.' and `navi_series`.`del`=0'
 			. ' order by `navi_series`.`id` asc';
-echo $sql;
+//echo $sql;
         $dl = array();
         $dt = array();
         $kt = array();
