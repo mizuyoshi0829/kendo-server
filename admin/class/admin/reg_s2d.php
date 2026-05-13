@@ -625,21 +625,21 @@
 		if( $mw == 'm' ){
 			$mwstr = $series_info['dantai_m_name'];
 			$table_name_rowspan = 3;
-			$table_name_name_width = 186; //148;
+			$table_name_name_width = 160; //148;
 			$table_height = 6;
 			$table_font_size = 11;
 			$table_font_size_small = 8;
 			$table_place_font_size = 6;
-			$table_cell_width = 30;
+			$table_cell_width = 24;
 		} else {
 			$mwstr = $series_info['dantai_w_name'];
 			$table_name_rowspan = 3;
-			$table_name_name_width = 186; //148;
+			$table_name_name_width = 160; //148;
 			$table_height = 6;
 			$table_font_size = 11;
 			$table_font_size_small = 8;
 			$table_place_font_size = 6;
-			$table_cell_width = 30;
+			$table_cell_width = 24;
 		}
 		$lindex = 1;
 	foreach ($tournament_list as $tournament_data) {
