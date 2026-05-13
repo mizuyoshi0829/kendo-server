@@ -37,7 +37,7 @@
         conn = new WebSocket('ws://' + base_ip + ':3000/');
 
         conn.onopen = function (e) {
-            conn.send('{"mode":1,"navi":' + mavi_id + ',"places":["7","8","9","10"]}');
+            conn.send('{"mode":1,"navi":' + mavi_id + ',"places":["1","2","3","4"]}');
         };
 
         conn.onerror = function (e) {
