@@ -1032,9 +1032,9 @@ class form_page_kojin_tournament
 				$break_html_name = $cssparam['break_html_name'];
 			}
         }
-        if( $return_path == '' ){
+        //if( $return_path == '' ){
             $return_path = 'index_%s.html';
-        }
+        //}
 		if( $break_html === null ){
 			$break_html = [];
 	        for( $tournament_index = 0; $tournament_index < count($tournament_data['data']); $tournament_index++ ){
@@ -1060,6 +1060,10 @@ class form_page_kojin_tournament
 			. '</head>' . "\n"
 			. '<body>' . "\n"
 			. '<style>' . "\n"
+                        . '.container {' . "\n"
+                        . '    width: 80%;' . "\n"
+                        . '    min-width: 1100px;' . "\n"
+                        . '}' . "\n"
 			. '.div_result_tournament_name {' . "\n"
 			. '    margin: 0;' . "\n"
 			. '    padding: 0;' . "\n"

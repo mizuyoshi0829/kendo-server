@@ -61,6 +61,8 @@ function string_insert_br( $str )
 	for(;;){
 		$s = grapheme_extract($str, 1, GRAPHEME_EXTR_COUNT, $next, $next);
 		if( $s === 'ー' ){ $s = '丨'; }
+                if( $s === '（' ){ $s = '︵'; }
+                if( $s === '）' ){ $s = '︶'; }
 		if( !$first ){ $ret .= '<br />'; }
 		$ret .= $s;
 		if( $next >= $maxbytes ){ break; }
