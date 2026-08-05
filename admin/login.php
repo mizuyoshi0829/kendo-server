@@ -5,7 +5,7 @@
 
 	$objPage = new form_page_admin_login();
 	if( $objPage != null ){
-		$objPage->init(41,0);
+		$objPage->init(58,0);
 		$objPage->dispatch();
 	}
 ?>

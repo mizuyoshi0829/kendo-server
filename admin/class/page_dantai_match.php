@@ -2111,10 +2111,10 @@ ini_set( 'memory_limit', '256M' );
                 } else {
 					$name = $entry_list[$team1_index][$f.'_sei'];
 					for( $fi = 1; $fi <= 7; $fi++ ){
-						$name2 = $entry_list[$team1_index][$f2.$fi.'_sei'];
+						$name2 = $entry_list[$team1_index][sprintf($f2,$fi).'_sei'];
 						if( $fi != $data['matches'][$i1]['player1'] && $name2 != '' && $name == $name2 ){
 							$add1 = mb_substr( $entry_list[$team1_index][$f.'_mei'], 0, 1 );
-							$add2 = mb_substr( $entry_list[$team1_index][$f2.$fi.'_mei'], 0, 1 );
+							$add2 = mb_substr( $entry_list[$team1_index][sprintf($f2,$fi).'_mei'], 0, 1 );
 							if( $add1 == $add2 ){
 								$add1 = mb_substr( $entry_list[$team1_index][$f.'_mei'], 1, 1 );
 							}
@@ -2386,10 +2386,10 @@ ini_set( 'memory_limit', '256M' );
 				} else {
 					$name = $entry_list[$team2_index][$f.'_sei'];
 					for( $fi = 1; $fi <= 7; $fi++ ){
-						$name2 = $entry_list[$team2_index][$f2.$fi.'_sei'];
+						$name2 = $entry_list[$team2_index][sprintf($f2,$fi).'_sei'];
 						if( $fi != $data['matches'][$i1]['player2'] && $name2 != '' && $name == $name2 ){
 							$add1 = mb_substr( $entry_list[$team2_index][$f.'_mei'], 0, 1 );
-							$add2 = mb_substr( $entry_list[$team2_index][$f2.$fi.'_mei'], 0, 1 );
+							$add2 = mb_substr( $entry_list[$team2_index][sprintf($f2,$fi).'_mei'], 0, 1 );
 							if( $add1 == $add2 ){
 								$add1 = mb_substr( $entry_list[$team2_index][$f.'_mei'], 1, 1 );
 							}

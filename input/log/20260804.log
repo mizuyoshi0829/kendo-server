@@ -1,0 +1,92 @@
+[2026/08/04 21:12:40]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 1
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 3329
+    [player2_id] => 9217
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 1
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 1
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 2
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=1
+    [QUERY_STRING] => a=0&s=60&t=2&m=1
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 58679
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.1.19
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.1.50
+    [SERVER_NAME] => 192.168.1.50
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_PRIORITY] => u=0, i
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_COOKIE] => PHPSESSID=a2b8837c7eaf6a0096b28df445463104
+    [HTTP_REFERER] => http://192.168.1.50/input/kojin_result.php?m=1
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_ORIGIN] => http://192.168.1.50
+    [CONTENT_LENGTH] => 223
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:153.0) Gecko/20100101 Firefox/153.0
+    [HTTP_HOST] => 192.168.1.50
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anJVx8M8IQPU1m6AOoaPyAAAAJI
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1785877959.9697
+    [REQUEST_TIME] => 1785877959
+)
+
