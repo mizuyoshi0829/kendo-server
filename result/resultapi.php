@@ -42,7 +42,7 @@
                 if( $match == -1 ){ break; }
                 $file_write = true;
                 if( $match >= 1000 ){
-                    $html = output_realtime_html_for_one_board2( $navi_id, $pi, $match );
+                    $html = output_realtime_html_for_one_board2( $navi_id, $pi, $match, $player );
                 } else {
                     if( $navi_id == 6 ){
                         if( $place == 0 ){

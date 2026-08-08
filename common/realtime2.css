@@ -247,8 +247,18 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 	width: 48%;
     float: left;
 }
+#result1 .tb_frame_name_add {
+    margin-left: -26px;
+	font-size: 48px;
+}
+#result1 .tb_frame_content2_smallfont4 {
+	font-size: 48px;
+}
+#result1 .tb_frame_content2_smallfont5 {
+	font-size: 44px;
+}
 #result1 .tb_frame_content2_smallfont6 {
-	font-size: 50px;
+	font-size: 38px;
 }
 #result1 .tb_frame_content2_smallfont7 {
 	font-size: 38px;  /*42px;*/
@@ -276,10 +286,6 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 }
 #result1 .tb_frame_content2_smallfont15 {
 	font-size: 19px;
-}
-#result1 .tb_frame_name_add {
-    margin-left: -26px;
-	font-size: 48px;
 }
 #result1 .tb_frame_current_match {
 	background-color: #ff0000;

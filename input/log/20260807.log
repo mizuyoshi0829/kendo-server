@@ -1,0 +1,6364 @@
+[2026/08/07 04:23:33]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 1
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 34049
+    [player2_id] => 39937
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 2
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 1
+    [waza2_3] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 1
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 4
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=1
+    [QUERY_STRING] => a=0&s=60&t=2&m=1
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 53801
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.80
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=827811e6b01130b36ba2a7759934f83a
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=1
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 205
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVdxSCYxuO18IWCWg47FgAAAMA
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786076613.1937
+    [REQUEST_TIME] => 1786076613
+)
+
+[2026/08/07 04:24:20]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 1
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 29953
+    [player2_id] => 25601
+    [faul1_1] => 0
+    [faul1_2] => 1
+    [waza1_1] => 1
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [t] => 1
+    [m] => 1
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 7
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&t=1&m=1
+    [QUERY_STRING] => a=0&s=61&t=1&m=1
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 63396
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.66
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=53c60ed032c50b01b3ad05653dc51978
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=1
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 225
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVd9CCYxuO18IWCWg47HwAAAMw
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786076660.6989
+    [REQUEST_TIME] => 1786076660
+)
+
+[2026/08/07 04:24:22]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 1
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 3329
+    [player2_id] => 9217
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 2
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 1
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 2
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=1
+    [QUERY_STRING] => a=0&s=60&t=2&m=1
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 58225
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.59
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=2e574e43d66a1cb98b20470f34c98ced
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=1
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 223
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVd9iCYxuO18IWCWg47IQAAAMU
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786076662.3508
+    [REQUEST_TIME] => 1786076662
+)
+
+[2026/08/07 04:25:35]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 1
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 9473
+    [player2_id] => 15361
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_1] => 1
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [t] => 1
+    [m] => 1
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 5
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&t=1&m=1
+    [QUERY_STRING] => a=0&s=61&t=1&m=1
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 60233
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.68
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=b858a143ac1db3724256d57033d6e49e
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=1
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 232
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVePwciw_tXKHzPtMkxhQAAAII
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786076735.1459
+    [REQUEST_TIME] => 1786076735
+)
+
+[2026/08/07 04:26:02]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 1
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 8449
+    [player2_id] => 34817
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 1
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 1
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 1
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 3
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=1
+    [QUERY_STRING] => a=0&s=60&t=2&m=1
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 64468
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.61
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=04a6343bb52d2de8690e8e384160a5fd
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=1
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 232
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVeWi2M9PfSEiX3Xt2WtQAAAEM
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786076762.1625
+    [REQUEST_TIME] => 1786076762
+)
+
+[2026/08/07 04:27:46]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 1
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 14593
+    [player2_id] => 30721
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 1
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [t] => 1
+    [m] => 1
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 6
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&t=1&m=1
+    [QUERY_STRING] => a=0&s=61&t=1&m=1
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 60076
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.69
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=5f74791d41509ba66cd5f0d8d56ea299
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=1
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 233
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVewiCYxuO18IWCWg47KQAAAMY
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786076866.7886
+    [REQUEST_TIME] => 1786076866
+)
+
+[2026/08/07 04:28:48]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 1
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 24833
+    [player2_id] => 10241
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 1
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [t] => 1
+    [m] => 1
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 8
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&t=1&m=1
+    [QUERY_STRING] => a=0&s=61&t=1&m=1
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 51701
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.34
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=f127dd9499d63258f2ec1a2443d2a842
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=1
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 233
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVfACCYxuO18IWCWg47KwAAANU
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786076928.1102
+    [REQUEST_TIME] => 1786076928
+)
+
+[2026/08/07 04:29:45]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 1
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 39169
+    [player2_id] => 4097
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 1
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 1
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 1
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=1
+    [QUERY_STRING] => a=0&s=60&t=2&m=1
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 49718
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.85
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=1d7751787eac36f774e1803289b7bc62
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=1
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 232
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVfOS2M9PfSEiX3Xt2WwAAAAEA
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786076985.1781
+    [REQUEST_TIME] => 1786076985
+)
+
+[2026/08/07 04:30:58]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 2
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 35585
+    [player2_id] => 9729
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 1
+    [waza2_1] => 3
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [t] => 1
+    [m] => 2
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 7
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&t=1&m=2
+    [QUERY_STRING] => a=0&s=61&t=1&m=2
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 49875
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.66
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=53c60ed032c50b01b3ad05653dc51978
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=2
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 224
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVfgi2M9PfSEiX3Xt2WwwAAAEk
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786077058.7652
+    [REQUEST_TIME] => 1786077058
+)
+
+[2026/08/07 04:31:01]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 2
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 24321
+    [player2_id] => 3585
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 0
+    [waza1_2] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_1] => 0
+    [waza2_2] => 0
+    [waza2_3] => 1
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 2
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 4
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=2
+    [QUERY_STRING] => a=0&s=60&t=2&m=2
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 53779
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.80
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=827811e6b01130b36ba2a7759934f83a
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=2
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 232
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVfhS2M9PfSEiX3Xt2WxQAAAE0
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786077061.8522
+    [REQUEST_TIME] => 1786077061
+)
+
+[2026/08/07 04:31:29]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 2
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 19201
+    [player2_id] => 39425
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_1] => 3
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 2
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 3
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=2
+    [QUERY_STRING] => a=0&s=60&t=2&m=2
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 55090
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.61
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=04a6343bb52d2de8690e8e384160a5fd
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=2
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 225
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVfoXiXDbeZgw4ATjqlbQAAABM
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786077089.0481
+    [REQUEST_TIME] => 1786077089
+)
+
+[2026/08/07 04:31:43]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 2
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 14337
+    [player2_id] => 34305
+    [faul1_1] => 0
+    [faul1_2] => 1
+    [waza1_1] => 3
+    [waza1_2] => 2
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 2
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 2
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=2
+    [QUERY_STRING] => a=0&s=60&t=2&m=2
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 53959
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.59
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=2e574e43d66a1cb98b20470f34c98ced
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=2
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 215
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVfryCYxuO18IWCWg47OAAAAMw
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786077103.0735
+    [REQUEST_TIME] => 1786077103
+)
+
+[2026/08/07 04:34:46]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 2
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 40705
+    [player2_id] => 25089
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_1] => 2
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [t] => 1
+    [m] => 2
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 6
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&t=1&m=2
+    [QUERY_STRING] => a=0&s=61&t=1&m=2
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 53491
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.69
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=5f74791d41509ba66cd5f0d8d56ea299
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=2
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 233
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVgZi2M9PfSEiX3Xt2W0QAAAE4
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786077286.9272
+    [REQUEST_TIME] => 1786077286
+)
+
+[2026/08/07 04:35:01]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 2
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 4865
+    [player2_id] => 30209
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 2
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 1
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [t] => 1
+    [m] => 2
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 5
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&t=1&m=2
+    [QUERY_STRING] => a=0&s=61&t=1&m=2
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 58903
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.68
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=b858a143ac1db3724256d57033d6e49e
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=2
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 232
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVgdQciw_tXKHzPtMkxjwAAAIU
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786077301.5614
+    [REQUEST_TIME] => 1786077301
+)
+
+[2026/08/07 04:35:17]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 2
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 29441
+    [player2_id] => 8705
+    [faul1_1] => 0
+    [faul1_2] => 1
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_1] => 1
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 2
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 1
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=2
+    [QUERY_STRING] => a=0&s=60&t=2&m=2
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 59353
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.85
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=1d7751787eac36f774e1803289b7bc62
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=2
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 224
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVghQciw_tXKHzPtMkxkwAAAIc
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786077317.3316
+    [REQUEST_TIME] => 1786077317
+)
+
+[2026/08/07 04:37:00]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 3
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 40449
+    [player2_id] => 15105
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 1
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 1
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [t] => 1
+    [m] => 3
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 7
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&t=1&m=3
+    [QUERY_STRING] => a=0&s=61&t=1&m=3
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 59610
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.66
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=53c60ed032c50b01b3ad05653dc51978
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=3
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 233
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVg7CCYxuO18IWCWg47VgAAAMA
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786077420.777
+    [REQUEST_TIME] => 1786077420
+)
+
+[2026/08/07 04:38:25]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 3
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 18945
+    [player2_id] => 8961
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 0
+    [waza1_2] => 0
+    [waza1_3] => 1
+    [faul2_1] => 0
+    [faul2_2] => 1
+    [waza2_1] => 0
+    [waza2_2] => 0
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 3
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 4
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=3
+    [QUERY_STRING] => a=0&s=60&t=2&m=3
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 50944
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.80
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=827811e6b01130b36ba2a7759934f83a
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=3
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 232
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVhQS2M9PfSEiX3Xt2W4AAAAE0
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786077505.1399
+    [REQUEST_TIME] => 1786077505
+)
+
+[2026/08/07 04:38:56]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 3
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 19969
+    [player2_id] => 25345
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 3
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [t] => 1
+    [m] => 3
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 5
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&t=1&m=3
+    [QUERY_STRING] => a=0&s=61&t=1&m=3
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 55003
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.68
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=b858a143ac1db3724256d57033d6e49e
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=3
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 225
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVhYCCYxuO18IWCWg47YQAAAMs
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786077536.5258
+    [REQUEST_TIME] => 1786077536
+)
+
+[2026/08/07 04:39:50]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 3
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 24065
+    [player2_id] => 34561
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_2] => 1
+    [waza1_3] => 3
+    [faul2_1] => 0
+    [faul2_2] => 1
+    [waza2_1] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 3
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 1
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=3
+    [QUERY_STRING] => a=0&s=60&t=2&m=3
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 55663
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.85
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=1d7751787eac36f774e1803289b7bc62
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=3
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 205
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVhli2M9PfSEiX3Xt2W6gAAAEY
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786077590.0336
+    [REQUEST_TIME] => 1786077590
+)
+
+[2026/08/07 04:40:48]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 2
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 20225
+    [player2_id] => 14849
+    [faul1_1] => 0
+    [faul1_2] => 1
+    [waza1_1] => 1
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [t] => 1
+    [m] => 2
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 8
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&t=1&m=2
+    [QUERY_STRING] => a=0&s=61&t=1&m=2
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 56004
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.34
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=f127dd9499d63258f2ec1a2443d2a842
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=2
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 233
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVh0HiXDbeZgw4ATjqlhQAAAA4
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786077648.3309
+    [REQUEST_TIME] => 1786077648
+)
+
+[2026/08/07 04:40:54]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 4
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 5121
+    [player2_id] => 19713
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 1
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [t] => 1
+    [m] => 4
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 7
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&t=1&m=4
+    [QUERY_STRING] => a=0&s=61&t=1&m=4
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 63777
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.66
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=53c60ed032c50b01b3ad05653dc51978
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=4
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 224
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVh1gciw_tXKHzPtMkxrAAAAJg
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786077654.1029
+    [REQUEST_TIME] => 1786077654
+)
+
+[2026/08/07 04:42:16]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 3
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 29185
+    [player2_id] => 39681
+    [faul1_1] => 0
+    [faul1_2] => 1
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_1] => 1
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 3
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 2
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=3
+    [QUERY_STRING] => a=0&s=60&t=2&m=3
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 58860
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.59
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=2e574e43d66a1cb98b20470f34c98ced
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=3
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 233
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anViKCCYxuO18IWCWg47agAAAMY
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786077736.061
+    [REQUEST_TIME] => 1786077736
+)
+
+[2026/08/07 04:43:10]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 4
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 19457
+    [player2_id] => 13569
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_1] => 3
+    [waza2_2] => 3
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 4
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 1
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=4
+    [QUERY_STRING] => a=0&s=60&t=2&m=4
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 54315
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.85
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=1d7751787eac36f774e1803289b7bc62
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=4
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 215
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anViXiCYxuO18IWCWg47cQAAAM8
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786077790.0837
+    [REQUEST_TIME] => 1786077790
+)
+
+[2026/08/07 04:43:24]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 4
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 13825
+    [player2_id] => 28929
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 0
+    [waza1_2] => 0
+    [waza1_3] => 1
+    [faul2_1] => 0
+    [faul2_2] => 1
+    [waza2_1] => 0
+    [waza2_2] => 0
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 4
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 4
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=4
+    [QUERY_STRING] => a=0&s=60&t=2&m=4
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 52143
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.80
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=827811e6b01130b36ba2a7759934f83a
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=4
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 233
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVibCCYxuO18IWCWg47eAAAAMY
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786077804.8094
+    [REQUEST_TIME] => 1786077804
+)
+
+[2026/08/07 04:43:29]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 3
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 14081
+    [player2_id] => 3841
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 1
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 3
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 3
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=3
+    [QUERY_STRING] => a=0&s=60&t=2&m=3
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 61055
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.61
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=04a6343bb52d2de8690e8e384160a5fd
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=3
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 232
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVicSCYxuO18IWCWg47ewAAAMk
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786077809.2165
+    [REQUEST_TIME] => 1786077809
+)
+
+[2026/08/07 04:45:05]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 3
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 4609
+    [player2_id] => 9985
+    [faul1_1] => 0
+    [faul1_2] => 1
+    [waza1_1] => 1
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [t] => 1
+    [m] => 3
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 6
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&t=1&m=3
+    [QUERY_STRING] => a=0&s=61&t=1&m=3
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 65017
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.69
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=5f74791d41509ba66cd5f0d8d56ea299
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=3
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 231
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVi0XiXDbeZgw4ATjqljAAAAAo
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786077905.0034
+    [REQUEST_TIME] => 1786077905
+)
+
+[2026/08/07 04:45:17]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 4
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 35841
+    [player2_id] => 40193
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 4
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [t] => 1
+    [m] => 4
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 5
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&t=1&m=4
+    [QUERY_STRING] => a=0&s=61&t=1&m=4
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 49925
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.68
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=b858a143ac1db3724256d57033d6e49e
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=4
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 233
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVi3XiXDbeZgw4ATjqljwAAAAE
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786077917.5205
+    [REQUEST_TIME] => 1786077917
+)
+
+[2026/08/07 04:45:23]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 5
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 29953
+    [player2_id] => 9729
+    [faul1_1] => 0
+    [faul1_2] => 1
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_1] => 1
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [t] => 1
+    [m] => 5
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 7
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&t=1&m=5
+    [QUERY_STRING] => a=0&s=61&t=1&m=5
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 49227
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.66
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=53c60ed032c50b01b3ad05653dc51978
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=5
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 224
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVi4yCYxuO18IWCWg47oQAAAME
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786077923.0702
+    [REQUEST_TIME] => 1786077923
+)
+
+[2026/08/07 04:46:53]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 5
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 39169
+    [player2_id] => 8705
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_1] => 2
+    [waza2_2] => 1
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 5
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 1
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=5
+    [QUERY_STRING] => a=0&s=60&t=2&m=5
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 54957
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.85
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=1d7751787eac36f774e1803289b7bc62
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=5
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 214
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVjPSCYxuO18IWCWg47qgAAANE
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786078013.9043
+    [REQUEST_TIME] => 1786078013
+)
+
+[2026/08/07 04:47:21]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 4
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 29697
+    [player2_id] => 23809
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_1] => 1
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 4
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 3
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=4
+    [QUERY_STRING] => a=0&s=60&t=2&m=4
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 50971
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.61
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=04a6343bb52d2de8690e8e384160a5fd
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=4
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 225
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVjWSCYxuO18IWCWg47rwAAAMU
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786078041.9099
+    [REQUEST_TIME] => 1786078041
+)
+
+[2026/08/07 04:47:59]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 5
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 39937
+    [player2_id] => 3585
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_1] => 1
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 5
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 4
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=5
+    [QUERY_STRING] => a=0&s=60&t=2&m=5
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 63352
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.80
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=827811e6b01130b36ba2a7759934f83a
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=5
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 224
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVjf3iXDbeZgw4ATjqllQAAABg
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786078079.207
+    [REQUEST_TIME] => 1786078079
+)
+
+[2026/08/07 04:48:43]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 4
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 24577
+    [player2_id] => 18689
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 3
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 4
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 2
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=4
+    [QUERY_STRING] => a=0&s=60&t=2&m=4
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 63362
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.59
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=2e574e43d66a1cb98b20470f34c98ced
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=4
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 233
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVjqniXDbeZgw4ATjqllgAAAA8
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786078122.9875
+    [REQUEST_TIME] => 1786078122
+)
+
+[2026/08/07 04:49:44]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 6
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 40449
+    [player2_id] => 5121
+    [faul1_1] => 0
+    [faul1_2] => 1
+    [waza1_1] => 3
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [t] => 1
+    [m] => 6
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 7
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&t=1&m=6
+    [QUERY_STRING] => a=0&s=61&t=1&m=6
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 58894
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.66
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=53c60ed032c50b01b3ad05653dc51978
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=6
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 224
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVj6Aciw_tXKHzPtMkxwQAAAJU
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786078184.3602
+    [REQUEST_TIME] => 1786078184
+)
+
+[2026/08/07 04:51:04]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 6
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 24065
+    [player2_id] => 13569
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_1] => 1
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 6
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 1
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=6
+    [QUERY_STRING] => a=0&s=60&t=2&m=6
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 65137
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.85
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=1d7751787eac36f774e1803289b7bc62
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=6
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 225
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVkOCCYxuO18IWCWg472QAAAMc
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786078264.0604
+    [REQUEST_TIME] => 1786078264
+)
+
+[2026/08/07 04:51:09]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 4
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 20481
+    [player2_id] => 35073
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 1
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [t] => 1
+    [m] => 4
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 6
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&t=1&m=4
+    [QUERY_STRING] => a=0&s=61&t=1&m=4
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 64377
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.69
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=5f74791d41509ba66cd5f0d8d56ea299
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=4
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 233
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVkPSCYxuO18IWCWg473QAAANc
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786078269.228
+    [REQUEST_TIME] => 1786078269
+)
+
+[2026/08/07 04:52:13]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 3
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 35329
+    [player2_id] => 30465
+    [faul1_1] => 0
+    [faul1_2] => 1
+    [waza1_1] => 1
+    [waza1_3] => 1
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 3
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [t] => 1
+    [m] => 3
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 8
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&t=1&m=3
+    [QUERY_STRING] => a=0&s=61&t=1&m=3
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 57044
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.34
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=f127dd9499d63258f2ec1a2443d2a842
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=3
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 213
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVkfQciw_tXKHzPtMkxzAAAAJE
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786078333.4036
+    [REQUEST_TIME] => 1786078333
+)
+
+[2026/08/07 04:52:20]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 5
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 15361
+    [player2_id] => 4865
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_1] => 3
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [t] => 1
+    [m] => 5
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 5
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&t=1&m=5
+    [QUERY_STRING] => a=0&s=61&t=1&m=5
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 57460
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.68
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=b858a143ac1db3724256d57033d6e49e
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=5
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 232
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVkhAciw_tXKHzPtMkxzgAAAJQ
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786078340.6647
+    [REQUEST_TIME] => 1786078340
+)
+
+[2026/08/07 04:52:21]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 6
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 18945
+    [player2_id] => 13825
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 1
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 6
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 4
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=6
+    [QUERY_STRING] => a=0&s=60&t=2&m=6
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 50398
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.80
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=827811e6b01130b36ba2a7759934f83a
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=6
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 225
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVkhSCYxuO18IWCWg477AAAANI
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786078341.3375
+    [REQUEST_TIME] => 1786078341
+)
+
+[2026/08/07 04:52:32]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 5
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 8449
+    [player2_id] => 39425
+    [faul1_1] => 0
+    [faul1_2] => 1
+    [waza1_1] => 1
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 1
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 5
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 3
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=5
+    [QUERY_STRING] => a=0&s=60&t=2&m=5
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 58292
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.61
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=04a6343bb52d2de8690e8e384160a5fd
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=5
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 224
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVkkCCYxuO18IWCWg478QAAAMU
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786078352.8743
+    [REQUEST_TIME] => 1786078352
+)
+
+[2026/08/07 04:52:43]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 5
+    [mode] => update_match
+    [end_match] => 1
+    [player1_id] => 8449
+    [player2_id] => 39425
+    [faul1_1] => 0
+    [faul1_2] => 1
+    [waza1_1] => 1
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 1
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 5
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 3
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=5
+    [QUERY_STRING] => a=0&s=60&t=2&m=5
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 62220
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.61
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=04a6343bb52d2de8690e8e384160a5fd
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&s=60&t=2&m=5
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 224
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVkmgciw_tXKHzPtMkx0wAAAIs
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786078362.9879
+    [REQUEST_TIME] => 1786078362
+)
+
+[2026/08/07 04:53:47]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 5
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 3329
+    [player2_id] => 14337
+    [faul1_1] => 0
+    [faul1_2] => 1
+    [waza1_1] => 1
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 5
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 2
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=5
+    [QUERY_STRING] => a=0&s=60&t=2&m=5
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 51023
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.59
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=2e574e43d66a1cb98b20470f34c98ced
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=5
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 224
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVk2wciw_tXKHzPtMkx4AAAAIE
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786078427.0161
+    [REQUEST_TIME] => 1786078427
+)
+
+[2026/08/07 04:54:19]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 5
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 14593
+    [player2_id] => 25089
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_1] => 2
+    [waza2_2] => 1
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [t] => 1
+    [m] => 5
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 6
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&t=1&m=5
+    [QUERY_STRING] => a=0&s=61&t=1&m=5
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 53124
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.69
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=5f74791d41509ba66cd5f0d8d56ea299
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=5
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 215
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVk-yCYxuO18IWCWg48BgAAAMI
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786078459.4782
+    [REQUEST_TIME] => 1786078459
+)
+
+[2026/08/07 04:55:48]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 5
+    [mode] => update_match
+    [end_match] => 1
+    [player1_id] => 14593
+    [player2_id] => 25089
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_1] => 2
+    [waza2_2] => 3
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [t] => 1
+    [m] => 5
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 6
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&t=1&m=5
+    [QUERY_STRING] => a=0&s=61&t=1&m=5
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 50260
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.69
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=5f74791d41509ba66cd5f0d8d56ea299
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=5
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 215
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVlVAciw_tXKHzPtMkx7QAAAIM
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786078548.842
+    [REQUEST_TIME] => 1786078548
+)
+
+[2026/08/07 04:56:17]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 4
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 40961
+    [player2_id] => 4353
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_1] => 1
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [t] => 1
+    [m] => 4
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 8
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&t=1&m=4
+    [QUERY_STRING] => a=0&s=61&t=1&m=4
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 55678
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.34
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=f127dd9499d63258f2ec1a2443d2a842
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=4
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 224
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVlcXiXDbeZgw4ATjqlowAAABg
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786078577.6334
+    [REQUEST_TIME] => 1786078577
+)
+
+[2026/08/07 04:56:29]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 6
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 19969
+    [player2_id] => 35841
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 1
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [t] => 1
+    [m] => 6
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 5
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&t=1&m=6
+    [QUERY_STRING] => a=0&s=61&t=1&m=6
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 61386
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.68
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=b858a143ac1db3724256d57033d6e49e
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=6
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 233
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVlfQciw_tXKHzPtMkx8gAAAJE
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786078589.0198
+    [REQUEST_TIME] => 1786078589
+)
+
+[2026/08/07 04:57:39]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 6
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 39681
+    [player2_id] => 24577
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_1] => 3
+    [waza2_2] => 3
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 6
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 2
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=6
+    [QUERY_STRING] => a=0&s=60&t=2&m=6
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 52252
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.59
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=2e574e43d66a1cb98b20470f34c98ced
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=6
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 215
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVlwwciw_tXKHzPtMkx_AAAAJA
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786078659.0383
+    [REQUEST_TIME] => 1786078659
+)
+
+[2026/08/07 04:58:26]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 7
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 9729
+    [player2_id] => 40449
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_1] => 1
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [t] => 1
+    [m] => 7
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 7
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&t=1&m=7
+    [QUERY_STRING] => a=0&s=61&t=1&m=7
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 57874
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.66
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=53c60ed032c50b01b3ad05653dc51978
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=7
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 224
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVl8gciw_tXKHzPtMkx_QAAAJY
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786078706.043
+    [REQUEST_TIME] => 1786078706
+)
+
+[2026/08/07 04:58:36]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 6
+    [mode] => update_match
+    [end_match] => 1
+    [player1_id] => 18945
+    [player2_id] => 13825
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 1
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 6
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 4
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=6
+    [QUERY_STRING] => a=0&s=60&t=2&m=6
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 54716
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.80
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=827811e6b01130b36ba2a7759934f83a
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&s=60&t=2&m=6
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 225
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVl_C2M9PfSEiX3Xt2XFwAAAE8
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786078716.3794
+    [REQUEST_TIME] => 1786078716
+)
+
+[2026/08/07 04:59:16]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 6
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 14081
+    [player2_id] => 23809
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_1] => 1
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 6
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 3
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=6
+    [QUERY_STRING] => a=0&s=60&t=2&m=6
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 51769
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.61
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=04a6343bb52d2de8690e8e384160a5fd
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=6
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 233
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVmJC2M9PfSEiX3Xt2XHAAAAFQ
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786078756.7226
+    [REQUEST_TIME] => 1786078756
+)
+
+[2026/08/07 04:59:28]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 6
+    [mode] => update_match
+    [end_match] => 1
+    [player1_id] => 14081
+    [player2_id] => 23809
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_1] => 1
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 6
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 3
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=6
+    [QUERY_STRING] => a=0&s=60&t=2&m=6
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 56639
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.61
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=04a6343bb52d2de8690e8e384160a5fd
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&s=60&t=2&m=6
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 233
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVmMCCYxuO18IWCWg48IAAAAMo
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786078768.573
+    [REQUEST_TIME] => 1786078768
+)
+
+[2026/08/07 05:00:26]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 7
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 8705
+    [player2_id] => 13569
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_1] => 1
+    [waza2_2] => 3
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 7
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 1
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=7
+    [QUERY_STRING] => a=0&s=60&t=2&m=7
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 58743
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.85
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=1d7751787eac36f774e1803289b7bc62
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=7
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 214
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVmagciw_tXKHzPtMkyCQAAAJI
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786078826.8119
+    [REQUEST_TIME] => 1786078826
+)
+
+[2026/08/07 05:00:43]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 5
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 24833
+    [player2_id] => 20225
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 1
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [t] => 1
+    [m] => 5
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 8
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&t=1&m=5
+    [QUERY_STRING] => a=0&s=61&t=1&m=5
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 62430
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.65
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=f127dd9499d63258f2ec1a2443d2a842
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=5
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 225
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVme3iXDbeZgw4ATjqlrQAAABI
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786078843.752
+    [REQUEST_TIME] => 1786078843
+)
+
+[2026/08/07 05:02:36]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 7
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 3585
+    [player2_id] => 18945
+    [faul1_1] => 0
+    [faul1_2] => 1
+    [waza1_1] => 1
+    [waza1_2] => 1
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 7
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 4
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=7
+    [QUERY_STRING] => a=0&s=60&t=2&m=7
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 64264
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.80
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=827811e6b01130b36ba2a7759934f83a
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=7
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 214
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVm63iXDbeZgw4ATjqlrgAAABY
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786078955.9993
+    [REQUEST_TIME] => 1786078955
+)
+
+[2026/08/07 05:03:03]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 6
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 4609
+    [player2_id] => 20481
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 1
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [t] => 1
+    [m] => 6
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 6
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&t=1&m=6
+    [QUERY_STRING] => a=0&s=61&t=1&m=6
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 54830
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.69
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=5f74791d41509ba66cd5f0d8d56ea299
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=6
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 232
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVnB3iXDbeZgw4ATjqlsgAAAAk
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786078983.248
+    [REQUEST_TIME] => 1786078983
+)
+
+[2026/08/07 05:03:27]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 6
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 35329
+    [player2_id] => 4353
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_1] => 1
+    [waza2_2] => 3
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [t] => 1
+    [m] => 6
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 8
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&t=1&m=6
+    [QUERY_STRING] => a=0&s=61&t=1&m=6
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 49582
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.65
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=f127dd9499d63258f2ec1a2443d2a842
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=6
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 214
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVnHwciw_tXKHzPtMkyGQAAAII
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786079007.5812
+    [REQUEST_TIME] => 1786079007
+)
+
+[2026/08/07 05:06:30]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 7
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 3329
+    [player2_id] => 24577
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 3
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 7
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 2
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=7
+    [QUERY_STRING] => a=0&s=60&t=2&m=7
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 56229
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.59
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=2e574e43d66a1cb98b20470f34c98ced
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=7
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 224
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVn1iCYxuO18IWCWg48LQAAAMo
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786079190.5606
+    [REQUEST_TIME] => 1786079190
+)
+
+[2026/08/07 05:11:15]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 7
+    [mode] => update_match
+    [end_match] => 1
+    [player1_id] => 3585
+    [player2_id] => 18945
+    [faul1_1] => 0
+    [faul1_2] => 1
+    [waza1_1] => 1
+    [waza1_2] => 1
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 7
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 4
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=7
+    [QUERY_STRING] => a=0&s=60&t=2&m=7
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 56423
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.80
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=827811e6b01130b36ba2a7759934f83a
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&s=60&t=2&m=7
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 214
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVo8wciw_tXKHzPtMkyHwAAAIY
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786079475.2932
+    [REQUEST_TIME] => 1786079475
+)
+
+[2026/08/07 05:16:11]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 7
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 25089
+    [player2_id] => 4609
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_1] => 1
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [t] => 1
+    [m] => 7
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 6
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&t=1&m=7
+    [QUERY_STRING] => a=0&s=61&t=1&m=7
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 65210
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.69
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=5f74791d41509ba66cd5f0d8d56ea299
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=7
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 232
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVqG3iXDbeZgw4ATjql1QAAAAQ
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786079771.0097
+    [REQUEST_TIME] => 1786079771
+)
+
+[2026/08/07 05:19:23]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 7
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 8449
+    [player2_id] => 23809
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 1
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 7
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 3
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=7
+    [QUERY_STRING] => a=0&s=60&t=2&m=7
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 61146
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.61
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=04a6343bb52d2de8690e8e384160a5fd
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=7
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 232
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVq23iXDbeZgw4ATjql5wAAABQ
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786079963.372
+    [REQUEST_TIME] => 1786079963
+)
+
+[2026/08/07 05:19:30]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 7
+    [mode] => update_match
+    [end_match] => 1
+    [player1_id] => 8449
+    [player2_id] => 23809
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 1
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 7
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 3
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=7
+    [QUERY_STRING] => a=0&s=60&t=2&m=7
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 58338
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.61
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=04a6343bb52d2de8690e8e384160a5fd
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&s=60&t=2&m=7
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 232
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVq4iCYxuO18IWCWg48RwAAANI
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786079970.7267
+    [REQUEST_TIME] => 1786079970
+)
+
+[2026/08/07 05:23:10]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 7
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 4865
+    [player2_id] => 19969
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_1] => 1
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [t] => 1
+    [m] => 7
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 5
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&t=1&m=7
+    [QUERY_STRING] => a=0&s=61&t=1&m=7
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 61644
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.68
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=b858a143ac1db3724256d57033d6e49e
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=7
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 232
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVrvgciw_tXKHzPtMkyJAAAAJY
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786080190.2598
+    [REQUEST_TIME] => 1786080190
+)
+
+[2026/08/07 05:28:58]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 7
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 24833
+    [player2_id] => 4353
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_1] => 3
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [t] => 1
+    [m] => 7
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 8
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&t=1&m=7
+    [QUERY_STRING] => a=0&s=61&t=1&m=7
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 64310
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.65
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=f127dd9499d63258f2ec1a2443d2a842
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=7
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 232
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVtGiCYxuO18IWCWg48YQAAANI
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786080538.6562
+    [REQUEST_TIME] => 1786080538
+)
+
+[2026/08/07 05:36:56]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 8
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 8449
+    [player2_id] => 3585
+    [faul1_1] => 0
+    [faul1_2] => 1
+    [waza1_1] => 1
+    [waza1_2] => 1
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 8
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 3
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=8
+    [QUERY_STRING] => a=0&s=60&t=2&m=8
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 52671
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.61
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=04a6343bb52d2de8690e8e384160a5fd
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=8
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 213
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVu-HiXDbeZgw4ATjqmIwAAABA
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786081016.9464
+    [REQUEST_TIME] => 1786081016
+)
+
+[2026/08/07 05:37:03]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 8
+    [mode] => update_match
+    [end_match] => 1
+    [player1_id] => 8449
+    [player2_id] => 3585
+    [faul1_1] => 0
+    [faul1_2] => 1
+    [waza1_1] => 1
+    [waza1_2] => 1
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_3] => 0
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 8
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 3
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=8
+    [QUERY_STRING] => a=0&s=60&t=2&m=8
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 50473
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.61
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=04a6343bb52d2de8690e8e384160a5fd
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&s=60&t=2&m=8
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 213
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVu_3iXDbeZgw4ATjqmKAAAAA8
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786081023.4691
+    [REQUEST_TIME] => 1786081023
+)
+
+[2026/08/07 05:40:43]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 8
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 19969
+    [player2_id] => 4609
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 1
+    [waza2_1] => 1
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [t] => 1
+    [m] => 8
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 6
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&t=1&m=8
+    [QUERY_STRING] => a=0&s=61&t=1&m=8
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 61050
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.69
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=5f74791d41509ba66cd5f0d8d56ea299
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=8
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 232
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVv23iXDbeZgw4ATjqmOgAAAAs
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786081243.5188
+    [REQUEST_TIME] => 1786081243
+)
+
+[2026/08/07 05:41:13]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 8
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 13569
+    [player2_id] => 3329
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 1
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 8
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 2
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=8
+    [QUERY_STRING] => a=0&s=60&t=2&m=8
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 50340
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.59
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=2e574e43d66a1cb98b20470f34c98ced
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=8
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 232
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVv-SCYxuO18IWCWg48gwAAAMA
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786081273.4824
+    [REQUEST_TIME] => 1786081273
+)
+
+[2026/08/07 05:43:44]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 8
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 40449
+    [player2_id] => 4353
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_1] => 1
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [t] => 1
+    [m] => 8
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 7
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&t=1&m=8
+    [QUERY_STRING] => a=0&s=61&t=1&m=8
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 56460
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.66
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=53c60ed032c50b01b3ad05653dc51978
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=8
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 232
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anVwkCCYxuO18IWCWg48mwAAAM4
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786081424.6144
+    [REQUEST_TIME] => 1786081424
+)
+
+[2026/08/07 05:59:01]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 9
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 4609
+    [player2_id] => 4353
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_1] => 1
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 61
+    [t] => 1
+    [m] => 9
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 6
+            [admin] => 0
+            [series] => 61
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=61&t=1&m=9
+    [QUERY_STRING] => a=0&s=61&t=1&m=9
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 65237
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.69
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=5f74791d41509ba66cd5f0d8d56ea299
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=9
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 231
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anV0JSCYxuO18IWCWg480wAAAMA
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786082341.3063
+    [REQUEST_TIME] => 1786082341
+)
+
+[2026/08/07 06:04:40]--------------------------------------------------
+post:Array
+(
+    [place_match_no] => 9
+    [mode] => update_match
+    [end_match] => 0
+    [player1_id] => 13569
+    [player2_id] => 8449
+    [faul1_1] => 0
+    [faul1_2] => 0
+    [waza1_1] => 3
+    [waza1_2] => 0
+    [waza1_3] => 0
+    [faul2_1] => 0
+    [faul2_2] => 0
+    [waza2_2] => 0
+    [waza2_3] => 0
+    [extra] => 1
+    [match_time] => 
+    [end01] => 対戦終了
+)
+get:Array
+(
+    [a] => 0
+    [s] => 60
+    [t] => 2
+    [m] => 9
+)
+session:Array
+(
+    [auth_input] => Array
+        (
+            [login] => 1
+            [navi_id] => 10
+            [place] => 2
+            [admin] => 0
+            [series] => 60
+            [series_info_id] => 30
+        )
+
+    [auth] => Array
+        (
+            [year] => 2026
+            [series_info_id] => 30
+        )
+
+)
+
+server:Array
+(
+    [USER] => apache
+    [HOME] => /usr/share/httpd
+    [SCRIPT_NAME] => /input/kojin_result.php
+    [REQUEST_URI] => /input/kojin_result.php?a=0&s=60&t=2&m=9
+    [QUERY_STRING] => a=0&s=60&t=2&m=9
+    [REQUEST_METHOD] => POST
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [REMOTE_PORT] => 51639
+    [SCRIPT_FILENAME] => /var/www/kendo-server/input/kojin_result.php
+    [SERVER_ADMIN] => root@localhost
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/kendo-server
+    [CONTEXT_PREFIX] => 
+    [REQUEST_SCHEME] => http
+    [DOCUMENT_ROOT] => /var/www/kendo-server
+    [REMOTE_ADDR] => 192.168.0.59
+    [SERVER_PORT] => 80
+    [SERVER_ADDR] => 192.168.0.126
+    [SERVER_NAME] => 192.168.0.126
+    [SERVER_SOFTWARE] => Apache/2.4.64 (Fedora Linux)
+    [SERVER_SIGNATURE] => 
+    [PATH] => /usr/local/bin:/usr/bin
+    [HTTP_COOKIE] => PHPSESSID=2e574e43d66a1cb98b20470f34c98ced
+    [HTTP_ACCEPT_LANGUAGE] => ja,en-US;q=0.9,en;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_REFERER] => http://192.168.0.126/input/kojin_result.php?a=0&m=9
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_ORIGIN] => http://192.168.0.126
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [CONTENT_LENGTH] => 232
+    [HTTP_CONNECTION] => close
+    [HTTP_HOST] => 192.168.0.126
+    [proxy-nokeepalive] => 1
+    [UNIQUE_ID] => anV1eCCYxuO18IWCWg483wAAAM8
+    [FCGI_ROLE] => RESPONDER
+    [PHP_SELF] => /input/kojin_result.php
+    [REQUEST_TIME_FLOAT] => 1786082680.9013
+    [REQUEST_TIME] => 1786082680
+)
+

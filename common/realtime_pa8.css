@@ -323,7 +323,7 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 	border: 1px solid #000000;
 	width: 15px;
 	position:absolute;
-	top: 0;
+	top: 20pt;
 	left: 60%;
 	font-size: 12px;
     z-index: 10;
@@ -347,7 +347,7 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 	border: none;
 	width: 15px;
 	position:absolute;
-	top: 82px;
+	top: 108px;
 	left: 30%;
 	font-size: 11px;
 	line-height: 105%;

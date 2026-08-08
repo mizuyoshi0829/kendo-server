@@ -11,15 +11,17 @@
             return $ret;
         }
         $namelen = grapheme_strlen( $name );
-        $ret['html'] = string_insert_br( $name );
         if( $name2 != '' ){
             $namelen += grapheme_strlen( $name2 );
-            $ret['html'] .= '<br /><p class="tb_frame_name_add">(' . $name2 . ')</p>';
         }
         if( $namelen >= 15 ){
             $ret['font_class'] = ' tb_frame_content2_smallfont15';
-        } else if( $namelen > 5 ){
+        } else if( $namelen >= 4 ){
             $ret['font_class'] = ' tb_frame_content2_smallfont' . $namelen;
+        }
+        $ret['html'] = string_insert_br( $name );
+        if( $name2 != '' ){
+            $ret['html'] .= '<br /><p class="tb_frame_name_add' . $ret['font_class'] . '">(' . $name2 . ')</p>';
         }
         return $ret;
     }

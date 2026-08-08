@@ -1522,6 +1522,7 @@ class form_page
                     $err = 1;
                 }
 			} else if( $dv['kind'] == 'photo' ){
+/*
 				$_SESSION['p'][$field.'_effect'] = get_field_string( $_POST, $field.'_effect' );
 				$file = $this->get_entry_post_photo_file_data( $field.'_file', $_SESSION['p']['id'] );
 				if( $file != '' ){
@@ -1538,6 +1539,7 @@ class form_page
                     'brightness_gray' => 0,
                 ];
 				$this->get_entry_post_photo_crop_data( $_SESSION['p'][$field], $_SESSION['p'][$field.'_effect'],$force );
+*/
 			} else if( $dv['kind'] == 'include' ){
 				$func = 'get_entry_post_data_from_def_'.$_SESSION['auth']['series'].'_'.$dv['field'];
 				$func( $dv, $add1, $add2 );
