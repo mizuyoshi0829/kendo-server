@@ -29,7 +29,72 @@
 	//---------------------------------------------------------------
 	//
 	//---------------------------------------------------------------
+	function init_entry_post_data_from_def_9_traffic( &$data, $def, $add1, $add2 )
+	{
+		$data['traffic_bus_l'] = '';
+		$data['traffic_bus_s'] = '';
+		$data['traffic_mycar'] = '';
+	}
 
+	function get_entry_post_data_from_def_9_traffic( $def, $add1, $add2 )
+	{
+		$_SESSION['p']['traffic_bus_l'] = get_field_string( $_POST, 'traffic_bus_l' );
+		$_SESSION['p']['traffic_bus_s'] = get_field_string( $_POST, 'traffic_bus_s' );
+		$_SESSION['p']['traffic_mycar'] = get_field_string( $_POST, 'traffic_mycar' );
+	}
+
+	function get_entry_db_data_from_def_9_traffic( $data, $list, $def, $add1, $add2 )
+	{
+		$data['traffic_bus_l'] = get_field_string( $list, 'traffic_bus_l' );
+		$data['traffic_bus_s'] = get_field_string( $list, 'traffic_bus_s' );
+		$data['traffic_mycar'] = get_field_string( $list, 'traffic_mycar' );
+		return $data;
+	}
+
+	function update_entry_data_9_traffic( $def, $dbs )
+	{
+		$data = array(
+			'traffic_bus_l' => $dbs->real_escape_string( get_field_string( $_SESSION['p'], 'traffic_bus_l' ) ),
+			'traffic_bus_s' => $dbs->real_escape_string( get_field_string( $_SESSION['p'], 'traffic_bus_s' ) ),
+			'traffic_mycar' => $dbs->real_escape_string( get_field_string( $_SESSION['p'], 'traffic_mycar' ) )
+		);
+		return $data;
+	}
+
+	function init_entry_post_data_from_def_10_traffic( &$data, $def, $add1, $add2 )
+	{
+		$data['traffic_bus_l'] = '';
+		$data['traffic_bus_s'] = '';
+		$data['traffic_mycar'] = '';
+	}
+
+	function get_entry_post_data_from_def_10_traffic( $def, $add1, $add2 )
+	{
+		$_SESSION['p']['traffic_bus_l'] = get_field_string( $_POST, 'traffic_bus_l' );
+		$_SESSION['p']['traffic_bus_s'] = get_field_string( $_POST, 'traffic_bus_s' );
+		$_SESSION['p']['traffic_mycar'] = get_field_string( $_POST, 'traffic_mycar' );
+	}
+
+	function get_entry_db_data_from_def_10_traffic( $data, $list, $def, $add1, $add2 )
+	{
+		$data['traffic_bus_l'] = get_field_string( $list, 'traffic_bus_l' );
+		$data['traffic_bus_s'] = get_field_string( $list, 'traffic_bus_s' );
+		$data['traffic_mycar'] = get_field_string( $list, 'traffic_mycar' );
+		return $data;
+	}
+
+	function update_entry_data_10_traffic( $def, $dbs )
+	{
+		$data = array(
+			'traffic_bus_l' => $dbs->real_escape_string( get_field_string( $_SESSION['p'], 'traffic_bus_l' ) ),
+			'traffic_bus_s' => $dbs->real_escape_string( get_field_string( $_SESSION['p'], 'traffic_bus_s' ) ),
+			'traffic_mycar' => $dbs->real_escape_string( get_field_string( $_SESSION['p'], 'traffic_mycar' ) )
+		);
+		return $data;
+	}
+	//---------------------------------------------------------------
+	//
+	//---------------------------------------------------------------
 	function __output_tournament_9_10_for_excel( $objPage, $series_info, $tournament_data, $entry_list, $mv )
 	{
 //print_r($tournament_data);
@@ -1613,9 +1678,18 @@ if( $line == 400 ){ break; }
 			$sheet->setCellValueByColumnAndRow( 1 , $pos, $series_name );
 			$col = 2;
 			$sheet->setCellValueByColumnAndRow( $col++, $pos, $c->get_pref_name( $preftbl, intval($fields['school_address_pref']) ) );
+			$school_org = intval($fields['school_org']);
+			$school_org_name = '';
+			if($school_org == 1){
+				$school_org_name = '学校';
+			} else if($school_org == 2){
+				$school_org_name = '地域クラブ活動団体';
+			}
+			$sheet->setCellValueByColumnAndRow( $col++, $pos, $school_org_name );
 			$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['school_name'] );
 			$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['school_name_kana'] );
 			$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['school_name_ryaku'] );
+			$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['school_representative'] );
 			$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['school_email'] );
 
 			$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['insotu1_sei'].' '.$fields['insotu1_mei'] );
@@ -1624,8 +1698,8 @@ if( $line == 400 ){ break; }
 			}
 			$col++;
 			$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['insotu1_kana_sei'].' '.$fields['insotu1_kana_mei'] );
-			$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['insotu1_keitai_mobile'] );
-			$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['insotu1_keitai_tel'] );
+			$sheet->setCellValueExplicitByColumnAndRow( $col++, $pos, $fields['insotu1_keitai_mobile'], PHPExcel_Cell_DataType::TYPE_STRING );
+			$sheet->setCellValueExplicitByColumnAndRow( $col++, $pos, $fields['insotu1_keitai_tel'], PHPExcel_Cell_DataType::TYPE_STRING );
 			$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['insotu1_college'] );
 			$sheet->setCellValueByColumnAndRow( $col++, $pos, $c->get_pref_name( $preftbl, intval($fields['insotu1_org_pref']) ) );
 			$yaku = intval($fields['insotu1_position']);
@@ -1643,6 +1717,8 @@ if( $line == 400 ){ break; }
 				$yaku = '';
 			}
 			$sheet->setCellValueByColumnAndRow( $col++, $pos, $yaku );
+			$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['insotu1_appointment'] );
+
 			$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['insotu2_sei'].' '.$fields['insotu2_mei'] );
 			if( $fields['insotu2_add'] == '1' ){
 				$sheet->setCellValueByColumnAndRow( $col, $pos, 'あり' );
@@ -1664,14 +1740,18 @@ if( $line == 400 ){ break; }
 				$yaku = '';
 			}
 			$sheet->setCellValueByColumnAndRow( $col++, $pos, $yaku );
+			/*
 			$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['insotu3_sei'].' '.$fields['insotu3_mei'] );
 			if( $fields['insotu3_add'] == '1' ){
 				$sheet->setCellValueByColumnAndRow( $col, $pos, 'あり' );
 			}
 			$col++;
 			$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['insotu3_kana_sei'].' '.$fields['insotu3_kana_mei'] );
+			*/
 			$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['reserve_catalog'] );
-			$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['traffic'] );
+			$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['traffic_bus_l'] );
+			$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['traffic_bus_s'] );
+			$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['traffic_mycar'] );
 
 			for( $player = 1; $player <= 3; $player++ ){
 				if( $player < 3 ){
@@ -1685,9 +1765,10 @@ if( $line == 400 ){ break; }
 				$col++;
 				$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['player'.$player.'_disp'] );
 				$sheet->setCellValueByColumnAndRow( $col++, $pos, $fields['player'.$player.'_kana_sei'].' '.$fields['player'.$player.'_kana_mei'] );
-				$sheet->setCellValueByColumnAndRow( $col++, $pos, $c->get_grade_junior_name( $gradetbl, intval($fields['player'.$player.'_gakunen_dan_gakunen']) ) );
-				$dan = $fields['player'.$player.'_gakunen_dan_dan'];
-				$sheet->setCellValueByColumnAndRow( $col++, $pos, ( $dan != '0' ? $dan : '' ) );
+				$sheet->setCellValueByColumnAndRow( $col++, $pos, $c->get_grade_junior_name( $gradetbl, intval($fields['player'.$player.'_gakunen']) ) );
+				//$dan = $fields['player'.$player.'_gakunen'];
+				//$sheet->setCellValueByColumnAndRow( $col++, $pos, ( $dan != '0' ? $dan : '' ) );
+				$sheet->setCellValueByColumnAndRow( $col++, $pos, '' );
 			}
 			$pos++;
 		}
