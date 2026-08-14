@@ -1,12 +1,12 @@
 <?php
     require_once dirname(dirname(__FILE__)).'/admin/common/common.php';
     require_once dirname(dirname(__FILE__)).'/admin/common/config.php';
-    require_once dirname(dirname(__FILE__)).'/admin/class/admin/reg_2b.php';
-    require_once dirname(dirname(__FILE__)).'/admin/class/admin/reg_3.php';
-    require_once dirname(dirname(__FILE__)).'/admin/class/admin/reg_4.php';
-    require_once dirname(dirname(__FILE__)).'/admin/class/admin/reg_5.php';
-    require_once dirname(dirname(__FILE__)).'/admin/class/admin/reg_6.php';
-    require_once dirname(dirname(__FILE__)).'/admin/class/admin/reg_9_10.php';
+    //require_once dirname(dirname(__FILE__)).'/admin/class/admin/reg_2b.php';
+    //require_once dirname(dirname(__FILE__)).'/admin/class/admin/reg_3.php';
+    //require_once dirname(dirname(__FILE__)).'/admin/class/admin/reg_4.php';
+    //require_once dirname(dirname(__FILE__)).'/admin/class/admin/reg_5.php';
+    //require_once dirname(dirname(__FILE__)).'/admin/class/admin/reg_6.php';
+    //require_once dirname(dirname(__FILE__)).'/admin/class/admin/reg_9_10.php';
     require_once dirname(dirname(__FILE__)).'/admin/class/admin/reg_14_15.php';
     require_once dirname(dirname(__FILE__)).'/admin/class/page.php';
     require_once dirname(dirname(__FILE__)).'/admin/class/page_kojin_entry.php';
