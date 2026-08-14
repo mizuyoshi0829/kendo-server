@@ -156,6 +156,8 @@ class form_page_kojin_tournament
                 $d['belonging_to_name'] = $this->__pageObj->get_pref_name( $pref_array2, get_field_string_number( $fields, $seriesinfo['belonging_to_field'], 0 ) );
             } else if( $seriesinfo['belonging_to_field'] == 'school_pref' ){
                 $d['belonging_to_name'] = $this->__pageObj->get_pref_name( $pref_array2, get_field_string_number( $fields, $seriesinfo['belonging_to_field'], 0 ) );
+            } else if( $seriesinfo['belonging_to_field'] == 'school_name' ){
+                $d['belonging_to_name'] = $d['school_name_ryaku'];
             } else if( $seriesinfo['belonging_to_field'] == 'kojin_address_pref' ){
                 $d['belonging_to_name'] = $this->__pageObj->get_pref_name( $pref_array2, get_field_string_number( $fields, $seriesinfo['belonging_to_field'], 0 ) );
             } else {

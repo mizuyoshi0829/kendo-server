@@ -1,27 +1,17 @@
 <?php
 
-//define( '__ROOT_IP__', '192.168.1.126');
+define( '__ROOT_IP__', '192.168.1.126');
 //define( '__ROOT_IP__', 'localhost');
-define( '__ROOT_IP__', '192.168.0.126');
+//define( '__ROOT_IP__', '192.168.0.126');
 
-//define( '__HTTP_BASE__', 'http://localhost/kendo/reg/');
-//define( 'DATABASE_HOST', 'localhost' );
-
-//define( '__HTTP_BASE__', 'https://www.i-kendo.net/kendo/');
-//define( '__HTTP_BASE2__', 'https://www.i-kendo.net/kendo/admin/');
 define( '__HTTP_BASE__', 'http://'.__ROOT_IP__.'/');
 define( '__HTTP_BASE_SSL__', 'https://'.__ROOT_IP__.'/');
 define( '__HTTP_BASE2__', 'http://'.__ROOT_IP__.'/admin/');
-//define( '__HTTP_BASE__', 'http://localhost/');
-//define( '__HTTP_BASE_SSL__', 'https://localhost/');
-//define( '__HTTP_BASE2__', 'http://localhost/admin/');
-//define( 'DATABASE_HOST', 'mysql487.db.sakura.ne.jp' );
-//define( 'DATABASE_NAME', 'kendo-n_kendo-n' );
-//define( 'DATABASE_USER', 'kendo-n' );
-//define( 'DATABASE_PASSWORD', '95x9are5ze' );
 define( 'DATABASE_HOST', '127.0.0.1' );
-define( 'DATABASE_NAME', 'keioffice_kendo' );
-define( 'DATABASE_USER', 'keioffice_kendo' );
+//define( 'DATABASE_NAME', 'keioffice_kendo' );
+define( 'DATABASE_NAME', 'keioffice_zenchu' );
+//define( 'DATABASE_USER', 'keioffice_kendo' );
+define( 'DATABASE_USER', 'root' );
 define( 'DATABASE_PASSWORD', 'hprzjntc' );
 
 //define( 'ADMIN_PASSWORD', '18x3jph4fi' );

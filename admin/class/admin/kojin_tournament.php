@@ -1,6 +1,6 @@
 <?php
-	require_once dirname(dirname(__FILE__)).DIRECTORY_SEPARATOR.'page.php';
-	require_once dirname(__FILE__).DIRECTORY_SEPARATOR.'reg_14_15.php';
+    require_once dirname(dirname(__FILE__)) . '/page.php';
+    //require_once dirname(__FILE__).DIRECTORY_SEPARATOR.'reg_14_15.php';
     require_once dirname(dirname(__FILE__)) . '/page_kojin_entry.php';
     require_once dirname(dirname(__FILE__)) . '/page_kojin_tournament.php';
 
