@@ -473,6 +473,7 @@ window.onload = function () {
       <input name="player2_id" type="hidden" value="<?php echo $p['player2_id']; ?>" />
       <table class="tb_score_in" width="960" border="0">
         <tr>
+          <td class="tbprefname"></td>
           <td class="tbprefname">学校名</td>
           <td class="tbprefname"><span class="tb_srect">氏名</span></td>
           <td class="tbprefname"><span class="tb_srect">&nbsp</span></td>
@@ -480,8 +481,14 @@ window.onload = function () {
           <td class="tbprefnamehalf">勝敗</td>
         </tr>
         <tr>
-          <td class="tbnamecolor tbprefnamehalf"><span class="tbprefname"><?php echo get_field_string($data['players'][1],'belonging_to_name_str');?></span></td>
-          <td class="tbname01 tb_srect"><?php echo $data['players'][1]['name_str'];?></td>
+          <td class="tbprefname" style="background-color: #ff0000; text-align: center;">赤</td>
+          <td class="tbnamecolor tbprefnamehalf">
+            <span class="tbprefname"><?php echo get_field_string($data['players'][1],'belonging_to_name_str');?></span>
+          </td>
+          <td class="tbname01 tb_srect">
+            <?php echo $data['players'][1]['name_str'];?><br />
+            <input type="checkbox" name="supporter1" id="player1_supporter" value="1" <?php if($p['supporter1']==1): ?>checked="checked" <?php endif; ?> onClick="change_supporter(1);" />サポーター
+          </td>
           <td class="tbname01 tb_srect">
 <?php if( $series_info['enable_shidou'] == 0 ): ?>
             <input name="faul1_1" type="hidden" value="0" />
@@ -515,8 +522,12 @@ window.onload = function () {
           <td class="tbname01 tb_srect"><div align="center"><?php echo $win1str; ?></div></td>
         </tr>
         <tr>
+          <td class="tbprefname" style="background-color: #ffffff; text-align: center;">白</td>
           <td class="tbnamecolor tbprefnamehalf"><span class="tbprefname"><?php echo get_field_string($data['players'][2],'belonging_to_name_str');?></span></td>
-          <td class="tbname01 tb_srect"><?php echo $data['players'][2]['name_str'];?></td>
+          <td class="tbname01 tb_srect">
+            <?php echo $data['players'][2]['name_str'];?><br />
+            <input type="checkbox" name="supporter2" id="player2_supporter" value="1" <?php if($p['supporter2']==1): ?>checked="checked" <?php endif; ?> onClick="change_supporter(2);" />サポーター
+          </td>
           <td class="tbname01 tb_srect">
 <?php if( $series_info['enable_shidou'] == 0 ): ?>
             <input name="faul2_1" type="hidden" value="0" />

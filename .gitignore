@@ -3,3 +3,4 @@
 /result
 /admin/common/config.php
 /realtime/config.js
+*.bak
