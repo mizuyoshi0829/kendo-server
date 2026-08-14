@@ -561,6 +561,7 @@ window.onload = function () {
           <td class="tbname01 tb_srect"><div align="center"><?php echo $win2str; ?></div></td>
         </tr>
         <tr>
+          <td class="tbname01">&nbsp;</td>
           <td class="tbnamecolor tbprefnamehalf">&nbsp;</td>
           <td class="tbname01"><input type="checkbox" name="extra" id="extra" value="1" <?php if($p['extra']==1): ?>checked="checked" <?php endif; ?> onChange="change_extra();" />延長</td>
           <td class="tbname01" colspan="4">
