@@ -777,7 +777,7 @@
 			$table_name_rowspan = 3;
 			$table_name_name_width = 120;
 			$table_name_pref_width = 80;
-			$table_height = 11;
+			$table_height = 12;
 			$table_font_size = 11;
 			$table_place_font_size = 6;
 			$table_cell_width = 35;
@@ -786,7 +786,7 @@
 			$table_name_rowspan = 3;
 			$table_name_name_width = 120;
 			$table_name_pref_width = 80;
-			$table_height = 11;
+			$table_height = 12;
 			$table_font_size = 11;
 			$table_place_font_size = 6;
 			$table_cell_width = 35;
