@@ -113,6 +113,10 @@
     {
         $exist_matches = [ 1 => true, 2 => true, 3 => true, 4 => true, 5 => true ];
         if( $match_info['series_lt'] == 'dl' || $match_info['series_lt'] == 'dt' ){
+            $inc = dirname(__FILE__) . '/reg_s' . $series_info['id'] . 'd.php';
+            if( file_exists( $inc ) ){
+                require_once $inc;
+            }
             $is_dantai = true;
             if( $match_info['series_lt'] == 'dl' ){
                 $data = $objPage->get_dantai_league_one_result( $match );
@@ -279,6 +283,10 @@
                 }
             }
         } else {
+            $inc = dirname(__FILE__) . '/reg_s' . $series_info['id'] . 'k.php';
+            if( file_exists( $inc ) ){
+                require_once $inc;
+            }
             $is_dantai = false;
             $objTournament = new form_page_kojin_tournament( $objPage );
             $hon1 = array( 1=>0, 2=>0, 3=>0, 4=>0, 5=>0 );
