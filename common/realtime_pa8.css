@@ -82,7 +82,7 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 .tb_score_in {
 	font-family: Arial, Helvetica, sans-serif;
 	text-align: center;
-	width: 348px; /*400px;*/
+	width: 384px; /*400px;*/
 	padding-left: 5px;
 	/*table-layout: fixed;*/
 	border: none;
