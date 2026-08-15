@@ -113,7 +113,7 @@
     {
         $exist_matches = [ 1 => true, 2 => true, 3 => true, 4 => true, 5 => true ];
         if( $match_info['series_lt'] == 'dl' || $match_info['series_lt'] == 'dt' ){
-            $inc = dirname(__FILE__) . '/reg_s' . $series_info['id'] . 'd.php';
+            $inc = dirname(__FILE__) . '/admin/reg_s' . $series_info['id'] . 'd.php';
             if( file_exists( $inc ) ){
                 require_once $inc;
             }
@@ -283,7 +283,7 @@
                 }
             }
         } else {
-            $inc = dirname(__FILE__) . '/reg_s' . $series_info['id'] . 'k.php';
+            $inc = dirname(__FILE__) . '/admin/reg_s' . $series_info['id'] . 'k.php';
             if( file_exists( $inc ) ){
                 require_once $inc;
             }
