@@ -207,7 +207,7 @@
             {$info.placeholder}
 
   {elseif $info.kind == 'include'}
-   {assign var="include_file" value="reg/mform_`$smarty.session.auth.series`_`$info.select_info`.html"}
+   {assign var="include_file" value="admin/mform_`$smarty.session.auth.series`_`$info.select_info`.html"}
             {include file="$include_file"}
   {/if}
  {/if}
