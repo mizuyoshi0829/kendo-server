@@ -776,7 +776,7 @@
 			$mvstr = '男子';
 			$table_name_rowspan = 3;
 			$table_name_name_width = 120;
-			$table_name_pref_width = 80;
+			$table_name_pref_width = 88;
 			$table_height = 12;
 			$table_font_size = 11;
 			$table_place_font_size = 6;
@@ -785,7 +785,7 @@
 			$mvstr = '女子';
 			$table_name_rowspan = 3;
 			$table_name_name_width = 120;
-			$table_name_pref_width = 80;
+			$table_name_pref_width = 88;
 			$table_height = 12;
 			$table_font_size = 11;
 			$table_place_font_size = 6;
@@ -806,7 +806,7 @@
 			. 'body { font-family: \'DejaVu Sans Condensed\'; font-size: 5pt;  }'. "\n"
 			. '.content {' . "\n"
 		//	. '    position: relative;' . "\n"
-			. '    width: 960px;' . "\n"
+			. '    width: 976px;' . "\n"
 			. '    height: 980px;' . "\n"
 			. '    font-size: 5px;' . "\n"
 			. '    margin: 16px;' . "\n"
