@@ -784,8 +784,8 @@
 		} else {
 			$mvstr = '女子';
 			$table_name_rowspan = 3;
-			$table_name_name_width = 120;
-			$table_name_pref_width = 88;
+			$table_name_name_width = 96;
+			$table_name_pref_width = 106;
 			$table_height = 12;
 			$table_font_size = 11;
 			$table_place_font_size = 6;
