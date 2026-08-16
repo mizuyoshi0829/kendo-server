@@ -121,10 +121,10 @@
   {if $seriesinfo.kojin_tournament_w != 0}
     <p><a href="kojin_tournament.php?s={$seriesinfo.kojin_tournament_w}&mw=w">{$seriesinfo.kojin_w_name}トーナメント</a></p>
   {/if}
+ {/if}
   {if $seriesinfo.enable_referee != 0}
     <p><a href="referee.php?s={if $seriesinfo.dantai_league_m != 0}{$seriesinfo.dantai_league_m}{else}{$seriesinfo.dantai_tournament_m}{/if}">審判登録</a></p>
   {/if}
- {/if}
 {*
     <p><a href="info.php?s=2">中学校エントリー一覧</a></p>
     <p><a href="dantai_tournament.php?s=2&mw=m">団体(男子)トーナメント</a></p>

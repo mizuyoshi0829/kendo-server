@@ -142,44 +142,88 @@ class form_page_kojin_tournament
             $kojin_name_field_header2 = $this->get_kojin_name_field_header( $seriesinfo, $series_mw, 2 );
             /**/
             //$kojin_name_field_header = $this->get_kojin_name_field_header( $seriesinfo, $series_mw, 1 );
-            $d = array(
-                'info' => $info,
-                'player' => 1,
-                'sei' => get_field_string( $fields, $kojin_name_field_header.'_sei' ),
-                'mei' => get_field_string( $fields, $kojin_name_field_header.'_mei' ),
-                //'sei' => base64_decode(get_field_string( $fields, 'kojin_'.$series_mw.'1_sei' )),
-                //'mei' => base64_decode(get_field_string( $fields, 'kojin_'.$series_mw.'1_mei' )),
-                'disp_name' => get_field_string( $fields, $kojin_name_field_header.'_disp' ),
-                'school_name_ryaku' => get_field_string( $fields, $seriesinfo['belonging_to_field'].'_ryaku' ),
-            );
-            if( $seriesinfo['belonging_to_field'] == 'pref_name' ){
-                $d['belonging_to_name'] = $this->__pageObj->get_pref_name( $pref_array2, get_field_string_number( $fields, $seriesinfo['belonging_to_field'], 0 ) );
-            } else if( $seriesinfo['belonging_to_field'] == 'school_pref' ){
-                $d['belonging_to_name'] = $this->__pageObj->get_pref_name( $pref_array2, get_field_string_number( $fields, $seriesinfo['belonging_to_field'], 0 ) );
-            } else if( $seriesinfo['belonging_to_field'] == 'school_name' ){
-                $d['belonging_to_name'] = $d['school_name_ryaku'];
-            } else if( $seriesinfo['belonging_to_field'] == 'kojin_address_pref' ){
-                $d['belonging_to_name'] = $this->__pageObj->get_pref_name( $pref_array2, get_field_string_number( $fields, $seriesinfo['belonging_to_field'], 0 ) );
-            } else {
-                $d['belonging_to_name'] = get_field_string( $fields, $seriesinfo['belonging_to_field'] );
-            }
-            $name = $d['sei'] . ' ' . $d['mei'] . '(' . $d['belonging_to_name'];
-            $d['belonging_to_name2'] = '';
-            if( $seriesinfo['belonging_to_field2'] != '' ){
-                if( $seriesinfo['belonging_to_field2'] == 'pref_name' ){
-                    $d['belonging_to_name2'] = $this->__pageObj->get_pref_name( $pref_array2, get_field_string_number( $fields, $seriesinfo['belonging_to_field2'], 0 ) );
-                } else if( $seriesinfo['belonging_to_field2'] == 'school_pref' ){
-                    $d['belonging_to_name2'] = $this->__pageObj->get_pref_name( $pref_array2, get_field_string_number( $fields, $seriesinfo['belonging_to_field2'], 0 ) );
-                } else if( $seriesinfo['belonging_to_field2'] == 'school_address_pref' ){
-                    $d['belonging_to_name2'] = $this->__pageObj->get_pref_name( $pref_array2, get_field_string_number( $fields, $seriesinfo['belonging_to_field2'], 0 ) );
+            $y1 = get_field_string_number( $fields, 'player1_yosen', 0 );
+            if( $y1 > 0 ){
+                $d = array(
+                    'info' => $info,
+                    'player' => 1,
+                    'sei' => get_field_string( $fields, $kojin_name_field_header.'_sei' ),
+                    'mei' => get_field_string( $fields, $kojin_name_field_header.'_mei' ),
+                    //'sei' => base64_decode(get_field_string( $fields, 'kojin_'.$series_mw.'1_sei' )),
+                    //'mei' => base64_decode(get_field_string( $fields, 'kojin_'.$series_mw.'1_mei' )),
+                    'disp_name' => get_field_string( $fields, $kojin_name_field_header.'_disp' ),
+                    'school_name_ryaku' => get_field_string( $fields, $seriesinfo['belonging_to_field'].'_ryaku' ),
+                );
+                if( $seriesinfo['belonging_to_field'] == 'pref_name' ){
+                    $d['belonging_to_name'] = $this->__pageObj->get_pref_name( $pref_array2, get_field_string_number( $fields, $seriesinfo['belonging_to_field'], 0 ) );
+                } else if( $seriesinfo['belonging_to_field'] == 'school_pref' ){
+                    $d['belonging_to_name'] = $this->__pageObj->get_pref_name( $pref_array2, get_field_string_number( $fields, $seriesinfo['belonging_to_field'], 0 ) );
+                } else if( $seriesinfo['belonging_to_field'] == 'school_name' ){
+                    $d['belonging_to_name'] = $d['school_name_ryaku'];
+                } else if( $seriesinfo['belonging_to_field'] == 'kojin_address_pref' ){
+                    $d['belonging_to_name'] = $this->__pageObj->get_pref_name( $pref_array2, get_field_string_number( $fields, $seriesinfo['belonging_to_field'], 0 ) );
                 } else {
-                    $d['belonging_to_name2'] = get_field_string( $fields, $seriesinfo['belonging_to_field2'] );
+                    $d['belonging_to_name'] = get_field_string( $fields, $seriesinfo['belonging_to_field'] );
                 }
-                $name .= ( '・' . $d['belonging_to_name2'] );
+                $name = $d['sei'] . ' ' . $d['mei'] . '(' . $d['belonging_to_name'];
+                $d['belonging_to_name2'] = '';
+                if( $seriesinfo['belonging_to_field2'] != '' ){
+                    if( $seriesinfo['belonging_to_field2'] == 'pref_name' ){
+                        $d['belonging_to_name2'] = $this->__pageObj->get_pref_name( $pref_array2, get_field_string_number( $fields, $seriesinfo['belonging_to_field2'], 0 ) );
+                    } else if( $seriesinfo['belonging_to_field2'] == 'school_pref' ){
+                        $d['belonging_to_name2'] = $this->__pageObj->get_pref_name( $pref_array2, get_field_string_number( $fields, $seriesinfo['belonging_to_field2'], 0 ) );
+                    } else if( $seriesinfo['belonging_to_field2'] == 'school_address_pref' ){
+                        $d['belonging_to_name2'] = $this->__pageObj->get_pref_name( $pref_array2, get_field_string_number( $fields, $seriesinfo['belonging_to_field2'], 0 ) );
+                    } else {
+                        $d['belonging_to_name2'] = get_field_string( $fields, $seriesinfo['belonging_to_field2'] );
+                    }
+                    $name .= ( '・' . $d['belonging_to_name2'] );
+                }
+                $name .= ')';
+                $list['players_for_smarty']['0_'.$info.'_1'] = $name;
+                $list['players'][] = $d;
             }
-            $name .= ')';
-            $list['players_for_smarty']['0_'.$info.'_1'] = $name;
-            $list['players'][] = $d;
+            $y2 = get_field_string_number( $fields, 'player2_yosen', 0 );
+            if( $y2 > 0 ){
+                $d = array(
+                    'info' => $info,
+                    'player' => 2,
+                    'sei' => get_field_string( $fields, $kojin_name_field_header.'_sei' ),
+                    'mei' => get_field_string( $fields, $kojin_name_field_header.'_mei' ),
+                    //'sei' => base64_decode(get_field_string( $fields, 'kojin_'.$series_mw.'1_sei' )),
+                    //'mei' => base64_decode(get_field_string( $fields, 'kojin_'.$series_mw.'1_mei' )),
+                    'disp_name' => get_field_string( $fields, $kojin_name_field_header.'_disp' ),
+                    'school_name_ryaku' => get_field_string( $fields, $seriesinfo['belonging_to_field'].'_ryaku' ),
+                );
+                if( $seriesinfo['belonging_to_field'] == 'pref_name' ){
+                    $d['belonging_to_name'] = $this->__pageObj->get_pref_name( $pref_array2, get_field_string_number( $fields, $seriesinfo['belonging_to_field'], 0 ) );
+                } else if( $seriesinfo['belonging_to_field'] == 'school_pref' ){
+                    $d['belonging_to_name'] = $this->__pageObj->get_pref_name( $pref_array2, get_field_string_number( $fields, $seriesinfo['belonging_to_field'], 0 ) );
+                } else if( $seriesinfo['belonging_to_field'] == 'school_name' ){
+                    $d['belonging_to_name'] = $d['school_name_ryaku'];
+                } else if( $seriesinfo['belonging_to_field'] == 'kojin_address_pref' ){
+                    $d['belonging_to_name'] = $this->__pageObj->get_pref_name( $pref_array2, get_field_string_number( $fields, $seriesinfo['belonging_to_field'], 0 ) );
+                } else {
+                    $d['belonging_to_name'] = get_field_string( $fields, $seriesinfo['belonging_to_field'] );
+                }
+                $name = $d['sei'] . ' ' . $d['mei'] . '(' . $d['belonging_to_name'];
+                $d['belonging_to_name2'] = '';
+                if( $seriesinfo['belonging_to_field2'] != '' ){
+                    if( $seriesinfo['belonging_to_field2'] == 'pref_name' ){
+                        $d['belonging_to_name2'] = $this->__pageObj->get_pref_name( $pref_array2, get_field_string_number( $fields, $seriesinfo['belonging_to_field2'], 0 ) );
+                    } else if( $seriesinfo['belonging_to_field2'] == 'school_pref' ){
+                        $d['belonging_to_name2'] = $this->__pageObj->get_pref_name( $pref_array2, get_field_string_number( $fields, $seriesinfo['belonging_to_field2'], 0 ) );
+                    } else if( $seriesinfo['belonging_to_field2'] == 'school_address_pref' ){
+                        $d['belonging_to_name2'] = $this->__pageObj->get_pref_name( $pref_array2, get_field_string_number( $fields, $seriesinfo['belonging_to_field2'], 0 ) );
+                    } else {
+                        $d['belonging_to_name2'] = get_field_string( $fields, $seriesinfo['belonging_to_field2'] );
+                    }
+                    $name .= ( '・' . $d['belonging_to_name2'] );
+                }
+                $name .= ')';
+                $list['players_for_smarty']['0_'.$info.'_1'] = $name;
+                $list['players'][] = $d;
+            }
 /**/
 /*
             if( $seriesinfo['player_field_mode'] == 3 ){
