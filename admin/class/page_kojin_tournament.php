@@ -221,7 +221,7 @@ class form_page_kojin_tournament
                     $name .= ( '・' . $d['belonging_to_name2'] );
                 }
                 $name .= ')';
-                $list['players_for_smarty']['0_'.$info.'_1'] = $name;
+                $list['players_for_smarty']['0_'.$info.'_2'] = $name;
                 $list['players'][] = $d;
             }
 /**/
