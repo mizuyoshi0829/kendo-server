@@ -26,7 +26,12 @@
                 header( "Location: ".__HTTP_BASE__."input/".$navi['script']."?m=1" ); //.$navi_top[$pv['place']]['kojin_tournament_w'] );
                 exit;
             }
-
+            if( isset($_POST['referee']) ){
+                $_SESSION['auth_input']['series'] = $navi['series'];
+                $_SESSION['auth_input']['series_info_id'] = $navi['series_info_id'];
+                header( "Location: ".__HTTP_BASE__."input/input_referee.php?m=1" );
+                exit;
+            }
         }
     }
 ?>
@@ -54,6 +59,7 @@
       <input type="hidden" name="navi_id" value="<?php echo __NAVI_ID__; ?>">
       <p class="login_pass">パスワード：<input type="password" name="pass"></p>
       <input type="submit" name="exec" value="入力"><br />
+      <br /><br /><input type="submit" name="referee" value="審判員設定"><br />
     </form>
   </div>
 </div>
