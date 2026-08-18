@@ -22,7 +22,8 @@
     $objPage = new form_page();
     $objEntry = new form_page_kojin_entry( $objPage );
     $objTournament = new form_page_kojin_tournament( $objPage );
-
+    $objMatch = new form_page_kojin_match( $objPage );
+    
     if( $admin == 1 ){
         $login = get_field_string_number( $_GET, 'lg', 0 );
         if( $login == 1 ){
