@@ -294,7 +294,7 @@ class form_page
         $sql = 'select * from `series` where `navi_id`=' . $navi_id . ' and `refereepass`=' . $pass;
         $list = db_query_list( $dbs, $sql );
         if( count( $list ) > 0 ){
-            return 1000; // 審判
+            return 1; // 審判
         }
         return 0;
    }
