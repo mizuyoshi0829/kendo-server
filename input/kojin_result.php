@@ -574,7 +574,7 @@ window.onload = function () {
           <td class="tbname01">&nbsp;</td>
         </tr>
         <tr>
-          <td class="tbnamecolor">&nbsp;</td>
+          <td>&nbsp;</td>
           <td class="tbnamecolor">主審</td>
           <td class="tbname01">
             <form action="dantai_result.php?a=<?php echo $admin; ?>&s=<?php echo $series; ?>&l=<?php echo $league; ?>&t=<?php echo $tournament; ?>&m=<?php echo $place_match_no; ?>" method="post">
@@ -588,8 +588,8 @@ window.onload = function () {
               </select>
             </form>
           </td>
-          <td colspan="3" class="tbnamecolor">副審</td>
-          <td colspan="3" class="tbname01">
+          <td class="tbnamecolor">副審</td>
+          <td class="tbname01">
             <form action="dantai_result.php?a=<?php echo $admin; ?>&s=<?php echo $series; ?>&l=<?php echo $league; ?>&t=<?php echo $tournament; ?>&m=<?php echo $place_match_no; ?>" method="post">
               <input name="mode" type="hidden" value="change_referee" />
               <input name="no" type="hidden" value="2" />
