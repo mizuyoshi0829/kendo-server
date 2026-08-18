@@ -571,7 +571,7 @@ window.onload = function () {
         </tr>
 <?php if( $series_info['enable_referee'] != 0 ): ?>
         <tr>
-          <td colspan="2" class="tbnamecolor">&nbsp;</td>
+          <td class="tbnamecolor">&nbsp;</td>
           <td colspan="3" class="tbnamecolor">主審</td>
           <td colspan="3" class="tbname01">
             <form action="dantai_result.php?a=<?php echo $admin; ?>&s=<?php echo $series; ?>&l=<?php echo $league; ?>&t=<?php echo $tournament; ?>&m=<?php echo $place_match_no; ?>" method="post">
