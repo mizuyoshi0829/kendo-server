@@ -9,6 +9,7 @@
     //require_once dirname(dirname(__FILE__)).'/admin/class/admin/reg_9_10.php';
     require_once dirname(dirname(__FILE__)).'/admin/class/admin/reg_14_15.php';
     require_once dirname(dirname(__FILE__)).'/admin/class/page.php';
+    require_once dirname(dirname(__FILE__)).'/admin/class/page_kojin_match.php';
     require_once dirname(dirname(__FILE__)).'/admin/class/page_kojin_entry.php';
     require_once dirname(dirname(__FILE__)).'/admin/class/page_kojin_tournament.php';
 
@@ -301,6 +302,7 @@
     $contents = file_get_contents(
         __HTTP_BASE__.'result/resultapi.php?n=1&p='.$place.'&v='.$navi_id
     );
+    $referee_list = $objMatch->get_referee_list( $series );
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -571,10 +573,10 @@ window.onload = function () {
         </tr>
 <?php if( $series_info['enable_referee'] != 0 ): ?>
         <tr>
-          <td class="tbname01">&nbsp;</td>
+          <td>&nbsp;</td>
         </tr>
         <tr>
-          <td>&nbsp;</td>
+          <td class="tbname01">&nbsp;</td>
           <td class="tbnamecolor">主審</td>
           <td class="tbname01">
             <form action="dantai_result.php?a=<?php echo $admin; ?>&s=<?php echo $series; ?>&l=<?php echo $league; ?>&t=<?php echo $tournament; ?>&m=<?php echo $place_match_no; ?>" method="post">
@@ -601,7 +603,7 @@ window.onload = function () {
               </select>
             </form>
           </td>
-          <td colspan="3" class="tbname01">
+          <td class="tbname01">
             <form action="dantai_result.php?a=<?php echo $admin; ?>&s=<?php echo $series; ?>&l=<?php echo $league; ?>&t=<?php echo $tournament; ?>&m=<?php echo $place_match_no; ?>" method="post">
               <input name="mode" type="hidden" value="change_referee" />
               <input name="no" type="hidden" value="3" />
