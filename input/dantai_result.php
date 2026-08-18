@@ -1106,7 +1106,7 @@ function jump_direct()
           <td>&nbsp;</td> 
         </tr>
 <?php if( $series_info['enable_referee'] != 0 ): ?>
-        <tr><td colspan="2" class="tbnamecolor">&nbsp;</td></tr>
+        <tr><td class="tbname01">&nbsp;</td></tr>
         <tr>
           <td>&nbsp;</td>
           <td colspan="2" class="tbnamecolor">&nbsp;</td>
