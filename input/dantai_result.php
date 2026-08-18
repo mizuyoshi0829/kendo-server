@@ -662,6 +662,7 @@ function jump_direct()
       <input name="check_end6" type="hidden" value="<?php echo $p['check_end6']; ?>" />
       <table class="tb_score_in" width="960" border="0">
         <tr>
+          <td>&nbsp;</td>
           <td colspan="2" class="tbnamecolor">学校名</td>
           <td colspan="3" class="tbnamecolor"><span class="tb_srect">先鋒</span></td>
           <td colspan="3" class="tbnamecolor"><span class="tb_srect">次鋒</span></td>
@@ -673,6 +674,7 @@ function jump_direct()
           <td class="tbname01">勝敗</td>
         </tr>
         <tr>
+          <td rowspan="4" class="teamside1">赤</td>
           <td colspan="2" class="tbnamecolor"><?php echo $objPage->get_pref_name(null,get_field_string($data['entry1'],'school_address_pref',0));?></td>
 <?php for( $i1 = 1; $i1 <= 5; $i1++ ): ?>
           <td colspan="3" class="tbnamecolor2"><?php echo $win1str[$i1]; ?></td>
@@ -837,6 +839,7 @@ function jump_direct()
           <td class="tbname01 tb_srect">&nbsp;</td>
         </tr>
         <tr>
+          <td rowspan="4" class="teamside2">白</td>
           <td colspan="2" class="tbnamecolor tbprefname"><?php echo $objPage->get_pref_name(null,get_field_string_number($data['entry2'],'school_address_pref',0));?></td>
 <?php for( $i1 = 1; $i1 <= 5; $i1++ ): ?>
 <?php for( $i2 = 1; $i2 <= 3; $i2++ ): ?>

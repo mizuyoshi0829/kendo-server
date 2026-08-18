@@ -56,3 +56,14 @@ body {
 	background-color: #D9E3E3;
 	text-align: center;
 }
+.teamside1 {
+    
+	background-color: #FF0000;
+	text-align: center;
+    border: solid 1px #222222;
+}
+.teamside2 {
+	background-color: #FFFFFF;
+	text-align: center;
+    border: solid 1px #222222;
+}
