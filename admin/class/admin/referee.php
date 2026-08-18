@@ -94,8 +94,10 @@ class form_page_admin_referee extends form_page
 
     function getRefereeList( $series )
     {
-		$dbs = db_connect( DATABASE_HOST, DATABASE_USER, DATABASE_PASSWORD, DATABASE_NAME );
-		$referee_sql = 'select * from `referee` where `series`='.$series.' and `year`='.$_SESSION['auth']['year'].' order by `id` asc';
+        $serieslist = $this->get_series_list( $series );
+        if( $serieslist === false ){ return []; }
+  	    $dbs = db_connect( DATABASE_HOST, DATABASE_USER, DATABASE_PASSWORD, DATABASE_NAME );
+        $referee_sql = 'select * from `referee` where `series_info_id`=' . $serieslist['id'] . ' and `year`=' . $_SESSION['auth']['year'] . ' order by `id` asc';
 		$referee_list = db_query_list( $dbs, $referee_sql );
         return $referee_list;
     }
@@ -186,6 +188,7 @@ class form_page_admin_referee extends form_page
             }
             $sql = 'insert into `referee` set'
                 . ' `series`=' . $series
+                . ',`series_info_id`=' . $serieslist['id']
                 . ',`year`=' . $_SESSION['auth']['year']
                 . ',' . implode( ',', $entry )
                 . ',`del`=0,`created`=NOW(),`modified`=NOW()';
