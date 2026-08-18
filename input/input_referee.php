@@ -119,10 +119,11 @@
 
     $series_info = $objPage->get_series_list( $series );
     if( $navi_info['series_lt'] == 'dl' || $navi_info['series_lt'] == 'dt' ){
-        $inc = dirname(dirname(__FILE__)) . '/admin/reg_s' . $series_info['id'] . 'd.php';
+        $inc = dirname(dirname(__FILE__)) . '/admin/class/admin/reg_s' . $series_info['id'] . 'd.php';
     } else {
-        $inc = dirname(dirname(__FILE__)) . '/admin/reg_s' . $series_info['id'] . 'k.php';
+        $inc = dirname(dirname(__FILE__)) . '/admin/class/admin/reg_s' . $series_info['id'] . 'k.php';
     }
+    echo $inc;
     if( file_exists( $inc ) ){
         require_once $inc;
     }
