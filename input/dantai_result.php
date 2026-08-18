@@ -826,6 +826,7 @@ function jump_direct()
 <?php endfor; ?>
         </tr>
         <tr>
+          <td>&nbsp;</td>
           <td colspan="2" class="tbnamecolor tb_srect">&nbsp;</td>
 <?php for( $i1 = 1; $i1 <= 5; $i1++ ): ?>
           <td colspan="3" class="tbname01 tb_srect">
@@ -991,6 +992,7 @@ function jump_direct()
           <td colspan="3" class="tbnamecolor2"><?php echo $win2str[6]; ?></td>
         </tr>
         <tr>
+          <td>&nbsp;</td>
           <td colspan="2" class="tbnamecolor">試合時間</td>
 <?php for( $i1 = 1; $i1 <= 5; $i1++ ): ?>
           <td colspan="3" class="tbname01"><?php echo $data['matches'][$i1]['match_time']; ?></td>
@@ -1000,6 +1002,7 @@ function jump_direct()
           <td class="tbname01">&nbsp;</td>
         </tr>
         <tr>
+          <td>&nbsp;</td>
           <td colspan="2" class="tbprefname">&nbsp;</td>
           <td colspan="3">
             <div align="center" class="tbprefname">
@@ -1105,6 +1108,7 @@ function jump_direct()
 <?php if( $series_info['enable_referee'] != 0 ): ?>
         <tr><td colspan="2" class="tbnamecolor">&nbsp;</td></tr>
         <tr>
+          <td>&nbsp;</td>
           <td colspan="2" class="tbnamecolor">&nbsp;</td>
           <td colspan="3" class="tbnamecolor">主審</td>
           <td colspan="3" class="tbname01">
