@@ -118,6 +118,15 @@
     $navi_count = $objPage->get_series_place_navi_data_count( $navi_id, $place );
 
     $series_info = $objPage->get_series_list( $series );
+    if( $navi_info['series_lt'] == 'dl' || $navi_info['series_lt'] == 'dt' ){
+        $inc = dirname(dirname(__FILE__)) . '/admin/reg_s' . $series_info['id'] . 'd.php';
+    } else {
+        $inc = dirname(dirname(__FILE__)) . '/admin/reg_s' . $series_info['id'] . 'k.php';
+    }
+    if( file_exists( $inc ) ){
+        require_once $inc;
+    }
+
     $place_num = intval( $series_info['place_num'] );
     if( $place_match_no > 1 ){
         $navi_info['prev'] = $objPage->get_series_place_navi_data( $navi_id, $place, $place_match_no-1 );
