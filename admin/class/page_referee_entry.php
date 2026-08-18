@@ -83,7 +83,7 @@ class form_page_referee_entry
     {
 		$dbs = db_connect( DATABASE_HOST, DATABASE_USER, DATABASE_PASSWORD, DATABASE_NAME );
         if( $_SESSION['p']['id'] == 0 ){
-            $sql = 'select `*` from `referee` where `del`=1';
+            $sql = 'select * from `referee` where `del`=1';
             $list = db_query_list( $dbs, $sql );
             if( count( $list ) > 0 ){
                 $sql = 'update `referee` set `del`=0,'
@@ -165,7 +165,7 @@ class form_page_referee_entry
     function search_entry_data( $p )
     {
 		$dbs = db_connect( DATABASE_HOST, DATABASE_USER, DATABASE_PASSWORD, DATABASE_NAME );
-		$sql = 'select `*` from `referee`'
+		$sql = 'select * from `referee`'
 			. ' where `series_info_id`='.$_SESSION['auth_input']['series_info_id'].' and `year`='.$_SESSION['auth_input']['year']
             . ' and `del`=0';
 			//.' order by `disp_order` asc';
