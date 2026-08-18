@@ -19,6 +19,7 @@
             $_SESSION['auth_input']['navi_id'] = __NAVI_ID__;
             $_SESSION['auth_input']['place'] = $navi['place_no'];
             $_SESSION['auth_input']['admin'] = 0;
+            $_SESSION['auth_input']['year'] = $navi['year'];
             $_SESSION['auth'] = array( 'year' => $navi['year'] );
             if( isset($_POST['exec']) ){
                 $_SESSION['auth_input']['series'] = $navi['series'];
