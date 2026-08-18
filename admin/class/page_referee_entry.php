@@ -201,7 +201,6 @@ class form_page_referee_entry
         if( $school12 != '' ){ $sql .= ' and `school` not like \'' . $school12 . '\''; }
         if( $school21 != '' ){ $sql .= ' and `school2` not like \'' . $school21 . '\''; }
         if( $school22 != '' ){ $sql .= ' and `school2` not like \'' . $school22 . '\''; }
-echo $sql;
 		$list = db_query_list( $dbs, $sql );
 		return $list;
     }

@@ -123,7 +123,6 @@
     } else {
         $inc = dirname(dirname(__FILE__)) . '/admin/class/admin/reg_s' . $series_info['id'] . 'k.php';
     }
-    echo $inc;
     if( file_exists( $inc ) ){
         require_once $inc;
     }
@@ -374,7 +373,7 @@ window.onload = function () {
         <td class="tbnamecolor tbprefname" colspan="3"><span class="tb_srect">監督</span></td>
       </tr>
       <tr>
-        <td class="tbprefname teamside1">赤</td>
+        <td class="tbprefname teamside1" style="background-color: #ff0000; text-align: center;">赤</td>
         <td class="tbnamecolor tbprefnamehalf">
           <span class="tbprefname">
             <?php echo $objPage->get_pref_name( null, $school_address_pref1 ); ?>
@@ -396,7 +395,7 @@ window.onload = function () {
         </td>
       </tr>
       <tr>
-        <td class="tbprefname teamside2">白</td>
+        <td class="tbprefname teamside2" style="background-color: #ffffff; text-align: center;">白</td>
         <td class="tbnamecolor tbprefnamehalf">
           <span class="tbprefname">
             <?php echo $objPage->get_pref_name( null, $school_address_pref2 ); ?>
