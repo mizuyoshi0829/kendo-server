@@ -140,6 +140,7 @@ class form_page_referee_entry
             . ' left join `prefs` as `p2` on `r`.`org_pref`=`p2`.`id`'
             . ' left join `prefs` as `p3` on `r`.`org_pref2`=`p3`.`id`'
 			. ' where `r`.`id`='.$id;
+echo $sql,"<br />\n";
 		$list = db_query_list( $dbs, $sql );
         if( count( $list ) == 0 ){
             return array();
