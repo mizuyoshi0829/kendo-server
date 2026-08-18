@@ -288,8 +288,15 @@ class form_page
 //echo $sql;
 //print_r($list);
 //exit;
-        if( count( $list ) == 0 ){ return 0; }
-        return $list[0]['place'];
+        if( count( $list ) > 0 ){
+            return $list[0]['place'];
+        }
+        $sql = 'select * from `series` where `navi_id`=' . $navi_id . ' and `refereepass`=' . $pass;
+        $list = db_query_list( $dbs, $sql );
+        if( count( $list ) > 0 ){
+            return 1000; // 審判
+        }
+        return 0;
    }
 
 	function update_navi_current_input_match_no( $navi_id, $place, $match, $player )
