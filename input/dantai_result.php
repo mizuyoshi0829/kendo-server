@@ -13,6 +13,7 @@
     require_once dirname(dirname(__FILE__)).'/admin/class/page_dantai_match.php';
     require_once dirname(dirname(__FILE__)).'/admin/class/page_dantai_league.php';
     require_once dirname(dirname(__FILE__)).'/admin/class/page_dantai_tournament.php';
+    require_once dirname(dirname(__FILE__)).'/admin/class/page_referee_entry.php';
 
 //    define( '__HTTP_BASE__', 'http://www.i-kendo.net/kendo/');
 
@@ -36,6 +37,7 @@
     $objMatch = new form_page_dantai_match( $objPage );
     $objLeague = new form_page_dantai_league( $objPage );
     $objTournament = new form_page_dantai_tournament( $objPage );
+    $objRefereeEntry = new form_page_referee_entry( $objPage );
     if( $admin == 1 ){
 //$objPage->save_dantai_entry_data_tbl_file(7,8);
         $login = get_field_string_number( $_GET, 'lg', 0 );

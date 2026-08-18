@@ -61,9 +61,12 @@ class form_page_dantai_match
 
 	function get_referee_list( $series )
 	{
-		$dbs = db_connect( DATABASE_HOST, DATABASE_USER, DATABASE_PASSWORD, DATABASE_NAME );
-		$sql = 'select * from `referee` where `series`='.$series.' and `del`=0 order by `id` asc';
-		return db_query_list( $dbs, $sql );
+        $serieslist = $this->__pageObj->get_series_list( $series );
+        if( $serieslist === false ){ return []; }
+  	    $dbs = db_connect( DATABASE_HOST, DATABASE_USER, DATABASE_PASSWORD, DATABASE_NAME );
+        $referee_sql = 'select * from `referee` where `series_info_id`=' . $serieslist['id'] . ' and `year`=' . $_SESSION['auth']['year'] . ' order by `id` asc';
+		$referee_list = db_query_list( $dbs, $referee_sql );
+        return $referee_list;
     }
 
 	function set_dantai_referee( $match, $no, $id )
