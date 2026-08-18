@@ -133,14 +133,13 @@ class form_page_referee_entry
     {
         if( $id == 0 ){ return array(); }
 		$dbs = db_connect( DATABASE_HOST, DATABASE_USER, DATABASE_PASSWORD, DATABASE_NAME );
-		$sql = 'select `r`.`*`, `p1`.`name` as `pref_name`,'
+		$sql = 'select `r`.*, `p1`.`name` as `pref_name`,'
             . ' `p2`.`name` as `org_pref_name`, `p3`.`name` as `org_pref2_name`'
             . ' from `referee` as `r`'
             . ' left join `prefs` as `p1` on `r`.`pref`=`p1`.`id`'
             . ' left join `prefs` as `p2` on `r`.`org_pref`=`p2`.`id`'
             . ' left join `prefs` as `p3` on `r`.`org_pref2`=`p3`.`id`'
 			. ' where `r`.`id`='.$id;
-echo $sql,"<br />\n";
 		$list = db_query_list( $dbs, $sql );
         if( count( $list ) == 0 ){
             return array();
@@ -151,7 +150,7 @@ echo $sql,"<br />\n";
     function get_entry_data_list()
     {
 		$dbs = db_connect( DATABASE_HOST, DATABASE_USER, DATABASE_PASSWORD, DATABASE_NAME );
-		$sql = 'select `r`.`*`, `p1`.`name` as `pref_name`, `p2`.`name` as `org_pref_name`, `p3`.`name` as `org_pref2_name`'
+		$sql = 'select `r`.*, `p1`.`name` as `pref_name`, `p2`.`name` as `org_pref_name`, `p3`.`name` as `org_pref2_name`'
             . ' from `referee` as `r`'
             . ' left join `prefs` as `p1` on `r`.`pref`=`p1`.`id`'
             . ' left join `prefs` as `p2` on `r`.`org_pref`=`p2`.`id`'
