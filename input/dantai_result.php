@@ -1100,6 +1100,7 @@ function jump_direct()
           <td>&nbsp;</td> 
         </tr>
 <?php if( $series_info['enable_referee'] != 0 ): ?>
+        <tr></tr>
         <tr>
           <td colspan="2" class="tbnamecolor">&nbsp;</td>
           <td colspan="3" class="tbnamecolor">主審</td>
