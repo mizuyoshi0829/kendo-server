@@ -541,7 +541,7 @@
         $html .= '            </div>'."\n";
         for( $i1 = 1; $i1 <= 5; $i1++ ){
             $html .= '      <div class="tb_frame">'."\n";
-            $html .= '        <div class="tb_frame_waza">'."\n";
+            $html .= '        <div class="tb_frame_waza_2">'."\n";
             if( $exist_matches[$i1] ){
                 $html .= __output_realtime_html_for_one_board_waza( $data, $i1, 2 );
             }
@@ -615,7 +615,7 @@
         $html .= '      </div>'."\n";
 
         $html .= '      <div class="tb_frame">'."\n";
-        $html .= '        <div class="tb_frame_waza">'."\n";
+        $html .= '        <div class="tb_frame_waza_2">'."\n";
         if( $is_dantai ){
             $html .= __output_realtime_html_for_one_board_waza( $data, 6, 2 );
         }

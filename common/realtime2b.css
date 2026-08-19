@@ -341,7 +341,13 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 #result1 .tb_frame_waza {
 	text-align: center;
 	height: 100px;
-	margin-top: -34px;
+	margin-top: -38px;
+	margin-left: 33px;
+}
+#result1 .tb_frame_waza_2 {
+	text-align: center;
+	height: 100px;
+	margin-top: -38px;
 	margin-left: 33px;
 }
 #result1 .tb_frame_waza1_1 {
