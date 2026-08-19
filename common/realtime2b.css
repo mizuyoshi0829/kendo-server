@@ -442,7 +442,7 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 }
 #result1 .tb_frame_faul_extra {
 	text-align: center;
-	border: 1px solid #000000;
+	border: 2px solid #000000;
 	width: 22px;
 	position:absolute;
 	top: 85px;
