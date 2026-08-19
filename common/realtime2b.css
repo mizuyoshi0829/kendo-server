@@ -353,12 +353,12 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 #result1 .tb_frame_waza1_1 {
 	text-align: center;
 	color: #ff0000;
-	border: 1px solid #ff0000;
-	font-size: 23px;
-	width: 30px;
-	height: 30px;
+	border: 2px solid #ff0000;
+	font-size: 45px;
+	width: 44px;
+	height: 44px;
     border-radius: 50%;
-    line-height: 30px;
+    line-height: 44px;
     background: #ffffff;
 }
 #result1 .tb_frame_waza1_2 {
@@ -395,7 +395,10 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 	margin: -12px 0 0 -4px;
 }
 #result1 .tb_frame_first_waza {
-	border: 2px solid #ff0000;
+	border: 4px solid #ff0000;
+	width: 46px;
+	height: 46px;
+    line-height: 46px;
 }
 #result1 .tb_frame_no_waza {
     display: none;
