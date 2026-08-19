@@ -443,10 +443,10 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 #result1 .tb_frame_faul_extra {
 	text-align: center;
 	border: 1px solid #000000;
-	width: 24px;
+	width: 22px;
 	position:absolute;
-	top: 78px;
-	left: 60%;
+	top: 85px;
+	left: 3%;
 	font-size: 18px;
     z-index: 10;
 }
@@ -500,7 +500,7 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 	height: 30px;
 	position:absolute;
 	font-size: 24px;
-	top: 72px;
+	top: 172px;
 	left: -35%;
     color: #ff0000;
 }
