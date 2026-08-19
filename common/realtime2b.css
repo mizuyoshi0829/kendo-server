@@ -384,6 +384,16 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 	float: left;
 	margin: -12px 0 0 -4px;
 }
+#result1 .tb_frame_first_waza {
+	border: 2px solid #ff0000;
+}
+#result1 .tb_frame_no_waza {
+    display: none;
+}
+#result1 .tb_frame_draw_waza_2 {
+    position: relative;
+    top: 56px;
+}
 #result1 .tb_frame_faul {
 	text-align: left;
 	/*border: none;*/ /*1px solid #000000;*/
