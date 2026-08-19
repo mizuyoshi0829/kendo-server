@@ -489,9 +489,9 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 	border: none; /*1px solid #000000;*/
 	height: 30px;
 	position:absolute;
-	font-size: 36px;
-	top: 150px;
-	left: -25%;
+	font-size: 24px;
+	top: -12px;
+	left: -35%;
     color: #ff0000;
 }
 #result1 .tb_frame_supporter2 {
@@ -499,8 +499,8 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 	border: none; /*1px solid #000000;*/
 	height: 30px;
 	position:absolute;
-	font-size: 36px;
-	top: 180px;
+	font-size: 24px;
+	top: 72px;
 	left: -25%;
     color: #ff0000;
 }
