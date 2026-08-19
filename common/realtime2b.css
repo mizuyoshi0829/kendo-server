@@ -340,9 +340,9 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 }
 #result1 .tb_frame_waza {
 	text-align: center;
-	height: 60px;
-	margin-top: -22px;
-	margin-left: 36px;
+	height: 100px;
+	margin-top: -34px;
+	margin-left: 33px;
 }
 #result1 .tb_frame_waza1_1 {
 	text-align: center;
