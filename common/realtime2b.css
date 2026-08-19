@@ -508,21 +508,21 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 #result1 .tb_frame_draw::before,
 #result1 .tb_frame_draw::after {
   content: "";      /* 疑似要素に必須 */
-  width: 100%;      /* 幅いっぱいを指定 */
-  height: 2px;      /* 適度な太さを指定 */
+  width: 3px;      /* 幅いっぱいを指定 */
+  height: 100%;      /* 適度な太さを指定 */
   display: inline-block; /* 高さを持たせるためにinline-blockを指定 */
   background: #aaa; /* 線の色を指定 */
   border-radius: 2px;    /* 線の端を丸くしたいなら指定する */
   position: absolute;    /* 相対位置に指定 */
   top: 0;           /* 表示位置を上から0pxに指定 */
-  left: 0;          /* 表示位置を左から0pxに指定 */
+  left: 50%;          /* 表示位置を左から0pxに指定 */
 }
 
 #result1 .tb_frame_draw::before {
-  transform: rotate(45deg); /* 時計回りに45度回転させる */
+  transform: rotate(20deg); /* 時計回りに45度回転させる */
 }
 #result1 .tb_frame_draw::after {
-  transform: rotate(-45deg); /* 反時計回りに45度回転させる */
+  transform: rotate(-20deg); /* 反時計回りに45度回転させる */
 }
 #result1 .tbprefnamehalf {
 	text-align: center;
