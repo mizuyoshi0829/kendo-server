@@ -342,13 +342,13 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 	text-align: center;
 	height: 100px;
 	margin-top: -38px;
-	margin-left: 33px;
+	margin-left: 26px;
 }
 #result1 .tb_frame_waza_2 {
 	text-align: center;
 	height: 67px;
 /*	margin-top: -38px;*/
-	margin-left: 33px;
+	margin-left: 26px;
 }
 #result1 .tb_frame_waza1_1 {
 	text-align: center;
@@ -397,6 +397,7 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 	margin: -12px 0 0 -4px;
 }
 #result1 .tb_frame_first_waza {
+	margin-left: -2px;
 	border: 5px solid #ff0000;
 	font-size: 37px;
 	width: 46px;
