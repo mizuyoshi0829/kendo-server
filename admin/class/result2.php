@@ -94,7 +94,14 @@
             if($data['matches'][$match][$head.$i2]==5){
                 $html .= '          <div class="tb_frame_waza2_' . $team . '">';
             } else {
-                $html .= '          <div class="tb_frame_waza1_' . $team . '">';
+                $html .= '          <div class="tb_frame_waza1_' . $team;
+                if( $i2 == 1 && $data['matches'][$match][$head.$i2] != 0 ){
+                    $html .= ' tb_frame_first_waza';
+                }
+                if( $data['matches'][$match][$head.$i2] == 0 ){
+                    $html .= ' tb_frame_no_waza';
+                }
+                $html .= '">';
             }
             if( $data['matches'][$match][$head.$i2] == 0 ){ $html .= '&nbsp;'; }
             if( $data['matches'][$match][$head.$i2] == 1 ){ $html .= 'メ'; }
