@@ -546,7 +546,7 @@
                 $html .= __output_realtime_html_for_one_board_waza( $data, $i1, 2 );
             }
             $html .= '      </div>'."\n";
-            $html .= '        <div class="tb_frame_faul tb_frame_bbottom">';
+            $html .= '        <div class="tb_frame_faul_2 tb_frame_bbottom">';
             if( $exist_matches[$i1] ){
                 if($data['matches'][$i1]['faul2_1']==2){ $html .= '<div class="tb_frame_faul_shidou_b">指</div>'; }
                 if($data['matches'][$i1]['faul2_2']==1){ $html .= '<div class="tb_frame_faul_faul_b"><span class="text-red">▲</span></div>'; }
@@ -620,7 +620,7 @@
             $html .= __output_realtime_html_for_one_board_waza( $data, 6, 2 );
         }
         $html .=   '      </div>'."\n";
-        $html .= '        <div class="tb_frame_faul tb_frame_bbottom">';
+        $html .= '        <div class="tb_frame_faul_2 tb_frame_bbottom">';
         if( $is_dantai ){
             if($data['matches'][6]['faul2_1']==2){ $html .= '<div class="tb_frame_faul_shidou_b">指</div>'; }
             if($data['matches'][6]['faul2_2']==1){ $html .= '<div class="tb_frame_faul_faul_b"><span class="text-red">▲</span></div>'; }
