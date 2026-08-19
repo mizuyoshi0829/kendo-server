@@ -501,7 +501,7 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 	position:absolute;
 	font-size: 24px;
 	top: 72px;
-	left: -25%;
+	left: -35%;
     color: #ff0000;
 }
 #result1 .tb_frame_draw {
