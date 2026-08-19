@@ -202,13 +202,13 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 	border: none;
 }
 #result1 .tb_frame_content {
-	margin: 5% 19% 0 19%;
+	margin: 0 19% 0 19%;
 	text-align: center;
 	border: none;
 /*	border: 1px solid #80ff80; */
 	font-size: 56px;
 	line-height: 95%;
-	height: 195px; /*220px;*/
+	height: 190px; /*220px;*/
 	width: 60%;
 	position:relative;
 /*	vertical-align:middle;*/
@@ -341,12 +341,12 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 #result1 .tb_frame_waza {
 	text-align: center;
 	height: 100px;
-	margin-top: -38px;
+	margin-top: -22px;
 	margin-left: 26px;
 }
 #result1 .tb_frame_waza_2 {
 	text-align: center;
-	height: 67px;
+	height: 81px;
 /*	margin-top: -38px;*/
 	margin-left: 26px;
 }
@@ -354,7 +354,7 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 	text-align: center;
 	color: #ff0000;
 	border: 3px solid #ff0000;
-	font-size: 45px;
+	font-size: 37px;
 	width: 44px;
 	height: 44px;
     border-radius: 50%;
@@ -367,7 +367,7 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 	text-align: center;
 	color: #ff0000;
     border: 3px solid #ff0000;
-	font-size: 45px;
+	font-size: 37px;
 	width: 44px;
 	height: 44px;
     border-radius: 50%;
@@ -443,14 +443,14 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 }
 #result1 .tb_frame_faul_shidou_b {
 	float: right;
-	margin-top: -16px;
+	/*margin-top: -16px;*/
 }
 #result1 .tb_frame_faul_faul {
 	float: left;
 }
 #result1 .tb_frame_faul_faul_b {
-	float: left;
-	margin-top: -16px;
+    float: left;
+    /*margin-top: -16px; */ 
 }
 #result1 .tb_frame_ippon {
 	text-align: center;
