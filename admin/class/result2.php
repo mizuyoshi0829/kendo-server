@@ -447,7 +447,11 @@
                     if( !$fusen ){
                         if( ( $hon1[$i1] == 1 && $hon2[$i1] == 0 ) || ( $hon1[$i1] == 0 && $hon2[$i1] == 1 ) ){
                             if( $data['matches'][$i1]['extra'] == 0 ){
-                                $html .=   '<div class="tb_frame_ippon">一本勝</div>';
+                                if( $hon1[$i1] == 1 && $hon2[$i1] == 0 ){
+                                    $html .=   '<div class="tb_frame_ippon">一本勝</div>';
+                                } else if( $hon1[$i1] == 0 && $hon2[$i1] == 1 ){
+                                    $html .=   '<div class="tb_frame_ippon_2">一本勝</div>';
+                                }
                             }
                         } else if( $hon1[$i1] == $hon2[$i1] ){
                             $html .=   '<div class="tb_frame_draw">×</div>';
