@@ -212,6 +212,7 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 	width: 60%;
 	position:relative;
 /*	vertical-align:middle;*/
+    padding: 6px 0 0 0;
 }
 #result1 .tb_frame_content2 {
 	margin: 5% 19% 0 19%;
@@ -347,7 +348,7 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 #result1 .tb_frame_waza_2 {
 	text-align: center;
 	height: 95px;
-	margin-top: -11px;
+	margin-top: 10px;
 	margin-left: 26px;
 	display: flex;
 	flex-direction: column-reverse;
