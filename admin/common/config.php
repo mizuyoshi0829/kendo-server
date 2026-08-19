@@ -11,7 +11,7 @@ define( 'DATABASE_HOST', '127.0.0.1' );
 //define( 'DATABASE_NAME', 'keioffice_kendo' );
 define( 'DATABASE_NAME', 'keioffice_zenchu' );
 //define( 'DATABASE_USER', 'keioffice_kendo' );
-define( 'DATABASE_USER', 'root' );
+define( 'DATABASE_USER', 'keioffice_kendo' );
 define( 'DATABASE_PASSWORD', 'hprzjntc' );
 
 //define( 'ADMIN_PASSWORD', '18x3jph4fi' );
