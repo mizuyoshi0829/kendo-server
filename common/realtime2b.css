@@ -345,22 +345,24 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 #result1 .tb_frame_waza1_1 {
 	text-align: center;
 	color: #ff0000;
-	border: none;
-	font-size: 36px;
-	width: 28px; /*32px;*/
-	height: 50px;
-	float: left;
-	padding: 2px;
-	margin-top: -4px;
+	border: 1px solid #ff0000;
+	font-size: 23px;
+	width: 30px;
+	height: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    background: #ffffff;
 }
 #result1 .tb_frame_waza1_2 {
 	text-align: center;
 	color: #ff0000;
-	border: none;
-	font-size: 36px;
-	width: 28px; /*32px;*/
-	height: 50px;
-	float: left;
+    border: 1px solid #ff0000;
+    font-size: 23px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    background: #ffffff;
 	padding: 24px 2px 2px 2px;
 	margin-top: -4px;
 }
