@@ -349,6 +349,8 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 	height: 95px;
 /*	margin-top: -38px;*/
 	margin-left: 26px;
+	display: flex;
+	flex-direction: column-reverse;
 }
 #result1 .tb_frame_waza1_1 {
 	text-align: center;
