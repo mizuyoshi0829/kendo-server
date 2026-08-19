@@ -353,26 +353,28 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 #result1 .tb_frame_waza1_1 {
 	text-align: center;
 	color: #ff0000;
-	border: 2px solid #ff0000;
+	border: 3px solid #ff0000;
 	font-size: 45px;
 	width: 44px;
 	height: 44px;
     border-radius: 50%;
     line-height: 44px;
     background: #ffffff;
+	padding: 0px;
+	margin-top: 2px;
 }
 #result1 .tb_frame_waza1_2 {
 	text-align: center;
 	color: #ff0000;
-    border: 1px solid #ff0000;
-    font-size: 23px;
-    width: 30px;
-    height: 30px;
+    border: 3px solid #ff0000;
+	font-size: 45px;
+	width: 44px;
+	height: 44px;
     border-radius: 50%;
-    line-height: 30px;
+    line-height: 44px;
     background: #ffffff;
-/*	padding: 24px 2px 2px 2px;*/
-/*	margin-top: -4px;*/
+	padding: 0px;
+	margin-top: 2px;
 }
 #result1 .tb_frame_waza2_1 {
 	text-align: center;
@@ -395,7 +397,7 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 	margin: -12px 0 0 -4px;
 }
 #result1 .tb_frame_first_waza {
-	border: 4px solid #ff0000;
+	border: 5px solid #ff0000;
 	font-size: 37px;
 	width: 46px;
 	height: 46px;
