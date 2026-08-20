@@ -4480,13 +4480,13 @@ print_r( $match_id_list );
 						$sql = 'update `one_match` set `player1`=' . $player . ','
 						    . '`player1_change_name`=\'' . $name . '\''
 						    . ' where `id`='.$next_one_match_id;
-//echo $sql,"<br />\n";
+echo $sql,"<br />\n";
 						db_query( $dbs, $sql );
 					} else if( $team2 == $team_id ){
 						$sql = 'update `one_match` set `player2`=' . $player . ','
 						    . '`player2_change_name`=\'' . $name . '\''
 						    . ' where `id`='.$next_one_match_id;
-//echo $sql,"<br />\n";
+echo $sql,"<br />\n";
 						db_query( $dbs, $sql );
 					}
 				}

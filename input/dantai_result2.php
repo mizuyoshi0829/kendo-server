@@ -187,8 +187,7 @@
     } else if( $mode == 'change_player' ){
         $team = get_field_string_number( $_POST, 'team', 0 );
         $player = get_field_string_number( $_POST, 'player', 0 );
-        //if( $team != 0 && $player != 0 && isset( $_POST['player'.$team.'_'.$player] ) ){
-        if( $team != 0 && isset( $_POST['player'.$team.'_'.$player] ) ){
+        if( $team != 0 && $player != 0 && isset( $_POST['player'.$team.'_'.$player] ) ){
             $p = intval( $_POST['player'.$team.'_'.$player] );
             $n = $_POST['player'.$team.'_change_name_'.$player];
             $objPage->set_dantai_player( $navi_id, $match, $team, $player, $p, $n, $league );
