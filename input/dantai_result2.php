@@ -215,7 +215,6 @@
 //    } else {
 //        exit;
     }
-print_r($data);
 //    $place_match_no = intval( $data['place_match_no'] );
     $navi_list = $objPage->get_series_place_all_navi_data( $navi_id, $place );
     for( $i1 = 0; $i1 < $navi_count; $i1++ ){
