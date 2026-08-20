@@ -511,7 +511,7 @@ function jump_direct()
 
 <body>
 <!--
-<?php print_r($data); ?>
+<?php //print_r($data); ?>
 <?php //print_r($_POST); ?>
 <?php //echo DATABASE_NAME; ?>
 -->

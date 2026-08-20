@@ -4622,7 +4622,6 @@ print_r( $match_id_list );
 				. ' set `player' . $team . '`=' . $player . ',`player' . $team . '_change_name`=\'' . $name . '\''
 				. ' where `id`='.$one_match_id;
 			db_query( $dbs, $sql );
-echo $sql,"<br />\n";
 		}
 	}
 
