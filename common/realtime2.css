@@ -403,6 +403,15 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 	margin-top: -12px;
     padding-bottom: 8px;
 }
+#result1 .tb_frame_faul_2 {
+	text-align: left;
+	/*border: none;*/ /*1px solid #000000;*/
+	height: 30px;
+	position:relative;
+	font-size: 26px; /*36px*/;
+	margin-top: -12px;
+    padding-bottom: 8px;
+}
 #result1 .tb_frame_faul1 {
 	text-align: center;
 /*	border: none;*/
