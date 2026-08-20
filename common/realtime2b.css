@@ -383,21 +383,19 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 	text-align: center;
 	color: #ff0000;
 	border: none;
-	font-size: 48px;
-	width: 32px;
-	height: 34px;
-	float: left;
-	margin: -12px 0 0 -4px;
+	font-size: 54px;
+	width: 60px;
+	height: 60px;
+	margin: -12px 0 0 -7px;
 }
 #result1 .tb_frame_waza2_2 {
 	text-align: center;
 	color: #ff0000;
 	border: none;
-	font-size: 48px;
-	width: 32px;
-	height: 34px;
-	float: left;
-	margin: -12px 0 0 -4px;
+	font-size: 54px;
+	width: 60px;
+	height: 60px;
+	margin: -12px 0 0 -7px;
 }
 #result1 .tb_frame_first_waza {
 	margin-left: -2px;
