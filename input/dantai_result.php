@@ -237,7 +237,7 @@
         }
     }
 //print_r($_POST);
-print_r($data);
+//print_r($data);
 /*
     if( $league > 0 ){
         if( $series_mw == 'w' ){
@@ -621,7 +621,7 @@ function jump_direct()
 
 <body>
 <!--
-<?php //print_r($data); ?>
+<?php print_r($data); ?>
 <?php //print_r($_POST); ?>
 <?php //echo DATABASE_NAME; ?>
 -->
