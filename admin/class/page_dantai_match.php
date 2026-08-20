@@ -946,7 +946,7 @@ ini_set( 'memory_limit', '256M' );
 						$sql .= '`player' . $next_team . '`='. $player . ',`player' . $next_team . '_change_name`=\'' . $name . '\'';
 					}
 					$sql .= ' where `id`=' . $next_one_match_id;
-					//echo $sql,"<br />\n";
+					echo $sql,"<br />\n";
 					db_query( $dbs, $sql );
 				}
 			}

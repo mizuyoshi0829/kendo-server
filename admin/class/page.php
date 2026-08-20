@@ -4543,7 +4543,6 @@ print_r( $match_id_list );
                 }
             }
 			*/
-			print_r($next_matches);
 			if( count( $next_matches ) > 0 ){
                 foreach( $next_matches as $mv ){
     				$ldata = db_get_one_data( $dbs, ' dantai_league_match', '*', '`league`='.$league_id.' and `league_match_index`='.$mv['index'] );
