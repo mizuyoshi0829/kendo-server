@@ -144,6 +144,8 @@
     $command = 'c='.$category;
     $ret = '';
     $match_info = $objPage->get_dantai_match_info( $match );
+echo $match,"<br />\n";
+print_r($match_info);
     $series = get_field_string_number( $match_info, 'series', 0 );
     $series_mw = get_field_string( $match_info, 'series_mw' );
     $league = get_field_string_number( $match_info, 'league', 0 );
