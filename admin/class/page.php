@@ -4496,6 +4496,18 @@ print_r( $match_id_list );
             $next_matches = array();
 			if( $league_match_index == 1 ){
                 if( $team == 1 ){
+                    $next_matches[] = array( 'index' => 2, 'team' => 2 );
+                } else if( $team == 2 ){
+                    $next_matches[] = array( 'index' => 3, 'team' => 1 );
+                }
+            } else if( $league_match_index == 3 ){
+                if( $team == 2 ){
+                    $next_matches[] = array( 'index' => 2, 'team' => 1 );
+                }
+			}
+			/*
+			if( $league_match_index == 1 ){
+                if( $team == 1 ){
                     $next_matches[] = array( 'index' => 2, 'team' => 1 );
                     $next_matches[] = array( 'index' => 3, 'team' => 1 );
                 } else if( $team == 2 ){
@@ -4530,6 +4542,7 @@ print_r( $match_id_list );
                 } else if( $team == 2 ){
                 }
             }
+			*/
 			if( count( $next_matches ) > 0 ){
                 foreach( $next_matches as $mv ){
     				$ldata = db_get_one_data( $dbs, ' dantai_league_match', '*', '`league`='.$league_id.' and `league_match_index`='.$mv['index'] );
@@ -6036,7 +6049,7 @@ echo $sql,"<br />\n";
                 $one_match['player1_name'] = '';
                 $one_match['player1_name_ryaku'] = '';
 				if( $one_match['player1'] == 0 && $i1 < 6 ){
-					$one_match['player1'] = $i1;
+					//$one_match['player1'] = $i1;
 				}
                 if( $series_info['player_field_mode'] == 1 ){
                     $f = 'player' . $one_match['player1'];
@@ -6059,7 +6072,7 @@ echo $sql,"<br />\n";
                 $one_match['player1_name'] = '';
                 $one_match['player1_name_ryaku'] = '';
 				if( $one_match['player2'] == 0 && $i1 < 6 ){
-					$one_match['player2'] = $i1;
+					//$one_match['player2'] = $i1;
 				}
                 if( $series_info['player_field_mode'] == 1 ){
                     $f = 'player' . $one_match['player2'];
