@@ -4,6 +4,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="refresh" content="900">
     <title>試合結果リアルタイム表示</title>
     <link href="/common/realtime2b.css" rel="stylesheet" type="text/css" />
 </head>
@@ -39,7 +40,7 @@
         };
 
         conn.onclose = function () {
-            alert("切断しました");
+            //alert("切断しました");
             setTimeout(open, 5000);
         };
     }
