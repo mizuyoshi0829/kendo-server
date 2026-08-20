@@ -4461,7 +4461,7 @@ print_r( $match_id_list );
 				fwrite( $fp, "    );\n" );
 				fclose( $fp );
 			}
-
+/*
 			$sql = 'select * from `dantai_league_match`'
 				. ' where `league`=' . $league_id . ' and `league_match_index`<>' . $league_match_index;
 			$list = db_query_list( $dbs, $sql );
@@ -4491,7 +4491,7 @@ print_r( $match_id_list );
 					}
 				}
 			}
-
+*/
 
             $next_matches = array();
 			if( $league_match_index == 1 ){
