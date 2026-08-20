@@ -6027,7 +6027,7 @@ echo $sql,"<br />\n";
 		$dantai_match['referee1_name'] = '';
 		$dantai_match['referee2_name'] = '';
 		$dantai_match['referee3_name'] = '';
-		$sql = 'select * from `referee` where `series`='.$series.' order by `id` asc';
+		$sql = 'select * from `referee` where `series_info_id`='.$series_info['id'].' order by `id` asc';
 		$referee_list = db_query_list( $dbs, $sql );
         foreach( $referee_list as $rv ){
             if( $rv['id'] == $dantai_match['referee1'] ){
