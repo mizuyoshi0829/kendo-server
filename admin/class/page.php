@@ -6049,7 +6049,7 @@ echo $sql,"<br />\n";
                 $one_match['player1_name'] = '';
                 $one_match['player1_name_ryaku'] = '';
 				if( $one_match['player1'] == 0 && $i1 < 6 ){
-					//$one_match['player1'] = $i1;
+					$one_match['player1'] = $i1;
 				}
                 if( $series_info['player_field_mode'] == 1 ){
                     $f = 'player' . $one_match['player1'];
@@ -6072,7 +6072,7 @@ echo $sql,"<br />\n";
                 $one_match['player1_name'] = '';
                 $one_match['player1_name_ryaku'] = '';
 				if( $one_match['player2'] == 0 && $i1 < 6 ){
-					//$one_match['player2'] = $i1;
+					$one_match['player2'] = $i1;
 				}
                 if( $series_info['player_field_mode'] == 1 ){
                     $f = 'player' . $one_match['player2'];
