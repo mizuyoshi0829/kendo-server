@@ -51,7 +51,7 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 
 */
 .content {
-	width: 348px; /*400px;*/
+	width: 384px; /*400px;*/
 	padding: 10px 0;
 	float: left;
 }
