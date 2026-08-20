@@ -237,7 +237,7 @@
         }
     }
 //print_r($_POST);
-//print_r($data);
+print_r($data);
 /*
     if( $league > 0 ){
         if( $series_mw == 'w' ){

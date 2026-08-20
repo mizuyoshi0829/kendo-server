@@ -130,9 +130,7 @@
             } else {
                 $data = $objPage->get_dantai_tournament_one_result( $match );
             }
-echo "<!--\n";
-print_r($data);
-echo "-->";
+//print_r($data);
             $result1 = 0;
             $result1str = '';
             $result2 = 0;
