@@ -342,6 +342,10 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 	text-align: center;
 	height: 60px;
 }
+#result1 .tb_frame_waza_2 {
+	text-align: center;
+	height: 60px;
+}
 #result1 .tb_frame_waza1_1 {
 	text-align: center;
 	color: #ff0000;
@@ -384,6 +388,12 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 	float: left;
 	margin: -12px 0 0 -4px;
 }
+#result1 .tb_frame_first_waza {
+}
+#result1 .tb_frame_no_waza {
+}
+#result1 .tb_frame_draw_waza_2 {
+}
 #result1 .tb_frame_faul {
 	text-align: left;
 	/*border: none;*/ /*1px solid #000000;*/
@@ -394,6 +404,14 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
     padding-bottom: 8px;
 }
 #result1 .tb_frame_faul1 {
+	text-align: center;
+/*	border: none;*/
+	font-size: 16px;
+	width: 30px;
+	height: 24px;
+	float: left;
+}
+#result1 .tb_frame_faul1_2 {
 	text-align: center;
 /*	border: none;*/
 	font-size: 16px;
@@ -426,6 +444,16 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 	margin-top: -16px;
 }
 #result1 .tb_frame_ippon {
+	text-align: center;
+	border: none;
+	width: 24px;
+	position:absolute;
+	top: 260px;
+	left: 75%;
+	font-size: 18px;
+	line-height: 105%;
+}
+#result1 .tb_frame_ippon_2 {
 	text-align: center;
 	border: none;
 	width: 24px;
