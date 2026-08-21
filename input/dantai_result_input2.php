@@ -294,32 +294,17 @@ function change_waza( team, no )
         <tr>
           <td class="tbname01 tb_srect">
             <select name="input_player1" class="tb_srect" id="input_player1">
-              <option value="0"<?php if($p['input_player1']==0): ?> selected="selected"<?php endif; ?>>-</option>
-<?php if( $series_info['player_field_mode'] == 1 ): ?>
-<?php for( $pn = 1; $pn <= 7; $pn++ ): ?>
-<?php if( $series_mw === '' ): ?>
-<?php if( $data['entry1']['player'.$pn.'_sei'] != '' ): ?>
-              <option value="<?php echo $pn; ?>"<?php if($p['input_player1']==$pn): ?> selected="selected"<?php endif; ?>><?php echo $data['entry1']['player'.$pn.'_sei'],' ',$data['entry1']['player'.$pn.'_mei']; ?></option>
-<?php endif; ?>
-<?php else: ?>
-<?php if( $data['entry1']['player'.$pn.'_sei'] != '' ): ?>
-              <option value="<?php echo $pn; ?>"<?php if($p['input_player1']==$pn): ?> selected="selected"<?php endif; ?>><?php echo $data['entry1']['player'.$pn.'_sei'],' ',$data['entry1']['player'.$pn.'_mei']; ?></option>
-<?php endif; ?>
-<?php endif; ?>
-<?php endfor; ?>
-<?php else: ?>
-<?php for( $pn = 1; $pn <= 7; $pn++ ): ?>
-<?php if( $series_mw === '' ): ?>
-<?php if( $data['entry1']['player'.$pn.'_sei'] != '' ): ?>
-              <option value="<?php echo $pn; ?>"<?php if($p['input_player1']==$pn): ?> selected="selected"<?php endif; ?>><?php echo $data['entry1']['player'.$pn.'_sei'],' ',$data['entry1']['player'.$pn.'_mei']; ?></option>
-<?php endif; ?>
-<?php else: ?>
-<?php if( $data['entry1']['player'.$pn.'_'.$series_mw.'_sei'] != '' ): ?>
-              <option value="<?php echo $pn; ?>"<?php if($p['input_player1']==$pn): ?> selected="selected"<?php endif; ?>><?php echo $data['entry1']['player'.$pn.'_'.$series_mw.'_sei'],' ',$data['entry1']['player'.$pn.'_'.$series_mw.'_mei']; ?></option>
-<?php endif; ?>
-<?php endif; ?>
-<?php endfor; ?>
-<?php endif; ?>
+      <option value="0"<?php if($p['input_player1']==0): ?> selected="selected"<?php endif; ?>>-</option>
+<?php
+    for( $pn = 1; $pn <= 7; $pn++ ){
+        $dantai_name_field_header = $objMatch->get_dantai_name_field_header( $series_info, $series_mw, $pn );
+        if( $data['entry1'][$dantai_name_field_header.'_sei'] != '' ){
+?>
+      <option value="<?php echo $pn; ?>"<?php if($p['input_player1']==$pn): ?> selected="selected"<?php endif; ?>><?php echo $data['entry1'][$dantai_name_field_header.'_sei'],' ',$data['entry1'][$dantai_name_field_header.'_mei']; ?></option>
+<?php
+        }
+    }
+?>
 <!--
               <option value="8"<?php if( $p['input_player1'] == 8 ): ?> selected="selected"<?php endif; ?>>補員3</option>
               <option value="9"<?php if( $p['input_player1'] == 9 ): ?> selected="selected"<?php endif; ?>>補員4</option>
