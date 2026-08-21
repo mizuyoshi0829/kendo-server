@@ -1,16 +1,23 @@
 <?php
     require_once dirname(dirname(__FILE__)).'/admin/common/common.php';
     require_once dirname(dirname(__FILE__)).'/admin/common/config.php';
-    require_once dirname(dirname(__FILE__)).'/admin/class/admin/reg_2b.php';
-    require_once dirname(dirname(__FILE__)).'/admin/class/admin/reg_3.php';
-    require_once dirname(dirname(__FILE__)).'/admin/class/admin/reg_4.php';
-    require_once dirname(dirname(__FILE__)).'/admin/class/admin/reg_5.php';
-    require_once dirname(dirname(__FILE__)).'/admin/class/admin/reg_6.php';
-    require_once dirname(dirname(__FILE__)).'/admin/class/admin/reg_s4d.php';
+//    require_once dirname(dirname(dirname(__FILE__))).'/kendo/admin/class/admin/reg_2b.php';
+//    require_once dirname(dirname(__FILE__)).'/admin/class/admin/reg_3.php';
+//    require_once dirname(dirname(__FILE__)).'/admin/class/admin/reg_4.php';
+//    require_once dirname(dirname(dirname(__FILE__))).'/kendo/admin/class/admin/reg_5.php';
+//    require_once dirname(dirname(dirname(__FILE__))).'/kendo/admin/class/admin/reg_6.php';
+//    require_once dirname(dirname(dirname(__FILE__))).'/kendo/admin/class/admin/reg_7_8.php';
+//    require_once dirname(dirname(dirname(__FILE__))).'/kendo/admin/class/admin/reg_9_10.php';
     require_once dirname(dirname(__FILE__)).'/admin/class/page.php';
+    require_once dirname(dirname(__FILE__)).'/admin/class/page_dantai_match.php';
+    require_once dirname(dirname(__FILE__)).'/admin/class/page_dantai_league.php';
+    require_once dirname(dirname(__FILE__)).'/admin/class/page_dantai_tournament.php';
 
     session_start();
     $objPage = new form_page();
+    $objMatch = new form_page_dantai_match( $objPage );
+    $objLeague = new form_page_dantai_league( $objPage );
+    $objTournament = new form_page_dantai_tournament( $objPage );
     $place = get_field_string_number( $_GET, 'p', 1 );
     $category = get_field_string_number( $_GET, 'c', 1 );
     $league = get_field_string_number( $_GET, 'l', 0 );
@@ -24,7 +31,15 @@
     $place_match_no = get_field_string_number( $_POST, 'place_match_no', 1 );
     $mode = get_field_string( $_POST, 'mode' );
     $place = get_field_string_number( $_POST, 'place', 1 );
-    $data = $objPage->get_dantai_one_result( $match_id );
+    $league = get_field_string_number( $_POST, 'league', 0 );
+    $tournament = get_field_string_number( $_POST, 'tournament', 0 );
+    $series_info_id = get_field_string_number( $_POST, 'series_info_id', 0 );
+    $inc = dirname(dirname(__FILE__)) . '/admin/class/admin/reg_s' . $series_info_id . 'd.php';
+    if( file_exists( $inc ) ){
+        require_once $inc;
+    }
+
+    $data = $objMatch->get_dantai_one_result( $match_id );
 //print_r($data);
     $series = get_field_string_number( $data, 'series', 0 );
     $series_mw = get_field_string( $data, 'series_mw' );
@@ -32,6 +47,7 @@
     $tournament = get_field_string_number( $data, 'tournament', 0 );
     $series_info = $objPage->get_series_list( $series );
 
+    );
 /*
     if( $mode == 'updatedb' ){
         $input_match_no = get_field_string_number( $_POST, 'input_match_no', 0 );
@@ -148,6 +164,8 @@
     $p['input_waza2_3'] = $data['matches'][$match_no]['waza2_3'];
     $p['extra'] = $data['matches'][$match_no]['extra'];
     $p['match_time'] = $data['matches'][$match_no]['match_time'];
+    $p['match_time_minute'] = $data['matches'][$match_no]['match_time_minute'];
+    $p['match_time_second'] = $data['matches'][$match_no]['match_time_second'];
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -160,9 +178,9 @@
 <script type="text/javascript">
 function update_realtime( field, value )
 {
-<?php if( $_SESSION['auth']['locked'] == 0 ): ?>
+<?php if( $series_info['locked'] == 0 ): ?>
     $.get(
-        "http://www.i-kendo.net/kendo/result/resultapi.php",
+        '<?php echo __HTTP_BASE__; ?>result/resultapi.php',
         { n: 2, v: <?php echo $navi_id; ?>, p: <?php echo $place; ?>, m: <?php echo $match_id; ?>, mn: <?php echo $match_no; ?>, fd: field, va: value }
     );
 <?php endif; ?>
@@ -235,7 +253,11 @@ function change_waza( team, no )
       <input name="mode" type="hidden" value="update_match" />
       <table class="tb_score_in" width="960" border="0">
         <tr>
+<?php if( isset($data['entry1']['school_name_ryaku']) ): ?>
+          <td rowspan="2" class="tbnamecolor tbprefnamehalf"><span class="tbprefname"><?php echo get_field_string($data['entry1'],'school_name_ryaku');?></span></td>
+<?php else: ?>
           <td rowspan="2" class="tbnamecolor tbprefnamehalf"><span class="tbprefname"><?php echo get_field_string($data['entry1'],'school_name');?></span></td>
+<?php endif; ?>
           <td class="tbname01 tb_srect">
             <?php if( $match_no == 1 ): ?>先鋒<?php endif; ?>
             <?php if( $match_no == 2 ): ?>次鋒<?php endif; ?>
@@ -261,6 +283,9 @@ function change_waza( team, no )
               <option value="1"<?php if($p['input_waza1_'.$i1]==1): ?> selected="selected"<?php endif; ?>>メ</option>
               <option value="2"<?php if($p['input_waza1_'.$i1]==2): ?> selected="selected"<?php endif; ?>>ド</option>
               <option value="3"<?php if($p['input_waza1_'.$i1]==3): ?> selected="selected"<?php endif; ?>>コ</option>
+<?php if( $series_info['enable_tsuki'] == 1 ): ?>
+              <option value="6"<?php if($p['input_waza1_'.$i1]==6): ?> selected="selected"<?php endif; ?>>ツ</option>
+<?php endif; ?>
               <option value="4"<?php if($p['input_waza1_'.$i1]==4): ?> selected="selected"<?php endif; ?>>反</option>
               <option value="5"<?php if($p['input_waza1_'.$i1]==5): ?> selected="selected"<?php endif; ?>>不戦勝</option>
             </select>
@@ -333,6 +358,9 @@ function change_waza( team, no )
               <option value="1"<?php if($p['input_waza2_'.$i1]==1): ?> selected="selected"<?php endif; ?>>メ</option>
               <option value="2"<?php if($p['input_waza2_'.$i1]==2): ?> selected="selected"<?php endif; ?>>ド</option>
               <option value="3"<?php if($p['input_waza2_'.$i1]==3): ?> selected="selected"<?php endif; ?>>コ</option>
+<?php if( $series_info['enable_tsuki'] == 1 ): ?>
+              <option value="6"<?php if($p['input_waza2_'.$i1]==6): ?> selected="selected"<?php endif; ?>>ツ</option>
+<?php endif; ?>
               <option value="4"<?php if($p['input_waza2_'.$i1]==4): ?> selected="selected"<?php endif; ?>>反</option>
               <option value="5"<?php if($p['input_waza2_'.$i1]==5): ?> selected="selected"<?php endif; ?>>不戦勝</option>
             </select>
@@ -382,7 +410,8 @@ function change_waza( team, no )
           <td class="tbnamecolor tbprefnamehalf">&nbsp;</td>
           <td class="tbname01"><input type="checkbox" name="extra" id="extra" value="1" <?php if($p['extra']==1): ?>checked="checked" <?php endif; ?> onChange="change_extra();" />延長</td>
           <td class="tbname01" colspan="2">
-            試合時間：<input name="match_time" type="text" class="" value="<?php echo $p['match_time']; ?>" />
+            試合時間：<input name="match_time_minute" type="text" class="" size="6" value="<?php echo $p['match_time_minute']; ?>" />分
+              <input name="match_time_second" type="text" class="" size="6" value="<?php echo $p['match_time_second']; ?>" />秒
           </td>
           <td class="tbname01" colspan="2">&nbsp;</td>
         </tr>
@@ -393,7 +422,9 @@ function change_waza( team, no )
       <br />
       <br />
       <input name="input_update" type="submit" class="" id="input_update" value="対戦終了" />
-<!--      <input name="input_cancel" type="submit" class="" id="input_cancel" value="中断" /> -->
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input name="input_cancel" type="submit" class="" id="input_cancel" value="中断" />
       </form>
     <!-- end .content --></div>
   </div>
