@@ -871,6 +871,54 @@ function jump_direct()
           <td colspan="3">&nbsp;</td>
 -->
         </tr>
+<?php if( $series_info['enable_referee'] != 0 ): ?>
+        <tr><td class="tbname01">&nbsp;</td></tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td colspan="2" class="tbnamecolor">&nbsp;</td>
+          <td colspan="3" class="tbnamecolor">主審</td>
+          <td colspan="3" class="tbname01">
+            <form action="dantai_result.php?a=<?php echo $admin; ?>&s=<?php echo $series; ?>&l=<?php echo $league; ?>&t=<?php echo $tournament; ?>&m=<?php echo $place_match_no; ?>" method="post">
+              <input name="mode" type="hidden" value="change_referee" />
+              <input name="no" type="hidden" value="1" />
+              <select name="referee1" class="tb_srect" id="referee1" onChange="submit();">
+                <option value="0"<?php if( $data['referee1'] == 0 ): ?> selected="selected"<?php endif; ?>>---</option>
+<?php foreach( $referee_list as $rv ): ?>
+                <option value="<?php echo $rv['id']; ?>" <?php if( $data['referee1'] == $rv['id'] ): ?>selected="selected"<?php endif; ?>><?php echo $rv['sei'],' ',$rv['mei']; ?></option>
+<?php endforeach; ?>
+              </select>
+            </form>
+          </td>
+          <td colspan="3" class="tbnamecolor">副審</td>
+          <td colspan="3" class="tbname01">
+            <form action="dantai_result.php?a=<?php echo $admin; ?>&s=<?php echo $series; ?>&l=<?php echo $league; ?>&t=<?php echo $tournament; ?>&m=<?php echo $place_match_no; ?>" method="post">
+              <input name="mode" type="hidden" value="change_referee" />
+              <input name="no" type="hidden" value="2" />
+              <select name="referee2" class="tb_srect" id="referee2" onChange="submit();">
+                <option value="0"<?php if( $data['referee2'] == 0 ): ?> selected="selected"<?php endif; ?>>---</option>
+<?php foreach( $referee_list as $rv ): ?>
+                <option value="<?php echo $rv['id']; ?>" <?php if( $data['referee2'] == $rv['id'] ): ?>selected="selected"<?php endif; ?>><?php echo $rv['sei'],' ',$rv['mei']; ?></option>
+<?php endforeach; ?>
+              </select>
+            </form>
+          </td>
+          <td colspan="3" class="tbname01">
+            <form action="dantai_result.php?a=<?php echo $admin; ?>&s=<?php echo $series; ?>&l=<?php echo $league; ?>&t=<?php echo $tournament; ?>&m=<?php echo $place_match_no; ?>" method="post">
+              <input name="mode" type="hidden" value="change_referee" />
+              <input name="no" type="hidden" value="3" />
+              <select name="referee3" class="tb_srect" id="referee3" onChange="submit();">
+                <option value="0"<?php if( $data['referee3'] == 0 ): ?> selected="selected"<?php endif; ?>>---</option>
+<?php foreach( $referee_list as $rv ): ?>
+                <option value="<?php echo $rv['id']; ?>" <?php if( $data['referee3'] == $rv['id'] ): ?>selected="selected"<?php endif; ?>><?php echo $rv['sei'],' ',$rv['mei']; ?></option>
+<?php endforeach; ?>
+              </select>
+            </form>
+          </td>
+          <td class="tbname01">&nbsp;</td> 
+          <td colspan="3" class="tbname01">&nbsp;</td>
+          <td class="tbname01">&nbsp;</td> 
+        </tr>
+<?php endif; ?>
       </table>
 <!--      </form> -->
 <?php if( $admin == 1 && $_SESSION['auth_input']['admin'] == 1 ): ?>
