@@ -39,6 +39,10 @@
     if( file_exists( $inc ) ){
         require_once $inc;
     }
+    $objPage->update_navi_current_input_match_no( $navi_id, $place, $place_match_no, $match_no );
+    $contents = file_get_contents(
+        __HTTP_BASE__.'result/resultapi.php?n=1&p='.$place.'&v='.$navi_id
+    );
 
     $data = $objMatch->get_dantai_one_result( $match_id );
 //print_r($data);
@@ -316,7 +320,11 @@ function change_waza( team, no )
           </td>
         </tr>
         <tr>
+<?php if( isset($data['entry2']['school_name_ryaku']) ): ?>
+          <td rowspan="2" class="tbnamecolor tbprefnamehalf"><span class="tbprefname"><?php echo get_field_string($data['entry2'],'school_name_ryaku');?></span></td>
+<?php else: ?>
           <td rowspan="2" class="tbnamecolor tbprefnamehalf"><span class="tbprefname"><?php echo get_field_string($data['entry2'],'school_name');?></span></td>
+<?php endif; ?>
           <td class="tbname01 tb_srect">
             <?php if( $match_no == 1 ): ?>先鋒<?php endif; ?>
             <?php if( $match_no == 2 ): ?>次鋒<?php endif; ?>
@@ -355,31 +363,16 @@ function change_waza( team, no )
           <td class="tbname01 tb_srect">
             <select name="input_player2" class="tb_srect" id="input_player2">
               <option value="0"<?php if($p['input_player2']==0): ?> selected="selected"<?php endif; ?>>-</option>
-<?php if( $series_info['player_field_mode'] == 1 ): ?>
-<?php for( $pn = 1; $pn <= 7; $pn++ ): ?> 
-<?php if( $series_mw === '' ): ?>
-<?php if( $data['entry2']['player'.$pn.'_sei'] != '' ): ?>
-              <option value="<?php echo $pn; ?>"<?php if($p['input_player2']==$pn): ?> selected="selected"<?php endif; ?>><?php echo $data['entry2']['player'.$pn.'_sei'],' ',$data['entry2']['player'.$pn.'_mei']; ?></option>
-<?php endif; ?>
-<?php else: ?>
-<?php if( $data['entry2']['player'.$pn.'_sei'] != '' ): ?>
-              <option value="<?php echo $pn; ?>"<?php if($p['input_player2']==$pn): ?> selected="selected"<?php endif; ?>><?php echo $data['entry2']['player'.$pn.'_sei'],' ',$data['entry2']['player'.$pn.'_mei']; ?></option>
-<?php endif; ?>
-<?php endif; ?>
-<?php endfor; ?>
-<?php else: ?>
-<?php for( $pn = 1; $pn <= 7; $pn++ ): ?> 
-<?php if( $series_mw === '' ): ?>
-<?php if( $data['entry2']['player'.$pn.'_sei'] != '' ): ?>
-              <option value="<?php echo $pn; ?>"<?php if($p['input_player2']==$pn): ?> selected="selected"<?php endif; ?>><?php echo $data['entry2']['player'.$pn.'_sei'],' ',$data['entry2']['player'.$pn.'_mei']; ?></option>
-<?php endif; ?>
-<?php else: ?>
-<?php if( $data['entry2']['player'.$pn.'_'.$series_mw.'_sei'] != '' ): ?>
-              <option value="<?php echo $pn; ?>"<?php if($p['input_player2']==$pn): ?> selected="selected"<?php endif; ?>><?php echo $data['entry2']['player'.$pn.'_'.$series_mw.'_sei'],' ',$data['entry2']['player'.$pn.'_'.$series_mw.'_mei']; ?></option>
-<?php endif; ?>
-<?php endif; ?>
-<?php endfor; ?>
-<?php endif; ?>
+<?php
+    for( $pn = 1; $pn <= 7; $pn++ ){
+        $dantai_name_field_header = $objMatch->get_dantai_name_field_header( $series_info, $series_mw, $pn );
+        if( $data['entry2'][$dantai_name_field_header.'_sei'] != '' ){
+?>
+              <option value="<?php echo $pn; ?>"<?php if($p['input_player2']==$pn): ?> selected="selected"<?php endif; ?>><?php echo $data['entry2'][$dantai_name_field_header.'_sei'],' ',$data['entry2'][$dantai_name_field_header.'_mei']; ?></option>
+<?php
+        }
+    }
+?>
 <!--
               <option value="8"<?php if( $p['input_player2'] == 8 ): ?> selected="selected"<?php endif; ?>>補員3</option>
               <option value="9"<?php if( $p['input_player2'] == 9 ): ?> selected="selected"<?php endif; ?>>補員4</option>
