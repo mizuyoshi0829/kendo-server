@@ -15,8 +15,9 @@
     require_once dirname(dirname(__FILE__)).'/admin/class/page_dantai_match.php';
     require_once dirname(dirname(__FILE__)).'/admin/class/page_dantai_league.php';
     require_once dirname(dirname(__FILE__)).'/admin/class/page_dantai_tournament.php';
+    require_once dirname(dirname(__FILE__)).'/admin/class/page_referee_entry.php';
 
-    define( '__HTTP_BASE__', 'http://www.i-kendo.net/kendo/');
+//    define( '__HTTP_BASE__', 'http://www.i-kendo.net/kendo/');
 
     $passtbl = array(
         array( 'series' => 4, 'place' => 1, 'pass' => '11', 'top'=>303 ),
@@ -37,6 +38,7 @@
     $objMatch = new form_page_dantai_match( $objPage );
     $objLeague = new form_page_dantai_league( $objPage );
     $objTournament = new form_page_dantai_tournament( $objPage );
+    $objRefereeEntry = new form_page_referee_entry( $objPage );
     if( $admin == 1 ){
 //$objPage->save_dantai_entry_data_tbl_file(7,8);
         $login = get_field_string_number( $_GET, 'lg', 0 );
@@ -203,6 +205,10 @@
         }
     } else if( $mode == 'exchane_flag' ){
         $objPage->set_dantai_exchane_flag( $match );
+    } else if( $mode == 'change_referee' ){
+        $no = get_field_string_number( $_POST, 'no', 0 );
+        $id = get_field_string_number( $_POST, 'referee'.$no, 0 );
+        $objMatch->set_dantai_referee( $match, $no, $id );
     }
     if( $league > 0 ){
         $data = $objPage->get_dantai_league_one_result( $match );
@@ -256,7 +262,16 @@
             $data['matches'][$input_match_no]['waza2_2'] = get_field_string_number( $_POST, 'input_waza2_2', 0 );
             $data['matches'][$input_match_no]['waza2_3'] = get_field_string_number( $_POST, 'input_waza2_3', 0 );
             $data['matches'][$input_match_no]['extra'] = get_field_string_number( $_POST, 'extra', 0 );
-            $data['matches'][$input_match_no]['match_time'] = get_field_string( $_POST, 'match_time' );
+            $data['matches'][$input_match_no]['match_time_minute'] = get_field_string( $_POST, 'match_time_minute' );
+            $data['matches'][$input_match_no]['match_time_second'] = get_field_string( $_POST, 'match_time_second' );
+            if(
+                $data['matches'][$input_match_no]['match_time_minute'] == ''
+                && $data['matches'][$input_match_no]['match_time_second'] == ''
+            ){
+                $data['matches'][$input_match_no]['match_time'] = '';
+            } else {
+                $data['matches'][$input_match_no]['match_time'] = $data['matches'][$input_match_no]['match_time_minute'] . '分' . $data['matches'][$input_match_no]['match_time_second'] . '秒';
+            }
             if( isset( $_POST['input_update'] ) ){
                 $data['matches'][$input_match_no]['end_match'] = 1;
             }
@@ -278,9 +293,9 @@
             $result2str = '不戦勝';
         }
         if( $update_db ){
-            $hon1 = array(0,0,0,0,0,0);
-            $hon2 = array(0,0,0,0,0,0);
-            $win = array(0,0,0,0,0,0);
+            $hon1 = array(0,0,0,0,0,0,0);
+            $hon2 = array(0,0,0,0,0,0,0);
+            $win = array(0,0,0,0,0,0,0);
             $list = array(
                 'p' => $data['matches'],
                 'hon1' => $hon1,
@@ -485,6 +500,7 @@
     $contents = file_get_contents(
         __HTTP_BASE__.'result/resultapi.php?n=1&p='.$place.'&v='.$navi_id
     );
+    $referee_list = $objMatch->get_referee_list( $series );
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
