@@ -951,20 +951,32 @@ class form_page_kojin_tournament
         if( $p['winner'] == 1 ){
             $winner = $p['player1_id'];
             $loser = $p['player2_id'];
+            $winner_suppoter = $p['supporter1'];
+            $loser_suppoter = $p['supporter2'];
         } else if( $p['winner'] == 2 ){
             $winner = $p['player2_id'];
             $loser = $p['player1_id'];
+            $winner_suppoter = $p['supporter2'];
+            $loser_suppoter = $p['supporter1'];
         } else {
             $winner = 0;
+            $winner_suppoter = 0;
             $loser = 0;
+            $loser_suppoter = 0;
         }
         if( $winner != 0 && $win_match != 0 && $win_match_player_no != 0 ){
-            $sql = 'update `one_match` set `player'.$win_match_player_no.'`='.$winner.' where `id`='.$win_match;
-            //echo $sql;
+            $sql = 'update `one_match`'
+                . ' set `player'.$win_match_player_no.'`=' . $winner . ','
+                . ' `supporter'.$win_match_player_no.'`=' . $winner_suppoter
+                . ' where `id`='.$win_match;
+            echo $sql;
             db_query( $dbs, $sql );
         }
         if( $loser != 0 && $lose_match != 0 && $lose_match_player_no != 0 ){
-            $sql = 'update `one_match` set `player'.$lose_match_player_no.'`='.$loser.' where `id`='.$lose_match;
+            $sql = 'update `one_match`'
+                . ' set `player'.$lose_match_player_no.'`=' . $loser . ','
+                . ' `supporter'.$lose_match_player_no.'`=' . $loser_suppoter
+                . ' where `id`='.$lose_match;
             //echo $sql;
             db_query( $dbs, $sql );
         }
