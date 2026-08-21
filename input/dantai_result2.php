@@ -500,6 +500,7 @@
     $contents = file_get_contents(
         __HTTP_BASE__.'result/resultapi.php?n=1&p='.$place.'&v='.$navi_id
     );
+    print_r($contents);
     $referee_list = $objMatch->get_referee_list( $series );
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
