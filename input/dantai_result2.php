@@ -875,8 +875,8 @@ function jump_direct()
         <tr><td class="tbname01">&nbsp;</td></tr>
         <tr>
           <td class="tbnamecolor">主審</td>
-          <td colspan="3" class="tbname01">
-            <form action="dantai_result.php?a=<?php echo $admin; ?>&s=<?php echo $series; ?>&l=<?php echo $league; ?>&t=<?php echo $tournament; ?>&m=<?php echo $place_match_no; ?>" method="post">
+          <td colspan="2" class="tbname01">
+            <form action="dantai_result2.php?a=<?php echo $admin; ?>&s=<?php echo $series; ?>&l=<?php echo $league; ?>&t=<?php echo $tournament; ?>&m=<?php echo $place_match_no; ?>" method="post">
               <input name="mode" type="hidden" value="change_referee" />
               <input name="no" type="hidden" value="1" />
               <select name="referee1" class="tb_srect" id="referee1" onChange="submit();">
@@ -889,7 +889,7 @@ function jump_direct()
           </td>
           <td class="tbnamecolor">副審</td>
           <td class="tbname01">
-            <form action="dantai_result.php?a=<?php echo $admin; ?>&s=<?php echo $series; ?>&l=<?php echo $league; ?>&t=<?php echo $tournament; ?>&m=<?php echo $place_match_no; ?>" method="post">
+            <form action="dantai_result2.php?a=<?php echo $admin; ?>&s=<?php echo $series; ?>&l=<?php echo $league; ?>&t=<?php echo $tournament; ?>&m=<?php echo $place_match_no; ?>" method="post">
               <input name="mode" type="hidden" value="change_referee" />
               <input name="no" type="hidden" value="2" />
               <select name="referee2" class="tb_srect" id="referee2" onChange="submit();">
@@ -901,7 +901,7 @@ function jump_direct()
             </form>
           </td>
           <td class="tbname01">
-            <form action="dantai_result.php?a=<?php echo $admin; ?>&s=<?php echo $series; ?>&l=<?php echo $league; ?>&t=<?php echo $tournament; ?>&m=<?php echo $place_match_no; ?>" method="post">
+            <form action="dantai_result2.php?a=<?php echo $admin; ?>&s=<?php echo $series; ?>&l=<?php echo $league; ?>&t=<?php echo $tournament; ?>&m=<?php echo $place_match_no; ?>" method="post">
               <input name="mode" type="hidden" value="change_referee" />
               <input name="no" type="hidden" value="3" />
               <select name="referee3" class="tb_srect" id="referee3" onChange="submit();">
