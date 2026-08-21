@@ -874,9 +874,7 @@ function jump_direct()
 <?php if( $series_info['enable_referee'] != 0 ): ?>
         <tr><td class="tbname01">&nbsp;</td></tr>
         <tr>
-          <td>&nbsp;</td>
-          <td colspan="2" class="tbnamecolor">&nbsp;</td>
-          <td colspan="3" class="tbnamecolor">主審</td>
+          <td class="tbnamecolor">主審</td>
           <td colspan="3" class="tbname01">
             <form action="dantai_result.php?a=<?php echo $admin; ?>&s=<?php echo $series; ?>&l=<?php echo $league; ?>&t=<?php echo $tournament; ?>&m=<?php echo $place_match_no; ?>" method="post">
               <input name="mode" type="hidden" value="change_referee" />
@@ -889,8 +887,8 @@ function jump_direct()
               </select>
             </form>
           </td>
-          <td colspan="3" class="tbnamecolor">副審</td>
-          <td colspan="3" class="tbname01">
+          <td class="tbnamecolor">副審</td>
+          <td class="tbname01">
             <form action="dantai_result.php?a=<?php echo $admin; ?>&s=<?php echo $series; ?>&l=<?php echo $league; ?>&t=<?php echo $tournament; ?>&m=<?php echo $place_match_no; ?>" method="post">
               <input name="mode" type="hidden" value="change_referee" />
               <input name="no" type="hidden" value="2" />
@@ -902,7 +900,7 @@ function jump_direct()
               </select>
             </form>
           </td>
-          <td colspan="3" class="tbname01">
+          <td class="tbname01">
             <form action="dantai_result.php?a=<?php echo $admin; ?>&s=<?php echo $series; ?>&l=<?php echo $league; ?>&t=<?php echo $tournament; ?>&m=<?php echo $place_match_no; ?>" method="post">
               <input name="mode" type="hidden" value="change_referee" />
               <input name="no" type="hidden" value="3" />
@@ -914,9 +912,6 @@ function jump_direct()
               </select>
             </form>
           </td>
-          <td class="tbname01">&nbsp;</td> 
-          <td colspan="3" class="tbname01">&nbsp;</td>
-          <td class="tbname01">&nbsp;</td> 
         </tr>
 <?php endif; ?>
       </table>
