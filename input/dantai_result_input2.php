@@ -8,7 +8,6 @@
 //    require_once dirname(dirname(dirname(__FILE__))).'/kendo/admin/class/admin/reg_6.php';
 //    require_once dirname(dirname(dirname(__FILE__))).'/kendo/admin/class/admin/reg_7_8.php';
 //    require_once dirname(dirname(dirname(__FILE__))).'/kendo/admin/class/admin/reg_9_10.php';
-    require_once dirname(dirname(__FILE__)).'/admin/class/admin/reg_s4d.php';
     require_once dirname(dirname(__FILE__)).'/admin/class/page.php';
     require_once dirname(dirname(__FILE__)).'/admin/class/page_dantai_match.php';
     require_once dirname(dirname(__FILE__)).'/admin/class/page_dantai_league.php';
