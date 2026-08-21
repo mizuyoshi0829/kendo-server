@@ -839,6 +839,7 @@ function jump_direct()
                 <input name="series" type="hidden" value="<?php echo $series; ?>" />
                 <input name="league" type="hidden" value="<?php echo $league; ?>" />
                 <input name="tournament" type="hidden" value="<?php echo $tournament; ?>" />
+                <input name="series_info_id" type="hidden" value="<?php echo $navi_info['series_info_id']; ?>" />
                 <input name="match_no" type="hidden" value="1" />
               </form>
             </div>

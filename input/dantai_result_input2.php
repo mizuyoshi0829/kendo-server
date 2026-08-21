@@ -39,10 +39,6 @@
     if( file_exists( $inc ) ){
         require_once $inc;
     }
-    $objPage->update_navi_current_input_match_no( $navi_id, $place, $place_match_no, $match_no );
-    $contents = file_get_contents(
-        __HTTP_BASE__.'result/resultapi.php?n=1&p='.$place.'&v='.$navi_id
-    );
 
     $data = $objMatch->get_dantai_one_result( $match_id );
 //print_r($data);
@@ -51,6 +47,10 @@
     $league = get_field_string_number( $data, 'league', 0 );
     $tournament = get_field_string_number( $data, 'tournament', 0 );
     $series_info = $objPage->get_series_list( $series );
+    $objPage->update_navi_current_input_match_no( $navi_id, $place, $place_match_no, $match_no );
+    $contents = file_get_contents(
+        __HTTP_BASE__.'result/resultapi.php?n=1&p='.$place.'&v='.$navi_id
+    );
 /*
     if( $mode == 'updatedb' ){
         $input_match_no = get_field_string_number( $_POST, 'input_match_no', 0 );
