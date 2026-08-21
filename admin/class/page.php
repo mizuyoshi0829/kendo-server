@@ -7019,6 +7019,7 @@ exit;
 		$series_mw = $dantai_tournament_match[0]['series_mw'];
 		$tournament = intval( $dantai_tournament_match[0]['tournament'] );
 		$tournament_match_index = intval( $dantai_tournament_match[0]['tournament_match_index'] );
+        $series_info = $this->get_series_list( $series );
 
 		$dantai_match = db_get_one_data( $dbs, 'dantai_match', '*', '`id`='.$match );
 		$dantai_match['entry1'] = $this->get_entry_one_data2( intval($dantai_match['team1']) );
@@ -7039,7 +7040,7 @@ exit;
 		$dantai_match['referee1_name'] = '';
 		$dantai_match['referee2_name'] = '';
 		$dantai_match['referee3_name'] = '';
-		$sql = 'select * from `referee` where `series`='.$series.' order by `id` asc';
+		$sql = 'select * from `referee` where `series_info_id`='.$series_info['id'].' order by `id` asc';
 		$referee_list = db_query_list( $dbs, $sql );
         foreach( $referee_list as $rv ){
             if( $rv['id'] == $dantai_match['referee1'] ){
