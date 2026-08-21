@@ -188,11 +188,11 @@ class form_page_kojin_tournament
                 $d = array(
                     'info' => $info,
                     'player' => 2,
-                    'sei' => get_field_string( $fields, $kojin_name_field_header.'_sei' ),
-                    'mei' => get_field_string( $fields, $kojin_name_field_header.'_mei' ),
+                    'sei' => get_field_string( $fields, $kojin_name_field_header2.'_sei' ),
+                    'mei' => get_field_string( $fields, $kojin_name_field_header2.'_mei' ),
                     //'sei' => base64_decode(get_field_string( $fields, 'kojin_'.$series_mw.'1_sei' )),
                     //'mei' => base64_decode(get_field_string( $fields, 'kojin_'.$series_mw.'1_mei' )),
-                    'disp_name' => get_field_string( $fields, $kojin_name_field_header.'_disp' ),
+                    'disp_name' => get_field_string( $fields, $kojin_name_field_header2.'_disp' ),
                     'school_name_ryaku' => get_field_string( $fields, $seriesinfo['belonging_to_field'].'_ryaku' ),
                 );
                 if( $seriesinfo['belonging_to_field'] == 'pref_name' ){
@@ -502,7 +502,7 @@ class form_page_kojin_tournament
 //print_r($list['data']);
         }
         db_close( $dbs );
-print_r($list);
+//print_r($list);
         return $list;
     }
 
