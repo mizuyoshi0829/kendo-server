@@ -46,8 +46,6 @@
     $league = get_field_string_number( $data, 'league', 0 );
     $tournament = get_field_string_number( $data, 'tournament', 0 );
     $series_info = $objPage->get_series_list( $series );
-
-    );
 /*
     if( $mode == 'updatedb' ){
         $input_match_no = get_field_string_number( $_POST, 'input_match_no', 0 );
