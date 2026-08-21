@@ -247,6 +247,10 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 	text-align: center;
 	height: 30px; /*30px;*/
 }
+.tb_frame_waza_2 {
+	text-align: center;
+	height: 30px; /*30px;*/
+}
 .tb_frame_waza1_1 {
 	text-align: center;
 	color: #ff0000;
@@ -291,7 +295,22 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 	margin: -6px 0 0 -2px;
     padding-top: 6px;
 }
+.tb_frame_first_waza {
+}
+.tb_frame_no_waza {
+}
+.tb_frame_draw_waza_2 {
+}
 .tb_frame_faul {
+	text-align: left;
+	/*border: none;*/ /*1px solid #000000;*/
+	height: 10px; /*15px;*/
+	position:relative;
+	font-size: 12px;
+	margin-top: 0px; /*-6px;*/
+    padding-bottom: 8px;
+}
+.tb_frame_faul_2 {
 	text-align: left;
 	/*border: none;*/ /*1px solid #000000;*/
 	height: 10px; /*15px;*/
