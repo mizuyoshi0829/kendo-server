@@ -2757,7 +2757,7 @@
 						continue;
 					}
                		$html .= '<h3>団体決勝トーナメント&nbsp;一回戦&nbsp;第' . $index . '試合</h3>';
-                	$html .= $objMatch->output_one_match_for_HTML2( $navi_info, $tournament_list['match'][$match_index+$i1-2], $entry_list, $mv, false, true );
+                	$html .= $objMatch->output_one_match_for_HTML2( $navi_info, $tournament_list['match'][$match_index+$i1-2], $entry_list, $mv, 1, true );
 					$index++;
            		}
                 if( $match_level >= 4 ){
@@ -2782,16 +2782,16 @@
             } else if( $match_level == 3 ){
         		for( $i1 = 1; $i1 <= 4; $i1++ ){
 		        	$html .= '<h3>団体決勝トーナメント&nbsp;準々決勝&nbsp;第'.$i1.'試合</h3>';
-			        $html .= $objMatch->output_one_match_for_HTML2( $navi_info, $tournament_list['match'][$i1+2], $entry_list, $mv, false, true );
+			        $html .= $objMatch->output_one_match_for_HTML2( $navi_info, $tournament_list['match'][$i1+2], $entry_list, $mv, 1, true );
         		}
             } else if( $match_level == 2 ){
         		for( $i1 = 1; $i1 <= 2; $i1++ ){
 		        	$html .= '<h3>団体決勝トーナメント&nbsp;準決勝&nbsp;第'.$i1.'試合</h3>';
-			        $html .= $objMatch->output_one_match_for_HTML2( $navi_info, $tournament_list['match'][$i1], $entry_list, $mv, false, true );
+			        $html .= $objMatch->output_one_match_for_HTML2( $navi_info, $tournament_list['match'][$i1], $entry_list, $mv, 1, true );
                 }
             } else if( $match_level == 1 ){
         		$html .= '<h3>団体決勝トーナメント&nbsp;決勝</h3>';
-	        	$html .= $objMatch->output_one_match_for_HTML2( $navi_info, $tournament_list['match'][0], $entry_list, $mv, false, true );
+	        	$html .= $objMatch->output_one_match_for_HTML2( $navi_info, $tournament_list['match'][0], $entry_list, $mv, 1, true );
                 break;
             }
             $match_level--;
