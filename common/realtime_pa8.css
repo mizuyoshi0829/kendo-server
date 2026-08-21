@@ -493,8 +493,7 @@ a:hover, a:active, a:focus { /* このセレクターグループは、キーボ
 	width: 50px;
 	float: left;
 }
-
-.tb_frame_hide_referee {
+.hide_referee {
 	display: none;
 }
 .tb_frame_referee {
