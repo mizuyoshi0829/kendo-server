@@ -124,6 +124,13 @@
     }
 
     $series_info = $objPage->get_series_list( $series );
+
+    if( $mode == 'change_referee' ){
+        $no = get_field_string_number( $_POST, 'no', 0 );
+        $id = get_field_string_number( $_POST, 'referee'.$no, 0 );
+        $objMatch->set_kojin_referee( $match, $no, $id );
+    }
+
     //    $match = $top_match; //$objPage->get_place_top_match( $param, $place, $series );
     //    if( $match == 0 ){ exit; }
 
@@ -580,7 +587,7 @@ window.onload = function () {
           <td class="tbname01">&nbsp;</td>
           <td class="tbnamecolor">主審</td>
           <td class="tbname01">
-            <form action="dantai_result.php?a=<?php echo $admin; ?>&s=<?php echo $series; ?>&l=<?php echo $league; ?>&t=<?php echo $tournament; ?>&m=<?php echo $place_match_no; ?>" method="post">
+            <form action="kojin_result.php?a=<?php echo $admin; ?>&s=<?php echo $series; ?>&l=<?php echo $league; ?>&t=<?php echo $tournament; ?>&m=<?php echo $place_match_no; ?>" method="post">
               <input name="mode" type="hidden" value="change_referee" />
               <input name="no" type="hidden" value="1" />
               <select name="referee1" class="tb_srect" id="referee1" onChange="submit();">
@@ -593,7 +600,7 @@ window.onload = function () {
           </td>
           <td class="tbnamecolor">副審</td>
           <td class="tbname01">
-            <form action="dantai_result.php?a=<?php echo $admin; ?>&s=<?php echo $series; ?>&l=<?php echo $league; ?>&t=<?php echo $tournament; ?>&m=<?php echo $place_match_no; ?>" method="post">
+            <form action="kojin_result.php?a=<?php echo $admin; ?>&s=<?php echo $series; ?>&l=<?php echo $league; ?>&t=<?php echo $tournament; ?>&m=<?php echo $place_match_no; ?>" method="post">
               <input name="mode" type="hidden" value="change_referee" />
               <input name="no" type="hidden" value="2" />
               <select name="referee2" class="tb_srect" id="referee2" onChange="submit();">
@@ -605,7 +612,7 @@ window.onload = function () {
             </form>
           </td>
           <td class="tbname01">
-            <form action="dantai_result.php?a=<?php echo $admin; ?>&s=<?php echo $series; ?>&l=<?php echo $league; ?>&t=<?php echo $tournament; ?>&m=<?php echo $place_match_no; ?>" method="post">
+            <form action="kojin_result.php?a=<?php echo $admin; ?>&s=<?php echo $series; ?>&l=<?php echo $league; ?>&t=<?php echo $tournament; ?>&m=<?php echo $place_match_no; ?>" method="post">
               <input name="mode" type="hidden" value="change_referee" />
               <input name="no" type="hidden" value="3" />
               <select name="referee3" class="tb_srect" id="referee3" onChange="submit();">
