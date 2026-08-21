@@ -502,7 +502,7 @@ class form_page_kojin_tournament
 //print_r($list['data']);
         }
         db_close( $dbs );
-//print_r($list);
+print_r($list);
         return $list;
     }
 
