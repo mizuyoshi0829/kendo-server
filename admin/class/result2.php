@@ -1004,7 +1004,11 @@
                     if( $data['matches'][1]['waza1_'.$i2] == 5 ){
                         $html .=   '          <div class="tb_frame_waza2_1">';
                     } else {
-                        $html .=   '          <div class="tb_frame_waza1_1">';
+                        $html .=   '          <div class="tb_frame_waza1_1"';
+                        if( $data['matches'][1]['waza1_'.$i2] == 0 ){
+                            $html .= ' tb_frame_no_waza';
+                        }
+                        $html .= '">';
                     }
                     if($data['matches'][1]['waza1_'.$i2]==0){ $html .=   '&nbsp;'; }
                     if($data['matches'][1]['waza1_'.$i2]==1){ $html .=   'メ'; }
@@ -1065,7 +1069,11 @@
                     if($data['matches'][1]['waza1_'.$i2] == 5 ){
                         $html .= '          <div class="tb_frame_waza2">';
                     } else {
-                        $html .= '          <div class="tb_frame_waza1">';
+                        $html .= '          <div class="tb_frame_waza1_2">';
+                        if( $data['matches'][1]['waza2_'.$i2] == 0 ){
+                            $html .= ' tb_frame_no_waza';
+                        }
+                        $html .= '">';
                     }
                     if($data['matches'][1]['waza2_'.$i2]==0){ $html .= '&nbsp;'; }
                     if($data['matches'][1]['waza2_'.$i2]==1){ $html .= 'メ'; }
