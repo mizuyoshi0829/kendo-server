@@ -28,7 +28,7 @@
 	//fwrite( $fp, 'session:'.print_r( $_SESSION, true )."\n" );
 	//fwrite( $fp, 'server:'.print_r( $_SERVER, true )."\n" );
 	fwrite( $fp, 'files:'.print_r( $_FILES, true )."\n" );
-    fwrite( $fp, "navi:".$navi_id." place:".$place." match:".$match." player:".$player."\n" );
+    fwrite( $fp, "navi:".$navi_id." place:".$place." no:".$no."\n" );
 	fclose( $fp );
 
     //if( $navi_id != 1 ){ return; }
@@ -39,7 +39,9 @@
             if( $place == 0 || $pi == $place ){
                 $match = $objPage->get_navi_current_input_match_no( $navi_id, $pi );
                 $player = $objPage->get_navi_current_input_match_player_no( $navi_id, $pi );
-echo "navi:".$navi_id." place:".$pi." match:".$match." player:".$player."\n";
+$fp = fopen( dirname(__FILE__).'/log/'.date('Ymd').'.log', 'a' );
+fwrite( $fp, "navi:".$navi_id." place:".$pi." match:".$match." player:".$player."\n" );
+fclose( $fp );
                 if( $match == 0 ){ continue; }
                 if( $match == -1 ){ break; }
                 $file_write = true;
