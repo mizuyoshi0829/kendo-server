@@ -1167,6 +1167,7 @@
         } else {
             $html = __output_realtime_html_for_one_board_sub2( $navi_id, $place, $place_match_no, $objPage, $match_info, $match, $series_info );
         }
+        $html .= "navi:".$navi_id." place:".$place." place_match_no:".$place_match_no." match_no:".$match_no."\n";
         return $html;
     }
 
