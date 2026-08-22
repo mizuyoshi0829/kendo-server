@@ -298,7 +298,12 @@
             $objTournament = new form_page_kojin_tournament( $objPage );
             $hon1 = array( 1=>0, 2=>0, 3=>0, 4=>0, 5=>0 );
             $hon2 = array( 1=>0, 2=>0, 3=>0, 4=>0, 5=>0 );
-            $data = array( 'matches' => array(1=>array(), 2=>array(), 3=>array(), 4=>array(), 5=>array()) );
+            $data = [
+                'referee1_name' => get_field_string( $data_now, 'referee1_name' ),
+                'referee2_name' => get_field_string( $data_now, 'referee2_name' ),
+                'referee3_name' => get_field_string( $data_now, 'referee3_name' ),
+                'matches' => [ 1=>[], 2=>[], 3=>[], 4=>[], 5=>[] ]
+            ];
             $data_prev = array();
             if( $place_match_no > 1 ){
                 $match_info2 = $objPage->get_series_place_prev_navi_data( $navi_id, $place, $place_match_no-1 );
@@ -359,7 +364,6 @@
         }
 
         $html = '    <div align="center" id="result1" class="tb_score_in">'."\n";
-$html .= print_r($data_now, true);
         $html .= '      <div class="tb_score_title">'.$match_info['place_name'].'</div>'."\n";
         $html .= '      <div class="tb_score_title">第'.$match_info['place_match_no'].'試合</div>'."\n";
         $html .= '      <div class="clearfloat"></div>'."\n";
