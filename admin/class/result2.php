@@ -1002,9 +1002,9 @@
             if( $i1 == 3 ){
                 for( $i2 = 1; $i2 <= 3; $i2++ ){
                     if( $data['matches'][1]['waza1_'.$i2] == 5 ){
-                        $html .=   '          <div class="tb_frame_waza2">';
+                        $html .=   '          <div class="tb_frame_waza2_1">';
                     } else {
-                        $html .=   '          <div class="tb_frame_waza1">';
+                        $html .=   '          <div class="tb_frame_waza1_1">';
                     }
                     if($data['matches'][1]['waza1_'.$i2]==0){ $html .=   '&nbsp;'; }
                     if($data['matches'][1]['waza1_'.$i2]==1){ $html .=   'メ'; }
