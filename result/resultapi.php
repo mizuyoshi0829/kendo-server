@@ -39,9 +39,9 @@
             if( $place == 0 || $pi == $place ){
                 $match = $objPage->get_navi_current_input_match_no( $navi_id, $pi );
                 $player = $objPage->get_navi_current_input_match_player_no( $navi_id, $pi );
-$fp = fopen( dirname(__FILE__).'/log/'.date('Ymd').'.log', 'a' );
-fwrite( $fp, "navi:".$navi_id." place:".$pi." match:".$match." player:".$player."\n" );
-fclose( $fp );
+//$fp = fopen( dirname(__FILE__).'/log/'.date('Ymd').'.log', 'a' );
+//fwrite( $fp, "navi:".$navi_id." place:".$pi." match:".$match." player:".$player."\n" );
+//fclose( $fp );
                 if( $match == 0 ){ continue; }
                 if( $match == -1 ){ break; }
                 $file_write = true;
