@@ -111,7 +111,7 @@ fclose( $fp );
         if( $match == -1 ){ return; }
         //$html = output_realtime_html_for_one_board( $navi_id, $place, $match );
         if( $match >= 1000 ){
-            $html = output_realtime_html_for_one_board2( $navi_id, $place, $match );
+            $html = output_realtime_html_for_one_board2( $navi_id, $place, $match, $match_no );
         } else {
             if( $navi_id == 6 ){
                 $html = output_realtime_html_for_one_board_11( $navi_id, $place, $match );
