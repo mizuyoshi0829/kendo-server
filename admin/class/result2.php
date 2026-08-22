@@ -1030,13 +1030,13 @@
         $html .= '</div>'."\n";
         $html .= '        <div class="tb_frame_content">';
         $html .= '</div>'."\n";
-        $html .= '        <div class="tb_frame_waza tb_frame_btop">'."\n";
+        $html .= '        <div class="tb_frame_faul tb_frame_btop">'."\n";
+        $html .= '        </div>'."\n";
+        $html .= '        <div class="tb_frame_waza">'."\n";
         for( $i2 = 1; $i2 <= 3; $i2++ ){
             $html .= '          <div class="tb_frame_waza1">';
             $html .= '</div>'."\n";
         }
-        $html .= '        </div>'."\n";
-        $html .= '        <div class="tb_frame_faul">'."\n";
         $html .= '        </div>'."\n";
         $html .= '      </div>'."\n";
         if( $series_info['enable_referee'] != 0 ){
