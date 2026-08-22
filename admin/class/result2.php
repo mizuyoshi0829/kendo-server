@@ -1099,9 +1099,9 @@
         $html .= '      </div>'."\n";
 
         $html .= '      <div class="tb_frame">'."\n";
-        $html .= '        <div class="tb_frame_faul">';
+        $html .= '        <div class="tb_frame_waza_2">'."\n";
         $html .= '        </div>'."\n";
-        $html .= '        <div class="tb_frame_waza tb_frame_bbottom">'."\n";
+        $html .= '        <div class="tb_frame_faul_2 tb_frame_bbottom">';
         $html .= '        </div>'."\n";
         $html .= '        <div class="tb_frame_content" id="player2_'.$i1.'">';
         $html .= '</div>'."\n";
