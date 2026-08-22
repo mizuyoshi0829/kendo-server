@@ -823,6 +823,22 @@ class form_page_kojin_tournament
         $dbs = db_connect( DATABASE_HOST, DATABASE_USER, DATABASE_PASSWORD, DATABASE_NAME );
         $data = db_get_one_data( $dbs, 'kojin_match', '*', '`id`='.$id );
 
+		$data['referee1_name'] = '';
+		$data['referee2_name'] = '';
+		$data['referee3_name'] = '';
+		$sql = 'select * from `referee` where `series_info_id`='.$series_info['id'].' order by `id` asc';
+		$referee_list = db_query_list( $dbs, $sql );
+        foreach( $referee_list as $rv ){
+            if( $rv['id'] == $data['referee1'] ){
+                $data['referee1_name'] = $rv['sei'] . ' ' . $rv['mei'];
+            }
+            if( $rv['id'] == $data['referee2'] ){
+                $data['referee2_name'] = $rv['sei'] . ' ' . $rv['mei'];
+            }
+            if( $rv['id'] == $data['referee3'] ){
+                $data['referee3_name'] = $rv['sei'] . ' ' . $rv['mei'];
+            }
+        }
         //$kojin_field = 'kojin_' . $series_mw;
         $data['matches'] = array();
         $data['players'] = array();
