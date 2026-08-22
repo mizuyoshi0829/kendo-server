@@ -1059,13 +1059,7 @@
         $html .= '            </div>'."\n";
         for( $i1 = 1; $i1 <= 5; $i1++ ){
             $html .= '      <div class="tb_frame">'."\n";
-            $html .= '        <div class="tb_frame_faul">';
-            if( $i1 == 3 ){
-                if($data['matches'][1]['faul2_1']==2){ $html .= '<div class="tb_frame_faul_shidou_b">指</div>'; }
-                if($data['matches'][1]['faul2_2']==1){ $html .= '<div class="tb_frame_faul_faul_b"><span class="text-red">▲</span></div>'; }
-            }
-            $html .= '        </div>'."\n";
-            $html .= '        <div class="tb_frame_waza tb_frame_bbottom">'."\n";
+            $html .= '        <div class="tb_frame_waza_2">'."\n";
             if( $i1 == 3 ){
                 for( $i2 = 1; $i2 <= 3; $i2++ ){
                     if($data['matches'][1]['waza1_'.$i2] == 5 ){
@@ -1082,6 +1076,12 @@
                     if($data['matches'][1]['waza2_'.$i2]==6){ $html .= 'ツ'; }
                     $html .= '</div>'."\n";
                 }
+            }
+            $html .= '        </div>'."\n";
+            $html .= '        <div class="tb_frame_faul_2 tb_frame_btop">'."\n";
+            if( $i1 == 3 ){
+                if($data['matches'][1]['faul2_1']==2){ $html .= '<div class="tb_frame_faul_shidou_b">指</div>'; }
+                if($data['matches'][1]['faul2_2']==1){ $html .= '<div class="tb_frame_faul_faul_b"><span class="text-red">▲</span></div>'; }
             }
             $html .= '        </div>'."\n";
             $html .= '        <div class="tb_frame_content';
