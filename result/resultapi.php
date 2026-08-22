@@ -28,6 +28,7 @@
 	//fwrite( $fp, 'session:'.print_r( $_SESSION, true )."\n" );
 	//fwrite( $fp, 'server:'.print_r( $_SERVER, true )."\n" );
 	fwrite( $fp, 'files:'.print_r( $_FILES, true )."\n" );
+    fwrite( $fp, "navi:".$navi_id." place:".$place." match:".$match." player:".$player."\n" );
 	fclose( $fp );
 
     //if( $navi_id != 1 ){ return; }
