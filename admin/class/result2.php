@@ -299,9 +299,9 @@
             $hon1 = array( 1=>0, 2=>0, 3=>0, 4=>0, 5=>0 );
             $hon2 = array( 1=>0, 2=>0, 3=>0, 4=>0, 5=>0 );
             $data = [
-                'referee1_name' => get_field_string( $data_now, 'referee1_name' ),
-                'referee2_name' => get_field_string( $data_now, 'referee2_name' ),
-                'referee3_name' => get_field_string( $data_now, 'referee3_name' ),
+                'referee1_name' => '',
+                'referee2_name' => '',
+                'referee3_name' => '',
                 'matches' => [ 1=>[], 2=>[], 3=>[], 4=>[], 5=>[] ]
             ];
             $data_prev = array();
@@ -330,6 +330,9 @@
             $data_now = $objTournament->get_kojin_tournament_one_result(
                 $match_info['series'], $match_info['series_mw'], $match
             );
+            $data['referee1_name'] = get_field_string( $data_now, 'referee1_name' );
+            $data['referee2_name'] = get_field_string( $data_now, 'referee2_name' );
+            $data['referee3_name'] = get_field_string( $data_now, 'referee3_name' );
 //print_r($data_now);
             $data['matches'][3] = $data_now['matches'];
             for( $waza = 1; $waza <= 3; $waza++ ){
