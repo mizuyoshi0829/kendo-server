@@ -359,6 +359,7 @@
         }
 
         $html = '    <div align="center" id="result1" class="tb_score_in">'."\n";
+$html .= print_r($data, true);
         $html .= '      <div class="tb_score_title">'.$match_info['place_name'].'</div>'."\n";
         $html .= '      <div class="tb_score_title">第'.$match_info['place_match_no'].'試合</div>'."\n";
         $html .= '      <div class="clearfloat"></div>'."\n";
