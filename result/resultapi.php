@@ -49,7 +49,7 @@
                     $html = output_realtime_html_for_one_board2( $navi_id, $pi, $match, $player );
 $fp = fopen( dirname(__FILE__).'/log/'.date('Ymd').'.log', 'a' );
 fwrite( $fp, "+++navi:".$navi_id." place:".$pi." match:".$match." player:".$player."\n" );
-fwrite( $fp, $html."\n" );
+//fwrite( $fp, $html."\n" );
 fclose( $fp );
                 } else {
                     if( $navi_id == 6 ){
