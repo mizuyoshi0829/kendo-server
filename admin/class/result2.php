@@ -985,7 +985,8 @@
             $html .=  '        <div class="tb_frame_title tb_frame_bbottom">&nbsp;</div>'."\n";
             $html .=  '        <div class="tb_frame_content" id="player1_'.$i1.'">';
             if( $i1 == 3 ){
-                $html .= __output_realtime_html_for_one_board_get_dantai_player_name( $data, $series_info, $match_info, 1, 1 );
+                $info = __output_realtime_html_for_one_board_get_dantai_player_name( $data, $series_info, $match_info, 1, 1 );
+                $html .= $info['html'];
             }
             $html .=   '</div>'."\n";
             $html .=   '        <div class="tb_frame_waza tb_frame_btop">'."\n";
@@ -1086,7 +1087,8 @@
             $html .= '        <div class="tb_frame_content';
             $html .= '" id="player2_'.$i1.'">';
             if( $i1 == 3 ){
-                $html .= __output_realtime_html_for_one_board_get_dantai_player_name( $data, $series_info, $match_info, 2, 1 );
+                $info = __output_realtime_html_for_one_board_get_dantai_player_name( $data, $series_info, $match_info, 2, 1 );
+                $html .= $info['html'];
             }
             $html .= '</div>'."\n";
             $html .= '      </div>'."\n";
