@@ -1153,6 +1153,7 @@
 
     function output_realtime_html_for_one_board2( $navi_id, $place, $place_match_no, $match_no )
     {
+        require_once( '/var/www/kendo-server/admin/class/admin/reg_s4d.php' );
         $objPage = new form_page();
         $match_info = $objPage->get_series_place_navi_data( $navi_id, $place, $place_match_no );
         $match = $match_info['match_id'];
