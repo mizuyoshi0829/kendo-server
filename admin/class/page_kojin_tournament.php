@@ -153,6 +153,7 @@ class form_page_kojin_tournament
                     //'mei' => base64_decode(get_field_string( $fields, 'kojin_'.$series_mw.'1_mei' )),
                     'disp_name' => get_field_string( $fields, $kojin_name_field_header.'_disp' ),
                     'school_name_ryaku' => get_field_string( $fields, $seriesinfo['belonging_to_field'].'_ryaku' ),
+                    'pref_name' => '',
                 );
                 if( $seriesinfo['belonging_to_field'] == 'pref_name' ){
                     $d['belonging_to_name'] = $this->__pageObj->get_pref_name( $pref_array2, get_field_string_number( $fields, $seriesinfo['belonging_to_field'], 0 ) );
@@ -178,6 +179,7 @@ class form_page_kojin_tournament
                         $d['belonging_to_name2'] = get_field_string( $fields, $seriesinfo['belonging_to_field2'] );
                     }
                     $name .= ( '・' . $d['belonging_to_name2'] );
+                    $d['pref_name'] = $d['belonging_to_name2'];
                 }
                 $name .= ')';
                 $list['players_for_smarty']['0_'.$info.'_1'] = $name;
@@ -194,6 +196,7 @@ class form_page_kojin_tournament
                     //'mei' => base64_decode(get_field_string( $fields, 'kojin_'.$series_mw.'1_mei' )),
                     'disp_name' => get_field_string( $fields, $kojin_name_field_header2.'_disp' ),
                     'school_name_ryaku' => get_field_string( $fields, $seriesinfo['belonging_to_field'].'_ryaku' ),
+                    'pref_name' => '',
                 );
                 if( $seriesinfo['belonging_to_field'] == 'pref_name' ){
                     $d['belonging_to_name'] = $this->__pageObj->get_pref_name( $pref_array2, get_field_string_number( $fields, $seriesinfo['belonging_to_field'], 0 ) );
@@ -219,6 +222,7 @@ class form_page_kojin_tournament
                         $d['belonging_to_name2'] = get_field_string( $fields, $seriesinfo['belonging_to_field2'] );
                     }
                     $name .= ( '・' . $d['belonging_to_name2'] );
+                    $d['pref_name'] = $d['belonging_to_name2'];
                 }
                 $name .= ')';
                 $list['players_for_smarty']['0_'.$info.'_2'] = $name;
